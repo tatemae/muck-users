@@ -125,4 +125,4 @@ http//:localhost:3000/login
 http//:localhost:3000/signup
 
 
-Copyright (c) 2009 Justin Ball, released under the MIT license
+Copyright (c) 2009 Tatemae, released under the MIT license

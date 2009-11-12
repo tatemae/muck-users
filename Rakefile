@@ -15,10 +15,10 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "muck-users"
     gem.summary = "Easy to use user engine for Rails"
-    gem.email = "justinball@gmail.com"
+    gem.email = "justin@tatemae.com"
     gem.homepage = "http://github.com/jbasdf/muck_users"
     gem.description = "Easily add user signup, login and other features to your application"
-    gem.authors = ["Justin Ball"]
+    gem.authors = ["Justin Ball", "Joel Duffin"]
     gem.rubyforge_project = "muck-users"
     gem.add_dependency "authlogic"
     gem.add_dependency "searchlogic"
