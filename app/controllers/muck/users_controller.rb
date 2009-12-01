@@ -131,6 +131,7 @@ class Muck::UsersController < ApplicationController
     end
     respond_to do |format|
       format.html { render :text => result}
+      format.js { render :text => result}
     end
   end
 
@@ -152,6 +153,7 @@ class Muck::UsersController < ApplicationController
     end
     respond_to do |format|
       format.html { render :text => result }
+      format.js { render :text => result}
     end
   end
 
