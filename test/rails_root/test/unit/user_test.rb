@@ -1,3 +1,32 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id                  :integer         not null, primary key
+#  login               :string(255)
+#  email               :string(255)
+#  first_name          :string(255)
+#  last_name           :string(255)
+#  crypted_password    :string(255)
+#  password_salt       :string(255)
+#  persistence_token   :string(255)
+#  single_access_token :string(255)
+#  perishable_token    :string(255)
+#  login_count         :integer         default(0), not null
+#  failed_login_count  :integer         default(0), not null
+#  last_request_at     :datetime
+#  last_login_at       :datetime
+#  current_login_at    :datetime
+#  current_login_ip    :string(255)
+#  last_login_ip       :string(255)
+#  terms_of_service    :boolean         not null
+#  time_zone           :string(255)     default("UTC")
+#  disabled_at         :datetime
+#  activated_at        :datetime
+#  created_at          :datetime
+#  updated_at          :datetime
+#
+
 require File.dirname(__FILE__) + '/../test_helper'
 
 class UserTest < ActiveSupport::TestCase
@@ -6,10 +35,8 @@ class UserTest < ActiveSupport::TestCase
     should_have_many :permissions
     should_have_many :roles
     
-    should_have_named_scope :by_newest
-    should_have_named_scope :active
-    should_have_named_scope :inactive
-    should_have_named_scope :recent
+    should_scope_by_newest
+    should_scope_recent
     
     should_ensure_length_in_range :email, 6..100 #, :short_message => 'does not look like a valid email address.', :long_message => 'does not look like a valid email address.'
     should_allow_values_for :email, 'a@x.com', 'de.veloper@example.com'
@@ -22,6 +49,29 @@ class UserTest < ActiveSupport::TestCase
     should_not_allow_mass_assignment_of :crypted_password, :password_salt, :persistence_token, :single_access_token, :perishable_token, :login_count,
                    :failed_login_count, :last_request_at, :last_login_at, :current_login_at, :current_login_ip, :last_login_ip, 
                    :terms_of_service, :time_zone, :disabled_at, :activated_at, :created_at, :updated_at
+                   
+    context "named scopes" do
+      setup do
+        @active_user = Factory(:user, :activated_at => DateTime.now)
+        @inactive_user = Factory(:user, :activated_at => nil)
+      end
+      context "active" do
+        should "find active user" do
+          assert User.active.include?(@active_user)
+        end
+        should "not find inactive user" do
+          assert !User.active.include?(@inactive_user)
+        end
+      end
+      context "inactive" do
+        should "find inactive user" do
+          assert User.inactive.include?(@inactive_user)
+        end
+        should "not find active user" do
+          assert !User.inactive.include?(@active_user)
+        end
+      end
+    end
   end
 
   context "search" do
