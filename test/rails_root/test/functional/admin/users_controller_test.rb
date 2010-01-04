@@ -4,10 +4,17 @@ class Admin::Muck::UsersControllerTest < ActionController::TestCase
 
   tests Admin::Muck::UsersController
 
-  # TODO get role test working
-  should_require_role('admin', :redirect_url => '/login', :index => :get)
   should_require_login :index => :get, :inactive => :get, :inactive_emails => :get, :activate_all => :get, :search => :get, :login_url => '/login'
 
+  context "logged in not admin" do
+    setup do
+      @user = Factory(:user)
+      activate_authlogic
+      login_as @user
+    end
+    should_require_role('admin', :redirect_url => '/login', :index => :get)
+  end
+  
   context "logged in as admin" do
     setup do
       @admin = Factory(:user)
