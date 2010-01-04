@@ -145,7 +145,7 @@ module ActionController
         end
       end
 
-      def permission_denied      
+      def permission_denied
         respond_to do |format|
           format.html do
             domain_name = GlobalConfig.application_url
@@ -214,6 +214,27 @@ module ActionController
       #   end
       # end
 
+      # Used to get a user based on parameters
+      def get_user
+        return nil if !logged_in?
+        if is_admin?
+          @user ||= User.find(params[:user_id]) rescue nil
+          @user ||= User.find(params[:id]) rescue nil
+          @user ||= current_user
+        else
+          @user = current_user
+        end
+      end
+      
+      # Try to get a user.  If no user is found then call permission_denied
+      def get_user_deny
+        @user = get_user
+        if !@user
+          flash[:notice] = "There was a problem finding your user information.  Please try again."
+          permission_denied 
+        end
+      end
+      
     end
   end
 end

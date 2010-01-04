@@ -1,3 +1,8 @@
+/* general */
+.center{text-align:center;}
+#popup_wrapper{width:auto;}
+.waiting{margin:3px 0;padding-left:20px;background:transparent url('/images/spinner.gif') no-repeat scroll left bottom;}
+
 /* forms */
 input{margin:0 10px 5px 0;padding:4px;font-size:1.3em;}
 input[type="text"],input[type="password"]{border:1px solid #8f8685;}
@@ -12,15 +17,21 @@ fieldset{border:none;margin:0;padding:0;}
 form fieldset{margin:0 0 2px;padding:0px;}
 form fieldset input[type="text"],form fieldset input[type="password"]{width:500px;}
 .common-form{width:500px;margin:40px auto;}
-.common-form h1{font-size:1.8em;}
+.wide-form h1, .common-form h1{font-size:1.8em;}
+.wide-form{width:700px;margin:40px auto;}
 .form-item{float:left;}
 .common-content{width:500px;margin:40px auto;font-size:1.2em;color:#555;}
 .button-link {background-color:transparent;border-top-width: 0px;border-left-width: 0px;border-right-width: 0px;border-bottom-width: 0px;}
 
 /*images*/
+.tiny{width:24px;height:24px;}
 .icon{width:50px;height:50px;}
 .thumb{width:100px;height:100px;}
 .medium{width:300px;height:300px;}
+
+/*icons*/
+ul.icon-list{margin:0;padding:0;list-style:none;}
+ul.icon-list a{display:inline-block;margin:2px 0;padding:2px 0 5px 28px;text-decoration:none;}
 
 /* tips */
 .availability{color:#b61e12;position:absolute;}
@@ -77,3 +88,6 @@ div.jGrowl div.jGrowl-notification h2{text-align:left;font-weight:bold;padding:5
 #errorExplanation h2{text-align:left;font-weight:bold;padding:5px 5px 5px 15px;font-size:16px;background-color:#B61E12;color:#fff;}
 #errorExplanation p{color:#333;margin-bottom:0;padding:5px;}
 #errorExplanation ul li{list-style:square;}
+
+/* support */
+.support-information{font-size:9px;color:#333;}
