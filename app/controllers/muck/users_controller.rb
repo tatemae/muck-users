@@ -51,43 +51,10 @@ class Muck::UsersController < ApplicationController
     @page_title = t('muck.users.register_account', :application_name => GlobalConfig.application_name)
     cookies.delete :auth_token
     @user = User.new(params[:user])
-
-    if GlobalConfig.use_recaptcha
-      if !(verify_recaptcha(@user) && @user.valid?)
-        raise ActiveRecord::RecordInvalid, @user
-      end
-    end
-
-    if GlobalConfig.automatically_activate
-      if GlobalConfig.automatically_login_after_account_create
-        if @user.save
-          @user.activate!
-          UserSession.create(@user)
-          send_welcome_email
-          flash[:notice] = t('muck.users.thanks_sign_up')
-          after_create_response(true, signup_complete_path(@user))
-        else
-          after_create_response(false)
-        end
-      else
-        if @user.save_without_session_maintenance
-          @user.activate!
-          send_welcome_email
-          flash[:notice] = t('muck.users.thanks_sign_up_login')
-          after_create_response(true, signup_complete_login_required_path(@user))
-        else
-          after_create_response(false)
-        end
-      end
-    else
-      if @user.save_without_session_maintenance
-        @user.deliver_activation_instructions!
-        flash[:notice] = t('muck.users.thanks_sign_up_check')
-        after_create_response(true, signup_complete_activation_required_path(@user))
-      else
-        after_create_response(false)
-      end
-    end
+    
+    check_recaptcha
+    success, path = setup_user
+    after_create_response(success, path)
   end
 
   def update
@@ -159,15 +126,6 @@ class Muck::UsersController < ApplicationController
 
   protected 
 
-  def send_welcome_email
-    begin
-      @user.deliver_welcome_email
-    rescue Net::SMTPAuthenticationError => ex
-      # TODO figure out what to do when email fails
-      # @user.no_welcome_email = 
-    end
-  end
-
   def valid_email?(email)
     user = User.new(:email => email)
     user.valid?
@@ -196,6 +154,81 @@ class Muck::UsersController < ApplicationController
         format.html { render :template => "users/new" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
+    end
+  end
+  
+  # Sign up methods
+  def check_recaptcha
+    if GlobalConfig.use_recaptcha
+      if !(verify_recaptcha(@user) && @user.valid?)
+        raise ActiveRecord::RecordInvalid, @user
+      end
+    end
+  end
+  
+  def setup_user
+    if GlobalConfig.automatically_activate
+      if GlobalConfig.automatically_login_after_account_create
+        setup_user_login
+      else
+        setup_user_no_login
+      end
+    else
+      setup_user_no_activate
+    end
+  end
+  
+  def setup_user_login
+    path = ''
+    success = false
+    if @user.save
+      @user.activate!
+      UserSession.create(@user)
+      send_welcome_email
+      flash[:notice] = t('muck.users.thanks_sign_up')
+      success = true
+      path = signup_complete_path(@user)
+    else
+      success = false
+    end
+    [success, path]
+  end
+  
+  def setup_user_no_login
+    path = ''
+    success = false
+    if @user.save_without_session_maintenance
+      @user.activate!
+      send_welcome_email
+      flash[:notice] = t('muck.users.thanks_sign_up_login')
+      success = true
+      path = signup_complete_login_required_path(@user)
+    else
+      success = false
+    end
+    [success, path]
+  end
+  
+  def setup_user_no_activate
+    path = ''
+    success = false
+    if @user.save_without_session_maintenance
+      @user.deliver_activation_instructions!
+      flash[:notice] = t('muck.users.thanks_sign_up_check')
+      success = true
+      path = signup_complete_activation_required_path(@user)
+    else
+      success = false
+    end
+    [success, path]
+  end
+  
+  def send_welcome_email
+    begin
+      @user.deliver_welcome_email
+    rescue Net::SMTPAuthenticationError => ex
+      # TODO figure out what to do when email fails
+      # @user.no_welcome_email = 
     end
   end
   

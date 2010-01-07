@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
                         :collection => { :is_login_available => :post, :is_email_available => :post }
   
   map.with_options(:controller => 'muck/users') do |users| 
-    users.signup "/signup",  :action => 'new'
+    users.signup "/signup",  :action => 'new', :requirements => {:protocol => muck_routes_protocol}
     users.signup_complete "/users/signup_complete/:id",  :action => 'welcome'
     users.activation_complete "/users/activation_complete/:id", :action => 'welcome'
     users.signup_complete_activation_required '/signup_complete_activate/:id', :action => 'activation_instructions'
@@ -25,23 +25,23 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :password_resets, :controller => 'muck/password_resets'
   
   map.with_options(:controller => 'muck/password_resets') do |password_resets|
-    password_resets.forgot_password "/forgot_password", :action => 'new'
-    password_resets.reset_password "/reset_password/:id", :action => 'edit'
-    password_resets.reset_password "/reset_password/:id", :action => 'update', :method => 'put'
+    password_resets.forgot_password "/forgot_password", :action => 'new', :requirements => {:protocol => muck_routes_protocol}
+    password_resets.reset_password "/reset_password/:id", :action => 'edit', :requirements => {:protocol => muck_routes_protocol}
+    password_resets.reset_password "/reset_password/:id", :action => 'update', :method => 'put', :requirements => {:protocol => muck_routes_protocol}
   end
 
   # username
   map.resource :username_request, :controller => 'muck/username_request'
 
   map.with_options(:controller => 'muck/username_request') do |username_request|
-    username_request.forgot_username "/forgot_username", :action => 'new'
+    username_request.forgot_username "/forgot_username", :action => 'new', :requirements => {:protocol => muck_routes_protocol}
   end
   
   # sessions
   map.resource :user_session, :controller => 'muck/user_sessions'
   map.with_options(:controller => 'muck/user_sessions') do |user_sessions|
-    user_sessions.login "/login", :action => 'new'
-    user_sessions.logout "/logout", :action => 'destroy'
+    user_sessions.login "/login", :action => 'new', :requirements => {:protocol => muck_routes_protocol}
+    user_sessions.logout "/logout", :action => 'destroy', :requirements => {:protocol => muck_routes_protocol}
     user_sessions.signup_complete_login_required '/signup_complete_login/:id', :action => 'new'
   end
   

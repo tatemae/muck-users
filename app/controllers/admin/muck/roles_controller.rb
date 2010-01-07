@@ -14,8 +14,6 @@ class Admin::Muck::RolesController < Admin::Muck::BaseController
     @role = Role.new(params[:role])
   end
 
-  # POST /websites
-  # POST /websites.xml
   def create
     @role = Role.new(params[:role])
 
