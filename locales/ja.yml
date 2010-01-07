@@ -32,7 +32,7 @@ ja:
       change_your_password: パスワードを変更する
       choose_member_name: メンバー名
       complete_profile: 完全にあなたのプロフィール
-      confirm_delete_account: "あなたがアカウントを削除したいですか？しています\\ nこの元に戻すことはできません。"
+      confirm_delete_account: "あなたがあなたのアカウントを削除しますか？しています\\ nこの元に戻すことはできません。"
       confirm_password: パスワードの確認
       confirm_select_new_password: パスワードの確認変更
       could_not_find_reset_code: パスワードをリセットするコードを見つけることができませんでした。もう一度パスワードをリセットしてください。
