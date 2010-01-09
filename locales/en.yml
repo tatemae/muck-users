@@ -107,6 +107,7 @@ en:
       password: Password
       activation_complete: Activation Complete
       account_not_activated: Your {{application_name}} account has not yet been activated.
+      users_admin: Users
       admin: 
         activate_all_inactive_users_confirm: Are you sure you want to activate all inactive users in the system?  This cannot be undone!
         activate_all_inactive_users: Activate All Inactive Users
