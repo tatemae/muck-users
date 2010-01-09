@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-01-06}
+  s.date = %q{2010-01-09}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -647,6 +647,8 @@ Gem::Specification.new do |s|
      "locales/zh-TW.yml",
      "locales/zh.yml",
      "muck-users.gemspec",
+     "public/images/admin/source/User.png",
+     "public/images/admin/user.gif",
      "public/images/profile_default.jpg",
      "rails/init.rb",
      "tasks/rails.rake",
