@@ -4,6 +4,7 @@ en:
     users: 
       password_reset_link_sent: Instructions to reset your password have been emailed to you. Please check your email.
       problem_creating_account: "There was a problem creating your account.  Please correct the following errors:"
+      users_admin: Users
       forgot_password: Forgot Password
       application_base_url_not_set: Please set application_base_url in global_config.yml
       what_is_the_email: What is the email address used to create your account?
@@ -55,6 +56,7 @@ en:
       username_available: Username available
       name: Name
       account_activated: Your account has been activated! You can now login.
+      total_users: "Total Users: {{total}}"
       request_username: Request Username
       navigation: 
         inactive_users: Inactive Users
@@ -64,12 +66,12 @@ en:
       email_available: Email available
       welcome: Welcome
       username_recover_prompt: Please provide the email that you used when you created your account, your username will be emailed to you.
+      user_successfully_deleted: User {{login}} was successfully deleted.
       update_profile: Update your profile
       request_username_subject: Forgotten username
       forgot_username: Forgot Username
       email_help: Please use a valid, current e-mail address. We will never share or spam your e-mail address.
       access_denied: You don't have permission to access the requested page.
-      user_successfully_deleted: User {{login}} was successfully deleted.
       username_help: You can use between 6 and 20 characters. If the name you want isn't available try adding numbers or punctuation.
       sign_in_title: Sign In
       problem_changing_password: There was a problem changing your password. {{errors}}
@@ -107,7 +109,6 @@ en:
       password: Password
       activation_complete: Activation Complete
       account_not_activated: Your {{application_name}} account has not yet been activated.
-      users_admin: Users
       admin: 
         activate_all_inactive_users_confirm: Are you sure you want to activate all inactive users in the system?  This cannot be undone!
         activate_all_inactive_users: Activate All Inactive Users

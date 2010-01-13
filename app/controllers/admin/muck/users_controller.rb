@@ -2,6 +2,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   unloadable
     
   before_filter :get_user, :only => [:update, :destroy]
+  before_filter :setup_subnavigation
   
   def index
     @user_count = User.count
@@ -115,8 +116,12 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   
   private 
   
-  def get_user
-    @user = User.find(params[:id])
-  end
+    def get_user
+      @user = User.find(params[:id])
+    end
+  
+    def setup_subnavigation
+      @sub_navigation_path = 'admin/users/user_navigation'
+    end
   
 end

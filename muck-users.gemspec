@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-01-09}
+  s.date = %q{2010-01-11}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -681,7 +681,6 @@ Gem::Specification.new do |s|
      "test/rails_root/db/migrate/20090402234137_create_languages.rb",
      "test/rails_root/db/migrate/20090426041056_create_countries.rb",
      "test/rails_root/db/migrate/20090426041103_create_states.rb",
-     "test/rails_root/db/migrate/20090602041838_create_users.rb",
      "test/rails_root/features/step_definitions/webrat_steps.rb",
      "test/rails_root/features/support/env.rb",
      "test/rails_root/lib/tasks/muck.rake",
@@ -691,6 +690,8 @@ Gem::Specification.new do |s|
      "test/rails_root/public/500.html",
      "test/rails_root/public/dispatch.rb",
      "test/rails_root/public/favicon.ico",
+     "test/rails_root/public/images/admin/Home.gif",
+     "test/rails_root/public/images/admin/source/Home.png",
      "test/rails_root/public/images/arrow_down.gif",
      "test/rails_root/public/images/arrow_left.gif",
      "test/rails_root/public/images/arrow_right.gif",
@@ -1282,10 +1283,10 @@ Gem::Specification.new do |s|
      "test/rails_root/config/initializers/session_store.rb",
      "test/rails_root/config/routes.rb",
      "test/rails_root/db/migrate/20090320174818_create_muck_permissions_and_roles.rb",
+     "test/rails_root/db/migrate/20090327231918_create_users.rb",
      "test/rails_root/db/migrate/20090402234137_create_languages.rb",
      "test/rails_root/db/migrate/20090426041056_create_countries.rb",
      "test/rails_root/db/migrate/20090426041103_create_states.rb",
-     "test/rails_root/db/migrate/20090602041838_create_users.rb",
      "test/rails_root/features/step_definitions/webrat_steps.rb",
      "test/rails_root/features/support/env.rb",
      "test/rails_root/public/dispatch.rb",
