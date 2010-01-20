@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "0.2.20"
+  s.version = "0.2.21"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-01-11}
+  s.date = %q{2010-01-20}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -39,6 +39,7 @@ Gem::Specification.new do |s|
      "app/views/admin/roles/show.html.erb",
      "app/views/admin/users/_activate.html.erb",
      "app/views/admin/users/_ajax_search_box.html.erb",
+     "app/views/admin/users/_dashboard_widget.html.erb",
      "app/views/admin/users/_row.html.erb",
      "app/views/admin/users/_search_box.html.erb",
      "app/views/admin/users/_table.html.erb",
@@ -647,7 +648,9 @@ Gem::Specification.new do |s|
      "locales/zh-TW.yml",
      "locales/zh.yml",
      "muck-users.gemspec",
+     "public/images/admin/roles.gif",
      "public/images/admin/source/User.png",
+     "public/images/admin/source/roles.png",
      "public/images/admin/user.gif",
      "public/images/profile_default.jpg",
      "rails/init.rb",
@@ -678,6 +681,7 @@ Gem::Specification.new do |s|
      "test/rails_root/config/routes.rb",
      "test/rails_root/db/.keep",
      "test/rails_root/db/migrate/20090320174818_create_muck_permissions_and_roles.rb",
+     "test/rails_root/db/migrate/20090327231918_create_users.rb",
      "test/rails_root/db/migrate/20090402234137_create_languages.rb",
      "test/rails_root/db/migrate/20090426041056_create_countries.rb",
      "test/rails_root/db/migrate/20090426041103_create_states.rb",
@@ -691,7 +695,10 @@ Gem::Specification.new do |s|
      "test/rails_root/public/dispatch.rb",
      "test/rails_root/public/favicon.ico",
      "test/rails_root/public/images/admin/Home.gif",
+     "test/rails_root/public/images/admin/roles.gif",
      "test/rails_root/public/images/admin/source/Home.png",
+     "test/rails_root/public/images/admin/source/User.png",
+     "test/rails_root/public/images/admin/user.gif",
      "test/rails_root/public/images/arrow_down.gif",
      "test/rails_root/public/images/arrow_left.gif",
      "test/rails_root/public/images/arrow_right.gif",
@@ -1121,6 +1128,7 @@ Gem::Specification.new do |s|
      "test/rails_root/public/robots.txt",
      "test/rails_root/public/stylesheets/.keep",
      "test/rails_root/public/stylesheets/admin.css",
+     "test/rails_root/public/stylesheets/application.css",
      "test/rails_root/public/stylesheets/blueprint/ie.css",
      "test/rails_root/public/stylesheets/blueprint/liquid_screen.css",
      "test/rails_root/public/stylesheets/blueprint/plugins/buttons/icons/cross.png",
