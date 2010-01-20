@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "0.2.21"
+  s.version = "0.2.22"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
@@ -698,6 +698,7 @@ Gem::Specification.new do |s|
      "test/rails_root/public/images/admin/roles.gif",
      "test/rails_root/public/images/admin/source/Home.png",
      "test/rails_root/public/images/admin/source/User.png",
+     "test/rails_root/public/images/admin/source/roles.png",
      "test/rails_root/public/images/admin/user.gif",
      "test/rails_root/public/images/arrow_down.gif",
      "test/rails_root/public/images/arrow_left.gif",
