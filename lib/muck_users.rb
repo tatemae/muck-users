@@ -11,6 +11,7 @@ I18n.load_path += Dir[ File.join(File.dirname(__FILE__), '..', 'locales', '*.{rb
 
 # Add admin link for users and roles
 MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_users'), '/admin/users', '/images/admin/user.gif') rescue nil
+MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_access_codes'), '/admin/users', '/images/admin/user.gif') rescue nil
 
 # Add users to the dashboard
 MuckEngine.add_muck_dashboard_item('admin/users/dashboard_widget') rescue nil

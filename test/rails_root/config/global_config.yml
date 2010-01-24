@@ -24,7 +24,7 @@ default: &DEFAULT
   automatically_activate: true
   automatically_login_after_account_create: true
   send_welcome: true
-  
+  require_access_code: false
   application_url: localhost:3000
   
   # if you use recaptcha you will need to also provide a public and private

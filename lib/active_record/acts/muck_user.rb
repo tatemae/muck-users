@@ -17,6 +17,10 @@ module ActiveRecord
           named_scope :inactive, :conditions => "activated_at IS NULL"    
           named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
           
+          belongs_to :access_code
+          accepts_nested_attributes_for :access_code
+          attr_accessor :access_code_code
+          
           email_name_regex  = '[\w\.%\+\-]+'.freeze
           domain_head_regex = '(?:[A-Z0-9\-]+\.)+'.freeze
           domain_tld_regex  = '(?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|jobs|museum)'.freeze

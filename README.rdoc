@@ -35,7 +35,9 @@ Inside of global_config.yml add the following changing the emails to match your 
     from_email: 'support@example.com'
     support_email: 'support@example.com'
     admin_email: 'admin@example.com'
-
+    
+    require_access_code: false # Determines whether or not a access code is required to sign up.
+  
 === Users migration
 The users table is frequently one of the most significant of any application.  A migration to create users is not included in this
 gem so that the users tables can be customized appropriately.  Here's an example migration:

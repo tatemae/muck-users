@@ -51,7 +51,7 @@ class Muck::UsersController < ApplicationController
     @page_title = t('muck.users.register_account', :application_name => GlobalConfig.application_name)
     cookies.delete :auth_token
     @user = User.new(params[:user])
-    
+    check_access_code
     check_recaptcha
     success, path = setup_user
     after_create_response(success, path)
@@ -126,151 +126,163 @@ class Muck::UsersController < ApplicationController
 
   protected 
 
-  def valid_email?(email)
-    user = User.new(:email => email)
-    user.valid?
-    if user.errors[:email]
-      [false, user.errors[:email]]
-    else
-      [true, '']
-    end
-  end
-  
-  def standard_response(template)
-    respond_to do |format|
-      format.html { render :template => "users/#{template}" }
-      format.xml { render :xml => @user }
-    end
-  end
-  
-  def after_create_response(success, local_uri = '')
-    if success
-      respond_to do |format|
-        format.html { redirect_to local_uri }
-        format.xml { render :xml => @user, :status => :created, :location => user_url(@user) }
-      end
-    else
-      respond_to do |format|
-        format.html { render :template => "users/new" }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-  
-  # Sign up methods
-  def check_recaptcha
-    if GlobalConfig.use_recaptcha
-      if !(verify_recaptcha(@user) && @user.valid?)
-        raise ActiveRecord::RecordInvalid, @user
-      end
-    end
-  end
-  
-  def setup_user
-    if GlobalConfig.automatically_activate
-      if GlobalConfig.automatically_login_after_account_create
-        setup_user_login
+    def valid_email?(email)
+      user = User.new(:email => email)
+      user.valid?
+      if user.errors[:email]
+        [false, user.errors[:email]]
       else
-        setup_user_no_login
+        [true, '']
       end
-    else
-      setup_user_no_activate
     end
-  end
   
-  def setup_user_login
-    path = ''
-    success = false
-    if @user.save
-      @user.activate!
-      UserSession.create(@user)
-      send_welcome_email
-      flash[:notice] = t('muck.users.thanks_sign_up')
-      success = true
-      path = signup_complete_path(@user)
-    else
+    def standard_response(template)
+      respond_to do |format|
+        format.html { render :template => "users/#{template}" }
+        format.xml { render :xml => @user }
+      end
+    end
+  
+    def after_create_response(success, local_uri = '')
+      if success
+        respond_to do |format|
+          format.html { redirect_to local_uri }
+          format.xml { render :xml => @user, :status => :created, :location => user_url(@user) }
+        end
+      else
+        respond_to do |format|
+          format.html { render :template => "users/new" }
+          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        end
+      end
+    end
+  
+    # Sign up methods
+    def check_access_code
+      if GlobalConfig.require_access_code
+        access_code, valid_code = AccessCode.valid_code?(params[:user][:access_code_code])
+        if valid_code
+          @user.access_code = access_code
+        else
+          flash[:notice] = translate('muck.users.access_required_warning')
+          raise Exceptions::InvalidAccessCode
+        end
+      end
+    end
+  
+    def check_recaptcha
+      if GlobalConfig.use_recaptcha
+        if !(verify_recaptcha(@user) && @user.valid?)
+          raise ActiveRecord::RecordInvalid, @user
+        end
+      end
+    end
+  
+    def setup_user
+      if GlobalConfig.automatically_activate
+        if GlobalConfig.automatically_login_after_account_create
+          setup_user_login
+        else
+          setup_user_no_login
+        end
+      else
+        setup_user_no_activate
+      end
+    end
+  
+    def setup_user_login
+      path = ''
       success = false
+      if @user.save
+        @user.activate!
+        UserSession.create(@user)
+        send_welcome_email
+        flash[:notice] = t('muck.users.thanks_sign_up')
+        success = true
+        path = signup_complete_path(@user)
+      else
+        success = false
+      end
+      [success, path]
     end
-    [success, path]
-  end
   
-  def setup_user_no_login
-    path = ''
-    success = false
-    if @user.save_without_session_maintenance
-      @user.activate!
-      send_welcome_email
-      flash[:notice] = t('muck.users.thanks_sign_up_login')
-      success = true
-      path = signup_complete_login_required_path(@user)
-    else
+    def setup_user_no_login
+      path = ''
       success = false
+      if @user.save_without_session_maintenance
+        @user.activate!
+        send_welcome_email
+        flash[:notice] = t('muck.users.thanks_sign_up_login')
+        success = true
+        path = signup_complete_login_required_path(@user)
+      else
+        success = false
+      end
+      [success, path]
     end
-    [success, path]
-  end
   
-  def setup_user_no_activate
-    path = ''
-    success = false
-    if @user.save_without_session_maintenance
-      @user.deliver_activation_instructions!
-      flash[:notice] = t('muck.users.thanks_sign_up_check')
-      success = true
-      path = signup_complete_activation_required_path(@user)
-    else
+    def setup_user_no_activate
+      path = ''
       success = false
+      if @user.save_without_session_maintenance
+        @user.deliver_activation_instructions!
+        flash[:notice] = t('muck.users.thanks_sign_up_check')
+        success = true
+        path = signup_complete_activation_required_path(@user)
+      else
+        success = false
+      end
+      [success, path]
     end
-    [success, path]
-  end
   
-  def send_welcome_email
-    begin
-      @user.deliver_welcome_email
-    rescue Net::SMTPAuthenticationError => ex
-      # TODO figure out what to do when email fails
-      # @user.no_welcome_email = 
+    def send_welcome_email
+      begin
+        @user.deliver_welcome_email
+      rescue Net::SMTPAuthenticationError => ex
+        # TODO figure out what to do when email fails
+        # @user.no_welcome_email = 
+      end
     end
-  end
   
-  # override redirect by adding :redirect_to as a hidden field in your form or as a url param
-  def after_update_response(success)
-    if success
+    # override redirect by adding :redirect_to as a hidden field in your form or as a url param
+    def after_update_response(success)
+      if success
+        respond_to do |format|
+          format.html do
+            get_redirect_to do
+              redirect_to admin? ? public_user_path(@user) : user_path(@user)
+            end
+          end
+          format.xml{ head :ok }
+        end
+      else
+        respond_to do |format|
+          format.html { render :template => 'users/edit' }
+          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        end
+      end
+    end
+  
+    # override redirect by adding :redirect_to as a hidden field in your form or as a url param
+    def after_destroy_response
       respond_to do |format|
         format.html do
+          flash[:notice] = t('muck.users.login_out_success')
           get_redirect_to do
-            redirect_to admin? ? public_user_path(@user) : user_path(@user)
+            redirect_to(login_url)
           end
         end
-        format.xml{ head :ok }
-      end
-    else
-      respond_to do |format|
-        format.html { render :template => 'users/edit' }
-        format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+        format.xml { head :ok }
       end
     end
-  end
   
-  # override redirect by adding :redirect_to as a hidden field in your form or as a url param
-  def after_destroy_response
-    respond_to do |format|
-      format.html do
-        flash[:notice] = t('muck.users.login_out_success')
-        get_redirect_to do
-          redirect_to(login_url)
+    def permission_denied
+      flash[:notice] = t('muck.users.permission_denied')
+      respond_to do |format|
+        format.html do
+          redirect_to user_path(current_user)
         end
       end
-      format.xml { head :ok }
     end
-  end
-  
-  def permission_denied
-    flash[:notice] = t('muck.users.permission_denied')
-    respond_to do |format|
-      format.html do
-        redirect_to user_path(current_user)
-      end
-    end
-  end
 
 end

@@ -43,4 +43,11 @@ class UserMailer < ActionMailer::Base
               :application_name => GlobalConfig.application_name
   end
 
+  def access_code(email, subject, message, code)
+    muck_setup_email(user)
+    subject       subject
+    body          :message => message, :code => code
+    content_type  "text/html"
+  end
+    
 end

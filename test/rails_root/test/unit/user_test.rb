@@ -2,29 +2,32 @@
 #
 # Table name: users
 #
-#  id                  :integer         not null, primary key
+#  id                  :integer(4)      not null, primary key
 #  login               :string(255)
 #  email               :string(255)
 #  first_name          :string(255)
 #  last_name           :string(255)
 #  crypted_password    :string(255)
 #  password_salt       :string(255)
-#  persistence_token   :string(255)
-#  single_access_token :string(255)
-#  perishable_token    :string(255)
-#  login_count         :integer         default(0), not null
-#  failed_login_count  :integer         default(0), not null
+#  persistence_token   :string(255)     not null
+#  single_access_token :string(255)     not null
+#  perishable_token    :string(255)     not null
+#  login_count         :integer(4)      default(0), not null
+#  failed_login_count  :integer(4)      default(0), not null
 #  last_request_at     :datetime
-#  last_login_at       :datetime
 #  current_login_at    :datetime
+#  last_login_at       :datetime
 #  current_login_ip    :string(255)
 #  last_login_ip       :string(255)
-#  terms_of_service    :boolean         not null
+#  terms_of_service    :boolean(1)      not null
 #  time_zone           :string(255)     default("UTC")
 #  disabled_at         :datetime
-#  activated_at        :datetime
 #  created_at          :datetime
+#  activated_at        :datetime
 #  updated_at          :datetime
+#  identity_url        :string(255)
+#  url_key             :string(255)
+#  access_code_id        :integer(4)
 #
 
 require File.dirname(__FILE__) + '/../test_helper'
@@ -45,6 +48,7 @@ class UserTest < ActiveSupport::TestCase
     should_not_allow_values_for :login, 'test guy', 'test.guy', 'testguy!', 'test@guy.com', :message => 'may only contain letters, numbers or a hyphen.'
     should_allow_values_for :login, 'testguy', 'test-guy'
     
+    should_belong_to :access_code
     
     should_not_allow_mass_assignment_of :crypted_password, :password_salt, :persistence_token, :single_access_token, :perishable_token, :login_count,
                    :failed_login_count, :last_request_at, :last_login_at, :current_login_at, :current_login_ip, :last_login_ip, 

@@ -5,11 +5,19 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   before_filter :setup_subnavigation
   
   def index
-    @user_count = User.count
-    @user_inactive_count = User.inactive_count
-    @users = User.by_newest.paginate(:page => @page, :per_page => @per_page)
     respond_to do |format|
-      format.html { render :template => 'admin/users/index' }
+      format.html do
+        @user_count = User.count
+        @user_inactive_count = User.inactive_count
+        @users = User.by_newest.paginate(:page => @page, :per_page => @per_page)
+        render :template => 'admin/users/index'
+      end
+      format.csv do
+        @users = User.find(:all)
+        headers["Content-Type"] = 'text/csv'
+        headers["Content-Disposition"] = "attachment; filename=\"users.csv\"" 
+        render :layout => false 
+      end
     end
   end
 

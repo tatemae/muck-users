@@ -1,0 +1,6 @@
+<h3><%=translate('muck.users.add_access_code') %></h3>
+<%= output_errors(translate('muck.users.access_code_add_problem'), {:class => 'help-box'}, @access_code) %>
+<% custom_form_for :access_code, :url => admin_access_codes_path do |f| -%>
+  <%= render :partial => 'admin/access_codes/form', :locals => {:f => f} %>
+  <%= f.submit translate('muck.users.save') %>
+<% end -%>

@@ -1,0 +1,8 @@
+<tr>
+  <td><%= link_to access_code.code, admin_access_code_path(access_code) %></td>
+  <td><%= access_code.uses %></td>
+  <td><%= access_code.use_limit %></td>
+  <td><%= access_code.unlimited %></td>
+  <td><%= format_date(access_code.expires_at) %></td>
+  <td><%= format_date(access_code.created_at) %></td>
+</tr>

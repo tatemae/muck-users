@@ -1,0 +1,15 @@
+<%= f.text_field :code, { :label => translate('muck.users.access_code'),
+                          :tip => translate('muck.users.access_code_tip')  } -%>
+<%= f.text_field :use_limit, { :label => translate('muck.users.use_limit'),
+                               :tip => translate('muck.users.use_limit_tip') } -%>
+<%= f.check_box :unlimited, { :label => translate('muck.users.unlimited'),
+                              :tip => translate('muck.users.unlimited_tip') } -%>
+<%= f.text_field :expires_at, { :label => translate('muck.users.expiration_date'),
+                                :tip => translate('muck.users.expiration_date_tip'),
+                                :class => 'date_pick' } -%>
+
+<script type="text/javascript" language="JavaScript">
+  jQuery(document).ready(function(){
+    jQuery('.date_pick').datepicker();
+  });
+</script>
