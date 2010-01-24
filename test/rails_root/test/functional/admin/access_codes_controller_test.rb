@@ -97,14 +97,14 @@ class Admin::Muck::AccessCodesController < ActionController::TestCase
 
       context "POST to create" do
         setup do
-          post :create, :access code => { :code => 'testcode', :expires_at => Date.new((DateTime.now.year + 2), 10, 10) }
+          post :create, :access_code => { :code => 'testcode', :expires_at => Date.new((DateTime.now.year + 2), 10, 10) }
         end
         should_redirect_to("show access code") { admin_access_code_path(assigns(:access_code)))) }
       end
 
       context "fail on POST to create" do
         setup do
-          post :create, :access code => {:code => nil, :expires_at => Date.new((DateTime.now.year + 2), 10, 10) }
+          post :create, :access_code => {:code => nil, :expires_at => Date.new((DateTime.now.year + 2), 10, 10) }
         end
         should_respond_with :success
         should_render_template :new
