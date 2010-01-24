@@ -4,6 +4,8 @@ require 'active_record/secure_methods'
 ActionController::Base.send :include, ActionController::AuthenticApplication
 ActiveRecord::Base.send :include, ActiveRecord::SecureMethods
 ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckUser }
+ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckAccessCode }
+ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckAccessCodeRequest }
 ActiveRecord::Base.class_eval { include MuckUsers::Exceptions }
 ActionController::Base.send :helper, MuckUsersHelper
 

@@ -70,14 +70,14 @@ class UserMailerTest < ActiveSupport::TestCase
     end
     
     should "send access code email" do
-      email = 'testguy@example.com'
+      email_address = 'testguy@example.com'
       subject = 'test subject'
       message = 'test message'
       code = 'testcode'
-      response = UserMailer.deliver_access_code(email, subject, message, code)
+      response = UserMailer.deliver_access_code(email_address, subject, message, code)
       assert !ActionMailer::Base.deliveries.empty?, "No email was sent"
       email = ActionMailer::Base.deliveries.last
-      assert_equal email.to, [email]
+      assert_equal email.to, [email_address]
       assert_equal email.from, [GlobalConfig.from_email]
     end
     

@@ -74,7 +74,7 @@ class Admin::Muck::AccessCodesController < ActionController::TestCase
             post :bulk_create, {:access_code => @params, :emails => @emails, :subject => @subject, :message => @message}
           end
           should_set_the_flash_to(I18n.translate('muck.users.bulk_access_codes_created'))
-          should_redirect_to("bulk access code page") { admin_bulk_create_access_codes_path)) }
+          should_redirect_to("bulk access code page") { admin_bulk_create_access_codes_path }
         end
         
         context "invalid access code" do

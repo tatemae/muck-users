@@ -27,18 +27,36 @@ class AccessCodeTest < ActiveSupport::TestCase
     should_have_many :users
 
     context "named scopes" do
-      should_scope_by_newest
-      should_scope_by_alpha    
-      should "get active codes" do
-        codes = [
-          Factory(:access_code, :code => 'expired', :expires_at => DateTime.now - 1.day),
-          Factory(:access_code, :code => 'overused', :uses => 10, :use_limit => 9, :expires_at => DateTime.now + 2.days),
-          Factory(:access_code, :code => 'valid_code', :expires_at => DateTime.now + 5.days), 
-        ]
-        AccessCode.active.each do |access_code|
-          assert_equal 'valid_code', access_code.code
+      should_scope_newest
+      
+      context "by_alpha" do
+        setup do
+          AccessCode.delete_all
+          @first = Factory(:access_code, :code => 'a')
+          @second = Factory(:access_code, :code => 'b')
+        end
+        should "sort by code" do
+          assert_equal @first, AccessCode.by_alpha[0]
+          assert_equal @second, AccessCode.by_alpha[1]
         end
       end
+          
+      context "active" do
+        setup do
+          AccessCode.delete_all
+          codes = [
+            Factory(:access_code, :code => 'expired', :expires_at => DateTime.now - 1.day),
+            Factory(:access_code, :code => 'overused', :uses => 10, :use_limit => 9, :expires_at => DateTime.now + 2.days),
+            Factory(:access_code, :code => 'valid_code', :expires_at => DateTime.now + 5.days), 
+          ]
+        end
+        should "get active codes" do
+          AccessCode.active.each do |access_code|
+            assert_equal 'valid_code', access_code.code
+          end
+        end
+      end
+      
     end
     
     should "use code" do
@@ -74,7 +92,7 @@ class AccessCodeTest < ActiveSupport::TestCase
     end
     
     should "generate a unique code" do
-      AccessCode.random_code.length.should > 0
+      assert AccessCode.random_code.length > 0
     end
     
   end
