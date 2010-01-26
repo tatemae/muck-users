@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
-class Muck::AccessCodeRequestsController < ActionController::TestCase
+class Muck::AccessCodeRequestsControllerTest < ActionController::TestCase
 
   tests Muck::AccessCodeRequestsController
 
@@ -24,9 +24,9 @@ class Muck::AccessCodeRequestsController < ActionController::TestCase
 
     context "POST to create" do
       setup do
-        post :create, :access_code_request => {:email => Factory.next(:email)}
+        post :create, :access_code_request => { :email => Factory.next(:email) }
       end
-      should_redirect_to("show access request") { access_code_request_path(assigns(:access_code)) }
+      should_redirect_to("show access request") { access_code_request_path(assigns(:access_code_request)) }
     end
 
   end

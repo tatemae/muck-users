@@ -1,6 +1,6 @@
-class Admin::AccessCodesController < Admin::Muck::BaseController
+class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
 
-  before_filter :setup_access_code, :except => [:index, :new, :create]
+  before_filter :setup_access_code, :except => [:index, :new, :create, :bulk, :bulk_create]
   
   def index
     @codes = AccessCode.by_alpha.paginate(:page => @page, :per_page => @per_page)
@@ -17,19 +17,18 @@ class Admin::AccessCodesController < Admin::Muck::BaseController
   
   def create
     @access_code = AccessCode.new(params[:access_code])
-    respond_to do |format|
-      if @access_code.save
-        flash[:notice] = 'Access Code was successfully added'
-        format.html { redirect_to admin_access_code_path(@access_code) }
-      else
-        format.html { render :action => 'admin/access_codes/new' }
-      end
+    if @access_code.save
+      flash[:notice] = 'Access Code was successfully added'
+      redirect_to admin_access_code_path(@access_code)
+    else
+      render :template => 'admin/access_codes/new'
     end
   end
   
   def bulk
     @access_code = AccessCode.new
     @access_code.code = AccessCode.random_code
+    render :template => 'admin/access_codes/bulk'
   end
   
   def bulk_create
@@ -39,24 +38,26 @@ class Admin::AccessCodesController < Admin::Muck::BaseController
       @access_code.unlimited = false
       @access_code.use_limit = 1
       @access_code.uses = 0
-      @access_code.code = AccessCode.random_code
+      @access_code.code ||= AccessCode.random_code # If they specified a code then don't change it.
       @access_code.save!
-      MessageMailer.deliver_access_code(email, params[:subject], params[:message], @access_code.code)
-    end    
-    redirect_to admin_access_codes_path
+      UserMailer.deliver_access_code(email, params[:subject], params[:message], @access_code.code)
+    end
+    flash[:notice] = translate('muck.users.bulk_access_codes_created', :email_count => emails.count)
+    redirect_to bulk_create_admin_access_codes_path
   rescue ActiveRecord::RecordInvalid => ex
-    render :action => :bulk
+    render :template => "admin/access_codes/bulk"
   end
   
   def edit
+    render :template => "admin/access_codes/edit"
   end
   
   def update
     if @access_code.update_attributes(params[:access_code])
-      redirect_to { redirect_to(admin_access_code_path(@access_code)) }
+      redirect_to(admin_access_code_path(@access_code))
     else
       flash[:notice] = 'There was a problem updating the access code.'
-      format.html { render :action => "edit" }
+      render :template => "admin/access_codes/edit"
     end
   end
 
@@ -67,9 +68,7 @@ class Admin::AccessCodesController < Admin::Muck::BaseController
     else
       flash[:notice] = "Cannot delete access code it has users associated with it."
     end
-    respond_to do |format|
-      format.html { redirect_to admin_access_codes_path }
-    end
+    redirect_to admin_access_codes_path
   end
   
   protected

@@ -1,4 +1,3 @@
-# new file app/controllers/activations_controller.rb
 class Muck::ActivationsController < ApplicationController
   unloadable
   

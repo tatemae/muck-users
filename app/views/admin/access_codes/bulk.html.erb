@@ -3,10 +3,10 @@
 
 <%= output_errors(translate('muck.users.bulk_access_code_problem'), {:class => 'help-box'}, @access_code) %>
 
-<% custom_form_for :access_code, :url => bulk_create_admin_coupons_path, :html => {:class => "standard-form alt"} do |f| -%>
+<% custom_form_for :access_code, :url => bulk_create_admin_access_codes_path, :html => {:class => "standard-form alt"} do |f| -%>
   <%= render :partial => 'admin/access_codes/form', :locals => {:f => f} %>
-  <%= f.text_field_tag :subject, params[:subject], :label => {:text => "Subject"} %>
-  <%= f.text_area_tag :message, params[:message], :label => {:text => "Message"} %>
-  <%= f.text_area_tag :emails, params[:emails], :label => {:text =>"Emails"}, :tip => translate('muck.users.bulk_access_code_emails_tip') %>
+  <%= text_field_tag :subject, params[:subject], :label => {:text => "Subject"} %>
+  <%= text_area_tag :message, params[:message], :label => {:text => "Message"} %>
+  <%= text_area_tag :emails, params[:emails], :label => {:text =>"Emails"}, :tip => translate('muck.users.bulk_access_code_emails_tip') %>
   <%= f.submit translate('muck.users.save') %>
 <% end -%>

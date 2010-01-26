@@ -47,7 +47,7 @@ ActionController::Routing::Routes.draw do |map|
   
   # Access codes
   map.resources :access_code_requests
-  
+
   # page a user is taken to when they log out
   map.logout_complete '/login', :controller => 'user_session', :action => 'new'
   

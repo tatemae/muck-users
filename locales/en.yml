@@ -30,7 +30,7 @@ en:
       username_sent: Your username has been sent emailed to you. Please check your Email.
       access_code_unlimited: Unlimited
       welcome: Welcome
-      bulk_access_codes_created: Bulk access codes created and emailed.
+      bulk_access_codes_created: Bulk access codes created and emailed to {{email_count}} emails.
       current_password: Current Password
       problem_creating_account: "There was a problem creating your account.  Please correct the following errors:"
       password_confirmation_help: To ensure that your password is correct please enter it again here.
