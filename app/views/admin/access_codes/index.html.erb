@@ -3,14 +3,16 @@
   <%= link_to translate('muck.users.access_code_new'), new_admin_access_code_path %>
 </div>
 <table class="adminTable" cellspacing="0" cellpadding="0">
-  <tr>
-    <th><%=translate('muck.users.access_code') %></th>
-    <th><%=translate('muck.users.access_code_uses') %></th>
-    <th><%=translate('muck.users.access_code_use_limit') %></th>
-    <th><%=translate('muck.users.access_code_unlimited') %></th>
-    <th><%=translate('muck.users.access_code_expires') %></th>
-    <th><%=translate('muck.users.access_code_created') %></th>
-  </tr>
+  <thead>
+    <tr>
+      <th><%=translate('muck.users.access_code') %></th>
+      <th><%=translate('muck.users.access_code_uses') %></th>
+      <th><%=translate('muck.users.access_code_use_limit') %></th>
+      <th><%=translate('muck.users.access_code_unlimited') %></th>
+      <th><%=translate('muck.users.access_code_expires') %></th>
+      <th><%=translate('muck.users.access_code_created') %></th>
+    </tr>
+  </thead>
   <%= render :partial => 'admin/access_codes/access_code', :collection => @codes %>
 </table>
 <%= will_paginate @codes %>

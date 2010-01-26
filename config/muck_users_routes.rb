@@ -46,7 +46,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   # Access codes
-  map.resources :access_code_requests
+  map.resources :access_code_requests, :controller => 'muck/access_code_requests'
 
   # page a user is taken to when they log out
   map.logout_complete '/login', :controller => 'user_session', :action => 'new'
@@ -56,7 +56,7 @@ ActionController::Routing::Routes.draw do |map|
     a.resources :users, :controller => 'muck/users', :collection => { :inactive => :get, :inactive_emails => :get, :activate_all => :get, :search => :post, :ajax_search => :post }
     a.resources :roles, :controller => 'muck/roles'
     a.resources :permissions, :controller => 'muck/permissions'
-    a.resources :access_codes, :collection => {:bulk => :get, :bulk_create => :post}
+    a.resources :access_codes, :controller => 'muck/access_codes', :collection => {:bulk => :get, :bulk_create => :post}
   end
 
 end

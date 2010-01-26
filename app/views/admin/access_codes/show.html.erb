@@ -3,24 +3,28 @@
 <%= link_to(translate('muck.users.access_code_delete_link'), admin_access_code_path(@access_code.id), :method => :delete, :confirm => translate('muck.users.access_code_delete_confirm')) %>
 
 <table class="adminTable" cellspacing="0" cellpadding="0">
-  <tr>
-    <th><%=translate('muck.users.access_code') %></th>
-    <th><%=translate('muck.users.access_code_uses') %></th>
-    <th><%=translate('muck.users.access_code_use_limit') %></th>
-    <th><%=translate('muck.users.access_code_unlimited') %></th>
-    <th><%=translate('muck.users.access_code_expires') %></th>
-    <th><%=translate('muck.users.access_code_created') %></th>
-  </tr>
+  <thead>
+    <tr>
+      <th><%=translate('muck.users.access_code') %></th>
+      <th><%=translate('muck.users.access_code_uses') %></th>
+      <th><%=translate('muck.users.access_code_use_limit') %></th>
+      <th><%=translate('muck.users.access_code_unlimited') %></th>
+      <th><%=translate('muck.users.access_code_expires') %></th>
+      <th><%=translate('muck.users.access_code_created') %></th>
+    </tr>
+  </thead>
   <%= render :partial => 'admin/access_codes/access_code', :object => @access_code %>
 </table>
 
 <h3><%=translate('muck.users.access_code_related_users') %></h3>
 <table class="adminTable" cellspacing="0" cellpadding="0">
-  <tr>
-    <th><%=translate('muck.users.login') %></th>
-    <th><%=translate('muck.users.email') %></th>
-    <th><%=translate('muck.users.first_name') %></th>
-    <th><%=translate('muck.users.last_name') %></th>
-  </tr>
+  <thead>
+    <tr>
+      <th><%=translate('muck.users.login') %></th>
+      <th><%=translate('muck.users.email') %></th>
+      <th><%=translate('muck.users.first_name') %></th>
+      <th><%=translate('muck.users.last_name') %></th>
+    </tr>
+  </thead>
   <%= render :partial => 'admin/access_codes/user', :collection => @access_code.users %>
 </table>
