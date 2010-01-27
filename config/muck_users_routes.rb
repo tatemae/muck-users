@@ -53,8 +53,7 @@ ActionController::Routing::Routes.draw do |map|
   
   # admin
   map.namespace :admin do |a|
-    a.resources :users, :controller => 'muck/users', :collection => { :inactive => :get, :inactive_emails => :get, :activate_all => :get, :search => :post, :ajax_search => :post }
-    a.resources :permissions, :controller => 'muck/users/permissions'
+    a.resources :users, :controller => 'muck/users', :collection => { :inactive => :get, :inactive_emails => :get, :activate_all => :get, :search => :post, :ajax_search => :post, :permissions => :get }
     a.resources :roles, :controller => 'muck/roles'
     a.resources :permissions, :controller => 'muck/permissions'
     a.resources :access_codes, :controller => 'muck/access_codes', :collection => {:bulk => :get, :bulk_create => :post}

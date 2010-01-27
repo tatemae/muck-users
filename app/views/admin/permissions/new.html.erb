@@ -1,6 +1,0 @@
-<h2><%=translate('muck.users.add_user_to_role') %></h2>
-<% custom_remote_form_for :permission do |f| %>
-  <%= f.roles_select :role %>
-  <%= f.hidden_field :user, :value => user.id %>
-  <%= f.submit translate('muck.users.add') %>
-<% end %>

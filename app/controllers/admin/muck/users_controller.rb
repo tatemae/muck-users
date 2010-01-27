@@ -1,7 +1,7 @@
 class Admin::Muck::UsersController < Admin::Muck::BaseController
   unloadable
     
-  before_filter :get_user, :only => [:update, :destroy]
+  before_filter :get_user, :only => [:update, :destroy, :permissions]
   before_filter :setup_subnavigation
   
   def index
@@ -69,6 +69,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   end
 
   def update
+    params[:user][:role_ids] ||= []
     if is_me?(@user)
       message = I18n.t("muck.users.cannot_deactivate_yourself")
     else
@@ -120,6 +121,10 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
       format.xml  { head :ok }
       format.js { render(:update){|page| page.visual_effect :fade, "#{@user.dom_id('row')}".to_sym} }
     end
+  end
+  
+  def permissions
+    render :partial => 'admin/users/permissions', :layout => false
   end
   
   private 

@@ -86,6 +86,7 @@ en:
       delete_this_user: Delete this user.
       username_help: You can use between 6 and 20 characters. If the name you want isn't available try adding numbers or punctuation.
       edit_role_dialog_title: Edit Role
+      change_permissions: Change Roles
       username_not_available: Username not available
       remove_my_account: Remove My Account
       email_available: Email available
@@ -108,8 +109,9 @@ en:
       access_code_request_tip: Enter your email and we'll send you an access code as soon as one is available. Thank you!
       password_mismatch: Password mismatch.
       add_role_dialog_title: Add Role
-      add_permission_to_user: Add Permission to user {{user}}
       new_password_doesnt_match: New password does not match the password confirmation.
+      add_permission_to_user: Add Permission to user {{user}}
+      change_permissions_for: Change Permissions for {{user}}
       user_account_deleted: You have successfully deleted your account.
       sign_in: Sign In
       expiration_date_tip: Enter the date upon which the access code will become invalid
