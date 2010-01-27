@@ -115,7 +115,11 @@ module ActiveRecord
           self.password_confirmation = user[:password_confirmation]
           save
         end
-                
+        
+        def is_in_role?(object, roles)
+          raise 'not implemented'
+        end
+        
         def has_role?(rolename)
           self.any_role?(rolename)
         end
@@ -170,6 +174,10 @@ module ActiveRecord
                 
         def activate!
           self.update_attribute(:activated_at, Time.now.utc)
+        end
+        
+        def deactivate!
+          self.update_attribute(:activated_at, nil)
         end
         
         def short_name

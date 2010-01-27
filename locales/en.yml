@@ -17,6 +17,7 @@ en:
       login_title: Log-in to your Account
       user_disable_problem: There was a problem disabling this user.
       access_code: Access Code
+      change_permissions_for: Change Permissions for {{user}}
       login_success: Login successful!
       change_password: Change Password
       add_user_to_role: Add User to Role
@@ -50,6 +51,7 @@ en:
       select_new_password: Select a New Password
       access_code_delete_link: Delete Access Code
       request_access_code: Request Access Code
+      updated_permissions: Updated Permissions
       first_name: First Name
       forgot_username: Forgot Username
       account_activated: Your account has been activated! You can now login.
@@ -81,12 +83,12 @@ en:
       click_to_sign_up_now: Click here to sign up now.
       forgot_password: Forgot Password
       login: Login
+      user_not_activated_error: Could not activate user
       password_not_reset: Password not reset.
       save: Save
       delete_this_user: Delete this user.
       username_help: You can use between 6 and 20 characters. If the name you want isn't available try adding numbers or punctuation.
       edit_role_dialog_title: Edit Role
-      change_permissions: Change Roles
       username_not_available: Username not available
       remove_my_account: Remove My Account
       email_available: Email available
@@ -96,6 +98,7 @@ en:
       edit: Edit
       activation_instructions: Activation Instructions
       access_code_created: Created
+      change_permissions: Change Roles
       what_is_the_email: What is the email address used to create your account?
       activation_complete: Activation Complete
       welcome_message: Welcome to muck.  This system provides the basic components to help you build your website.
@@ -111,9 +114,10 @@ en:
       add_role_dialog_title: Add Role
       new_password_doesnt_match: New password does not match the password confirmation.
       add_permission_to_user: Add Permission to user {{user}}
-      change_permissions_for: Change Permissions for {{user}}
       user_account_deleted: You have successfully deleted your account.
       sign_in: Sign In
+      complete_profile: Complete Your Profile
+      access_codes: Access Codes
       expiration_date_tip: Enter the date upon which the access code will become invalid
       problem_editing_account: There was a problem updating your information.
       access_code_delete_confirm: Are you sure you want to cancel this access code?
@@ -121,9 +125,7 @@ en:
         inactive_users: Inactive Users
         all_users: All Users
         search_users: Search Users
-      access_codes: Access Codes
       user_marked_inactive: User has been marked as inactive
-      complete_profile: Complete Your Profile
       access_code_request_thank_you: Thank you for your request.  We'll be in touch as soon as possible.
       role: Role
       bulk_access_codes_title: Bulk Access Codes
@@ -132,6 +134,7 @@ en:
       access_code_expires: Expires
       user_successfully_deleted: User {{login}} was successfully deleted.
       application_base_url_not_set: Please set application_base_url in global_config.yml
+      user_not_deactivated_error: Could not deactivate user
       total_users: "Total Users: {{total}}"
       password_cannot_be_blank: Password field cannot be blank.
       access_code_edit_link: Edit Access Code

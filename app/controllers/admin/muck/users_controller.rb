@@ -69,25 +69,31 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   end
 
   def update
-    params[:user][:role_ids] ||= []
-    if is_me?(@user)
-      message = I18n.t("muck.users.cannot_deactivate_yourself")
-    else
-      if @user.force_activate!
-        message = I18n.t('muck.users.user_marked_active')
+    
+    if params[:deactivate]
+      if is_me?(@user)
+        message = translate("muck.users.cannot_deactivate_yourself")
       else
-        message = I18n.t('muck.users.user_marked_inactive')
-      end
-    end    
-    activate_text = '<div class="flasherror">' + message + '</div>'
-    activate_text << render_to_string(:partial => 'admin/users/activate', :locals => {:user => @user})
-    respond_to do |format|
-      format.js do
-        render :update do |page|
-          page.replace_html @user.dom_id('link'), activate_text
+        if @user.deactivate!
+          return update_activate(translate('muck.users.user_marked_inactive'))
+        else
+          message = translate('muck.users.user_not_deactivated_error')
         end
       end
+    elsif params[:activate]
+      if @user.activate!
+        return update_activate(translate('muck.users.user_marked_active'))
+      else
+        message = translate('muck.users.user_not_activated_error')
+      end
+    else
+      params[:user][:role_ids] ||= []
+      if @user.update_attributes(params[:user])
+        return update_permissions(@user, translate('muck.users.updated_permissions'))
+      end
     end
+    flash[:notice] = message
+    output_admin_messages(@user)
   end
 
   def enable
@@ -115,7 +121,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
     @user.destroy
     respond_to do |format|
       format.html do
-        flash[:notice] = I18n.t('muck.users.user_successfully_deleted', :login => @user.login)
+        flash[:notice] = translate('muck.users.user_successfully_deleted', :login => @user.login)
         redirect_to admin_users_path
       end
       format.xml  { head :ok }
@@ -124,11 +130,27 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   end
   
   def permissions
-    render :partial => 'admin/users/permissions', :layout => false
+    render :template => 'admin/users/permissions', :layout => false
   end
   
-  private 
-  
+  protected
+
+    def update_permissions(user, message)
+      flash[:notice] = message
+      render :update do |page|
+        page << "jQuery('.dialog').dialog('close');"
+        page.replace_html user.dom_id('permissions'), :partial => 'admin/permissions/permission', :collection => user.permissions, :locals => { :user => user }
+      end
+    end
+      
+    def update_activate(message)
+      flash[:notice] = message
+      render :update do |page|
+        page.replace_html 'admin-messages', output_flash
+        page.replace_html @user.dom_id('link'), :partial => 'admin/users/activate', :locals => { :user => @user }
+      end
+    end
+    
     def get_user
       @user = User.find(params[:id])
     end

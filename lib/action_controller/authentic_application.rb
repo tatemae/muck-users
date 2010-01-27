@@ -111,7 +111,7 @@ module ActionController
       end
 
       def can_access?(user, object, roles, &block)
-        if logged_in? && user.is_in_role?(event, roles)
+        if logged_in? && user.is_in_role?(object, roles)
           content = capture(&block)
           concat(content, block.binding)
         end
