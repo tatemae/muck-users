@@ -1,5 +1,6 @@
 require 'muck_users/exceptions'
 require 'active_record/secure_methods'
+require 'muck_users/muck_custom_form_builder'
 
 ActionController::Base.send :include, ActionController::AuthenticApplication
 ActiveRecord::Base.send :include, ActiveRecord::SecureMethods
@@ -15,6 +16,7 @@ I18n.load_path += Dir[ File.join(File.dirname(__FILE__), '..', 'locales', '*.{rb
 # MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_users'), '/admin/users', '/images/admin/user.gif') rescue nil
 # MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_access_codes'), '/admin/users', '/images/admin/user.gif') rescue nil
 MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_users'), '/admin/users') rescue nil
+MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_roles'), '/admin/roles') rescue nil
 MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_access_codes'), '/admin/access_codes') rescue nil
 
 # Add users to the dashboard

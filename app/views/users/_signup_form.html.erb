@@ -5,7 +5,7 @@
 	<% if GlobalConfig.require_access_code -%>
     <%= f.text_field :access_code_code, { :label => translate('muck.users.access_code'), 
                                         :extra_html => translate('muck.users.access_code_help', 
-                                                          :access_request_anchor => %Q{<a class="fancy_pop iframe" href="#{new_access_code_request_path}">},
+                                                          :access_request_anchor => %Q{<a class="fancy-pop iframe" href="#{new_access_code_request_path}">},
                                                           :access_request_anchor_end => "</a>") } -%>
   <% end -%>
   

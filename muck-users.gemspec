@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-01-25}
+  s.date = %q{2010-01-26}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -1202,6 +1202,7 @@ Gem::Specification.new do |s|
      "test/rails_root/public/stylesheets/jquery/cupertino/images/ui-icons_cd0a0a_256x240.png",
      "test/rails_root/public/stylesheets/jquery/cupertino/images/ui-icons_ffffff_256x240.png",
      "test/rails_root/public/stylesheets/jquery/cupertino/jquery-ui-1.7.1.custom.css",
+     "test/rails_root/public/stylesheets/jquery/cupertino/jquery-ui-1.7.2.custom.css",
      "test/rails_root/public/stylesheets/jquery/jquery.autocomplete.css",
      "test/rails_root/public/stylesheets/jquery/jquery.fancybox.css",
      "test/rails_root/public/stylesheets/jquery/redmond/images/ui-bg_flat_0_aaaaaa_40x100.png",
@@ -1220,6 +1221,7 @@ Gem::Specification.new do |s|
      "test/rails_root/public/stylesheets/jquery/redmond/images/ui-icons_d8e7f3_256x240.png",
      "test/rails_root/public/stylesheets/jquery/redmond/images/ui-icons_f9bd01_256x240.png",
      "test/rails_root/public/stylesheets/jquery/redmond/jquery-ui-1.7.1.custom.css",
+     "test/rails_root/public/stylesheets/jquery/redmond/jquery-ui-1.7.2.custom.css",
      "test/rails_root/public/stylesheets/jquery/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png",
      "test/rails_root/public/stylesheets/jquery/smoothness/images/ui-bg_flat_75_ffffff_40x100.png",
      "test/rails_root/public/stylesheets/jquery/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png",
@@ -1234,6 +1236,7 @@ Gem::Specification.new do |s|
      "test/rails_root/public/stylesheets/jquery/smoothness/images/ui-icons_888888_256x240.png",
      "test/rails_root/public/stylesheets/jquery/smoothness/images/ui-icons_cd0a0a_256x240.png",
      "test/rails_root/public/stylesheets/jquery/smoothness/jquery-ui-1.7.1.custom.css",
+     "test/rails_root/public/stylesheets/jquery/smoothness/jquery-ui-1.7.2.custom.css",
      "test/rails_root/public/stylesheets/jquery/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png",
      "test/rails_root/public/stylesheets/jquery/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png",
      "test/rails_root/public/stylesheets/jquery/ui-lightness/images/ui-bg_flat_10_000000_40x100.png",
@@ -1249,6 +1252,7 @@ Gem::Specification.new do |s|
      "test/rails_root/public/stylesheets/jquery/ui-lightness/images/ui-icons_ffd27a_256x240.png",
      "test/rails_root/public/stylesheets/jquery/ui-lightness/images/ui-icons_ffffff_256x240.png",
      "test/rails_root/public/stylesheets/jquery/ui-lightness/jquery-ui-1.7.1.custom.css",
+     "test/rails_root/public/stylesheets/jquery/ui-lightness/jquery-ui-1.7.2.custom.css",
      "test/rails_root/public/stylesheets/reset.css",
      "test/rails_root/public/stylesheets/styles.css",
      "test/rails_root/public/stylesheets/themes/blue/styles.css",

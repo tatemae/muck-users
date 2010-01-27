@@ -1,6 +1,12 @@
 <tr id="<%=user.dom_id('row')%>" class="<%= cycle('odd','even') %>">
 	<td><%= link_to h(user.full_name), user %></td>
 	<td><%= mail_to h(user.email), user.email %></td>
+	<td>
+	  <ul class="permissions inline">
+	    <%= render :partial => 'admin/permissions/permission', :collection => user.permissions, :locals => { :user => user } %>
+	  </ul>
+	</td>
+  <td><%= link_to(translate('muck.users.add_permission'), new_admin_permission_path, { :title => translate('muck.users.add_permission_to_user', :user => user.full_name), :class => 'dialog-pop' }) %></td>
 	<td id="<%=user.dom_id('link')%>"><%= render :partial => 'admin/users/activate', :locals => { :user => user } %></td>
-	<td><%= link_to_remote t("muck.general.delete"), { :url => admin_user_path(user.id), :method => :delete }, { :title => t('muck.users.delete_this_user'), :class => 'delete-user' } -%></td>
+	<td><%= link_to(t("muck.general.delete"), { :url => admin_user_path(user.id) }, { :title => t('muck.users.delete_this_user'), :class => 'delete-user remote-delete' }) -%></td>
 </tr>

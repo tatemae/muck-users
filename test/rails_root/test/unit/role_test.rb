@@ -4,6 +4,7 @@ class RoleTest < ActiveSupport::TestCase
 
   should_validate_presence_of :rolename
   should_have_many :permissions
+  should_have_many :users
 
   context "Create new role" do
     should "should create a new role" do

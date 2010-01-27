@@ -2,54 +2,64 @@ class Admin::Muck::RolesController < Admin::Muck::BaseController
   unloadable
   
   def index
-    @user = User.find(params[:user_id])
-    @all_roles = Role.find(:all)
+    @roles = Role.by_alpha
+    render :template => 'admin/roles/index'
   end
 
   def show
-    @role = Role.new(params[:role])
+    @role = Role.find(params[:id])
+    @users = @role.users.paginate(:page => @page, :per_page => @per_page)
+    render :template => 'admin/roles/show'
   end
 
   def new
     @role = Role.new(params[:role])
+    render :template => 'admin/roles/new', :layout => false
   end
 
   def create
     @role = Role.new(params[:role])
-
-    respond_to do |format|
-      if @role.save
-        flash[:notice] = I18n.t('muck.roles.role_created')
-        format.html { redirect_to(admin_roles_path(@role)) }
-        format.xml  { render :xml => @role, :status => :created, :location => @role }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @role.errors, :status => :unprocessable_entity }
-      end
+    if @role.save
+      ajax_update_roles
+    else
+      output_admin_messages(@role)
     end
   end
 
   def edit
-    @role = Role.new(params[:role])
+    @role = Role.find(params[:id])
+    render :template => 'admin/roles/edit', :layout => false
   end
 
   def update
-    @user = User.find(params[:user_id])
     @role = Role.find(params[:id])
-    unless @user.has_role?(@role.rolename)
-      @user.roles << @role
+    if @role.update_attributes(params[:role])
+      ajax_update_roles
+    else
+      output_admin_messages(@role)
     end
-    redirect_to :action => 'index'
   end
 
   def destroy
-    @user = User.find(params[:user_id])
     @role = Role.find(params[:id])
-    if @user.has_role?(@role.rolename)
-      @user.roles.delete(@role)
+    if @role.rolename == 'administrator'
+      flash[:notice] = translate('muck.users.cant_delete_administrator_role')
+      output_admin_messages
+    else
+      @role.delete
+      render :update do |page|
+        page.remove @role.dom_id
+      end
     end
-    redirect_to :action => 'index'
   end
 
+  protected
+    
+    def ajax_update_roles
+      render :update do |page|
+        page.replace_html 'current-roles', :partial => 'admin/roles/role', :collection => Role.by_alpha
+        page << "jQuery('.dialog').dialog('close');"
+      end
+    end
+    
 end
-

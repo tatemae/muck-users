@@ -19,6 +19,7 @@ Rails::Initializer.run do |config|
   config.gem "authlogic"
   config.gem "searchlogic"
   config.gem "bcrypt-ruby", :lib => "bcrypt"
+  config.gem 'jrails'
   config.gem "overlord"
   config.gem 'muck-engine', :lib => 'muck_engine'
   config.plugin_locators << TestGemLocator

@@ -19,8 +19,10 @@ en:
       access_code: Access Code
       login_success: Login successful!
       change_password: Change Password
+      add_user_to_role: Add User to Role
       terms_and_service: By clicking 'Sign-up Now' you agree to comply with the {{tos_link_anchor}}Terms and Conditions{{link_end}}.
       password_reset_link_sent: Instructions to reset your password have been emailed to you. Please check your email.
+      deleting_user: deleting user...
       forgot_your_username: Forgot your username?
       email: Email
       login_requred: You must be logged in to access this feature.
@@ -28,9 +30,11 @@ en:
       confirm_delete_account: Are you sure you want to delete your account?\nThis can not be undone.
       password_updated: Password successfully updated.
       username_sent: Your username has been sent emailed to you. Please check your Email.
+      add_permission: (Add Permission)
       access_code_unlimited: Unlimited
       welcome: Welcome
       bulk_access_codes_created: Bulk access codes created and emailed to {{email_count}} emails.
+      users_in_role: "Users in this role:"
       current_password: Current Password
       problem_creating_account: "There was a problem creating your account.  Please correct the following errors:"
       password_confirmation_help: To ensure that your password is correct please enter it again here.
@@ -53,10 +57,12 @@ en:
       email_invalid: Invalid email
       user_disabled: User disabled
       invalid_username: Invalid username
+      update: Update
       could_not_find_user_with_email: Could not find a user with that email address.
       password_reset_email_subject: You have requested to change your {{application_name}} password
       cannot_deactivate_yourself: You cannot deactivate yourself!
       bulk_access_codes_description: This will generate a unique, single use access code for each of the emails provided.
+      add: Add
       admin: 
         activate_all_inactive_users_confirm: Are you sure you want to activate all inactive users in the system?  This cannot be undone!
         activate_all_inactive_users: Activate All Inactive Users
@@ -69,6 +75,7 @@ en:
       my_dashboard: My Dashboard
       confirm_select_new_password: Confirm Password Change
       use_limit: Number of Uses
+      add_role: Add Role
       admin_users_title: User Administration
       edit_access_code: Edit Access Code
       click_to_sign_up_now: Click here to sign up now.
@@ -78,12 +85,14 @@ en:
       save: Save
       delete_this_user: Delete this user.
       username_help: You can use between 6 and 20 characters. If the name you want isn't available try adding numbers or punctuation.
+      edit_role_dialog_title: Edit Role
       username_not_available: Username not available
       remove_my_account: Remove My Account
       email_available: Email available
       user_enabled: User enabled
       thanks_sign_up_check: Your account has been created. Please check your e-mail for your account activation instructions!
       delete_my_account: Delete my user account and all my data.
+      edit: Edit
       activation_instructions: Activation Instructions
       access_code_created: Created
       what_is_the_email: What is the email address used to create your account?
@@ -98,6 +107,8 @@ en:
       username: Username
       access_code_request_tip: Enter your email and we'll send you an access code as soon as one is available. Thank you!
       password_mismatch: Password mismatch.
+      add_role_dialog_title: Add Role
+      add_permission_to_user: Add Permission to user {{user}}
       new_password_doesnt_match: New password does not match the password confirmation.
       user_account_deleted: You have successfully deleted your account.
       sign_in: Sign In
@@ -112,20 +123,23 @@ en:
       user_marked_inactive: User has been marked as inactive
       complete_profile: Complete Your Profile
       access_code_request_thank_you: Thank you for your request.  We'll be in touch as soon as possible.
+      role: Role
       bulk_access_codes_title: Bulk Access Codes
       users_admin: Users
+      username_recover_prompt: Please provide the email that you used when you created your account, your username will be emailed to you.
       access_code_expires: Expires
       user_successfully_deleted: User {{login}} was successfully deleted.
-      username_recover_prompt: Please provide the email that you used when you created your account, your username will be emailed to you.
       application_base_url_not_set: Please set application_base_url in global_config.yml
+      total_users: "Total Users: {{total}}"
       password_cannot_be_blank: Password field cannot be blank.
       access_code_edit_link: Edit Access Code
-      total_users: "Total Users: {{total}}"
       access_code_edit_problem: Problem editing access code
       bulk_access_code_problem: Problem adding access code
       submit: Submit
       confirm_password: Confirm Password
+      add_user_to_role_title: Add user to a new role.
       expiration_date: Expiration Date
+      roles: Roles
       access_code_related_users: Users who signed up with this code
       login_empty: Please enter a login
       welcome_email_subject: Welcome to {{application_name}}
@@ -133,6 +147,7 @@ en:
       sign_in_title: Sign In
       edit_profile: Edit Profile
       admin_requred: You must be an administrator to access this feature.
+      delete: Delete
       password_help: Your password should be at least six characters long. A Mix of upper and lower-case letters and numbers works well
       login_fail: We're sorry, but we couldn't recognize your login information.  Please try again.
       email_not_available: Email already in use. {{reset_password_help}}
@@ -140,12 +155,14 @@ en:
       sign_up: Sign up
       change_your_password: Change Your Password
       forgot_your_password: Forgot your password?
+      role_delete_confirm: Are you sure you want to delete this role?  All associated permissions will also be deleted!
       unlimited: Unlimited
       remember_me: Remember me
       reset_your_password: Reset Your Password
       access_code_use_limit: Use Limit
       access_code_help: If you received a access code from us, please enter it in the box above. You may also {{access_request_anchor}}request a access code{{access_request_anchor_end}}.
       email_address: Email Address
+      cant_delete_administrator_role: You can't delete the administrator role.
       view_your_account: View Your Account
       request_username_subject: Forgotten username
       could_not_find_reset_code: Could not find a password reset code.  Please try resetting your password again.

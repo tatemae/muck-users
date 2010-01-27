@@ -9,7 +9,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
       format.html do
         @user_count = User.count
         @user_inactive_count = User.inactive_count
-        @users = User.by_newest.paginate(:page => @page, :per_page => @per_page)
+        @users = User.by_newest.paginate(:page => @page, :per_page => @per_page, :include => ['roles'])
         render :template => 'admin/users/index'
       end
       format.csv do

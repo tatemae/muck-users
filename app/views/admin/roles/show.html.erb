@@ -1,7 +1,3 @@
-<p>
-  <b><%= I18n.t('Rolename:') %></b>
-  <%=h @role.rolename %>
-</p>
-
-<%= link_to I18n.t('Edit'), edit_role_path(@role) %> |
-<%= link_to I18n.t('Back'), admin_roles_path %>
+<h2><%= @role.rolename %></h2>
+<h3><%=translate('muck.users.users_in_role') %></h3>
+<%= render :partial => 'admin/users/table' -%>

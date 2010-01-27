@@ -11,10 +11,13 @@
 class Role < ActiveRecord::Base
   unloadable
   
-  has_many :permissions
+  has_many :permissions, :dependent => :destroy
   has_many :users, :through => :permissions
-
+  
   validates_presence_of :rolename
+  validates_uniqueness_of :rolename
+
+  named_scope :by_alpha, :order => 'roles.rolename ASC'
 
   # roles can be defined as symbols.  We want to store them as strings in the database
   def rolename= val

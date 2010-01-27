@@ -10,7 +10,6 @@ jQuery(document).ajaxSend(function(event, request, settings) {
   	settings.data += (settings.data ? "&" : "") + "authenticity_token=" + encodeURIComponent(AUTH_TOKEN);
 });
 
-
 function setup_submit_delete(){
 	jQuery(".submit-delete").click(function() {
 		// if(!confirm("Are you sure?")){
@@ -93,10 +92,38 @@ function setup_country(force_load){
 	}
 }
 
+function apply_ajax_forms() {
+  jQuery('form.ajax').ajaxForm({
+    dataType: 'script',
+    beforeSend: function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+  });
+}
+
 jQuery(document).ready(function() {
 	
-	jQuery('a.fancy_pop').fancybox({'hideOnContentClick':false, 'overlayShow':true, 'frameWidth':600, 'frameHeight':500 });
+  jQuery('a.remote-delete').live('click', function() {
+    jQuery.post(this.href, { _method: 'delete' }, null, "script");
+    return false;
+  });
+
+	jQuery(".submit-form").click(function() {
+    jQuery(this).parent('form').submit();
+  });
+
+	apply_ajax_forms();
 	
+	jQuery('a.fancy-pop').fancybox({'hideOnContentClick':false, 'overlayShow':true, 'frameWidth':600, 'frameHeight':500 });
+	
+	jQuery('a.dialog-pop').live('click', function() {
+    var d = jQuery('<div class="dialog"></div>').appendTo("body");
+    d.dialog({ modal: true, autoOpen: false, width: 'auto', title: jQuery(this).attr('title') });
+    d.load(jQuery(this).attr('href'), '', function(){
+      d.dialog("open");
+      apply_ajax_forms();
+    });
+    return false;
+  });
+
 	jQuery("#global-login").focus(function() {
 		jQuery("#global-login").val("");
 	});

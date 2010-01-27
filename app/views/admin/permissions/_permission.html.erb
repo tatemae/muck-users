@@ -1,0 +1,4 @@
+<li id="<%=permission.dom_id%>">
+  <%= link_to(permission.role.rolename, admin_role_path(permission.role)) %>
+  <%= link_to('(Remove)', admin_permission_path(permission)) %>
+</li>
