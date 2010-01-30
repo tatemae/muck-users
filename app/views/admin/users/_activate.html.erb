@@ -1,5 +1,5 @@
 <% if user.active? -%>
-	<%= link_to I18n.t('muck.general.deactivate'), admin_user_path(user, :deactivate => 'true'), :class => 'remote-put' -%>
+	<%= link_to I18n.t('muck.general.deactivate'), admin_user_path(user, :deactivate => 'true'), :class => 'ajax-update' -%>
 <% else -%>
-	<%= link_to I18n.t('muck.general.activate'), admin_user_path(user, :activate => 'true'), :class => 'remote-put' -%>
+	<%= link_to I18n.t('muck.general.activate'), admin_user_path(user, :activate => 'true'), :class => 'ajax-update' -%>
 <% end -%>
