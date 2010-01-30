@@ -1,5 +1,5 @@
 <tr id="<%=role.dom_id%>">
   <td><%= link_to(role.rolename, admin_role_path(role)) %></td>
   <td><%= link_to(translate('muck.users.edit'), edit_admin_role_path(role), { :class => 'dialog-pop', :title => translate('muck.users.edit_role_dialog_title') } ) %></td>
-  <td><%= link_to(translate('muck.users.delete'), admin_role_path(role), { :class => 'remote-delete', :confirm => translate('muck.users.role_delete_confirm') } ) %></td>
+  <td><%= link_to(translate('muck.users.delete'), admin_role_path(role), { :class => 'ajax-delete', :confirm => translate('muck.users.role_delete_confirm') } ) %></td>
 </tr>
