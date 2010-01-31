@@ -125,7 +125,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
         redirect_to admin_users_path
       end
       format.xml  { head :ok }
-      format.js { render(:update){|page| page.visual_effect :fade, "#{@user.dom_id('row')}".to_sym} }
+      format.js { render :js => "jQuery('##{@user.dom_id('row')}').fadeOut();" }
     end
   end
   
@@ -137,10 +137,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
 
     def update_permissions(user, message)
       flash[:notice] = message
-      render :update do |page|
-        page << "jQuery('.dialog').dialog('close');"
-        page.replace_html user.dom_id('permissions'), :partial => 'admin/permissions/permission', :collection => user.permissions, :locals => { :user => user }
-      end
+      render :template => 'admin/users/update_permissions', :layout => false
     end
       
     def update_activate(message)

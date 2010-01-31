@@ -51,9 +51,9 @@ en:
       select_new_password: Select a New Password
       access_code_delete_link: Delete Access Code
       request_access_code: Request Access Code
-      updated_permissions: Updated Permissions
       first_name: First Name
       forgot_username: Forgot Username
+      updated_permissions: Updated Permissions
       account_activated: Your account has been activated! You can now login.
       already_logged_in: You are already logged in and don't need to recover your password.
       email_invalid: Invalid email
@@ -116,11 +116,13 @@ en:
       add_permission_to_user: Add Permission to user {{user}}
       user_account_deleted: You have successfully deleted your account.
       sign_in: Sign In
+      role_deleted: Role Deleted
+      role_not_deleted: Role could not be deleted
       complete_profile: Complete Your Profile
       access_codes: Access Codes
+      access_code_delete_confirm: Are you sure you want to cancel this access code?
       expiration_date_tip: Enter the date upon which the access code will become invalid
       problem_editing_account: There was a problem updating your information.
-      access_code_delete_confirm: Are you sure you want to cancel this access code?
       navigation: 
         inactive_users: Inactive Users
         all_users: All Users

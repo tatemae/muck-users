@@ -1,0 +1,2 @@
+jQuery('.dialog').dialog('close');
+jQuery('#<%= user.dom_id('permissions') %>').html('<%= escape_javascript(render(:partial => 'admin/permissions/permission', :collection => user.permissions, :locals => { :user => user })) %>');

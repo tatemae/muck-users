@@ -1,0 +1,2 @@
+jQuery('#current-roles').html('<%=escape_javascript(render(:partial => 'admin/roles/role', :collection => Role.by_alpha))%>');
+jQuery('.dialog').dialog('close');

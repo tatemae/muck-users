@@ -46,9 +46,17 @@ class Admin::Muck::RolesController < Admin::Muck::BaseController
       flash[:notice] = translate('muck.users.cant_delete_administrator_role')
       output_admin_messages
     else
-      @role.delete
-      render :update do |page|
-        page.remove @role.dom_id
+      if @role.delete
+        flash[:notice] = translate('muck.users.role_deleted')
+      else
+        flash[:notice] = translate('muck.users.role_not_deleted')
+      end
+      respond_to do |format|
+        format.html do
+          redirect_to admin_roles_path
+        end
+        format.xml  { head :ok }
+        format.js { render :text => "jQuery('##{@role.dom_id}').fadeOut();" }
       end
     end
   end
@@ -56,10 +64,7 @@ class Admin::Muck::RolesController < Admin::Muck::BaseController
   protected
     
     def ajax_update_roles
-      render :update do |page|
-        page.replace_html 'current-roles', :partial => 'admin/roles/role', :collection => Role.by_alpha
-        page << "jQuery('.dialog').dialog('close');"
-      end
+      render :template => 'admin/roles/ajax_update_roles'
     end
     
 end
