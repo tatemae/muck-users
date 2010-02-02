@@ -46,18 +46,24 @@ class Admin::Muck::RolesController < Admin::Muck::BaseController
       flash[:notice] = translate('muck.users.cant_delete_administrator_role')
       output_admin_messages
     else
-      if @role.delete
-        flash[:notice] = translate('muck.users.role_deleted')
-      else
-        flash[:notice] = translate('muck.users.role_not_deleted')
-      end
+      success = @role.delete
+      flash[:notice] = translate('muck.users.role_not_deleted') if !success
+
       respond_to do |format|
         format.html do
+          flash[:notice] = translate('muck.users.role_deleted') if success
           redirect_to admin_roles_path
         end
         format.xml  { head :ok }
-        format.js { render :text => "jQuery('##{@role.dom_id}').fadeOut();" }
+        format.js do
+          if success
+            render :js => 'admin/roles/destroy'
+          else
+            output_admin_messages
+          end
+        end
       end
+
     end
   end
 

@@ -125,7 +125,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
         redirect_to admin_users_path
       end
       format.xml  { head :ok }
-      format.js { render :js => "jQuery('##{@user.dom_id('row')}').fadeOut();" }
+      format.js { render :js => "#{}jQuery('##{@user.dom_id('row')}').fadeOut();" }
     end
   end
   
