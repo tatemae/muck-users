@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "0.3.0"
+  s.version = "0.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-01-30}
+  s.date = %q{2010-02-01}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -46,6 +46,8 @@ Gem::Specification.new do |s|
      "app/views/admin/access_codes/show.html.erb",
      "app/views/admin/permissions/_permission.html.erb",
      "app/views/admin/roles/_role.html.erb",
+     "app/views/admin/roles/ajax_update_roles.js.erb",
+     "app/views/admin/roles/destroy.js.erb",
      "app/views/admin/roles/edit.html.erb",
      "app/views/admin/roles/index.html.erb",
      "app/views/admin/roles/new.html.erb",
@@ -63,6 +65,7 @@ Gem::Specification.new do |s|
      "app/views/admin/users/index.html.erb",
      "app/views/admin/users/permissions.html.erb",
      "app/views/admin/users/search.html.erb",
+     "app/views/admin/users/update_permissions.js.erb",
      "app/views/password_resets/edit.html.erb",
      "app/views/password_resets/new.html.erb",
      "app/views/user_mailer/access_code.text.html.erb",
@@ -1144,6 +1147,7 @@ Gem::Specification.new do |s|
      "test/rails_root/public/javascripts/jquery/jquery.tips.js",
      "test/rails_root/public/javascripts/jquery/jrails.js",
      "test/rails_root/public/javascripts/muck-countries.js",
+     "test/rails_root/public/javascripts/muck-users.js",
      "test/rails_root/public/javascripts/muck.js",
      "test/rails_root/public/javascripts/muck_activities.js",
      "test/rails_root/public/javascripts/muck_time/en.js",
@@ -1189,6 +1193,7 @@ Gem::Specification.new do |s|
      "test/rails_root/public/stylesheets/blueprint/src/print.css",
      "test/rails_root/public/stylesheets/blueprint/src/reset.css",
      "test/rails_root/public/stylesheets/blueprint/src/typography.css",
+     "test/rails_root/public/stylesheets/default.css",
      "test/rails_root/public/stylesheets/jquery/cupertino/images/ui-bg_diagonals-small_0_aaaaaa_40x40.png",
      "test/rails_root/public/stylesheets/jquery/cupertino/images/ui-bg_diagonals-thick_15_444444_40x40.png",
      "test/rails_root/public/stylesheets/jquery/cupertino/images/ui-bg_glass_100_f0f0f0_1x400.png",
