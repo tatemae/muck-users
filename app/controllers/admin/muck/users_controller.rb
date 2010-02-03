@@ -89,7 +89,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
     else
       params[:user][:role_ids] ||= []
       if @user.update_attributes(params[:user])
-        return update_permissions(@user, translate('muck.users.updated_permissions'))
+        return update_permissions #(translate('muck.users.updated_permissions'))
       end
     end
     flash[:notice] = message
@@ -125,7 +125,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
         redirect_to admin_users_path
       end
       format.xml  { head :ok }
-      format.js { render :js => "#{}jQuery('##{@user.dom_id('row')}').fadeOut();" }
+      format.js { render :js => "jQuery('##{@user.dom_id('row')}').fadeOut();" }
     end
   end
   
@@ -135,17 +135,14 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   
   protected
 
-    def update_permissions(user, message)
-      flash[:notice] = message
+    def update_permissions(message = '')
+      flash[:notice] = message unless message.blank?
       render :template => 'admin/users/update_permissions', :layout => false
     end
       
     def update_activate(message)
       flash[:notice] = message
-      render :update do |page|
-        page.replace_html 'admin-messages', output_flash
-        page.replace_html @user.dom_id('link'), :partial => 'admin/users/activate', :locals => { :user => @user }
-      end
+      render :template => 'admin/users/update_activate', :layout => false
     end
     
     def get_user

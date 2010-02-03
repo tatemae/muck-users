@@ -1,0 +1,2 @@
+<%= output_admin_messages %>
+jQuery('#<%= @user.dom_id('link') %>').html('<%= escape_javascript(render(:partial => 'admin/permissions/activate', :locals => { :user => @user })) %>');

@@ -1,5 +1,5 @@
 <% custom_form_for @user, :url => admin_user_path(@user), :html => { :class => 'ajax', :method => :put } do |f| %>
-  <ul class="checkbox-list">
+  <ul class="admin-list checkbox-list">
     <% Role.all.each do |role| -%>
       <li><%= check_box_tag "user[role_ids][]", role.id, @user.has_role?(role.rolename) -%> <%= role.rolename -%></li>
     <% end -%>

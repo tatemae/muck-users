@@ -46,7 +46,7 @@ class Admin::Muck::RolesController < Admin::Muck::BaseController
       flash[:notice] = translate('muck.users.cant_delete_administrator_role')
       output_admin_messages
     else
-      success = @role.delete
+      success = @role.destroy
       flash[:notice] = translate('muck.users.role_not_deleted') if !success
 
       respond_to do |format|
@@ -57,7 +57,7 @@ class Admin::Muck::RolesController < Admin::Muck::BaseController
         format.xml  { head :ok }
         format.js do
           if success
-            render :js => 'admin/roles/destroy'
+            render :template => 'admin/roles/destroy', :layout => false
           else
             output_admin_messages
           end
