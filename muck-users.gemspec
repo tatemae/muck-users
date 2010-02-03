@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-02-01}
+  s.date = %q{2010-02-02}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -65,6 +65,7 @@ Gem::Specification.new do |s|
      "app/views/admin/users/index.html.erb",
      "app/views/admin/users/permissions.html.erb",
      "app/views/admin/users/search.html.erb",
+     "app/views/admin/users/update_activate.js.erb",
      "app/views/admin/users/update_permissions.js.erb",
      "app/views/password_resets/edit.html.erb",
      "app/views/password_resets/new.html.erb",
