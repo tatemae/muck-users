@@ -35,7 +35,7 @@ en:
       access_code_unlimited: Unlimited
       welcome: Welcome
       bulk_access_codes_created: Bulk access codes created and emailed to {{email_count}} emails.
-      users_in_role: "Users in this role:"
+      users_in_role: "Users in role: {{role}}"
       current_password: Current Password
       problem_creating_account: "There was a problem creating your account.  Please correct the following errors:"
       password_confirmation_help: To ensure that your password is correct please enter it again here.

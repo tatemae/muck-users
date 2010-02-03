@@ -1,3 +1,2 @@
-<h2><%= @role.rolename %></h2>
-<h3><%=translate('muck.users.users_in_role') %></h3>
+<h3><%=translate('muck.users.users_in_role', :role => @role.rolename) %></h3>
 <%= render :partial => 'admin/users/table' -%>

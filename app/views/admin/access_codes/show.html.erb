@@ -1,6 +1,6 @@
 <h2><%=translate('muck.users.access_code') %></h2>
 <%= link_to(translate('muck.users.access_code_edit_link'), edit_admin_access_code_path(@access_code.id)) %>
-<%= link_to(translate('muck.users.access_code_delete_link'), admin_access_code_path(@access_code.id), :method => :delete, :confirm => translate('muck.users.access_code_delete_confirm')) %>
+<%= link_to(translate('muck.users.access_code_delete_link'), admin_access_code_path(@access_code.id), :class => 'ajax-delete', :title => translate('muck.users.access_code_delete_confirm')) %>
 
 <table class="adminTable" cellspacing="0" cellpadding="0">
   <thead>
