@@ -12,16 +12,15 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   end
   
   def new
-    render :template => 'admin/access_codes/new'
+    render :template => 'admin/access_codes/new', :layout => false
   end
   
   def create
     @access_code = AccessCode.new(params[:access_code])
     if @access_code.save
-      flash[:notice] = 'Access Code was successfully added'
-      redirect_to admin_access_code_path(@access_code)
+      ajax_update_access_codes
     else
-      render :template => 'admin/access_codes/new'
+      output_admin_messages(@access_code)
     end
   end
   
@@ -56,23 +55,42 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
     if @access_code.update_attributes(params[:access_code])
       redirect_to(admin_access_code_path(@access_code))
     else
-      flash[:notice] = 'There was a problem updating the access code.'
+      flash[:notice] = translate('muck.users.access_code_update_problem')
       render :template => "admin/access_codes/edit"
     end
   end
 
   def destroy
     if @access_code.users.length <= 0
-      @access_code.destroy
-      flash[:notice] = "Deleted access code."
+      if success = @access_code.destroy
+        flash[:notice] = translate('muck.users.access_code_deleted')
+      else
+        flash[:notice] = translate('muck.users.access_code_delete_error')
+      end
     else
-      flash[:notice] = "Cannot delete access code it has users associated with it."
+      flash[:notice] = translate('muck.users.access_code_delete_problem')
     end
-    redirect_to admin_access_codes_path
+    respond_to do |format|
+      format.html { redirect_to admin_access_codes_path }
+      format.js do
+        if success
+          render :template => 'admin/access_codes/destroy', :layout => false
+        else
+          output_admin_messages
+        end
+      end
+    end
+    
   end
   
   protected
+  
     def setup_access_code
       @access_code = AccessCode.find(params[:id])
     end
+  
+    def ajax_update_access_codes
+      render :template => 'admin/access_codes/ajax_update_access_codes'
+    end
+      
 end

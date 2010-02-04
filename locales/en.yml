@@ -18,6 +18,8 @@ en:
       user_disable_problem: There was a problem disabling this user.
       access_code: Access Code
       change_permissions_for: Change Permissions for {{user}}
+      add_access_code_title: Add Access Code
+      edit_access_code_title: Edit Access Code
       login_success: Login successful!
       change_password: Change Password
       add_user_to_role: Add User to Role
@@ -29,6 +31,7 @@ en:
       login_requred: You must be logged in to access this feature.
       recover_password: Recover Password
       confirm_delete_account: Are you sure you want to delete your account?\nThis can not be undone.
+      access_code_deleted: Deleted access code.
       password_updated: Password successfully updated.
       username_sent: Your username has been sent emailed to you. Please check your Email.
       add_permission: (Add Permission)
@@ -45,6 +48,8 @@ en:
       account_not_activated: Your {{application_name}} account has not yet been activated.
       sorry_invalid_reset_code: We're sorry, but we could not locate your account. If you are having issues try copying and pasting the URL from your email into your browser or restarting the reset password process.
       problem_changing_password: There was a problem changing your password. {{errors}}
+      access_code_delete_problem: Cannot delete access code it has users associated with it.
+      access_code_delete_error: An error occured while trying to delete the access code
       user_enable_problem: There was a problem enabling this user.
       access_code_tip: Enter a access code.
       email_empty: Please enter an email address
@@ -98,6 +103,7 @@ en:
       edit: Edit
       activation_instructions: Activation Instructions
       access_code_created: Created
+      access_code_added: Access Code was successfully added
       change_permissions: Change Roles
       what_is_the_email: What is the email address used to create your account?
       activation_complete: Activation Complete
@@ -117,7 +123,6 @@ en:
       user_account_deleted: You have successfully deleted your account.
       sign_in: Sign In
       role_deleted: Role Deleted
-      role_not_deleted: Role could not be deleted
       complete_profile: Complete Your Profile
       access_codes: Access Codes
       access_code_delete_confirm: Are you sure you want to cancel this access code?
@@ -136,6 +141,7 @@ en:
       access_code_expires: Expires
       user_successfully_deleted: User {{login}} was successfully deleted.
       application_base_url_not_set: Please set application_base_url in global_config.yml
+      access_code_update_problem: There was a problem updating the access code.
       user_not_deactivated_error: Could not deactivate user
       total_users: "Total Users: {{total}}"
       password_cannot_be_blank: Password field cannot be blank.
@@ -146,6 +152,7 @@ en:
       confirm_password: Confirm Password
       add_user_to_role_title: Add user to a new role.
       expiration_date: Expiration Date
+      role_not_deleted: Role could not be deleted
       roles: Roles
       access_code_related_users: Users who signed up with this code
       login_empty: Please enter a login
@@ -163,7 +170,7 @@ en:
       change_your_password: Change Your Password
       forgot_your_password: Forgot your password?
       role_delete_confirm: Are you sure you want to delete this role?  All associated permissions will also be deleted!
-      unlimited: Unlimited
+      unlimited: Unlimited Uses
       remember_me: Remember me
       reset_your_password: Reset Your Password
       access_code_use_limit: Use Limit

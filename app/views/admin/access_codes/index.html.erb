@@ -1,7 +1,6 @@
 <h2><%=translate('muck.users.access_codes') %></h2>
-<div>
-  <%= link_to translate('muck.users.access_code_new'), new_admin_access_code_path %>
-</div>
+<p><%= link_to translate('muck.users.access_code_new'), new_admin_access_code_path, { :class => 'dialog-pop', :title => translate('muck.users.add_access_code_title') } %></p>
+
 <table class="adminTable" cellspacing="0" cellpadding="0">
   <thead>
     <tr>
@@ -11,8 +10,12 @@
       <th><%=translate('muck.users.access_code_unlimited') %></th>
       <th><%=translate('muck.users.access_code_expires') %></th>
       <th><%=translate('muck.users.access_code_created') %></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
-  <%= render :partial => 'admin/access_codes/access_code', :collection => @codes %>
+  <tbody id="current-access-codes">
+    <%= render :partial => 'admin/access_codes/access_code', :collection => @codes %>
+  </tbody>
 </table>
 <%= will_paginate @codes %>

@@ -1,8 +1,10 @@
-<tr>
+<tr id="<%=access_code.dom_id('row')%>">
   <td><%= link_to access_code.code, admin_access_code_path(access_code) %></td>
   <td><%= access_code.uses %></td>
   <td><%= access_code.use_limit %></td>
   <td><%= access_code.unlimited %></td>
   <td><%= format_date(access_code.expires_at) %></td>
   <td><%= format_date(access_code.created_at) %></td>
+  <td><%= link_to(translate('muck.users.edit'), edit_admin_access_code_path(access_code.id), { :class => 'dialog-pop', :title => translate('muck.users.edit_access_code_title') }) %></td>
+  <td><%= link_to(translate('muck.users.delete'), admin_access_code_path(access_code.id), :class => 'ajax-delete', :title => translate('muck.users.access_code_delete_confirm')) %></td>
 </tr>

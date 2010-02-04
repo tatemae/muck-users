@@ -1,0 +1,2 @@
+jQuery('#current-access-codes').prepend('<%=escape_javascript(render(:partial => 'admin/access_codes/access_code', :locals => { :access_code => @access_code } ))%>');
+jQuery('.dialog').dialog('close');
