@@ -1,12 +1,25 @@
 <h2><%=translate('muck.users.bulk_access_codes_title') %></h2>
 <p><%=translate('muck.users.bulk_access_codes_description') %></p>
-
 <%= output_errors(translate('muck.users.bulk_access_code_problem'), {:class => 'help-box'}, @access_code) %>
-
 <% custom_form_for :access_code, :url => bulk_create_admin_access_codes_path, :html => {:class => "standard-form alt"} do |f| -%>
-  <%= render :partial => 'admin/access_codes/form', :locals => {:f => f} %>
-  <%= text_field_tag :subject, params[:subject], :label => {:text => "Subject"} %>
-  <%= text_area_tag :message, params[:message], :label => {:text => "Message"} %>
-  <%= text_area_tag :emails, params[:emails], :label => {:text =>"Emails"}, :tip => translate('muck.users.bulk_access_code_emails_tip') %>
+  <%= f.text_field :code, { :label => translate('muck.users.access_code'),
+                            :tip => translate('muck.users.bulk_access_code_tip'),
+                            :hide_required => true } -%>
+  <%= f.text_field :use_limit, { :label => translate('muck.users.use_limit'),
+                                 :tip => translate('muck.users.use_limit_tip') } -%>
+  <%= f.check_box :unlimited, { :label => translate('muck.users.unlimited'),
+                                :tip => translate('muck.users.unlimited_tip') } -%>
+  <%= f.text_field :expires_at, { :label => translate('muck.users.expiration_date'),
+                                  :tip => translate('muck.users.expiration_date_tip'),
+                                  :class => 'date_pick' } -%>
+  <%= f.text_field :subject, { :label => translate('muck.users.bulk_access_code_subject') } -%>
+  <%= f.text_area :message, { :label => translate('muck.users.bulk_access_code_message') } -%>
+  <%= f.text_area :emails, { :label => translate('muck.users.bulk_access_code_emails'),
+                              :tip => translate('muck.users.bulk_access_code_emails_tip')  } -%>
   <%= f.submit translate('muck.users.save') %>
 <% end -%>
+<script type="text/javascript" language="JavaScript">
+  jQuery(document).ready(function(){
+    jQuery('.date_pick').datepicker();
+  });
+</script>

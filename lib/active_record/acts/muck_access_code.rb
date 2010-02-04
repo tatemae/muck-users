@@ -18,6 +18,9 @@ module ActiveRecord
           named_scope :by_alpha, :order => 'access_codes.code ASC'
           named_scope :active, :conditions => 'access_codes.expires_at > Now() AND access_codes.uses <= use_limit'
 
+          # Used to make bulk access code easier to deal with
+          attr_accessor :emails, :subject, :message
+          
           include ActiveRecord::Acts::MuckAccessCode::InstanceMethods
           extend ActiveRecord::Acts::MuckAccessCode::SingletonMethods
           
@@ -52,6 +55,13 @@ module ActiveRecord
       end
       
       module InstanceMethods
+        
+        def bulk_valid?
+          errors.add(:emails, I18n.translate('muck.users.validation_are_required')) if self.emails.blank?
+          errors.add(:subject, I18n.translate('muck.users.validation_is_required')) if self.subject.blank?
+          errors.add(:message, I18n.translate('muck.users.validation_is_required')) if self.message.blank?
+          raise RecordInvalid.new(self) if !errors.empty?
+        end
         
         def use_code
           self.update_attribute(:uses, self.uses + 1)

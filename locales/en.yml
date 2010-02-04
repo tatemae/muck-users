@@ -18,11 +18,10 @@ en:
       user_disable_problem: There was a problem disabling this user.
       access_code: Access Code
       change_permissions_for: Change Permissions for {{user}}
-      add_access_code_title: Add Access Code
-      edit_access_code_title: Edit Access Code
       login_success: Login successful!
       change_password: Change Password
       add_user_to_role: Add User to Role
+      add_access_code_title: Add Access Code
       terms_and_service: By clicking 'Sign-up Now' you agree to comply with the {{tos_link_anchor}}Terms and Conditions{{link_end}}.
       password_reset_link_sent: Instructions to reset your password have been emailed to you. Please check your email.
       deleting_user: deleting user...
@@ -35,6 +34,7 @@ en:
       password_updated: Password successfully updated.
       username_sent: Your username has been sent emailed to you. Please check your Email.
       add_permission: (Add Permission)
+      access_code_delete_error: An error occured while trying to delete the access code
       access_code_unlimited: Unlimited
       welcome: Welcome
       bulk_access_codes_created: Bulk access codes created and emailed to {{email_count}} emails.
@@ -42,6 +42,7 @@ en:
       current_password: Current Password
       problem_creating_account: "There was a problem creating your account.  Please correct the following errors:"
       password_confirmation_help: To ensure that your password is correct please enter it again here.
+      edit_access_code_title: Edit Access Code
       thanks_sign_up_login: Thanks for signing up! You may login now
       already_activated: Your account has already been activated. You can log in below.
       password: Password
@@ -49,13 +50,15 @@ en:
       sorry_invalid_reset_code: We're sorry, but we could not locate your account. If you are having issues try copying and pasting the URL from your email into your browser or restarting the reset password process.
       problem_changing_password: There was a problem changing your password. {{errors}}
       access_code_delete_problem: Cannot delete access code it has users associated with it.
-      access_code_delete_error: An error occured while trying to delete the access code
       user_enable_problem: There was a problem enabling this user.
       access_code_tip: Enter a access code.
       email_empty: Please enter an email address
       select_new_password: Select a New Password
+      bulk_access_code_emails: Emails
+      bulk_access_code_subject: Subject
       access_code_delete_link: Delete Access Code
       request_access_code: Request Access Code
+      validation_is_required: is required.
       first_name: First Name
       forgot_username: Forgot Username
       updated_permissions: Updated Permissions
@@ -88,6 +91,7 @@ en:
       click_to_sign_up_now: Click here to sign up now.
       forgot_password: Forgot Password
       login: Login
+      validation_are_required: are required.
       user_not_activated_error: Could not activate user
       password_not_reset: Password not reset.
       save: Save
@@ -118,9 +122,9 @@ en:
       access_code_request_tip: Enter your email and we'll send you an access code as soon as one is available. Thank you!
       password_mismatch: Password mismatch.
       add_role_dialog_title: Add Role
+      user_account_deleted: You have successfully deleted your account.
       new_password_doesnt_match: New password does not match the password confirmation.
       add_permission_to_user: Add Permission to user {{user}}
-      user_account_deleted: You have successfully deleted your account.
       sign_in: Sign In
       role_deleted: Role Deleted
       complete_profile: Complete Your Profile
@@ -134,6 +138,7 @@ en:
         search_users: Search Users
       user_marked_inactive: User has been marked as inactive
       access_code_request_thank_you: Thank you for your request.  We'll be in touch as soon as possible.
+      bulk_access_code_tip: Optional. If a code is specified then that code will be sent to all users.  Leave this field empty to send a unique code to each user.
       role: Role
       bulk_access_codes_title: Bulk Access Codes
       users_admin: Users
@@ -181,6 +186,8 @@ en:
       request_username_subject: Forgotten username
       could_not_find_reset_code: Could not find a password reset code.  Please try resetting your password again.
       register_for_account: Register for an account
+      bulk_access_code_message: Message
+      bulk_access_codes: Email Access Codes
       add_access_code: Add Access Code
       user_update: You're user information has been updated.
       update_profile: Update your profile

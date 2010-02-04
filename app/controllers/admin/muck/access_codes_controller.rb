@@ -18,7 +18,7 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   def create
     @access_code = AccessCode.new(params[:access_code])
     if @access_code.save
-      ajax_update_access_codes
+      ajax_create_access_code
     else
       output_admin_messages(@access_code)
     end
@@ -31,42 +31,45 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   end
   
   def bulk_create
-    emails = params[:emails].split(',')
+    @access_code = AccessCode.new(params[:access_code])
+    @access_code.bulk_valid?
+    emails = @access_code.emails.split(',')
+    use_random_code = @access_code.code.blank?
     emails.each do |email|
-      @access_code = AccessCode.new(params[:access_code])
-      @access_code.unlimited = false
-      @access_code.use_limit = 1
-      @access_code.uses = 0
-      @access_code.code ||= AccessCode.random_code # If they specified a code then don't change it.
-      @access_code.save!
-      UserMailer.deliver_access_code(email, params[:subject], params[:message], @access_code.code)
+      if use_random_code
+        # need to build a new access code for each email
+        @access_code = AccessCode.new(params[:access_code])
+        @access_code.unlimited = false
+        @access_code.use_limit = 1
+        @access_code.uses = 0
+        @access_code.code = AccessCode.random_code
+        @access_code.save!
+      end
+      UserMailer.deliver_access_code(email, @access_code.subject, @access_code.message, @access_code.code)
     end
     flash[:notice] = translate('muck.users.bulk_access_codes_created', :email_count => emails.count)
-    redirect_to bulk_create_admin_access_codes_path
+    redirect_to bulk_create_admin_access_codes_path    
+    
   rescue ActiveRecord::RecordInvalid => ex
     render :template => "admin/access_codes/bulk"
   end
   
   def edit
-    render :template => "admin/access_codes/edit"
+    render :template => "admin/access_codes/edit", :layout => false
   end
   
   def update
     if @access_code.update_attributes(params[:access_code])
-      redirect_to(admin_access_code_path(@access_code))
+      ajax_update_access_code
     else
-      flash[:notice] = translate('muck.users.access_code_update_problem')
-      render :template => "admin/access_codes/edit"
+      output_admin_messages(@access_code)
     end
   end
 
   def destroy
     if @access_code.users.length <= 0
-      if success = @access_code.destroy
-        flash[:notice] = translate('muck.users.access_code_deleted')
-      else
-        flash[:notice] = translate('muck.users.access_code_delete_error')
-      end
+      success = @access_code.destroy
+      flash[:notice] = translate('muck.users.access_code_delete_error') unless success
     else
       flash[:notice] = translate('muck.users.access_code_delete_problem')
     end
@@ -89,8 +92,12 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
       @access_code = AccessCode.find(params[:id])
     end
   
-    def ajax_update_access_codes
-      render :template => 'admin/access_codes/ajax_update_access_codes'
+    def ajax_update_access_code
+      render :template => 'admin/access_codes/ajax_update_access_code'
+    end
+    
+    def ajax_create_access_code
+      render :template => 'admin/access_codes/ajax_create_access_code'
     end
       
 end
