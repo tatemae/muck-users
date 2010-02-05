@@ -27,13 +27,19 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   def bulk
     @access_code = AccessCode.new
     @access_code.code = AccessCode.random_code
+    @access_code_requests_count = AccessCodeRequest.unfullfilled.count
     render :template => 'admin/access_codes/bulk'
   end
   
   def bulk_create
     @access_code = AccessCode.new(params[:access_code])
     @access_code.bulk_valid?
-    emails = @access_code.emails.split(',')
+    if send_requests = @access_code.send_requests
+      access_code_requests = AccessCodeRequest.get_requests(@access_code.send_request_limit)
+      emails = access_code_requests.map(&:email)
+    else
+      emails = @access_code.emails.split(',')
+    end
     use_random_code = @access_code.code.blank?
     emails.each do |email|
       if use_random_code
@@ -47,17 +53,19 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
       end
       UserMailer.deliver_access_code(email, @access_code.subject, @access_code.message, @access_code.code)
     end
+    AccessCodeRequest.mark_fullfilled(access_code_requests) if access_code_requests
     flash[:notice] = translate('muck.users.bulk_access_codes_created', :email_count => emails.count)
-    redirect_to bulk_create_admin_access_codes_path    
-    
+    redirect_to bulk_create_admin_access_codes_path
+
   rescue ActiveRecord::RecordInvalid => ex
+    @access_code_requests_count = AccessCodeRequest.unfullfilled.count
     render :template => "admin/access_codes/bulk"
   end
-  
+
   def edit
     render :template => "admin/access_codes/edit", :layout => false
   end
-  
+
   def update
     if @access_code.update_attributes(params[:access_code])
       ajax_update_access_code

@@ -8,6 +8,7 @@ en:
       join_application_name: Join and get it done
       email_help: Please use a valid, current e-mail address. We will never share or spam your e-mail address.
       logout_required: ""
+      access_code_fullfill_invites_limit_tip: Enter a number to limit the number of requests sent out.  For example, entering 100 will limit the invites to the most recent 100 requests
       access_required_warning: Site access is currently restricted.  You need a valid access code to sign up.
       login_out_success: You have been logged out.
       sign_out_title: Sign Out
@@ -27,6 +28,7 @@ en:
       deleting_user: deleting user...
       forgot_your_username: Forgot your username?
       email: Email
+      access_code_fullfill_invites_tip: Check here to send invites to users who have requested an invite.  This will ignore any emails specified above.
       login_requred: You must be logged in to access this feature.
       recover_password: Recover Password
       confirm_delete_account: Are you sure you want to delete your account?\nThis can not be undone.
@@ -35,6 +37,7 @@ en:
       username_sent: Your username has been sent emailed to you. Please check your Email.
       add_permission: (Add Permission)
       access_code_delete_error: An error occured while trying to delete the access code
+      access_code_fullfill_invites: Fulfill Invite Requests
       access_code_unlimited: Unlimited
       welcome: Welcome
       bulk_access_codes_created: Bulk access codes created and emailed to {{email_count}} emails.
@@ -58,13 +61,13 @@ en:
       bulk_access_code_subject: Subject
       access_code_delete_link: Delete Access Code
       request_access_code: Request Access Code
-      validation_is_required: is required.
       first_name: First Name
       forgot_username: Forgot Username
       updated_permissions: Updated Permissions
       account_activated: Your account has been activated! You can now login.
       already_logged_in: You are already logged in and don't need to recover your password.
       email_invalid: Invalid email
+      validation_is_required: is required.
       user_disabled: User disabled
       invalid_username: Invalid username
       update: Update
@@ -116,9 +119,9 @@ en:
       password_reset: Password reset.
       access_code_uses: Uses
       recover_password_prompt: (If you forgot your password recover it here)
+      username: Username
       user_marked_active: User has been marked as active
       all_users: All Users
-      username: Username
       access_code_request_tip: Enter your email and we'll send you an access code as soon as one is available. Thank you!
       password_mismatch: Password mismatch.
       add_role_dialog_title: Add Role
@@ -138,6 +141,7 @@ en:
         search_users: Search Users
       user_marked_inactive: User has been marked as inactive
       access_code_request_thank_you: Thank you for your request.  We'll be in touch as soon as possible.
+      access_code_fullfill_invites_limit: Invite Request Limit
       bulk_access_code_tip: Optional. If a code is specified then that code will be sent to all users.  Leave this field empty to send a unique code to each user.
       role: Role
       bulk_access_codes_title: Bulk Access Codes
@@ -186,8 +190,9 @@ en:
       request_username_subject: Forgotten username
       could_not_find_reset_code: Could not find a password reset code.  Please try resetting your password again.
       register_for_account: Register for an account
+      access_code_request_count: There are currently {{access_code_requests_count}} access code requests
       bulk_access_code_message: Message
-      bulk_access_codes: Email Access Codes
+      bulk_access_codes: Bulk Access Codes
       add_access_code: Add Access Code
       user_update: You're user information has been updated.
       update_profile: Update your profile

@@ -2,21 +2,36 @@
 <p><%=translate('muck.users.bulk_access_codes_description') %></p>
 <%= output_errors(translate('muck.users.bulk_access_code_problem'), {:class => 'help-box'}, @access_code) %>
 <% custom_form_for :access_code, :url => bulk_create_admin_access_codes_path, :html => {:class => "standard-form alt"} do |f| -%>
-  <%= f.text_field :code, { :label => translate('muck.users.access_code'),
-                            :tip => translate('muck.users.bulk_access_code_tip'),
-                            :hide_required => true } -%>
-  <%= f.text_field :use_limit, { :label => translate('muck.users.use_limit'),
-                                 :tip => translate('muck.users.use_limit_tip') } -%>
-  <%= f.check_box :unlimited, { :label => translate('muck.users.unlimited'),
-                                :tip => translate('muck.users.unlimited_tip') } -%>
-  <%= f.text_field :expires_at, { :label => translate('muck.users.expiration_date'),
-                                  :tip => translate('muck.users.expiration_date_tip'),
-                                  :class => 'date_pick' } -%>
-  <%= f.text_field :subject, { :label => translate('muck.users.bulk_access_code_subject') } -%>
-  <%= f.text_area :message, { :label => translate('muck.users.bulk_access_code_message') } -%>
-  <%= f.text_area :emails, { :label => translate('muck.users.bulk_access_code_emails'),
-                              :tip => translate('muck.users.bulk_access_code_emails_tip')  } -%>
-  <%= f.submit translate('muck.users.save') %>
+  <div class="span-11 column colborder">
+    <%= f.text_field :code, { :label => translate('muck.users.access_code'),
+                              :tip => translate('muck.users.bulk_access_code_tip'),
+                              :hide_required => true } -%>
+    <%= f.text_field :use_limit, { :label => translate('muck.users.use_limit'),
+                                   :tip => translate('muck.users.use_limit_tip') } -%>
+    <%= f.check_box :unlimited, { :label => translate('muck.users.unlimited'),
+                                  :tip => translate('muck.users.unlimited_tip') } -%>
+    <%= f.text_field :expires_at, { :label => translate('muck.users.expiration_date'),
+                                    :tip => translate('muck.users.expiration_date_tip'),
+                                    :class => 'date_pick' } -%>
+    <%= f.text_field :subject, { :label => translate('muck.users.bulk_access_code_subject') } -%>
+    <%= f.text_area :message, { :label => translate('muck.users.bulk_access_code_message') } -%>
+  </div>
+  <div class="span-11 column">
+    <%= f.text_area :emails, { :label => translate('muck.users.bulk_access_code_emails'),
+                                :tip => translate('muck.users.bulk_access_code_emails_tip')  } -%>
+
+    <% if @access_code_requests_count > 0 -%>
+      <p><%=translate('muck.users.access_code_request_count', :access_code_requests_count => @access_code_requests_count) %></p>
+      <%= f.check_box :send_requests, { :label => translate('muck.users.access_code_fullfill_invites'),
+                                        :tip => translate('muck.users.access_code_fullfill_invites_tip') } -%>
+
+      <%= f.text_field :send_request_limit, { :label => translate('muck.users.access_code_fullfill_invites_limit'),
+                                              :tip => translate('muck.users.access_code_fullfill_invites_limit_tip') } -%>
+    <% end -%>
+  </div>
+  <div class="span-24 column center">
+    <%= f.submit translate('muck.users.save') %>
+  </div>
 <% end -%>
 <script type="text/javascript" language="JavaScript">
   jQuery(document).ready(function(){

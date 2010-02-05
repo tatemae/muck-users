@@ -17,10 +17,11 @@ require File.dirname(__FILE__) + '/../test_helper'
 class AccessCodeTest < ActiveSupport::TestCase
 
   context "access code instance" do
-
     setup do
-      Factory(:access_code)
+      @access_code = Factory(:access_code)
     end
+    
+    subject { @access_code }
     
     should_validate_presence_of :code, :uses
     should_validate_uniqueness_of :code
