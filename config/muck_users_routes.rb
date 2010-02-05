@@ -55,7 +55,7 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |a|
     a.resources :users, :controller => 'muck/users', :member => { :permissions => :get }, :collection => { :inactive => :get, :inactive_emails => :get, :activate_all => :get, :search => :post, :ajax_search => :post }
     a.resources :roles, :controller => 'muck/roles'
-    a.resources :access_codes, :controller => 'muck/access_codes', :collection => {:bulk => :get, :bulk_create => :post}
+    a.resources :access_codes, :controller => 'muck/access_codes', :collection => { :bulk => :get, :bulk_create => :post }
   end
 
 end

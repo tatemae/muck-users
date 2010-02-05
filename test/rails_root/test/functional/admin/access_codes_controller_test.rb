@@ -67,7 +67,7 @@ class Admin::Muck::AccessCodesControllerTest < ActionController::TestCase
             post :bulk_create, :access_code => @params
           end
           should_set_the_flash_to(I18n.translate('muck.users.bulk_access_codes_created', :email_count => 1))
-          should_redirect_to("bulk access code page") { bulk_create_admin_access_codes_path }
+          should_redirect_to("bulk access code page") { bulk_admin_access_codes_path }
         end
 
         context "valid - sent invites" do
@@ -77,7 +77,10 @@ class Admin::Muck::AccessCodesControllerTest < ActionController::TestCase
             post :bulk_create, :access_code => @params.merge(:send_requests => true)
           end
           should_set_the_flash_to(I18n.translate('muck.users.bulk_access_codes_created', :email_count => 1))
-          should_redirect_to("bulk access code page") { bulk_create_admin_access_codes_path }
+          should_redirect_to("bulk access code page") { bulk_admin_access_codes_path }
+          should "set all access codes as fullfilled" do
+            assert_equal 0, AccessCodeRequest.unfullfilled.length
+          end
         end
         
         context "valid - no access code provided" do
@@ -85,7 +88,7 @@ class Admin::Muck::AccessCodesControllerTest < ActionController::TestCase
             post :bulk_create, :access_code => @params.merge(:code => nil)
           end
           should_set_the_flash_to(I18n.translate('muck.users.bulk_access_codes_created', :email_count => 1))
-          should_redirect_to("bulk access code page") { bulk_create_admin_access_codes_path }
+          should_redirect_to("bulk access code page") { bulk_admin_access_codes_path }
           should "set a random code" do
             assert !assigns(:access_code).code.blank?
           end

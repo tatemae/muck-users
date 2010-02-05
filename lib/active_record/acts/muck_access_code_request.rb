@@ -25,7 +25,7 @@ module ActiveRecord
       module SingletonMethods
         
         def get_requests(limit = nil)
-          if limit
+          if limit && limit.to_i > 0
             self.by_oldest.unfullfilled.all(:limit => limit)
           else
             self.by_oldest.unfullfilled

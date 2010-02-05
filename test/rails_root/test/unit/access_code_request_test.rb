@@ -39,9 +39,13 @@ class AccessCodeRequestTest < ActiveSupport::TestCase
         Factory(:access_code_request)
         Factory(:access_code_request)
       end
-      should "get access code requests" do
+      should "get 1 access code request" do
         access_code_requests = AccessCodeRequest.get_requests(1)
         assert_equal 1, access_code_requests.length
+      end
+      should "get all access code requests" do
+        access_code_requests = AccessCodeRequest.get_requests('')
+        assert access_code_requests.length > 0
       end
     end
     

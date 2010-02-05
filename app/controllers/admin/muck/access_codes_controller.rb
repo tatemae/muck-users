@@ -1,6 +1,4 @@
 class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
-
-  before_filter :setup_access_code, :except => [:index, :new, :create, :bulk, :bulk_create]
   
   def index
     @codes = AccessCode.by_alpha.paginate(:page => @page, :per_page => @per_page)
@@ -8,6 +6,7 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   end
 
   def show
+    @access_code = AccessCode.find(params[:id])
     render :template => 'admin/access_codes/show'
   end
   
@@ -55,7 +54,7 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
     end
     AccessCodeRequest.mark_fullfilled(access_code_requests) if access_code_requests
     flash[:notice] = translate('muck.users.bulk_access_codes_created', :email_count => emails.count)
-    redirect_to bulk_create_admin_access_codes_path
+    redirect_to bulk_admin_access_codes_path
 
   rescue ActiveRecord::RecordInvalid => ex
     @access_code_requests_count = AccessCodeRequest.unfullfilled.count
@@ -63,10 +62,12 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   end
 
   def edit
+    @access_code = AccessCode.find(params[:id])
     render :template => "admin/access_codes/edit", :layout => false
   end
 
   def update
+    @access_code = AccessCode.find(params[:id])
     if @access_code.update_attributes(params[:access_code])
       ajax_update_access_code
     else
@@ -75,6 +76,7 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   end
 
   def destroy
+    @access_code = AccessCode.find(params[:id])
     if @access_code.users.length <= 0
       success = @access_code.destroy
       flash[:notice] = translate('muck.users.access_code_delete_error') unless success
@@ -95,10 +97,6 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   end
   
   protected
-  
-    def setup_access_code
-      @access_code = AccessCode.find(params[:id])
-    end
   
     def ajax_update_access_code
       render :template => 'admin/access_codes/ajax_update_access_code'
