@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "0.3.3"
+  s.version = "0.3.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-02-04}
+  s.date = %q{2010-02-08}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -1300,6 +1300,7 @@ Gem::Specification.new do |s|
      "test/rails_root/test/integration/.keep",
      "test/rails_root/test/test_helper.rb",
      "test/rails_root/test/unit/.keep",
+     "test/rails_root/test/unit/access_code_request_test.rb",
      "test/rails_root/test/unit/access_code_test.rb",
      "test/rails_root/test/unit/permission_test.rb",
      "test/rails_root/test/unit/role_test.rb",
@@ -1356,6 +1357,7 @@ Gem::Specification.new do |s|
      "test/rails_root/test/functional/username_request_controller_test.rb",
      "test/rails_root/test/functional/users_controller_test.rb",
      "test/rails_root/test/test_helper.rb",
+     "test/rails_root/test/unit/access_code_request_test.rb",
      "test/rails_root/test/unit/access_code_test.rb",
      "test/rails_root/test/unit/permission_test.rb",
      "test/rails_root/test/unit/role_test.rb",

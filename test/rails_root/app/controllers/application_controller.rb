@@ -13,12 +13,13 @@ class ApplicationController < ActionController::Base
       access_denied unless admin?
     end
   
-    # only require ssl if we are in production
+    # only require ssl if it is turned on
     def ssl_required?
-      return ENV['SSL'] == 'on' ? true : false if defined? ENV['SSL']
-      return false if local_request?
-      return false if RAILS_ENV == 'test'
-      ((self.class.read_inheritable_attribute(:ssl_required_actions) || []).include?(action_name.to_sym)) && (RAILS_ENV == 'production' || RAILS_ENV == 'staging')
+      if GlobalConfig.enable_ssl
+        (self.class.read_inheritable_attribute(:ssl_required_actions) || []).include?(action_name.to_sym)
+      else
+        false
+      end
     end
-  
+
 end
