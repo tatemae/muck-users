@@ -75,6 +75,31 @@ class UserTest < ActiveSupport::TestCase
           assert !User.inactive.include?(@active_user)
         end
       end
+      context "by_login_alpha" do
+        setup do
+          @user1 = Factory(:user, :login => 'atest')
+          @user2 = Factory(:user, :login => 'btest')
+        end
+        should "order by login" do
+          users = User.by_login_alpha
+          assert users.index(@user1) < users.index(@user2)
+        end
+      end
+      context "by_login" do
+        setup do
+          @zuser = Factory(:user, :login => 'zasdf')
+          @xuser = Factory(:user, :login => 'xasdf')
+        end
+        should "find login by character match" do
+          assert User.by_login('z').include?(@zuser)
+        end
+        should "not find login that doesn't match" do
+          assert !User.by_login('x').include?(@zuser)
+        end
+        should "not find login that start with a matching character" do
+          assert User.by_login('asdf').blank?
+        end
+      end
     end
   end
 

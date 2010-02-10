@@ -77,6 +77,16 @@ class Muck::UsersController < ApplicationController
     after_destroy_response
   end
 
+  def login_search
+    if params[:q]
+      @users = User.by_login_alpha.by_login(params[:q], :limit => 100)
+    end
+    respond_to do |format|
+      format.js { render :text => @users.collect{|user| user.login }.join("\n") }
+      format.json { render :json => @users.collect{|user| { :login => user.login } }.to_json }
+    end
+  end
+  
   def is_login_available
     result = t('muck.users.username_not_available')
     if params[:user_login].nil?
@@ -85,13 +95,9 @@ class Muck::UsersController < ApplicationController
       result = t('muck.users.login_empty')
     elsif !User.login_exists?(params[:user_login])
       @user = User.new(:login => params[:user_login])
-      if !@user.validate_attributes(:only => [:login])
-        result = t('muck.users.invalid_username')
-        @user.errors.full_messages.each do |message|
-          if !message.include? 'blank'
-            result += "<br />#{message}"
-          end
-        end
+      @user.valid? # we aren't interested in the output of this.
+      if @user.errors.on(:login)
+        result = "#{t('muck.users.invalid_username')} <br /> #{t('muck.users.username')} #{@user.errors.on(:login)}"
       else
         result = t('muck.users.username_available')
       end

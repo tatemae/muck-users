@@ -232,32 +232,91 @@ class Muck::UsersControllerTest < ActionController::TestCase
       should_redirect_to("login") { login_path }
     end
   end
-
-  context "on GET to is_email_available" do
+  
+  context "GET to login_search" do
+    setup do
+      @auser = Factory(:user, :login => 'aaaa')
+      @zuser = Factory(:user, :login => 'zzzz')
+    end
+    context "valid params" do
+      setup do
+        get :login_search, :q => 'a', :format => 'js'
+      end
+      should_respond_with :success
+      should "find a user" do
+        assert @response.body.include?('aaaa')
+        assert assigns(:users).include?(@auser)
+      end
+      should "not find a non-matching user" do
+        assert !@response.body.include?('zzzz')
+      end
+    end
+  end
+  
+  context "POST to is_login_available" do
     context "no params" do
       setup do
-        get :is_email_available
+        post :is_login_available
+      end
+      should_respond_with :success
+      should_render_text ""
+    end
+    context "empty login" do
+      setup do
+        post :is_login_available, :user_login => ''
+      end
+      should_respond_with :success
+      should_render_text I18n.t('muck.users.login_empty')
+    end
+    context "valid login" do
+      setup do
+        post :is_login_available, :user_login => 'testdude1945'
+      end
+      should_respond_with :success
+      should_render_text I18n.t('muck.users.username_available')
+    end
+    context "invalid login" do
+      setup do
+        post :is_login_available, :user_login => 'testdude1945@example.comm'
+      end
+      should_respond_with :success
+      should_render_partial_text I18n.t('muck.users.invalid_username')
+    end
+    context "login not available" do
+      setup do
+        @user = Factory(:user)
+        post :is_login_available, :user_login => @user.login
+      end
+      should_respond_with :success
+      should_render_partial_text I18n.t('muck.users.username_not_available')
+    end
+  end
+  
+  context "POST to is_email_available" do
+    context "no params" do
+      setup do
+        post :is_email_available
       end
       should_respond_with :success
       should_render_text ""
     end
     context "empty email" do
       setup do
-        get :is_email_available, :user_email => ''
+        post :is_email_available, :user_email => ''
       end
       should_respond_with :success
       should_render_text I18n.t('muck.users.email_empty')
     end
     context "valid email" do
       setup do
-        get :is_email_available, :user_email => 'testdude1945@example.com'
+        post :is_email_available, :user_email => 'testdude1945@example.com'
       end
       should_respond_with :success
       should_render_text I18n.t('muck.users.email_available')
     end
     context "invalid email" do
       setup do
-        get :is_email_available, :user_email => 'testdude1945@com'
+        post :is_email_available, :user_email => 'testdude1945@com'
       end
       should_respond_with :success
       should_render_text I18n.t('muck.users.email_invalid')
@@ -265,7 +324,7 @@ class Muck::UsersControllerTest < ActionController::TestCase
     context "email not available" do
       setup do
         @user = Factory(:user)
-        get :is_email_available, :user_email => @user.email
+        post :is_email_available, :user_email => @user.email
       end
       should_respond_with :success
       should_render_partial_text I18n.t('muck.users.email_not_available', :reset_password_help => '')

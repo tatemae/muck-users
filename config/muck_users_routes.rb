@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
   # users
   map.resources :users, :controller => 'muck/users',
                         :member => { :enable => :put, :welcome => :get, :activation_instructions => :get },
-                        :collection => { :is_login_available => :post, :is_email_available => :post }
+                        :collection => { :is_login_available => :post, :is_email_available => :post, :login_search => :get }
   
   map.with_options(:controller => 'muck/users') do |users| 
     users.signup "/signup",  :action => 'new', :requirements => {:protocol => muck_routes_protocol}

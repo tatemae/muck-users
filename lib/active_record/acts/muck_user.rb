@@ -16,6 +16,8 @@ module ActiveRecord
           named_scope :active, :conditions => "activated_at IS NOT NULL"
           named_scope :inactive, :conditions => "activated_at IS NULL"    
           named_scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
+          named_scope :by_login_alpha, :order => "login ASC"
+          named_scope :by_login, lambda { |*args| { :conditions => ["login LIKE ?", args.first + '%'] } }
           
           belongs_to :access_code
           accepts_nested_attributes_for :access_code

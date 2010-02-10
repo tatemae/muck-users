@@ -62,6 +62,7 @@ en:
       access_code_delete_link: Delete Access Code
       request_access_code: Request Access Code
       first_name: First Name
+      username: Username
       forgot_username: Forgot Username
       updated_permissions: Updated Permissions
       account_activated: Your account has been activated! You can now login.
