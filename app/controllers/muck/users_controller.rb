@@ -79,7 +79,7 @@ class Muck::UsersController < ApplicationController
 
   def login_search
     if params[:q]
-      @users = User.by_login_alpha.by_login(params[:q], :limit => 100)
+      @users = User.by_login_alpha.by_login(params[:q], :limit => params[:limit] || 100)
     end
     respond_to do |format|
       format.js { render :text => @users.collect{|user| user.login }.join("\n") }

@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
 	jQuery("#user_email").keydown(function() {
 	  jQuery("#email-availibility").html('');
 	});
-	jQuery(".login-search").autocomplete('/login_search.js', {
+	jQuery(".login-search").autocomplete('/users/login_search.js', {
 		minChars: 1,
 		delay: 200,
 		autoFill: true,

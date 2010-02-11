@@ -104,6 +104,19 @@ By default when a user logs out they are sent to the login page.  You can add a 
 
 muck-users sends out emails that need to be able to generate links.  Be sure to set a value for application_url in global_config.yml
 
+=== Helpers
+Muck users provides an autocomplete login search.  To enable this functionality create a text box with the class 'login-search' and add 
+the following code to include the needed javascript and css:
+
+  <% content_for :head do -%>
+  <%= javascript_include_tag 'jquery/jquery.autocomplete.min' %>
+  <%= javascript_include_tag 'muck-users' %>
+  <%= stylesheet_link_tag 'jquery/jquery.autocomplete' %>
+  <% end -%>
+
+If you override the users controller you will also need to include login_search in your routes:
+  map.resources :users, :collection => { :login_search => :get }
+
 
 == General information
 This engine implements authlogic.  Some of the code contained was taken from here:
