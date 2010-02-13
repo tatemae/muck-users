@@ -4,5 +4,6 @@
       <li><%= check_box_tag "user[role_ids][]", role.id, @user.has_role?(role.rolename) -%> <%= role.rolename -%></li>
     <% end -%>
   </ul>
+  <%= hidden_field_tag :update_roles, true %>
   <%= f.submit translate('muck.users.save') %>
 <% end %>

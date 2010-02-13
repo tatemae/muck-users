@@ -8,5 +8,6 @@
 	</td>
 	<td><%= link_to(translate('muck.users.change_permissions'), permissions_admin_user_path(user), { :title => translate('muck.users.change_permissions_for', :user => user.full_name), :class => 'dialog-pop' }) %></td>
   <td id="<%=user.dom_id('link')%>"><%= render :partial => 'admin/users/activate', :locals => { :user => user } %></td>
+	<td><%= link_to(t("muck.users.edit"), edit_admin_user_path(user.id)) -%></td>
 	<td><%= link_to(t("muck.general.delete"), admin_user_path(user.id), { :title => t('muck.users.delete_this_user'), :class => 'delete-user ajax-delete' }) -%></td>
 </tr>

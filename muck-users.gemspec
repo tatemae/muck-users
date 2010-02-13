@@ -69,8 +69,6 @@ Gem::Specification.new do |s|
      "app/views/admin/users/permissions.html.erb",
      "app/views/admin/users/row.js.erb",
      "app/views/admin/users/search.html.erb",
-     "app/views/admin/users/update_activate.js.erb",
-     "app/views/admin/users/update_permissions.js.erb",
      "app/views/password_resets/edit.html.erb",
      "app/views/password_resets/new.html.erb",
      "app/views/user_mailer/access_code.text.html.erb",

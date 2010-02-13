@@ -1,7 +1,7 @@
 class Admin::Muck::UsersController < Admin::Muck::BaseController
   unloadable
     
-  before_filter :get_user, :only => [:update, :destroy, :permissions]
+  before_filter :get_user, :only => [:edit, :update, :destroy, :permissions]
   before_filter :setup_subnavigation
   
   def index
@@ -66,6 +66,10 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
     end
   end
 
+  def edit
+    render :template => 'admin/users/edit'
+  end
+  
   def update
     
     if params[:deactivate]
@@ -88,11 +92,28 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
       else
         flash[:notice] = translate('muck.users.user_not_activated_error')
       end
-    else
+    elsif params[:update_roles]
+      params[:user] ||= {}
       params[:user][:role_ids] ||= []
       if @user.update_attributes(params[:user])
         return update_permissions
       end
+    else # Standard update
+      if @user.update_attributes(params[:user])
+        respond_to do |format|
+          format.html do
+            flash[:notice] = translate('muck.users.user_update_sucess')
+            redirect_to admin_users_path
+          end
+          format.js { render :template => 'admin/users/row', :layout => false }
+        end
+      else
+        respond_to do |format|
+          format.html { render :template => 'admin/users/edit' }
+          format.js { output_admin_messages(@user) }
+        end
+      end
+      return
     end
 
     respond_to do |format|
