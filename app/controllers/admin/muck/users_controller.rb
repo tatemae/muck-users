@@ -62,9 +62,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   def ajax_search
     search_results
     respond_to do |format|
-      format.html do
-        render :partial => 'admin/users/table', :layout => false
-      end
+      format.html { render :partial => 'admin/users/table', :layout => false }
     end
   end
 
@@ -72,19 +70,23 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
     
     if params[:deactivate]
       if is_me?(@user)
-        message = translate("muck.users.cannot_deactivate_yourself")
+        flash[:notice] = translate("muck.users.cannot_deactivate_yourself")
       else
-        if @user.deactivate!
-          return update_activate(translate('muck.users.user_marked_inactive'))
+        if @user.admin?
+          flash[:notice] = translate('muck.users.cant_disable_admin')
         else
-          message = translate('muck.users.user_not_deactivated_error')
+          if @user.deactivate!
+            return update_activate(translate('muck.users.user_marked_inactive'))
+          else
+            flash[:notice] = translate('muck.users.user_not_deactivated_error')
+          end
         end
       end
     elsif params[:activate]
       if @user.activate!
         return update_activate(translate('muck.users.user_marked_active'))
       else
-        message = translate('muck.users.user_not_activated_error')
+        flash[:notice] = translate('muck.users.user_not_activated_error')
       end
     else
       params[:user][:role_ids] ||= []
@@ -92,40 +94,29 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
         return update_permissions #(translate('muck.users.updated_permissions'))
       end
     end
-    flash[:notice] = message
-    output_admin_messages(@user)
-  end
 
-  def enable
-    @user = User.find(params[:id])
-    if @user.update_attribute(:enabled, true)
-      self.current_user = @user
-      flash[:notice] = t("muck.users.user_enabled")
-    else
-      flash[:error] = t("muck.users.user_enable_problem")
+    respond_to do |format|
+      format.html { redirect_to admin_users_path }
+      format.js { output_admin_messages(@user) }
     end
-    redirect_to :action => 'index'
-  end
-  
-  def disable
-    @user = admin? ? User.find(params[:id]) : User.find(current_user)
-    if @user.update_attribute(:enabled, false)
-      flash[:notice] = t("users.user_disabled")
-    else
-      flash[:error] = t("users.user_disable_problem")
-    end
-    redirect_to :action => 'index'
   end
   
   def destroy
-    @user.destroy
+    if @user.admin?
+      flash[:notice] = translate('muck.users.cant_delete_admin')
+    else
+      @user.destroy
+      flash[:notice] = translate('muck.users.user_successfully_deleted', :login => @user.login)
+    end
     respond_to do |format|
-      format.html do
-        flash[:notice] = translate('muck.users.user_successfully_deleted', :login => @user.login)
-        redirect_to admin_users_path
+      format.html { redirect_to admin_users_path }
+      format.js do
+        if @user.admin?
+          output_admin_messages
+        else
+          render :js => "jQuery('##{@user.dom_id('row')}').fadeOut();"
+        end
       end
-      format.xml  { head :ok }
-      format.js { render :js => "jQuery('##{@user.dom_id('row')}').fadeOut();" }
     end
   end
   
@@ -137,12 +128,18 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
 
     def update_permissions(message = '')
       flash[:notice] = message unless message.blank?
-      render :template => 'admin/users/update_permissions', :layout => false
+      respond_to do |format|
+        format.html { redirect_to admin_users_path }
+        format.js { render :template => 'admin/users/row', :layout => false }
+      end
     end
       
-    def update_activate(message)
-      flash[:notice] = message
-      render :template => 'admin/users/update_activate', :layout => false
+    def update_activate(message = '')
+      flash[:notice] = message unless message.blank?
+      respond_to do |format|
+        format.html { redirect_to admin_users_path }
+        format.js { render :template => 'admin/users/row', :layout => false }
+      end
     end
     
     def get_user

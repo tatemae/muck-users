@@ -8,6 +8,7 @@ en:
       join_application_name: Join and get it done
       email_help: Please use a valid, current e-mail address. We will never share or spam your e-mail address.
       logout_required: ""
+      cant_disable_admin: Can't disable an administrator.  Please remove the user from the administrator role and try again.
       access_code_fullfill_invites_limit_tip: Enter a number to limit the number of requests sent out.  For example, entering 100 will limit the invites to the most recent 100 requests
       access_required_warning: Site access is currently restricted.  You need a valid access code to sign up.
       login_out_success: You have been logged out.
@@ -62,7 +63,6 @@ en:
       access_code_delete_link: Delete Access Code
       request_access_code: Request Access Code
       first_name: First Name
-      username: Username
       forgot_username: Forgot Username
       updated_permissions: Updated Permissions
       account_activated: Your account has been activated! You can now login.
@@ -151,6 +151,7 @@ en:
       access_code_expires: Expires
       user_successfully_deleted: User {{login}} was successfully deleted.
       application_base_url_not_set: Please set application_base_url in global_config.yml
+      cant_delete_admin: You can't delete a user that is in the admin role.  Remove the user from the administrator role and then try again.  Please be careful when deleting administrators.  If you delete all administrator accounts you will no longer be able to login to the administration system.
       access_code_update_problem: There was a problem updating the access code.
       user_not_deactivated_error: Could not deactivate user
       total_users: "Total Users: {{total}}"
