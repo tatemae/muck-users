@@ -199,6 +199,7 @@ en:
       user_update: You're user information has been updated.
       update_profile: Update your profile
       update_user: Update your user information
+      update_user_admin: Update User
       choose_member_name: Member Name
       access_denied: You don't have permission to access the requested page.
       username_available: Username available

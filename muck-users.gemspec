@@ -63,6 +63,7 @@ Gem::Specification.new do |s|
      "app/views/admin/users/_table.html.erb",
      "app/views/admin/users/_user_navigation.html.erb",
      "app/views/admin/users/do_search.html.erb",
+     "app/views/admin/users/edit.html.erb",
      "app/views/admin/users/inactive.html.erb",
      "app/views/admin/users/inactive_emails.html.erb",
      "app/views/admin/users/index.html.erb",

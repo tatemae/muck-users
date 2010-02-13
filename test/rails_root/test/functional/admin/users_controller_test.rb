@@ -108,17 +108,17 @@ class Admin::Muck::UsersControllerTest < ActionController::TestCase
     context "PUT to update - update roles" do
       setup do
         @new_role = Factory(:role)
-        put :update, :id => @user.to_param, :update_roles => true, :user => { :role_ids => @new_role.id } :format => 'js'
+        put :update, :id => @user.to_param, :update_roles => true, :user => { :role_ids => [ @new_role.id ] }, :format => 'js'
       end
       should_respond_with :success
       should "give user the new role" do
-        assert User.find(@user.to_param).is_in_role?(@new_role)
+        assert User.find(@user.to_param).has_role?(@new_role.rolename)
       end
     end
     
-    context "PUT to update - remove roles" do
+    context "PUT to update - remove all roles" do
       setup do
-        put :update, :id => @user.to_param, :update_roles => true :format => 'js'
+        put :update, :id => @user.to_param, :update_roles => true, :format => 'js'
       end
       should_respond_with :success
       should "remove the user from all roles" do
