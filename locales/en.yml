@@ -64,7 +64,6 @@ en:
       request_access_code: Request Access Code
       first_name: First Name
       forgot_username: Forgot Username
-      updated_permissions: Updated Permissions
       account_activated: Your account has been activated! You can now login.
       already_logged_in: You are already logged in and don't need to recover your password.
       email_invalid: Invalid email

@@ -91,7 +91,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
     else
       params[:user][:role_ids] ||= []
       if @user.update_attributes(params[:user])
-        return update_permissions #(translate('muck.users.updated_permissions'))
+        return update_permissions
       end
     end
 
