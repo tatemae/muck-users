@@ -8,12 +8,50 @@ et:
       role_created: "Roll on loodud."
       roles: Rollid
     users: 
+      access_code: "Juurdepääs Kood"
+      access_code_add_problem: "Probleem täiendatakse juurdepääsu kood"
+      access_code_added: "Juurdepääs Kood lisati edukalt"
+      access_code_created: Loodud
+      access_code_delete_confirm: "Kas soovite kindlasti loobuda käesoleva juurdepääsu koodi?"
+      access_code_delete_error: "Viga kustutada juurdepääsu kood"
+      access_code_delete_link: "Kustuta Access Code"
+      access_code_delete_problem: "Ei saa kustutada juurdepääsu kood on kasutajad sellega seotud."
+      access_code_deleted: "Kustutatud juurdepääsu kood."
+      access_code_edit_link: "Edit Access Code"
+      access_code_edit_problem: "Probleem toimetamine juurdepääsu kood"
+      access_code_expires: Aegub
+      access_code_fullfill_invites: "Täita Kutsu Taotlused"
+      access_code_fullfill_invites_limit: "Kutsumise Limit"
+      access_code_fullfill_invites_limit_tip: "Sisestage piirata taotluste arv saatis. Näiteks kui sisestate 100 piirab kutsub viimase 100 taotlust"
+      access_code_fullfill_invites_tip: "Sündmused saata kutseid kasutajad, kes on avaldanud soovi kutsuda. See eiravad kõiki kirju eespool nimetatud."
+      access_code_help: "Kui olete saanud ligipääsu koodi, palun sisestage see kastis. Võite {{access_request_anchor}} taotlusel juurdepääsu koodi {{access_request_anchor_end}}."
+      access_code_new: "Uus Access Code"
+      access_code_related_users: "Kasutajad, kes alla kirjutanud käesolevale juhendile"
+      access_code_request_count: "Praegu on {{access_code_requests_count}} juurdepääsu koodi taotlused"
+      access_code_request_thank_you: "Täname taotluse. Me tuleb ühendust niipea kui võimalik."
+      access_code_request_tip: "Sisesta oma meiliaadress ning me saadame Teile juurdepääsu koodi niipea, kui see on saadaval. Tänan!"
+      access_code_tip: "Sisestage juurdepääsu kood."
+      access_code_unlimited: Unlimited
+      access_code_update_problem: "Probleem ajakohastamine juurdepääsu kood."
+      access_code_use_limit: "Kasutage Limit"
+      access_code_uses: Kasutusalad
+      access_codes: Pääsukoodid
       access_denied: "Sul ei ole õigusi sisenemaks soovitud lehele."
+      access_required_warning: "Saidi juurdepääs on praegu piiratud. Sa pead kehtivat juurdepääsuluba kood registreeruda."
       account_activated: "Sinu konto on aktiveeritud! Nüüd saad sisse logida."
       account_not_activated: "Teie {{application_name}} konto ei ole aktiveeritud."
       activation_complete: "Aktiveerimine lõpule"
       activation_instructions: "Aktiveerimise juhised"
       activation_not_found: "Activation koodi ei leitud. Palun proovi luua uus konto."
+      add: Lisama
+      add_access_code: "Lisa Access Code"
+      add_access_code_title: "Lisa Access Code"
+      add_permission: "(Lisa luba)"
+      add_permission_to_user: "Lisa Luba kasutaja {{user}}"
+      add_role: "Lisa Roll"
+      add_role_dialog_title: "Lisa Roll"
+      add_user_to_role: "Lisa kasutaja roll"
+      add_user_to_role_title: "Lisa kasutaja uue rolli."
       admin: 
         activate_all_inactive_users: "Aktiveerida kõik mitteaktiivsed kasutajad"
         activate_all_inactive_users_confirm: "Kas olete kindel, et soovite aktiveerida kõikide mitteaktiivsete kasutajate süsteemi? Seda ei saa tagasi võtta!"
@@ -27,10 +65,26 @@ et:
       already_logged_in: "Te olete juba sisse loginud ja ei ole vaja taastada oma parooli."
       already_registered: "Oled juba liige?"
       application_base_url_not_set: "Palun vali application_base_url in global_config.yml"
+      bulk_access_code_emails: Emails
+      bulk_access_code_emails_tip: "Eraldi e-kirju comma"
+      bulk_access_code_message: Sõnum
+      bulk_access_code_problem: "Probleem täiendatakse juurdepääsu kood"
+      bulk_access_code_subject: Teema
+      bulk_access_code_tip: "Kohustuslik. Kui kood on määratletud siis, et kood saadetakse kõigile kasutajatele. Jäta see väli tühjaks saata unikaalne kood iga kasutaja."
+      bulk_access_codes: "Mass Pääsukoodid"
+      bulk_access_codes_created: "Mass pääsukoode loodud ja e-postiga {{email_count}} e-kirju."
+      bulk_access_codes_description: "See loob unikaalse, ühekordseks kasutamiseks juurdepääsu koodi iga meile ette."
+      bulk_access_codes_title: "Mass Pääsukoodid"
       cannot_deactivate_yourself: "Sa ei saa välja lülitada ennast!"
+      cant_delete_admin: "Sa ei saa kustutada kasutaja, mis on administraatori rolli. Eemalda kasutaja administraatori rolli ja seejärel proovige uuesti. Palun olge kustutamine administraatorid. Kui kustutate kõik administraatori kontosid, mida te ei saa enam sisse logida haldussüsteemi."
+      cant_delete_administrator_role: "Sa ei saa kustutada administraatori rolli."
+      cant_disable_admin: "Ei saa keelata haldaja. Palun eemaldage kasutaja administraatori rolli ja proovi uuesti."
       change_password: "Parooli muutmine"
+      change_permissions: "Muuda Rollid"
+      change_permissions_for: "Muuda Õigused {{user}}"
       change_your_password: "Muuda oma parool"
       choose_member_name: "Member name"
+      click_to_sign_up_now: "Kliki siia kirjutada nüüd."
       complete_profile: "Täielik profiil"
       confirm_delete_account: "Oled sa kindel, et soovid oma konto kustutada? \\ NSee ei saa tagasi võtta."
       confirm_password: "Kinnita Parool"
@@ -38,9 +92,16 @@ et:
       could_not_find_reset_code: "Ei leia paroolilähtestusketas koodi. Palun proovi uut parooli uuesti."
       could_not_find_user_with_email: "Ei suutnud leida kasutaja, et e-posti aadressi."
       current_password: "Praegune Parool"
+      delete: Kustutama
       delete_my_account: "Kustuta oma kasutajakonto ja kõik minu andmed."
       delete_this_user: "Kustuta see kasutaja."
+      deleting_user: "kustutada kasutaja ..."
+      edit: Edit
+      edit_access_code: "Edit Access Code"
+      edit_access_code_title: "Edit Access Code"
       edit_profile: "Muuda profiili"
+      edit_role_dialog_title: "Muuda roll"
+      email: Saada
       email_address: "E-posti aadress"
       email_available: "Saada olemas"
       email_empty: "Palun sisestage e-posti aadress"
@@ -48,6 +109,8 @@ et:
       email_invalid: "Vigane e-posti"
       email_not_available: "E-post on juba kasutusel. {{reset_password_help}}"
       email_recover_prompt: "Palun lisage e-posti olete loonud koos taastada oma parooli."
+      expiration_date: Aegumiskuupäev
+      expiration_date_tip: "Sisestage kuupäev, millele juurdepääsu koodi muutuvad kehtetuks"
       first_name: Eesnimi
       forgot_password: "Unustasin salasõna"
       forgot_username: "Unustasid Kasutajanimi"
@@ -56,6 +119,7 @@ et:
       invalid_username: "Vigane kasutajanimi"
       join_application_name: "Liitu ja saan seda teha"
       last_name: Perekonnanimi
+      login: "Sisse logima"
       login_empty: "Palun sisestage login"
       login_fail: "Vabandame, kuid me ei tunne oma sisselogimise andmeid. Palun proovi uuesti."
       login_out_success: "You have been logitud."
@@ -91,10 +155,17 @@ et:
       register_for_account: "Registreeri konto"
       remember_me: "Mäleta mind"
       remove_my_account: "Eemalda Minu konto"
+      request_access_code: "Taotleda juurdepääsu Kood"
       request_username: "Soovin Kasutajanimi"
       request_username_subject: "Unustasid kasutajanimi"
       reset_password: "Taasta salasõna"
       reset_your_password: "Taasta salasõna"
+      role: Roll
+      role_delete_confirm: "Kas olete kindel, et soovite kustutada selle rolli? Kõik seotud load ka kustutada!"
+      role_deleted: "Roll kustutatud"
+      role_not_deleted: "Rolli ei saa kustutada"
+      roles: Rollid
+      save: Salvestama
       select_new_password: "Valige uus parool"
       sign_in: "Logi sisse"
       sign_in_now: "Registreeru nüüd!"
@@ -103,12 +174,20 @@ et:
       sign_up: "Logi sisse"
       sign_up_now: "Sign up Now"
       sorry_invalid_reset_code: "Vabandame, kuid me ei leia oma konto. Kui teil on küsimusi, proovite kopeerida ja kleepida URL-e brauserisse või taasalustamist Taasta parool protsessi."
+      submit: Esitama
       terms_and_service: "Klikkides &quot;Sign up Now&quot;, nõustud sa järgima {{tos_link_anchor}} Tingimused {{link_end}}."
       thanks_sign_up: Täname!
       thanks_sign_up_check: "Teie konto on loodud. Palun kontrollige oma e-posti konto aktiveerimise juhised!"
       thanks_sign_up_login: "Täname! Võite Logi sisse"
+      total_users: "Total Users: {{total}}"
+      unlimited: "Piiramatu Kasutusalad"
+      unlimited_tip: "Sündmused kui juurdepääsu koodi võib kasutada piiramatu arv kordi. See tühistab kasutamist piirata."
+      update: Värskendama
       update_profile: "Uuenda oma profiili"
       update_user: "Uuenda oma kasutaja andmed"
+      update_user_admin: "Uuenda kasutaja"
+      use_limit: "Arv Kasutusalad"
+      use_limit_tip: "Mitu korda juurdepääsu koodi ei saa kasutada."
       user_account_deleted: "Sa oled edukalt kustutanud oma konto."
       user_disable_problem: "Tekkis probleem kustutad selle kasutaja."
       user_disabled: "Kasutaja puuetega"
@@ -116,14 +195,22 @@ et:
       user_enabled: "Kasutaja lülitatud"
       user_marked_active: "Kasutaja on märgistatud aktiivne"
       user_marked_inactive: "Kasutaja on märgistatud mitteaktiivsete"
+      user_not_activated_error: "Ei saa aktiveerida kasutaja"
+      user_not_deactivated_error: "Ei saa välja lülitada kasutaja"
       user_successfully_deleted: "Kasutaja {{login}} edukalt kustutatud."
       user_update: "Sa oled kasutaja info on uuendatud."
+      user_update_sucess: "Kasutaja edukalt uuendatud"
       username: Kasutajanimi
       username_available: "Kasutajanimi saadaval"
       username_help: "Võite kasutada on 6 kuni 20 tähemärki. Kui soovitud nimi ei ole võimalik proovida lisada numbreid või kirjavahemärke."
       username_not_available: "Kasutaja ei ole saadaval"
       username_recover_prompt: "Palun lisage e-posti, mida kasutatakse juhul, kui olete oma konto loonud, teie kasutajanimi meilitsi."
       username_sent: "Sinu kasutajanimi on saadetud meilitsi. Palun kontrolli oma e-posti."
+      users_admin: Kasutajad
+      users_in_role: "Kasutajad roll: {{role}}"
+      validation_are_required: "on vaja."
+      validation_is_required: "ei ole vaja."
+      view_your_account: "Vaadata oma konto"
       welcome: "Tere tulemast"
       welcome_email_subject: "Tere tulemast {{application_name}}"
       welcome_message: "Tere tulemast sopp. See süsteem annab põhikomponendid, mis aitavad Sul oma veebilehel."

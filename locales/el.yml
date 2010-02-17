@@ -8,12 +8,50 @@ el:
       role_created: "Ρόλος δημιουργήθηκε με επιτυχία."
       roles: Ρόλοι
     users: 
+      access_code: "Κωδικός πρόσβασης"
+      access_code_add_problem: "Πρόβλημα προσθέτοντας κωδικό πρόσβασης"
+      access_code_added: "Κωδικός πρόσβασης προστέθηκε με επιτυχία"
+      access_code_created: Δημιουργήθηκε
+      access_code_delete_confirm: "Είστε σίγουροι ότι θέλετε να ακυρώσετε αυτό το κωδικό πρόσβασης;"
+      access_code_delete_error: "Προέκυψε σφάλμα κατά την προσπάθεια να διαγράψετε τον κωδικό πρόσβασης"
+      access_code_delete_link: "Διαγραφή Κωδικός Πρόσβασης"
+      access_code_delete_problem: "Δεν μπορεί να διαγράψει τον κωδικό πρόσβασης που έχει τους χρήστες που συνδέονται με αυτό."
+      access_code_deleted: "Διαγράφεται κωδικό πρόσβασης."
+      access_code_edit_link: "Επεξεργασία Κωδικός Πρόσβασης"
+      access_code_edit_problem: "Πρόβλημα κωδικό πρόσβασης μοντάζ"
+      access_code_expires: Λήγει
+      access_code_fullfill_invites: "Εκπληρώσει Πρόσκληση Αιτήσεις"
+      access_code_fullfill_invites_limit: "Προσκαλέστε Αίτηση Όριο"
+      access_code_fullfill_invites_limit_tip: "Πληκτρολογήστε έναν αριθμό για να περιορίσει τον αριθμό των αιτήσεων που αποστέλλονται. Για παράδειγμα, εισάγονται 100 θα περιορίσει την καλεί να τις πιο πρόσφατες 100 αιτήσεις"
+      access_code_fullfill_invites_tip: "Ελέγξτε εδώ για να στείλετε προσκαλεί σε χρήστες που έχουν ζητήσει να καλέσει. Αυτό θα αγνοήσει οποιαδήποτε ηλεκτρονικά ταχυδρομεία που ορίζονται ανωτέρω."
+      access_code_help: "Εάν έχετε λάβει κωδικό πρόσβασης από εμάς, παρακαλούμε να το εγγράψουν στο παραπάνω πλαίσιο. Μπορείτε {{access_request_anchor}} επίσης να ζητήσει έναν κωδικό πρόσβασης {{access_request_anchor_end}}."
+      access_code_new: "Νέο Κωδικός Πρόσβασης"
+      access_code_related_users: "Οι χρήστες που υπέγραψε με αυτόν τον κωδικό"
+      access_code_request_count: "Υπάρχουν επί του παρόντος {{access_code_requests_count}} αιτήσεις κωδικό πρόσβασης"
+      access_code_request_thank_you: "Σας ευχαριστούμε για το αίτημά σας. Θα είμαστε σε επαφή το συντομότερο δυνατό."
+      access_code_request_tip: "Εισάγετε το email σας και θα σας στείλουμε ένα κωδικό πρόσβασης, το συντομότερο ένας είναι διαθέσιμη. Σε ευχαριστώ!"
+      access_code_tip: "Πληκτρολογήστε έναν κωδικό πρόσβασης."
+      access_code_unlimited: Απεριόριστη
+      access_code_update_problem: "Υπήρξε ένα πρόβλημα ενημέρωση του κωδικού πρόσβασης."
+      access_code_use_limit: "Όριο χρήσης"
+      access_code_uses: Χρήσεις
+      access_codes: Κωδικοί
       access_denied: "Δεν έχετε άδεια για να δείτε τη σελίδα που ζητήθηκε."
+      access_required_warning: "Πρόσβαση στην ιστοσελίδα είναι σήμερα περιορισμένο. Χρειάζεστε έγκυρο κωδικό πρόσβασης για να εγγραφείτε."
       account_activated: "Ο λογαριασμός σας έχει ενεργοποιηθεί! Μπορείτε τώρα να συνδεθείτε."
       account_not_activated: "{{application_name}} Λογαριασμός σας δεν έχει ακόμα ενεργοποιηθεί."
       activation_complete: "Πλήρης ενεργοποίηση"
       activation_instructions: "Ενεργοποίηση Οδηγίες"
       activation_not_found: "Activation code δεν βρέθηκε. Παρακαλώ προσπαθήστε να δημιουργήσετε ένα νέο λογαριασμό."
+      add: Προσθέτω
+      add_access_code: "Προσθέστε Κωδικός Πρόσβασης"
+      add_access_code_title: "Προσθέστε Κωδικός Πρόσβασης"
+      add_permission: "(Προσθήκη Permission)"
+      add_permission_to_user: "Προσθήκη Άδεια για {{user}} χρήστη"
+      add_role: "Προσθήκη Ρόλος"
+      add_role_dialog_title: "Προσθήκη Ρόλος"
+      add_user_to_role: "Προσθήκη Χρήστη για Ρόλος"
+      add_user_to_role_title: "Προσθήκη χρήστη σε ένα νέο ρόλο."
       admin: 
         activate_all_inactive_users: "Ενεργοποίηση όλων των ανενεργών χρηστών"
         activate_all_inactive_users_confirm: "Είστε σίγουροι ότι θέλετε να ενεργοποιήσετε όλους τους ανενεργούς χρήστες του συστήματος; Αυτό δεν μπορεί να αναιρεθεί!"
@@ -27,10 +65,26 @@ el:
       already_logged_in: "Είστε ήδη συνδεδεμένος και δεν χρειάζεται να ανακτήσει τον κωδικό σας."
       already_registered: "Είστε ήδη μέλος;"
       application_base_url_not_set: "Παρακαλούμε που application_base_url στο global_config.yml"
+      bulk_access_code_emails: Emails
+      bulk_access_code_emails_tip: "Separate emails με ένα κόμμα"
+      bulk_access_code_message: Μήνυμα
+      bulk_access_code_problem: "Πρόβλημα προσθέτοντας κωδικό πρόσβασης"
+      bulk_access_code_subject: Θέμα
+      bulk_access_code_tip: "Προαιρετικό. Εάν ένας κωδικός συνέχεια διευκρινίζεται ότι ο κώδικας θα αποσταλεί σε όλους τους χρήστες. Αφήστε αυτό το πεδίο κενό για να στείλετε ένα μοναδικό κωδικό σε κάθε χρήστη."
+      bulk_access_codes: "Μαζική Κωδικοί"
+      bulk_access_codes_created: "Μαζική κωδικούς πρόσβασης που δημιουργήθηκαν και {{email_count}} αποσταλεί με email."
+      bulk_access_codes_description: "Αυτό θα δημιουργήσει ένα μοναδικό, ενιαίο κωδικό πρόσβασης για τη χρήση κάθε ένα από τα μηνύματα ηλεκτρονικού ταχυδρομείου που παρέχονται."
+      bulk_access_codes_title: "Μαζική Κωδικοί"
       cannot_deactivate_yourself: "Δεν μπορείτε να απενεργοποιήσετε τον εαυτό σας!"
+      cant_delete_admin: "Δεν μπορείτε να διαγράψετε ένα χρήστη που είναι στο admin ρόλο. Αφαιρέστε το χρήστη από το ρόλο διαχειριστή και στη συνέχεια προσπαθήστε ξανά. Παρακαλώ να είστε προσεκτικοί κατά τη διαγραφή τους διαχειριστές. Αν διαγράψετε όλους διαχειριστής λογαριασμών σας δεν θα είναι πλέον σε θέση να συνδεθείτε στο σύστημα διαχείρισης."
+      cant_delete_administrator_role: "Δεν μπορείτε να διαγράψετε το ρόλο διαχειριστή."
+      cant_disable_admin: "Δεν είναι δυνατή η απενεργοποίηση ενός διαχειριστή. Παρακαλώ αφαιρέστε το χρήστη από το ρόλο διαχειριστή και προσπαθήστε ξανά."
       change_password: "Αλλαγή κωδικού"
+      change_permissions: "Αλλαγή ρόλων"
+      change_permissions_for: "Αλλαγή δικαιωμάτων για {{user}}"
       change_your_password: "Αλλάξετε τον κωδικό σας"
       choose_member_name: "Τα Όνομα"
+      click_to_sign_up_now: "Κάντε κλικ εδώ για να εγγραφείτε τώρα."
       complete_profile: "Πλήρες προφίλ σας"
       confirm_delete_account: "Είστε σίγουροι ότι θέλετε να διαγράψετε το λογαριασμό σας; \\ nΑυτό το δεν μπορεί να αναιρεθεί."
       confirm_password: "Επιβεβαίωση Password"
@@ -38,9 +92,16 @@ el:
       could_not_find_reset_code: "Δεν βρέθηκε ένας κώδικας επαναφοράς κωδικού πρόσβασης. Παρακαλώ δοκιμάστε επαναφέρετε τον κωδικό σας ξανά."
       could_not_find_user_with_email: "Δεν βρέθηκε ένας χρήστης με το e-mail."
       current_password: "Τρέχουσα Κωδικός"
+      delete: Διαγράφω
       delete_my_account: "Διαγραφή λογαριασμού χρήστη μου και όλα τα δεδομένα μου."
       delete_this_user: "Διαγραφή αυτού του χρήστη."
+      deleting_user: "διαγραφή χρήστη ..."
+      edit: Επεξεργασία
+      edit_access_code: "Επεξεργασία Κωδικός Πρόσβασης"
+      edit_access_code_title: "Επεξεργασία Κωδικός Πρόσβασης"
       edit_profile: "Επεξεργασία Προφίλ"
+      edit_role_dialog_title: "Επεξεργασία Ρόλος"
+      email: Email
       email_address: "Ηλεκτρονική Διεύθυνση"
       email_available: "Email διαθέσιμες"
       email_empty: "Παρακαλώ εισάγετε μια διεύθυνση email"
@@ -48,6 +109,8 @@ el:
       email_invalid: "Άκυρα email"
       email_not_available: "Email ήδη σε χρήση. {{reset_password_help}}"
       email_recover_prompt: "Παρακαλώ δώστε το email που υπέγραψε με να ανακτήσει τον κωδικό σας."
+      expiration_date: "Ημερομηνία Λήξης"
+      expiration_date_tip: "Πληκτρολογήστε την ημερομηνία κατά την οποία ο κωδικός πρόσβασης θα καταστεί άκυρη"
       first_name: Όνομα
       forgot_password: "Ξεχάσατε τον κωδικό σας"
       forgot_username: "Ξεχάσατε το Όνομα"
@@ -56,6 +119,7 @@ el:
       invalid_username: "Άκυρο όνομα χρήστη"
       join_application_name: "Ενταχθούν και να κάνει"
       last_name: Επώνυμο
+      login: Σύνδεση
       login_empty: "Παρακαλώ εισάγετε μια σύνδεση"
       login_fail: "Λυπούμαστε, αλλά δεν μπορέσαμε να αναγνωρίσουμε τα στοιχεία σύνδεσής σας. Παρακαλώ δοκιμάστε ξανά."
       login_out_success: "Έχετε αποσυνδεθεί."
@@ -91,10 +155,17 @@ el:
       register_for_account: "Εγγραφή για ένα λογαριασμό"
       remember_me: Θυμάσαι
       remove_my_account: "Αφαιρέστε λογαριασμός μου"
+      request_access_code: "Αίτηση Κωδικός Πρόσβασης"
       request_username: "Αίτηση Χρήστης"
       request_username_subject: "Ξεχάσατε το όνομα χρήστη"
       reset_password: "Επαναφέρετε τον κωδικό πρόσβασης"
       reset_your_password: "Επαναφέρετε τον κωδικό πρόσβασης"
+      role: Ρόλος
+      role_delete_confirm: "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το ρόλο; Όλα τα συναφή δικαιώματα θα διαγραφούν επίσης!"
+      role_deleted: "Ρόλος Διαγράφεται"
+      role_not_deleted: "Ρόλος δεν μπορεί να διαγραφεί"
+      roles: Ρόλοι
+      save: Αποθηκεύω
       select_new_password: "Επιλέξτε ένα νέο κωδικό"
       sign_in: Είσοδος
       sign_in_now: "Συνδεθείτε τώρα!"
@@ -103,12 +174,20 @@ el:
       sign_up: Εγγραφείτε
       sign_up_now: "Εγγραφείτε τώρα"
       sorry_invalid_reset_code: "Λυπούμαστε, αλλά δεν μπορέσαμε να εντοπίσετε το λογαριασμό σας. Αν έχετε προβλήματα προσπαθήσουμε αντιγραφή και επικόλληση το URL από το email σας στο πρόγραμμα περιήγησης ή την επανεκκίνηση της διαδικασίας επαναφοράς κωδικού πρόσβασης."
+      submit: Υποβάλω
       terms_and_service: "Με κλικ Sign-up Now &#39;συμφωνείτε να συμμορφωθούν με την {{tos_link_anchor}} Όρους και Προϋποθέσεις {{link_end}}."
       thanks_sign_up: "Ευχαριστώ για την εγγραφή!"
       thanks_sign_up_check: "Ο λογαριασμός σας έχει δημιουργηθεί. Ελέγξτε το e-mail για οδηγίες ενεργοποίησης λογαριασμό σας!"
       thanks_sign_up_login: "Ευχαριστώ για την εγγραφή! Μπορείτε να συνδεθείτε τώρα"
+      total_users: "Σύνολο χρηστών: {{total}}"
+      unlimited: "Απεριόριστη Χρήσεις"
+      unlimited_tip: "Ελέγξτε εδώ αν ο κωδικός πρόσβασης μπορεί να χρησιμοποιηθεί για απεριόριστο αριθμό φορές. Αυτό θα υπερκαλύψει το όριο χρήσης."
+      update: Ενημέρωση
       update_profile: "Ενημερώσετε το προφίλ σας"
       update_user: "Ενημέρωση πληροφορίες χρήστη"
+      update_user_admin: "Ενημέρωση Χρήστη"
+      use_limit: "Αριθμός Χρήσεις"
+      use_limit_tip: "Πληκτρολογήστε τον αριθμό των φορών που ο κωδικός πρόσβασης μπορεί να χρησιμοποιηθεί."
       user_account_deleted: "Έχετε διαγραφεί επιτυχώς λογαριασμό σας."
       user_disable_problem: "Υπήρξε ένα πρόβλημα απενεργοποίηση αυτού του χρήστη."
       user_disabled: "Χρήστη αναπηρία"
@@ -116,14 +195,22 @@ el:
       user_enabled: "Χρήστη δυνατότητα"
       user_marked_active: "Χρήστης έχει επισημανθεί ως ενεργό"
       user_marked_inactive: "Χρήστης έχει σημανθεί ως ανενεργή"
+      user_not_activated_error: "Δεν θα μπορούσε να ενεργοποιήσει χρήστη"
+      user_not_deactivated_error: "Δεν θα μπορούσε να απενεργοποιήσετε χρήστη"
       user_successfully_deleted: "{{login}} Χρήστη έχει διαγραφεί επιτυχώς."
       user_update: "Είσαι πληροφορίες χρήστης έχει ενημερωθεί."
+      user_update_sucess: "Χρήστης ενημερώθηκε με επιτυχία"
       username: Username
       username_available: "Username διαθέσιμες"
       username_help: "Μπορείτε να χρησιμοποιήσετε μεταξύ 6 και 20 χαρακτήρες. Αν το όνομα που θέλετε δεν είναι διαθέσιμη δοκιμάστε να προσθέσετε αριθμούς ή σημεία στίξης."
       username_not_available: "Όνομα χρήστη δεν είναι διαθέσιμες"
       username_recover_prompt: "Παρακαλώ δώστε το email που χρησιμοποιήσατε όταν δημιουργήσατε το λογαριασμό σας, το όνομα χρήστη σας θα σας αποσταλεί με email."
       username_sent: "Το όνομα χρήστη που έχει σταλεί μέσω ηλεκτρονικού ταχυδρομείου σε εσάς. Παρακαλούμε ελέγξτε τα email σας."
+      users_admin: Χρήστες
+      users_in_role: "Χρήστες σε ρόλο: {{role}}"
+      validation_are_required: απαιτούνται.
+      validation_is_required: απαιτείται.
+      view_your_account: "Ο λογαριασμός σας"
       welcome: "Καλώς ορίσατε"
       welcome_email_subject: "Καλώς ήλθατε στο {{application_name}}"
       welcome_message: "Καλώς ήλθατε στο βόρβορος. Το σύστημα αυτό παρέχει τα βασικά στοιχεία για να σας βοηθήσουν να κατασκευάσετε την ιστοσελίδα σας."

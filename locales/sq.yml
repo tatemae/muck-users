@@ -8,12 +8,50 @@ sq:
       role_created: "Roli është krijuar me sukses."
       roles: Rolet
     users: 
+      access_code: "Qasja Kodi"
+      access_code_add_problem: "Kodi qasje Problem duke shtuar"
+      access_code_added: "Hyrje dhe përdorim i Kodit u shtua me sukses"
+      access_code_created: Created
+      access_code_delete_confirm: "A jeni i sigurt se doni ta anulloni këtë kod qasje?"
+      access_code_delete_error: "Ka ndodhur një gabim ndërsa përpiqej të fshini kodin qasje"
+      access_code_delete_link: "Fshije Access Code"
+      access_code_delete_problem: "Nuk mund të fshini kodi ka qasje të përdoruesve të lidhur me to."
+      access_code_deleted: "Kodi Deleted qasje."
+      access_code_edit_link: "Edit Access Code"
+      access_code_edit_problem: "Qasje Problem redaktimi kod"
+      access_code_expires: Skadon
+      access_code_fullfill_invites: "Fto përmbush Kërkesat"
+      access_code_fullfill_invites_limit: "Fto Kërkesë Limit"
+      access_code_fullfill_invites_limit_tip: "Futni një numër të kufizuar numrin e kërkesave të dërguar jashtë. Për shembull, dhënia e 100 do të kufizojë fton për më të fundit 100 kërkesa"
+      access_code_fullfill_invites_tip: "Kontrolloni këtu për të dërguar fton për përdoruesit të cilët kanë kërkuar një të ftojë. Kjo do të injorojnë çdo emails specifikuara më sipër."
+      access_code_help: "Qoftë se keni marrë një kod qasje prej nesh, ju lutem shkruani atë në kutinë më sipër. Ju gjithashtu mund të kërkojë një kod {{access_request_anchor}} qasje {{access_request_anchor_end}}."
+      access_code_new: "Re Access Code"
+      access_code_related_users: "Përdoruesit që nënshkroi me këtë kod"
+      access_code_request_count: "Nuk janë aktualisht kërkesat {{access_code_requests_count}} kodin qasje"
+      access_code_request_thank_you: "Faleminderit për kërkesën tuaj. Ne do të jemi në kontakt sa më shpejt të jetë e mundur."
+      access_code_request_tip: "Enter your email tuaj dhe ne do t&#39;ju dërgoj një kod qasje sa më shpejt si një është në dispozicion. Faleminderit!"
+      access_code_tip: "Futni një kod aksesi."
+      access_code_unlimited: Unlimited
+      access_code_update_problem: "Nuk ishte një problem përditësimin kodin qasje."
+      access_code_use_limit: "Përdorimi Limit"
+      access_code_uses: Uses
+      access_codes: "Qasja Codes"
       access_denied: "Ju nuk keni leje për të hyrë faqes së kërkuar."
+      access_required_warning: "Qasje e sitit është e kufizuar ne kete moment. Ju duhet një kod të vlefshme akses për të regjistroheni."
       account_activated: "Llogaria juaj është aktivizuar! Ju tani mund të indentifikoheni."
       account_not_activated: "Llogaria juaj {{application_name}} nuk është aktivizuar akoma."
       activation_complete: "Aktivizimi Complete"
       activation_instructions: "Aktivizimi Udhëzime"
       activation_not_found: "Kodi Aktivizimi nuk u gjet. Ju lutemi provoni duke krijuar një llogari të re."
+      add: Shtoj
+      add_access_code: "Add Access Code"
+      add_access_code_title: "Add Access Code"
+      add_permission: "(Add Permission)"
+      add_permission_to_user: "Add Leja për {{user}} përdorues"
+      add_role: "Add Roli"
+      add_role_dialog_title: "Add Roli"
+      add_user_to_role: "Add Përdoruesi për rolin"
+      add_user_to_role_title: "Shto përdorues të një rol të ri."
       admin: 
         activate_all_inactive_users: "Aktivizo gjitha Inactive Users"
         activate_all_inactive_users_confirm: "A jeni i sigurt se doni ta aktivizoni gjithë përdoruesit inaktive në sistemin? Kjo nuk mund të zhbëhen!"
@@ -27,10 +65,26 @@ sq:
       already_logged_in: "Ju jeni tashmë i identifikuar dhe nuk duhet të mbulojë fjalëkalimin tuaj."
       already_registered: "Already a member?"
       application_base_url_not_set: "Vendosur Ju lutem application_base_url në global_config.yml"
+      bulk_access_code_emails: Emails
+      bulk_access_code_emails_tip: "Separate email me presje"
+      bulk_access_code_message: Mesazh
+      bulk_access_code_problem: "Kodi qasje Problem duke shtuar"
+      bulk_access_code_subject: Subjekti
+      bulk_access_code_tip: "Optional. Nëse një kod i caktuar atëherë se kodi do të dërgohen për të gjithë përdoruesit. Lini bosh këtë fushë për të dërguar një kod unik për çdo përdorues."
+      bulk_access_codes: "Bulk Qasja Codes"
+      bulk_access_codes_created: "Kodet Bulk akses për të krijuar dhe email-mail {{email_count}}."
+      bulk_access_codes_description: "Kjo do të gjenerojë një unik, vetëm qasje kodin përdorim për çdo të dhënë mail."
+      bulk_access_codes_title: "Bulk Qasja Codes"
       cannot_deactivate_yourself: "Ju nuk mund të çaktivizuar veten!"
+      cant_delete_admin: "Ju nuk mund të fshini një përdorues që është në rolin e admin. Hiq përdoruesit nga administratori dhe pastaj rolin provoni përsëri. Administratorët Ju lutem, kini kujdes kur të fshirjes. Nëse ju fshini të gjitha llogari administratori ju nuk do të jetë në gjendje të hyni brënda për të sistemit të administratës."
+      cant_delete_administrator_role: "Ju nuk mund të fshini rolin e administratorit."
+      cant_disable_admin: "Nuk mund të çaktivizuar një administrator. Ju lutem hiqni përdoruesit nga administratori rolin dhe provoni përsëri."
       change_password: "Change Password"
+      change_permissions: "Ndryshimi Rolet"
+      change_permissions_for: "Ndryshoni lejimet për {{user}}"
       change_your_password: "Change Your Password"
       choose_member_name: Nofka
+      click_to_sign_up_now: "Kliko këtu për të nënshkruar deri tani."
       complete_profile: "Profili juaj Complete"
       confirm_delete_account: "A jeni i sigurt se doni te fshini llogarinë tuaj? \\ NThis nuk mund të zhbëhen."
       confirm_password: "Confirm Password"
@@ -38,9 +92,16 @@ sq:
       could_not_find_reset_code: "Nuk mund të gjeni një kod reset password. Ju lutemi provoni përsëri resetting fjalëkalimin tuaj."
       could_not_find_user_with_email: "Nuk mund të gjeni një përdorues me atë adresë e-mail."
       current_password: "Current Password"
+      delete: Fshij
       delete_my_account: "Fshije Llogarine përdoruesit dhe të gjitha të dhënat e mia."
       delete_this_user: "Fshije këtë përdorues."
+      deleting_user: "grisësh user ..."
+      edit: Edit
+      edit_access_code: "Edit Access Code"
+      edit_access_code_title: "Edit Access Code"
       edit_profile: "Edit Profile"
+      edit_role_dialog_title: "Edit Roli"
+      email: Email
       email_address: "Email Adresa"
       email_available: "Email dispozicion"
       email_empty: "Ju lutem shkruani një adresë e-mail"
@@ -48,6 +109,8 @@ sq:
       email_invalid: "Invalid email"
       email_not_available: "Email tashmë në përdorim. {{reset_password_help}}"
       email_recover_prompt: "Ju lutemi shkruani email keni nënshkruar me të mbulojë fjalëkalimin tuaj."
+      expiration_date: "Data e skadimit"
+      expiration_date_tip: "Shkruani datën në të cilën kodin e hyrjes do të bëhet e pavlefshme"
       first_name: Emri
       forgot_password: "Forgot Password"
       forgot_username: "Forgot Username"
@@ -56,6 +119,7 @@ sq:
       invalid_username: "Emrin e pavlefshme"
       join_application_name: "Bashkohu dhe get it done"
       last_name: Mbiemri
+      login: Hyrje
       login_empty: "Ju lutem shkruani një hyrje me emrin përkatës"
       login_fail: "Na vjen keq, por ne nuk mund të njohim informacionin tuaj të hyrjes. Ju lutem provoni përsëri."
       login_out_success: "Ju keni qenë regjistruar jashtë."
@@ -91,10 +155,17 @@ sq:
       register_for_account: "Regjistrohu për një llogari"
       remember_me: "Mbaj mend"
       remove_my_account: "Hiq Llogaria ime"
+      request_access_code: "Request Access Code"
       request_username: "Kërkesë Emri"
       request_username_subject: "Username harruar"
       reset_password: "Reset Your Password"
       reset_your_password: "Reset Your Password"
+      role: Roli
+      role_delete_confirm: "A jeni i sigurt se doni te fshini kete rol? Të gjitha lejet e lidhur do të fshihet"
+      role_deleted: "Roli Deleted"
+      role_not_deleted: "Roli nuk mund të fshihen"
+      roles: Rolet
+      save: Ruaj
       select_new_password: "Zgjidhni një fjalëkalim të ri"
       sign_in: Identifikohuni
       sign_in_now: "Sign in now!"
@@ -103,12 +174,20 @@ sq:
       sign_up: Regjistrohu
       sign_up_now: "Sign-up Now"
       sorry_invalid_reset_code: "Na vjen keq, por ne nuk mund të gjetur llogarinë tuaj. Nëse keni çështje të përpiqen kopjimi dhe pasting URL-nga-mail juaj në shfletuesin tuaj ose rinisjen e procesit të reset password."
+      submit: Paraqes
       terms_and_service: "Duke klikuar Sign-up Tani &#39;ju pranoni që përputhen me {{tos_link_anchor}} Termat dhe Kushtet {{link_end}}."
       thanks_sign_up: "Faleminderit për nënshkrimin up!"
       thanks_sign_up_check: "Llogaria juaj është hapur. Ju lutem kontrolloni tuaj e-mail-udhëzime për aktivizimin e llogarisë suaj!"
       thanks_sign_up_login: "Faleminderit për nënshkrimin up! Ju mund të identifikohem tani"
+      total_users: "Total Users: {{total}}"
+      unlimited: "Pafund Uses"
+      unlimited_tip: "Kontrolloni nëse këtu kodin qasje mund të përdoret një numër të pakufizuar herë. Kjo do të pranoj kufizoni përdorimin."
+      update: Përditësimi
       update_profile: "Update profilin tuaj"
       update_user: "Përditësimin e informacionit tuaj të përdoruesit"
+      update_user_admin: "Update User"
+      use_limit: "Numri i Uses"
+      use_limit_tip: "Shkruani numrin e kodit qasje herë mund të përdoren."
       user_account_deleted: "Ju keni fshi me sukses llogarinë tuaj."
       user_disable_problem: "Nuk ishte një problem disabling këtë përdorues."
       user_disabled: "Përdorues me aftësi të kufizuara"
@@ -116,14 +195,22 @@ sq:
       user_enabled: "User aktivizuar"
       user_marked_active: "Përdoruesi është shënuar si aktive"
       user_marked_inactive: "Përdoruesi është shënuar si joaktiv"
+      user_not_activated_error: "Mund të mos aktivizohet përdorues"
+      user_not_deactivated_error: "Nuk mund të transferoj në rezervë përdorues"
       user_successfully_deleted: "{{login}} Antari u fshi me sukses."
       user_update: "Ju jeni informacion përdorues është përditësuar."
+      user_update_sucess: "User u ri-freskua me sukses"
       username: Emri
       username_available: "Emri dispozicion"
       username_help: "Ju mund të përdorni midis 6 dhe 20 karaktere. Nëse dëshironi emri nuk është në dispozicion të përpiqen duke shtuar numra ose shenja pikësimi."
       username_not_available: "Emri jo në dispozicion"
       username_recover_prompt: "Ju lutemi shkruani email që keni përdorur kur keni krijuar llogarinë tuaj, emrin tënd do të jetë emailed për ju."
       username_sent: "Emri juaj i ka dërguar me email është dërguar te ju. Ju lutem kontrolloni email tuaj."
+      users_admin: Users
+      users_in_role: "Perdorues ne rolin e: {{role}}"
+      validation_are_required: "janë të nevojshme."
+      validation_is_required: "është e nevojshme."
+      view_your_account: "Shiko Llogaria Juaj"
       welcome: Mirësevini
       welcome_email_subject: "Mirë se vini në {{application_name}}"
       welcome_message: "Mirë se vini në pleh. Ky sistem ofron komponentet themelore për të ndihmuar të ndërtoni faqen tuaj te internetit."

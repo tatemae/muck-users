@@ -8,12 +8,50 @@ id:
       role_created: "Peran berhasil dibuat."
       roles: Peran
     users: 
+      access_code: "Access Code"
+      access_code_add_problem: "Soal menambahkan kode akses"
+      access_code_added: "Kode akses telah berhasil ditambahkan"
+      access_code_created: Dibuat
+      access_code_delete_confirm: "Apakah Anda yakin ingin membatalkan kode akses ini?"
+      access_code_delete_error: "Sebuah kesalahan terjadi ketika mencoba untuk menghapus kode akses"
+      access_code_delete_link: "Hapus Access Code"
+      access_code_delete_problem: "Tidak dapat menghapus kode akses ini memiliki pengguna yang terkait dengannya."
+      access_code_deleted: "Dihapus kode akses."
+      access_code_edit_link: "Edit Access Code"
+      access_code_edit_problem: "Soal mengedit kode akses"
+      access_code_expires: Expires
+      access_code_fullfill_invites: "Memenuhi Undangan Permintaan"
+      access_code_fullfill_invites_limit: "Permintaan Undangan Batas"
+      access_code_fullfill_invites_limit_tip: "Masukkan nomor untuk membatasi jumlah permintaan dikirim keluar. Sebagai contoh, memasukkan 100 akan membatasi mengundang untuk 100 terbaru permintaan"
+      access_code_fullfill_invites_tip: "Cek di sini untuk mengirim undangan kepada pengguna yang telah meminta mengundang. Ini akan mengabaikan email apa pun ditentukan di atas."
+      access_code_help: "Jika Anda menerima kode akses dari kami, silakan masukkan dalam kotak di atas. Anda juga meminta {{access_request_anchor}} kode akses {{access_request_anchor_end}}."
+      access_code_new: "Kode Akses baru"
+      access_code_related_users: "Pengguna yang mendaftar dengan kode ini"
+      access_code_request_count: "Saat ini ada permintaan kode akses {{access_code_requests_count}}"
+      access_code_request_thank_you: "Terima kasih atas permintaan Anda. Kami akan menghubungi Anda sesegera mungkin."
+      access_code_request_tip: "Masukkan email Anda dan kami akan mengirimkan kode akses sesegera orang yang tersedia. Terima kasih!"
+      access_code_tip: "Masukkan kode akses."
+      access_code_unlimited: Unlimited
+      access_code_update_problem: "Ada masalah memperbarui kode akses."
+      access_code_use_limit: "Gunakan Batas"
+      access_code_uses: Menggunakan
+      access_codes: "Kode Akses"
       access_denied: "Anda tidak memiliki izin untuk mengakses halaman yang diminta."
+      access_required_warning: "Akses situs saat ini dibatasi. Anda memerlukan kode akses yang valid untuk mendaftar."
       account_activated: "Account Anda telah diaktifkan! Sekarang Anda dapat login."
       account_not_activated: "Account {{application_name}} Anda belum diaktifkan."
       activation_complete: "Aktivasi Lengkap"
       activation_instructions: "Aktivasi Petunjuk"
       activation_not_found: "Kode aktivasi tidak ditemukan. Silakan coba buat account baru."
+      add: Tambah
+      add_access_code: "Tambahkan Access Code"
+      add_access_code_title: "Tambahkan Access Code"
+      add_permission: "(Tambahkan Izin)"
+      add_permission_to_user: "Tambahkan Izin untuk pengguna {{user}}"
+      add_role: "Tambahkan Peran"
+      add_role_dialog_title: "Tambahkan Peran"
+      add_user_to_role: "Tambahkan User ke Peran"
+      add_user_to_role_title: "Menambahkan pengguna ke peran baru."
       admin: 
         activate_all_inactive_users: "Aktifkan Semua Inactive User"
         activate_all_inactive_users_confirm: "Apakah Anda yakin ingin mengaktifkan semua pengguna tidak aktif dalam sistem? Ini tidak dapat dibatalkan!"
@@ -27,10 +65,26 @@ id:
       already_logged_in: "Anda sudah login dan tidak perlu untuk memulihkan password anda."
       already_registered: "Already a member?"
       application_base_url_not_set: "Silakan set application_base_url di global_config.yml"
+      bulk_access_code_emails: Email
+      bulk_access_code_emails_tip: "Pisahkan email dengan tanda koma"
+      bulk_access_code_message: Pesan
+      bulk_access_code_problem: "Soal menambahkan kode akses"
+      bulk_access_code_subject: Subyek
+      bulk_access_code_tip: "Opsional. Jika kode adalah kode yang ditentukan maka akan dikirim ke semua pengguna. Kolom ini kosong untuk mengirim kode unik untuk tiap user."
+      bulk_access_codes: "Bulk Kode Akses"
+      bulk_access_codes_created: "Kode akses massal dibuat dan dikirimkan lewat email kepada {{email_count}} email."
+      bulk_access_codes_description: "Hal ini akan menghasilkan yang unik, menggunakan kode akses tunggal untuk setiap email yang disediakan."
+      bulk_access_codes_title: "Bulk Kode Akses"
       cannot_deactivate_yourself: "Anda tidak dapat menonaktifkan diri sendiri!"
+      cant_delete_admin: "Anda tidak dapat menghapus pengguna yang ada di peran admin. Hapus pengguna dari peran administrator dan kemudian coba lagi. Harap berhati-hati saat menghapus administrator. Jika Anda menghapus semua account administrator Anda tidak akan dapat lagi login ke sistem administrasi."
+      cant_delete_administrator_role: "Anda tidak dapat menghapus peran administrator."
+      cant_disable_admin: "Tidak dapat menonaktifkan sebuah administrator. Harap menghapus pengguna dari administrator peran dan coba lagi."
       change_password: "Ubah Password"
+      change_permissions: "Ubah Peran"
+      change_permissions_for: "Perubahan Izin akses untuk {{user}}"
       change_your_password: "Ubah Password"
       choose_member_name: "Nama Anggota"
+      click_to_sign_up_now: "Klik di sini untuk mendaftar sekarang."
       complete_profile: "Complete Your Profile"
       confirm_delete_account: "Apakah Anda yakin ingin menghapus account Anda? \\ NPerangkat tidak dapat dibatalkan."
       confirm_password: "Konfirmasi Password"
@@ -38,9 +92,16 @@ id:
       could_not_find_reset_code: "Tidak dapat menemukan kode reset password. Silakan coba lagi ulang sandi Anda."
       could_not_find_user_with_email: "Tidak dapat menemukan pengguna dengan alamat email tersebut."
       current_password: "Current Password"
+      delete: Menghapus
       delete_my_account: "Hapus akun user saya dan semua data saya."
       delete_this_user: "Hapus pengguna ini."
+      deleting_user: "menghapus pengguna ..."
+      edit: Edit
+      edit_access_code: "Edit Access Code"
+      edit_access_code_title: "Edit Access Code"
       edit_profile: "Edit Profil"
+      edit_role_dialog_title: "Edit Peran"
+      email: Email
       email_address: "Email Address"
       email_available: "Email tersedia"
       email_empty: "Silakan masukkan alamat email"
@@ -48,6 +109,8 @@ id:
       email_invalid: "Email valid"
       email_not_available: "Email sudah digunakan. {{reset_password_help}}"
       email_recover_prompt: "Harap sediakan email yang Anda sign up untuk mendapatkan kembali password Anda."
+      expiration_date: "Expiration Date"
+      expiration_date_tip: "Masukkan tanggal yang di atasnya kode akses akan menjadi tidak valid"
       first_name: "Nama Depan"
       forgot_password: "Lupa Password"
       forgot_username: "Lupa Username"
@@ -56,6 +119,7 @@ id:
       invalid_username: "Username tidak valid"
       join_application_name: "Bergabung dan menyelesaikannya"
       last_name: "Nama belakang"
+      login: Login
       login_empty: "Masukkan login"
       login_fail: "Kami minta maaf, tapi kami tidak dapat mengenali informasi login Anda. Silakan coba lagi."
       login_out_success: "Anda telah log out."
@@ -91,10 +155,17 @@ id:
       register_for_account: "Mendaftar untuk sebuah account"
       remember_me: "Ingat saya"
       remove_my_account: "Hapus Account"
+      request_access_code: "Permintaan Access Code"
       request_username: "Permintaan Pengguna"
       request_username_subject: "Lupa nama pengguna"
       reset_password: "Reset Your Password"
       reset_your_password: "Reset Your Password"
+      role: Peran
+      role_delete_confirm: "Apakah Anda yakin ingin menghapus peran ini? Semua perizinan yang terkait juga akan dihapus!"
+      role_deleted: "Peran Dihapus"
+      role_not_deleted: "Peran tidak dapat dihapus"
+      roles: Peran
+      save: Simpan
       select_new_password: "Pilih Sandi Baru"
       sign_in: Masuk
       sign_in_now: "Daftar sekarang!"
@@ -103,12 +174,20 @@ id:
       sign_up: Mendaftar
       sign_up_now: "Sign-up Now"
       sorry_invalid_reset_code: "Kami minta maaf, tapi kami tidak dapat menemukan account Anda. Jika Anda mengalami masalah coba salin dan sisipkan URL dari email Anda ke browser Anda atau me-restart proses reset password."
+      submit: Menyerahkan
       terms_and_service: "Dengan mengklik &#39;Sign-up Now&#39; Anda setuju untuk mematuhi {{tos_link_anchor}} Syarat dan Ketentuan {{link_end}}."
       thanks_sign_up: "Terima kasih telah mendaftar!"
       thanks_sign_up_check: "Account Anda telah dibuat. Silakan cek e-mail Anda untuk aktivasi account Anda petunjuk!"
       thanks_sign_up_login: "Terima kasih telah mendaftar! Anda dapat login sekarang"
+      total_users: "Total Users: {{total}}"
+      unlimited: "Unlimited Penggunaan"
+      unlimited_tip: "Cek di sini jika kode akses dapat digunakan dalam jumlah tidak terbatas kali. Ini akan menimpa batas penggunaan."
+      update: Pembaruan
       update_profile: "Update profil Anda"
       update_user: "Perbarui informasi pengguna"
+      update_user_admin: "Update User"
+      use_limit: "Jumlah Penggunaan"
+      use_limit_tip: "Masukkan nomor kali kode akses dapat digunakan."
       user_account_deleted: "Anda telah berhasil menghapus account Anda."
       user_disable_problem: "Ada masalah menonaktifkan pengguna ini."
       user_disabled: "Pengguna dinonaktifkan"
@@ -116,14 +195,22 @@ id:
       user_enabled: "Pengguna diaktifkan"
       user_marked_active: "User telah ditandai sebagai aktif"
       user_marked_inactive: "User telah ditandai sebagai tidak aktif"
+      user_not_activated_error: "Bisa tidak mengaktifkan pengguna"
+      user_not_deactivated_error: "Tidak dapat menonaktifkan pengguna"
       user_successfully_deleted: "{{login}} User berhasil dihapus."
       user_update: "Informasi pengguna Anda telah diperbarui."
+      user_update_sucess: "User telah berhasil diperbarui"
       username: Username
       username_available: "Username tersedia"
       username_help: "Anda dapat menggunakan antara 6 dan 20 karakter. Jika nama yang Anda inginkan tidak tersedia coba tambahkan nomor atau tanda baca."
       username_not_available: "Username tidak tersedia"
       username_recover_prompt: "Harap sediakan email yang Anda gunakan ketika Anda menciptakan account Anda, nama pengguna Anda akan dikirim melalui email kepada Anda."
       username_sent: "Username Anda telah dikirim email ke anda. Silakan periksa email Anda."
+      users_admin: Users
+      users_in_role: "Pengguna dalam peran: {{role}}"
+      validation_are_required: diperlukan.
+      validation_is_required: diperlukan.
+      view_your_account: "View Your Account"
       welcome: "Selamat datang"
       welcome_email_subject: "Welcome to {{application_name}}"
       welcome_message: "Selamat Datang di kotoran. Sistem ini menyediakan komponen dasar untuk membantu Anda membangun website Anda."

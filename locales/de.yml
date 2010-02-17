@@ -8,12 +8,50 @@ de:
       role_created: "Die Rolle wurde erfolgreich erstellt."
       roles: Rollen
     users: 
+      access_code: "Access Code"
+      access_code_add_problem: "Problem Hinzufügen Zugangscode"
+      access_code_added: "Access Code wurde hinzugefügt"
+      access_code_created: Erstellt
+      access_code_delete_confirm: "Sind Sie sicher, dass Sie diesem Zugangscode zu stornieren?"
+      access_code_delete_error: "Ein Fehler ist aufgetreten beim Versuch, den Zugang, zu löschen"
+      access_code_delete_link: "Löschen Access Code"
+      access_code_delete_problem: "Kann nicht gelöscht werden Zugangscode es Benutzern zugeordnet."
+      access_code_deleted: "Gelöschte Zugangscode."
+      access_code_edit_link: "Edit Access Code"
+      access_code_edit_problem: "Problem bearbeiten Zugangscode"
+      access_code_expires: Gültig
+      access_code_fullfill_invites: "Erfüllen Sie sich einladen Anfragen"
+      access_code_fullfill_invites_limit: "Anfrage bezüglich der Einladung Limit"
+      access_code_fullfill_invites_limit_tip: "Geben Sie eine Zahl zu begrenzen, die Zahl der Anträge verschickt. Zum Beispiel wird die Eingabe 100 begrenzen lädt zu den jüngsten 100 Zugriffe"
+      access_code_fullfill_invites_tip: "Prüfen Sie hier, Einladungen versenden, um Benutzern die einen entsprechenden Antrag ein einzuladen. Dies wird ignorieren oben genannten E-Mails."
+      access_code_help: "Wenn Sie erhielt einen Zugangscode von uns, geben Sie es bitte in das Feld oben ein. Sie können auch {{access_request_anchor}} Anfrage ein Zugangscode {{access_request_anchor_end}}."
+      access_code_new: "Neue Access Code"
+      access_code_related_users: "Nutzer, die bis unterzeichnet mit diesem Code"
+      access_code_request_count: "Es gibt derzeit {{access_code_requests_count}} Zugangscode Zugriffe"
+      access_code_request_thank_you: "Vielen Dank für Ihre Anfrage. Wir melden uns so bald wie möglich."
+      access_code_request_tip: "Geben Sie Ihre E-Mail und wir schicken Ihnen einen Zugang, sobald einer verfügbar ist. Danke!"
+      access_code_tip: "Geben Sie einen Zugangscode."
+      access_code_unlimited: Unlimited
+      access_code_update_problem: "Es gab ein Problem beim Aktualisieren des Zugangs-Code."
+      access_code_use_limit: "Verwenden Limit"
+      access_code_uses: Verwendet
+      access_codes: Zugangscodes
       access_denied: "Sie haben keine Berechtigung, auf die gewünschte Seite zugreifen."
+      access_required_warning: "Zugang zur Website ist derzeit beschränkt. Sie benötigen einen gültigen Zugangscode zu registrieren."
       account_activated: "Ihr Konto wurde aktiviert! Sie können sich jetzt anmelden."
       account_not_activated: "{{application_name}} Ihr Konto wurde noch nicht aktiviert."
       activation_complete: "Aktivierung abgeschlossen"
       activation_instructions: "Anweisungen für die Aktivierung"
       activation_not_found: "Aktivierungs-Code nicht gefunden. Bitte versuchen Sie ein neues Konto erstellen."
+      add: Hinzufügen
+      add_access_code: "Access Code hinzufügen"
+      add_access_code_title: "Access Code hinzufügen"
+      add_permission: "(Add Permission)"
+      add_permission_to_user: "Add Berechtigung zum Benutzer {{user}}"
+      add_role: "Neue Rolle"
+      add_role_dialog_title: "Neue Rolle"
+      add_user_to_role: "Benutzer hinzufügen, um Rolle"
+      add_user_to_role_title: "Hinzufügen eines Benutzers zu einer neuen Rolle."
       admin: 
         activate_all_inactive_users: "Aktivieren Sie alle inaktiven Benutzer"
         activate_all_inactive_users_confirm: "Sind Sie sicher, dass Sie diese Funktion aktivieren möchten alle aktiven Benutzer im System? Dies kann nicht rückgängig gemacht werden!"
@@ -21,16 +59,32 @@ de:
         show_emails: "E-Mails anzeigen"
         unactivated_users: "Es gibt {{count}} aktivierten Benutzer"
       admin_requred: "Sie müssen als Administrator angemeldet sein, um diese Funktion zuzugreifen."
-      admin_users_title: "User Administration"
+      admin_users_title: Benutzerverwaltung
       all_users: "All Users"
       already_activated: "Ihr Konto wurde bereits aktiviert. Sie können sich unten."
       already_logged_in: "Sie sind bereits angemeldet und brauchen Ihr Passwort nicht erholen."
       already_registered: "Bereits Mitglied?"
       application_base_url_not_set: "Bitte setzen Sie application_base_url in global_config.yml"
+      bulk_access_code_emails: E-Mails
+      bulk_access_code_emails_tip: "Separate E-Mails mit einem Komma"
+      bulk_access_code_message: Nachricht
+      bulk_access_code_problem: "Problem Hinzufügen Zugangscode"
+      bulk_access_code_subject: Subjekt
+      bulk_access_code_tip: "Optional. Wenn ein Code wird dann festgelegt, dass Code wird für alle Benutzer gesendet werden. Lassen Sie dieses Feld leer, um einen eindeutigen Code für jeden Benutzer zu senden."
+      bulk_access_codes: "Bulk Zugangscodes"
+      bulk_access_codes_created: "Bulk Zugangscodes erstellt und an {{email_count}} E-Mails per E-Mail."
+      bulk_access_codes_description: "Dies wird eine einzigartige, einzelne Nutzung des Zugangs-Code für jedes der E-Mails generieren, zur Verfügung gestellt."
+      bulk_access_codes_title: "Bulk Zugangscodes"
       cannot_deactivate_yourself: "Sie können sich nicht deaktivieren!"
+      cant_delete_admin: "Sie können nicht gelöscht werden, dass ein Benutzer im Admin-Rolle ist. Entfernen Sie den Benutzer aus der Administrator-Rolle und versuchen Sie es erneut. Bitte seien Sie vorsichtig beim Löschen von Administratoren. Wenn Sie alle Administrator-Konten, die Sie löschen nicht mehr in der Lage sein, die Verwaltung System anmelden."
+      cant_delete_administrator_role: "Sie können nicht gelöscht werden die Administrator-Rolle."
+      cant_disable_admin: "Nicht deaktivieren können ein Administrator. Bitte entfernen Sie den Benutzer aus der Administrator-Rolle und versuchen es erneut."
       change_password: "Passwort ändern"
+      change_permissions: "Rollen ändern"
+      change_permissions_for: "Ändern Sie Berechtigungen für {{user}}"
       change_your_password: "Ändern Sie Ihr Passwort"
       choose_member_name: "Mitglied Name"
+      click_to_sign_up_now: "Klicken Sie hier, um dich."
       complete_profile: "Runden Ihr Profil ab"
       confirm_delete_account: "Sind Sie sicher, dass Sie Ihren Account löschen? \\ N Diese kann nicht rückgängig gemacht werden."
       confirm_password: "Kennwort bestätigen"
@@ -38,9 +92,16 @@ de:
       could_not_find_reset_code: "Nicht finden konnten, ein Passwort Reset Code. Bitte versuchen Sie das Zurücksetzen des Passworts wieder."
       could_not_find_user_with_email: "Nicht finden konnten, ein Benutzer mit dieser E-Mail-Adresse."
       current_password: "Aktuelles Passwort"
+      delete: Löschen
       delete_my_account: "Löschen meines Benutzer-Accounts und alle meine Daten."
       delete_this_user: "Diesen Benutzer löschen."
+      deleting_user: "Löschen von Benutzer ..."
+      edit: Edit
+      edit_access_code: "Edit Access Code"
+      edit_access_code_title: "Edit Access Code"
       edit_profile: "Profil bearbeiten"
+      edit_role_dialog_title: "Rolle ändern"
+      email: E-Mail
       email_address: "E-Mail Adresse"
       email_available: "E-Mail zur Verfügung"
       email_empty: "Bitte geben Sie eine E-Mail-Adresse"
@@ -48,6 +109,8 @@ de:
       email_invalid: "Ungültige E-Mail"
       email_not_available: "E-Mail bereits im Einsatz. {{reset_password_help}}"
       email_recover_prompt: "Bitte geben Sie die E-Mail mit der Sie sich angemeldet haben, um Ihr Passwort zu erholen."
+      expiration_date: Ablaufdatum
+      expiration_date_tip: "Geben Sie den Zeitpunkt, zu dem der Zugang Code ungültig werden wird"
       first_name: Vorname
       forgot_password: "Passwort vergessen"
       forgot_username: "Nutzername vergessen"
@@ -56,6 +119,7 @@ de:
       invalid_username: "Ungültiger Benutzername"
       join_application_name: "Registriert und alles zu erledigen"
       last_name: Nachname
+      login: Anmeldung
       login_empty: "Bitte geben Sie einen Benutzernamen"
       login_fail: "Es tut uns leid, aber wir konnten nicht erkennen, Ihre Login-Daten. Bitte versuchen Sie es erneut."
       login_out_success: "Sie haben sich abgemeldet."
@@ -69,7 +133,7 @@ de:
         all_users: "All Users"
         inactive_users: "Aktive Benutzer"
         search_users: "Suche Benutzer"
-      new_password_doesnt_match: "Neues Passwort stimmt nicht mit dem Kennwort zu bestätigen."
+      new_password_doesnt_match: "Neues Passwort stimmt nicht mit dem Passwort-Bestätigung."
       old_password_incorrect: "Dein altes Passwort ist falsch."
       password: Passwort
       password_cannot_be_blank: "Passwort-Feld kann nicht leer sein."
@@ -91,10 +155,17 @@ de:
       register_for_account: "Registrieren Sie sich für ein Konto"
       remember_me: "Remember me"
       remove_my_account: "Entfernen Sie Ihr Konto"
+      request_access_code: "Zugangsdaten anfordern"
       request_username: "Anfordern Benutzername"
       request_username_subject: "Benutzername vergessen"
       reset_password: "Reset Your Password"
       reset_your_password: "Reset Your Password"
+      role: Rolle
+      role_delete_confirm: "Sind Sie sicher, dass Sie diese Rolle wirklich löschen? Alle damit verbundenen Berechtigungen werden ebenfalls gelöscht!"
+      role_deleted: "Rolle entfällt"
+      role_not_deleted: "Rolle konnte nicht gelöscht werden"
+      roles: Rollen
+      save: Sichern
       select_new_password: "Wählen Sie ein neues Passwort"
       sign_in: Anmelden
       sign_in_now: "Melden Sie sich jetzt!"
@@ -103,12 +174,20 @@ de:
       sign_up: Anmelden
       sign_up_now: "Sign-up Now"
       sorry_invalid_reset_code: "Es tut uns leid, aber wir konnten nicht gefunden werden Ihrem Konto. Falls Sie Fragen werden versuchen, Kopieren und Einfügen der URL von Ihrem E-Mail in Ihrem Browser oder ein Neustart des Passwort-Reset-Prozess."
+      submit: Übermitteln
       terms_and_service: "Durch Klick auf Anmelden &quot;-Up Now&quot; erklären Sie sich mit dem {{tos_link_anchor}} AGB {{link_end}}. nachzukommen"
       thanks_sign_up: "Vielen Dank für Ihre Anmeldung!"
       thanks_sign_up_check: "Ihr Konto wurde erstellt. Bitte überprüfen Sie Ihre E-Mail für Ihren Account Anweisungen für die Aktivierung!"
       thanks_sign_up_login: "Vielen Dank für Ihre Anmeldung! Sie können sich jetzt anmelden"
+      total_users: "Total Users: {{total}}"
+      unlimited: "Unbegrenzte Nutzungsmöglichkeiten"
+      unlimited_tip: "Prüfen Sie hier, wenn Sie den Zugangscode verwendet werden können eine unbegrenzte Anzahl von Zeiten. Dies überschreibt die Verwendung zu beschränken."
+      update: Aktualisieren
       update_profile: "Aktualisieren Sie Ihr Profil"
       update_user: "Aktualisieren Sie Ihre Benutzerinformationen"
+      update_user_admin: "Update User"
+      use_limit: "Number of Uses"
+      use_limit_tip: "Geben Sie die Anzahl der den Zugangscode verwendet werden kann."
       user_account_deleted: "Sie haben erfolgreich Ihren Account gelöscht."
       user_disable_problem: "Es gab ein Problem Sperrung des Nutzers."
       user_disabled: "User deaktiviert"
@@ -116,14 +195,22 @@ de:
       user_enabled: "Benutzer aktiviert"
       user_marked_active: "Benutzer wurde als aktiv markiert"
       user_marked_inactive: "Benutzer wurde als inaktiv markiert"
+      user_not_activated_error: "Es kann kein Benutzer"
+      user_not_deactivated_error: "Konnte nicht deaktivieren Benutzer"
       user_successfully_deleted: "User {{login}} wurde erfolgreich gelöscht."
       user_update: "Du bist Benutzer Informationen wurden aktualisiert."
+      user_update_sucess: "Benutzer wurde erfolgreich aktualisiert"
       username: Benutzername
       username_available: "Nutzername verfügbar"
-      username_help: "Sie können zwischen 6 und 20 Zeichen verwenden. Wenn der gewünschte Name nicht verfügbar versuchen Sie, Zahlen oder Satzzeichen."
+      username_help: "Sie können zwischen 6 bis 20 Zeichen verwenden. Wenn der gewünschte Name nicht verfügbar versuchen Sie, Zahlen oder Satzzeichen."
       username_not_available: "Benutzername nicht verfügbar"
       username_recover_prompt: "Bitte geben Sie die E-Mail, die Sie verwenden, wenn Sie Ihr Konto erstellt haben, wird Ihr Benutzername Ihr Passwort gemailt."
       username_sent: "Ihr Benutzername wurde gesendet, um Sie per E-Mail. Bitte überprüfen Sie Ihre E-Mail."
+      users_admin: Benutzer
+      users_in_role: "Benutzer in der Rolle: {{role}}"
+      validation_are_required: "erforderlich sind."
+      validation_is_required: "erforderlich ist."
+      view_your_account: "Profil &quot;Mein Konto&quot;"
       welcome: Willkommen
       welcome_email_subject: "Willkommen bei {{application_name}}"
       welcome_message: "Willkommen auf dem Dreck. Dieses System stellt die wesentlichen Bestandteile, um Sie beim Aufbau Ihrer Website."

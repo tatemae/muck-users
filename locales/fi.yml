@@ -8,12 +8,50 @@ fi:
       role_created: "Rooli oli luotu."
       roles: Roolit
     users: 
+      access_code: Avauskoodi
+      access_code_add_problem: "Problem lisäämällä avauskoodi"
+      access_code_added: "Avauskoodi lisätty onnistuneesti"
+      access_code_created: Luotu
+      access_code_delete_confirm: "Oletko varma että haluat poistaa tämän tunnuksen?"
+      access_code_delete_error: "Virhe poistaa avauskoodi"
+      access_code_delete_link: "Poista Access Code"
+      access_code_delete_problem: "Ei voi poistaa tunnuksen on käyttäjille liittyy siihen."
+      access_code_deleted: "Poistetaan avauskoodi."
+      access_code_edit_link: "Muokkaa Access Code"
+      access_code_edit_problem: "Ongelma muokkaus avauskoodi"
+      access_code_expires: Päättyy
+      access_code_fullfill_invites: "Toteuta kutsupyynnöt"
+      access_code_fullfill_invites_limit: "Kutsumispyyntö Limit"
+      access_code_fullfill_invites_limit_tip: "Anna numero rajoittaa pyyntöjen määrän lähetetty. Esimerkiksi kirjoittamalla 100 rajoittaa pyytää viimeisimmän 100 pyynnöt"
+      access_code_fullfill_invites_tip: "Tarkista tästä lähettää kutsuja käyttäjille, jotka ovat pyytäneet herättää. Tämä ohittaa kaikki sähköpostit edellä."
+      access_code_help: "Jos olet saanut tunnuksen meiltä, kirjoita se yllä olevaan kenttään. Saatat myös {{access_request_anchor}} pyytää avauskoodi {{access_request_anchor_end}}."
+      access_code_new: "Uusi numero"
+      access_code_related_users: "Käyttäjät, jotka allekirjoittaneet tämän koodin"
+      access_code_request_count: "Tällä hetkellä {{access_code_requests_count}} avauskoodi pyynnöt"
+      access_code_request_thank_you: "Thank you for your request. Otamme yhteyttä mahdollisimman pian."
+      access_code_request_tip: "Kirjoita sähköpostiosoitteesi ja lähetämme sinulle tunnuksen heti, kun sellainen on käytettävissä. Kiitos!"
+      access_code_tip: "Anna avauskoodi."
+      access_code_unlimited: Rajoittamattomat
+      access_code_update_problem: "Oli ongelma päivittää avauskoodi."
+      access_code_use_limit: "Käytä Limit"
+      access_code_uses: Käyttää
+      access_codes: Tunnusluvut
       access_denied: "Sinulla ei ole lupaa käyttää pyydettyä sivua."
+      access_required_warning: "Sivusto pääsy on tällä hetkellä rajoitettu. Tarvitset voimassa oleva avauskoodi kirjautua."
       account_activated: "Tilisi on aktivoitu! Voit nyt kirjautua."
       account_not_activated: "Sinun {{application_name}} tiliä ei ole vielä aktivoitu."
       activation_complete: "Aktivointi on valmis"
       activation_instructions: Aktivointiohjeita
       activation_not_found: "Aktivointikoodi ei löytynyt. Yritä luoda uusi tili."
+      add: Lisää
+      add_access_code: "Lisää Access Code"
+      add_access_code_title: "Lisää Access Code"
+      add_permission: "(Lisää Permission)"
+      add_permission_to_user: "Lisää Lupa käyttäjän {{user}}"
+      add_role: "Lisää Rooli"
+      add_role_dialog_title: "Lisää Rooli"
+      add_user_to_role: "Lisää käyttäjä on rooli"
+      add_user_to_role_title: "Lisää käyttäjä uutta roolia."
       admin: 
         activate_all_inactive_users: "Aktivoida kaikki aktiiviset käyttäjät"
         activate_all_inactive_users_confirm: "Oletko varma että haluat aktivoida kaikki aktiivisia käyttäjiä järjestelmässä? Tämä ei voi perua!"
@@ -27,10 +65,26 @@ fi:
       already_logged_in: "Olet jo kirjautunut sisään, ja ei tarvitse palauttaa salasanasi."
       already_registered: "Already a member?"
       application_base_url_not_set: "Aseta application_base_url ja global_config.yml"
+      bulk_access_code_emails: Sähköpostiviestejä
+      bulk_access_code_emails_tip: "Erilliset sähköpostiosoitteet pilkulla"
+      bulk_access_code_message: Viesti
+      bulk_access_code_problem: "Problem lisäämällä avauskoodi"
+      bulk_access_code_subject: Aihe
+      bulk_access_code_tip: "Vapaaehtoinen. Jos koodi on määritetty niin, että koodi lähetetään kaikille käyttäjille. Jätä tämä kenttä tyhjäksi lähettää yksilöllinen koodi jokaiselle käyttäjälle."
+      bulk_access_codes: "Bulk Tunnusluvut"
+      bulk_access_codes_created: "Bulk Tunnusluvut luodaan ja lähetetään {{email_count}} sähköposteja."
+      bulk_access_codes_description: "Tämä luo ainutlaatuisen, kertakäyttöiset avauskoodi kunkin sähköposteja säädetty."
+      bulk_access_codes_title: "Bulk Tunnusluvut"
       cannot_deactivate_yourself: "Et voi poistaa itseäsi!"
+      cant_delete_admin: "Et voi poistaa käyttäjän, joka on admin rooli. Poista käyttäjä ylläpitäjän rooli ja yritä uudelleen. Olkaa varovainen poistaessasi ylläpitäjät. Jos poistat kaikki ylläpitäjän tilin et enää voi kirjautua hallinnon järjestelmään."
+      cant_delete_administrator_role: "Et voi poistaa ylläpitäjän rooli."
+      cant_disable_admin: "Ei voi poistaa järjestelmänvalvoja. Poista käyttäjä ylläpitäjän rooli ja yritä uudelleen."
       change_password: "Vaihda salasana"
+      change_permissions: "Muuta Tehtävät"
+      change_permissions_for: "Muuta Käyttöoikeudet {{user}}"
       change_your_password: "Vaihda salasana"
       choose_member_name: Jäsennimesi
+      click_to_sign_up_now: "Klikkaa tästä ja rekisteröidy nyt."
       complete_profile: "Täydellinen Profiilini"
       confirm_delete_account: "Oletko varma, että haluat poistaa tilisi? \\ NTämä ei voi peruuttaa."
       confirm_password: "Vahvista salasana"
@@ -38,9 +92,16 @@ fi:
       could_not_find_reset_code: "Ei löytänyt salasanan nollaus koodia. Ole hyvä ja pyydä uusi salasana uudelleen."
       could_not_find_user_with_email: "Ei löydy käyttäjää, että sähköpostiosoite."
       current_password: "Nykyinen salasana"
+      delete: Poistaa
       delete_my_account: "Poistan käyttäjätunnuksen ja kaikki tietoni."
       delete_this_user: "Poista käyttäjä."
+      deleting_user: "poistamisen käyttäjä ..."
+      edit: Muokkaus
+      edit_access_code: "Muokkaa Access Code"
+      edit_access_code_title: "Muokkaa Access Code"
       edit_profile: "Edit Profile"
+      edit_role_dialog_title: "Muokkaa Rooli"
+      email: Muodossaan
       email_address: Sähköpostiosoitteella
       email_available: "Email saatavilla"
       email_empty: "Anna sähköpostiosoite"
@@ -48,6 +109,8 @@ fi:
       email_invalid: "Virheellinen sähköpostiosoite"
       email_not_available: "Email on jo käytössä. {{reset_password_help}}"
       email_recover_prompt: "Ole hyvä ja anna sähköpostiosoite olet rekisteröitynyt käyttäjäksi, palauttaa salasanasi."
+      expiration_date: Vanhenemispäivä
+      expiration_date_tip: "Syötä päivämäärä, jolloin tunnuksen tulee kelpaa"
       first_name: Etunimi
       forgot_password: "Unohtunut salasana"
       forgot_username: "Forgot Username"
@@ -56,6 +119,7 @@ fi:
       invalid_username: "Virheellinen käyttäjätunnus"
       join_application_name: "Liity jäseneksi ja saat sen tehdä"
       last_name: Sukunimi
+      login: Kirjautuminen
       login_empty: "Anna login"
       login_fail: "Pahoittelemme, mutta emme voineet tunnistaa kirjautumistiedot. Yritä uudelleen."
       login_out_success: "Olet kirjautunut ulos."
@@ -91,10 +155,17 @@ fi:
       register_for_account: "Rekisteröidy tili"
       remember_me: "Muista minut"
       remove_my_account: "Poista Oma tilini"
+      request_access_code: "Request Access Code"
       request_username: "Pyydä Käyttäjätunnus"
       request_username_subject: "Unohditko käyttäjätunnuksesi"
       reset_password: "Palauta salasana"
       reset_your_password: "Palauta salasana"
+      role: Rooli
+      role_delete_confirm: "Oletko varma että haluat poistaa tämän roolin? Kaikki siihen liittyvät oikeudet poistetaan myös!"
+      role_deleted: "Rooli Poistettu"
+      role_not_deleted: "Asemaa ei voida poistaa"
+      roles: Roolit
+      save: Tallentaa
       select_new_password: "Valitse uusi salasana"
       sign_in: Sisään
       sign_in_now: "Kirjaudu sisään nyt!"
@@ -103,12 +174,20 @@ fi:
       sign_up: Kirjautua
       sign_up_now: "Sign-up now"
       sorry_invalid_reset_code: "Pahoittelemme, mutta emme löytäneet tilillesi. Jos sinulla on kysymyksiä yrittää kopioida ja liittää URL-osoitteen sähköpostisi selaimen tai käynnistämättä nollata salasanan prosessia."
+      submit: Lähettää
       terms_and_service: "Klikkaamalla &quot;Kirjaudu nyt&quot; sitoudut noudattamaan {{tos_link_anchor}} Käyttöehdot {{link_end}}."
       thanks_sign_up: "Kiitos rekisteröitymisestä!"
       thanks_sign_up_check: "Tilisi on luotu. Tarkista sähköpostisi tilin aktivointiin ohjeita!"
       thanks_sign_up_login: "Kiitos rekisteröitymisestä! Voit kirjautua heti"
+      total_users: "Käyttäjiä yhteensä: {{total}}"
+      unlimited: "Rajoittamattomat käyttö"
+      unlimited_tip: "Tarkista tästä, jos käyttää koodia voidaan käyttää rajoittamattoman määrän kertoja. Tämä korvaa käytön rajoittamiseksi."
+      update: Päivittää
       update_profile: "Päivitä profiili"
       update_user: "Päivitä käyttäjän tiedot"
+      update_user_admin: "Käyttäjätietojen päivitys"
+      use_limit: "Number of Uses"
+      use_limit_tip: "Anna monta kertaa saada koodia voidaan käyttää."
       user_account_deleted: "Olet poistanut käyttäjätunnuksesi."
       user_disable_problem: "Oli ongelma käytöstä tämän käyttäjän."
       user_disabled: "Käyttäjän käytössä"
@@ -116,14 +195,22 @@ fi:
       user_enabled: "Käyttäjän käytössä"
       user_marked_active: "Käyttäjän on merkitty aktiiviseksi"
       user_marked_inactive: "Käyttäjän on merkitty aktiivisia"
+      user_not_activated_error: "Ei voi aktivoida käyttäjä"
+      user_not_deactivated_error: "Ei voi poistaa käyttäjän"
       user_successfully_deleted: "Käyttäjän {{login}} poistettu onnistuneesti."
       user_update: "Olet käyttäjän tiedot on päivitetty."
+      user_update_sucess: "Käyttäjän päivittäminen onnistui"
       username: Käyttäjätunnuksella
       username_available: "Käyttäjätunnus saatavilla"
       username_help: "Voit käyttää välillä 6 ja 20 merkkiä. Jos haluamasi nimi ei ole käytettävissä, kokeile lisätä numeroita tai välimerkkejä."
       username_not_available: "Käyttäjätunnus ei ole käytettävissä"
       username_recover_prompt: "Ole hyvä ja anna sähköpostiosoite, jota käytit kun loit tilisi, sinun käyttäjätunnuksesi lähetetään sinulle."
       username_sent: "Käyttäjätunnuksesi on lähetetty sähköpostitse. Tarkista sähköpostisi."
+      users_admin: Käyttäjät
+      users_in_role: "Käyttäjät asema: {{role}}"
+      validation_are_required: tarvitaan.
+      validation_is_required: tarvitaan.
+      view_your_account: Tilin
       welcome: Tervetuloa
       welcome_email_subject: "Tervetuloa {{application_name}}"
       welcome_message: "Tervetuloa hukata. Tämä järjestelmä tarjoaa ne peruselementit, joiden avulla voit rakentaa sivuston."

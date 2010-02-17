@@ -8,12 +8,50 @@ zh-CN:
       role_created: 角色已成功创建。
       roles: 角色
     users: 
+      access_code: 访问码
+      access_code_add_problem: 添加访问代码问题
+      access_code_added: 访问代码已成功添加
+      access_code_created: 创建
+      access_code_delete_confirm: 您确定要取消此访问代码？
+      access_code_delete_error: 发生错误时尝试删除代码614424
+      access_code_delete_link: 删除访问码
+      access_code_delete_problem: 无法删除访问代码它与它相关联的用户。
+      access_code_deleted: 删除访问代码。
+      access_code_edit_link: 编辑访问码
+      access_code_edit_problem: 编辑访问代码问题
+      access_code_expires: 到期
+      access_code_fullfill_invites: 完成邀请请求
+      access_code_fullfill_invites_limit: 邀请请求限制
+      access_code_fullfill_invites_limit_tip: 输入一个数字来限制发出请求的数量。例如，输入100将限制邀请到最近的100个请求
+      access_code_fullfill_invites_tip: 检查这里传送邀请给谁要求将邀请用户。这将忽略上面指定的任何电子邮件。
+      access_code_help: "如果您收到我们的查询码，请在上面的框中。您也可以{{access_request_anchor}}要求访问代码{{access_request_anchor_end}}."
+      access_code_new: 新的接入代码
+      access_code_related_users: 用户谁签署这一守则
+      access_code_request_count: "目前有{{access_code_requests_count}}访问代码的请求"
+      access_code_request_thank_you: 感谢您的要求。我们将联系尽快。
+      access_code_request_tip: 请输入您的电子邮件，我们将寄给您访问代码只要一可用。谢谢您！
+      access_code_tip: 输入访问代码。
+      access_code_unlimited: 无限
+      access_code_update_problem: 有一个问题，更新访问代码。
+      access_code_use_limit: 使用限制
+      access_code_uses: 用途
+      access_codes: 接入码
       access_denied: 您没有权限访问请求的网页。
+      access_required_warning: 目前网站访问限制。你需要一个有效的查询码进行注册。
       account_activated: 您的帐户已经启用！您现在可以登录。
       account_not_activated: "您{{application_name}}帐户尚未被激活。"
       activation_complete: 激活完成
       activation_instructions: 启动说明
       activation_not_found: 激活码没有找到。请尝试创建一个新帐户。
+      add: 添加
+      add_access_code: 新增接入码
+      add_access_code_title: 新增接入码
+      add_permission: （添加许可）
+      add_permission_to_user: "添加权限用户{{user}}"
+      add_role: 添加角色
+      add_role_dialog_title: 添加角色
+      add_user_to_role: 添加用户到角色
+      add_user_to_role_title: 添加用户到一个新的角色。
       admin: 
         activate_all_inactive_users: 激活所有无效用户
         activate_all_inactive_users_confirm: 你确定要激活系统中所有的活跃用户？这不能撤消！
@@ -27,10 +65,26 @@ zh-CN:
       already_logged_in: 您已登录，不需要恢复您的密码。
       already_registered: 已经是会员？
       application_base_url_not_set: 请设置application_base_url在global_config.yml
+      bulk_access_code_emails: 电子邮件
+      bulk_access_code_emails_tip: 独立的邮件用逗号
+      bulk_access_code_message: 消息
+      bulk_access_code_problem: 添加访问代码问题
+      bulk_access_code_subject: 题目
+      bulk_access_code_tip: 可选。如果指定的代码则该代码将被发送到所有用户。给这一领域的空白，以一个独特的代码发送到每个用户。
+      bulk_access_codes: 散装接入码
+      bulk_access_codes_created: "散装访问代码创建并通过电子邮件发送给{{email_count}}电子邮件。"
+      bulk_access_codes_description: 这将产生一个独特的，单一使用的每个访问的电子邮件提供的代码。
+      bulk_access_codes_title: 散装接入码
       cannot_deactivate_yourself: 您不能停用你自己！
+      cant_delete_admin: 您不能删除一个用户，在管理员的作用。删除管理员角色的用户，然后再试一次。请小心删除管理员。如果您删除所有的管理员帐户您将无法再登录到管理系统。
+      cant_delete_administrator_role: 您不能删除管理员的作用。
+      cant_disable_admin: 无法禁用管理员。请删除从管理员角色的用户，然后再试一次。
       change_password: 更改密码
+      change_permissions: 改变角色
+      change_permissions_for: "为{{user}}更改权限"
       change_your_password: 更改密码
       choose_member_name: 会员名称
+      click_to_sign_up_now: 点击这里立即注册。
       complete_profile: 完整的个人信息
       confirm_delete_account: "你确定要删除帐户？\\ n这无法撤消。"
       confirm_password: 确认密码
@@ -38,9 +92,16 @@ zh-CN:
       could_not_find_reset_code: 找不到密码重设代码。请尝试重置密码了。
       could_not_find_user_with_email: 找不到与该电子邮件地址的用户。
       current_password: 当前密码
+      delete: 删除
       delete_my_account: 删除我的用户帐户和我的所有数据。
       delete_this_user: 删除此用户。
+      deleting_user: 删除用户...
+      edit: 编辑
+      edit_access_code: 编辑访问码
+      edit_access_code_title: 编辑访问码
       edit_profile: 编辑个人资料
+      edit_role_dialog_title: 编辑角色
+      email: 电子邮件
       email_address: 电子邮件地址
       email_available: 电子邮件可用
       email_empty: 请输入一个电子邮件地址
@@ -48,6 +109,8 @@ zh-CN:
       email_invalid: 无效的电子邮件
       email_not_available: "电子邮件已在使用中。 {{reset_password_help}}"
       email_recover_prompt: 请提供您的电子邮件签署了恢复您的密码了。
+      expiration_date: 截止日期
+      expiration_date_tip: 输入日期后，该接入码将会无效
       first_name: 名字
       forgot_password: 忘记密码
       forgot_username: 忘记用户名
@@ -56,6 +119,7 @@ zh-CN:
       invalid_username: 无效的用户名
       join_application_name: 加入并做到这件事
       last_name: 姓氏
+      login: 注册
       login_empty: 请输入登录
       login_fail: 很抱歉，但我们无法识别您的登录信息。请再试一次。
       login_out_success: 您已登出。
@@ -91,10 +155,17 @@ zh-CN:
       register_for_account: 注册一个帐号
       remember_me: 记住我
       remove_my_account: 删除我的帐户
+      request_access_code: 请求访问码
       request_username: 要求用户名
       request_username_subject: 忘记用户名
       reset_password: 重设密码
       reset_your_password: 重设密码
+      role: 角色
+      role_delete_confirm: 您确定要删除此角色？所有相关的权限也将被删除！
+      role_deleted: 角色删除
+      role_not_deleted: 角色无法删除
+      roles: 角色
+      save: 保存
       select_new_password: 选择一个新密码
       sign_in: 登录
       sign_in_now: 马上注册！
@@ -103,12 +174,20 @@ zh-CN:
       sign_up: 注册
       sign_up_now: 注册后便立即
       sorry_invalid_reset_code: 很抱歉，但我们无法找到您的帐户。如果您有问题，尝试复制并粘贴至您的电子邮件到您的浏览器的网址或重新启动重置密码的过程。
+      submit: 提交
       terms_and_service: "通过点击&#39;注册后便现在&#39;你同意遵守{{tos_link_anchor}}条款{{link_end}}."
       thanks_sign_up: 感谢您注册！
       thanks_sign_up_check: 您的帐户已创建。请检查您的电子邮件帐户的启动说明邮件！
       thanks_sign_up_login: 感谢您注册！现在您可以登陆
+      total_users: "总用户：{{total}}"
+      unlimited: 无限使用
+      unlimited_tip: 点击这里访问代码是否可以使用的次数是无限的。这将取代使用限制。
+      update: 更新
       update_profile: 更新个人资料
       update_user: 更新您的用户信息
+      update_user_admin: 更新用户
+      use_limit: 使用数
+      use_limit_tip: 输入次数访问代码都可以使用。
       user_account_deleted: 您已成功删除您的帐户。
       user_disable_problem: 有一个问题，禁用该用户。
       user_disabled: 用户停用
@@ -116,14 +195,22 @@ zh-CN:
       user_enabled: 用户启用
       user_marked_active: 用户已被标记为活动
       user_marked_inactive: 用户已被标记为无效
+      user_not_activated_error: 用户无法激活
+      user_not_deactivated_error: 用户无法停用
       user_successfully_deleted: "用户{{login}}已成功删除。"
       user_update: 你的用户信息已更新。
+      user_update_sucess: 用户已成功更新
       username: 用户名
       username_available: 用户可用
       username_help: 您可以使用6至20个字符。如果你想要的名字不可用尝试添加数字或标点符号。
       username_not_available: 用户名不可用
       username_recover_prompt: 请提供您的电子邮件时使用创建帐户，您的用户将通过电子邮件发送给您。
       username_sent: 你的用户名已发送电子邮件发送给您。请检查您的电子邮件。
+      users_admin: 用户
+      users_in_role: "在角色的用户：{{role}}"
+      validation_are_required: 是必需的。
+      validation_is_required: 是必需的。
+      view_your_account: 查看您的帐户
       welcome: 欢迎
       welcome_email_subject: "欢迎{{application_name}}"
       welcome_message: 欢迎淤泥。该系统提供了基本的组件，帮助您建立您的网站。

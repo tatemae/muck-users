@@ -8,12 +8,50 @@ sv:
       role_created: "Roll har skapats."
       roles: Roller
     users: 
+      access_code: Åtkomstkod
+      access_code_add_problem: "Problem att lägga till kod"
+      access_code_added: "Access Code har lagts"
+      access_code_created: Created
+      access_code_delete_confirm: "Är du säker på att du vill avbryta denna kod?"
+      access_code_delete_error: "Ett fel uppstod vid försök att ta bort prefixet"
+      access_code_delete_link: "Radera åtkomstkod"
+      access_code_delete_problem: "Kan inte ta bort prefixet har användare i samband med det."
+      access_code_deleted: "Utgår behörighetskod."
+      access_code_edit_link: "Edit åtkomstkod"
+      access_code_edit_problem: "Problemet redigering behörighetskod"
+      access_code_expires: Förfaller
+      access_code_fullfill_invites: "Uppfyll Bjud Begäran"
+      access_code_fullfill_invites_limit: "Bjud Request Limit"
+      access_code_fullfill_invites_limit_tip: "Ange ett nummer för att begränsa antalet ansökningar skickats ut. Till exempel kommer in 100 begränsa uppmanar de senaste 100 ansökningar"
+      access_code_fullfill_invites_tip: "Kolla här för att skicka inbjudningar till användare som har begärt en inbjuda. Detta ignorerar alla mail som anges ovan."
+      access_code_help: "Om du fick en kod från oss, vänligen ange det i rutan ovan. Du kan också {{access_request_anchor}} begära en behörighetskod {{access_request_anchor_end}}."
+      access_code_new: "New åtkomstkod"
+      access_code_related_users: "Användare som registrerat sig med denna kod"
+      access_code_request_count: "Det finns för närvarande {{access_code_requests_count}} prefixet sidvisningar"
+      access_code_request_thank_you: "Tack för din förfrågan. Vi hör av oss så snart som möjligt."
+      access_code_request_tip: "Ange din e-postadress och vi skickar en kod så snart det finns en sådan. Tack!"
+      access_code_tip: "Ange en behörighetskod."
+      access_code_unlimited: Obegränsad
+      access_code_update_problem: "Fanns ett problem att uppdatera koden."
+      access_code_use_limit: "Använd Limit"
+      access_code_uses: Använder
+      access_codes: Koder
       access_denied: "Du har inte behörighet till den begärda sidan."
+      access_required_warning: "Åtkomsten till webbplatsen är för närvarande begränsad. Du behöver en giltig kod för att registrera dig."
       account_activated: "Ditt konto har aktiverats! Du kan nu logga in."
       account_not_activated: "Ditt {{application_name}} konto har ännu inte aktiverats."
       activation_complete: "Aktivering Complete"
       activation_instructions: Aktiveringsanvisningar
       activation_not_found: "Aktiveringskod hittades inte. Försök skapa ett nytt konto."
+      add: "Lägg till"
+      add_access_code: "Lägg åtkomstkod"
+      add_access_code_title: "Lägg åtkomstkod"
+      add_permission: "(Lägg Permission)"
+      add_permission_to_user: "Lägg Tillstånd att användare {{user}}"
+      add_role: "Lägg Role"
+      add_role_dialog_title: "Lägg Role"
+      add_user_to_role: "Lägg Användare till"
+      add_user_to_role_title: "Lägg till en ny roll."
       admin: 
         activate_all_inactive_users: "Aktivera alla inaktiva användare"
         activate_all_inactive_users_confirm: "Är du säker på att du vill aktivera alla inaktiva användare i systemet? Detta kan inte ångras!"
@@ -27,10 +65,26 @@ sv:
       already_logged_in: "Du redan är inloggad och inte behöver återställa ditt lösenord."
       already_registered: "Redan medlem?"
       application_base_url_not_set: "Var vänlig ställ application_base_url i global_config.yml"
+      bulk_access_code_emails: Emails
+      bulk_access_code_emails_tip: "Separera e-post med ett kommatecken"
+      bulk_access_code_message: Message
+      bulk_access_code_problem: "Problem att lägga till kod"
+      bulk_access_code_subject: Ämne
+      bulk_access_code_tip: "Valfritt. Om en kod anges för att koden kommer att skickas till alla användare. Lämnar fältet tomt för att skicka en unik kod för varje användare."
+      bulk_access_codes: "Bulk Koder"
+      bulk_access_codes_created: "Bulk tillgång skapat koder och skickas till {{email_count}} e-post."
+      bulk_access_codes_description: "Detta genererar en unik, enda kod använda Access för varje e-post som."
+      bulk_access_codes_title: "Bulk Koder"
       cannot_deactivate_yourself: "Du kan inte avaktivera dig själv!"
+      cant_delete_admin: "Du kan inte ta bort en användare som är i admin roll. Ta bort användare från rollen och försök igen. Var försiktig när du tar bort administratörer. Om du raderar alla administratörskonton du kommer inte längre att kunna logga in till administrationen systemet."
+      cant_delete_administrator_role: "Du kan inte ta bort administratören roll."
+      cant_disable_admin: "Kan inte stänga av en administratör. Ta bort användare från rollen och försök igen."
       change_password: "Ändra lösenord"
+      change_permissions: "Ändra Roller"
+      change_permissions_for: "Ändra behörigheter för {{user}}"
       change_your_password: "Ändra lösenord"
       choose_member_name: Medlemsnamn
+      click_to_sign_up_now: "Klicka här för att registrera dig nu."
       complete_profile: "Komplett Din profil"
       confirm_delete_account: "Är du säker på att du vill radera ditt konto? \\ NDetta kan inte ångras."
       confirm_password: "Bekräfta lösenord"
@@ -38,9 +92,16 @@ sv:
       could_not_find_reset_code: "Kunde inte hitta en kod för återställning av lösenord. Försök att återställa ditt lösenord igen."
       could_not_find_user_with_email: "Kunde inte hitta en användare med den e-postadress."
       current_password: "Nuvarande lösenord"
+      delete: "Ta bort"
       delete_my_account: "Ta bort mitt användarkonto och alla mina uppgifter."
       delete_this_user: "Ta bort den här användaren."
+      deleting_user: "radera användare ..."
+      edit: Redigera
+      edit_access_code: "Edit åtkomstkod"
+      edit_access_code_title: "Edit åtkomstkod"
       edit_profile: "Edit Profile"
+      edit_role_dialog_title: "Edit Role"
+      email: Email
       email_address: Epostadress
       email_available: "Email tillgänglig"
       email_empty: "Ange en e-postadress"
@@ -48,6 +109,8 @@ sv:
       email_invalid: "Ogiltig e"
       email_not_available: "Tipsa redan är i bruk. {{reset_password_help}}"
       email_recover_prompt: "Ange e-postadress du registrerade dig med att återställa ditt lösenord."
+      expiration_date: Förfallodatum
+      expiration_date_tip: "Ange det datum då behörighetskod blir ogiltiga"
       first_name: Förnamn
       forgot_password: "Glömt lösenord"
       forgot_username: "Glömt användarnamn"
@@ -56,6 +119,7 @@ sv:
       invalid_username: "Ogiltigt användarnamn"
       join_application_name: "Gå och få det gjort"
       last_name: Efternamn
+      login: "Logga in"
       login_empty: "Ange en inloggning"
       login_fail: "Vi är ledsna, men vi kunde inte känna igen din inloggningsinformation. Försök igen."
       login_out_success: "Du har loggats ut."
@@ -91,10 +155,17 @@ sv:
       register_for_account: "Registrera dig för ett konto"
       remember_me: "Kom ihåg mig"
       remove_my_account: "Bort Mitt Konto"
+      request_access_code: "Request åtkomstkod"
       request_username: "Begär Användarnamn"
       request_username_subject: "Glömt användarnamn"
       reset_password: "Återställa lösenordet"
       reset_your_password: "Återställa lösenordet"
+      role: Roll
+      role_delete_confirm: "Är du säker på att du vill ta bort denna funktion? Alla tillhörande behörigheter kommer också att raderas!"
+      role_deleted: "Roll Utgår"
+      role_not_deleted: "Roll kan inte tas bort"
+      roles: Roller
+      save: Spara
       select_new_password: "Välja ett nytt lösenord"
       sign_in: "Logga in"
       sign_in_now: "Logga in nu!"
@@ -103,12 +174,20 @@ sv:
       sign_up: "Sign up"
       sign_up_now: "Sign-up Now"
       sorry_invalid_reset_code: "Vi är ledsna, men vi kunde inte hitta ditt konto. Om du har problem prova att kopiera och klistra in webbadressen från din e-post i webbläsaren eller starta om återställning av lösenord processen."
+      submit: "Skicka in"
       terms_and_service: "Genom att klicka på &quot;Registrera dig nu&quot; godkänner du att följa {{tos_link_anchor}} Villkor {{link_end}}."
       thanks_sign_up: "Tack för att du registrerar dig!"
       thanks_sign_up_check: "Ditt konto har skapats. Kontrollera din e-post för din instruktioner kontoaktivering!"
       thanks_sign_up_login: "Tack för att du registrerar dig! Du kan logga in nu"
+      total_users: "Total Users: {{total}}"
+      unlimited: "Obegränsade användningsområden"
+      unlimited_tip: "Kolla här om behörighetskod kan användas ett obegränsat antal gånger. Därmed åsidosätts användning gränsen."
+      update: Uppdatera
       update_profile: "Uppdatera din profil"
       update_user: "Uppdatera användarinformation"
+      update_user_admin: "Uppdatera användare"
+      use_limit: "Number of Uses"
+      use_limit_tip: "Ange antal gånger kod kan användas."
       user_account_deleted: "Du har nu tagit bort ditt konto."
       user_disable_problem: "Det uppstod ett problem handikappande här användaren."
       user_disabled: "Användare funktionshinder"
@@ -116,14 +195,22 @@ sv:
       user_enabled: "User aktiverat"
       user_marked_active: "Medlemmen har markerats som aktiv"
       user_marked_inactive: "Medlemmen har markerats som inaktiva"
+      user_not_activated_error: "Kunde inte aktivera användare"
+      user_not_deactivated_error: "Kunde inte inaktivera användare"
       user_successfully_deleted: "User {{login}} har raderats."
       user_update: "You&#39;re användarinformation har uppdaterats."
+      user_update_sucess: "Medlemmen har uppdaterats"
       username: Användarnamn
       username_available: "Användarnamn tillgänglig"
       username_help: "Du kan använda mellan 6 och 20 tecken. Om namnet du vill ha finns inte prova att lägga till siffror eller skiljetecken."
       username_not_available: "Användarnamn inte tillgänglig"
       username_recover_prompt: "Ange e-postadress som du använde när du skapade ditt konto, kommer ditt användarnamn att skickas till dig."
       username_sent: "Ditt användarnamn har skickats via e-post till dig. Kontrollera din e-post."
+      users_admin: Användare
+      users_in_role: "Användare i rollen: {{role}}"
+      validation_are_required: krävs.
+      validation_is_required: krävs.
+      view_your_account: "Visa din profil"
       welcome: Välkommen
       welcome_email_subject: "Välkommen till {{application_name}}"
       welcome_message: "Välkommen till muck. Detta system ger de grundläggande komponenter som hjälper dig bygga din webbplats."

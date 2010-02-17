@@ -8,12 +8,50 @@ it:
       role_created: "Ruolo è stato creato con successo."
       roles: Ruoli
     users: 
+      access_code: "Access Code"
+      access_code_add_problem: "Problema codice di accesso aggiungendo"
+      access_code_added: "Codice di accesso è stato correttamente aggiunto"
+      access_code_created: Creato
+      access_code_delete_confirm: "Sei sicuro di voler cancellare questo codice di accesso?"
+      access_code_delete_error: "È verificato un errore durante il tentativo di eliminare il codice di accesso"
+      access_code_delete_link: "Elimina Access Code"
+      access_code_delete_problem: "Impossibile eliminare il codice di accesso si è utenti ad esso associati."
+      access_code_deleted: "Soppresso il codice di accesso."
+      access_code_edit_link: "Modifica Codice Accesso"
+      access_code_edit_problem: "Codice di accesso editing Problem"
+      access_code_expires: Scade
+      access_code_fullfill_invites: "Invita soddisfare richieste"
+      access_code_fullfill_invites_limit: "Invita Request Limit"
+      access_code_fullfill_invites_limit_tip: "Inserire un numero di limitare il numero di richieste inviate. Per esempio, digitando 100 limiterà la invita alla più recente 100 richieste"
+      access_code_fullfill_invites_tip: "Controlla qui per inviare invita gli utenti che hanno chiesto un invito. Ciò ignorerà qualsiasi e-mail di cui sopra."
+      access_code_help: "Se hai ricevuto un codice di accesso da noi, inserisci nella casella di cui sopra. Si può anche {{access_request_anchor}} richiedere un codice di accesso {{access_request_anchor_end}}."
+      access_code_new: "Nuovo Codice di accesso"
+      access_code_related_users: "Gli utenti che hanno firmato con questo codice"
+      access_code_request_count: "Attualmente ci sono richieste di codici di accesso {{access_code_requests_count}}"
+      access_code_request_thank_you: "Grazie per la vostra richiesta. Saremo in contatto il più presto possibile."
+      access_code_request_tip: "Inserisci la tua email e ti invieremo un codice di accesso non appena disponibile. Grazie!"
+      access_code_tip: "Immettere un codice di accesso."
+      access_code_unlimited: Illimitata
+      access_code_update_problem: "C&#39;è stato un problema di aggiornare il codice di accesso."
+      access_code_use_limit: "Limitare l&#39;uso"
+      access_code_uses: Usa
+      access_codes: "Codici di accesso"
       access_denied: "Non hai il permesso di accedere alla pagina richiesta."
+      access_required_warning: "Di accesso al sito è attualmente limitata. Avete bisogno di un codice di accesso valido per iscriversi."
       account_activated: "Il tuo account è stato attivato! È ora possibile effettuare il login."
       account_not_activated: "{{application_name}} Tuo account non è ancora stato attivato."
       activation_complete: "Attivazione completata"
       activation_instructions: "Istruzioni per l&#39;attivazione"
       activation_not_found: "Codice di attivazione non trovato. Si prega di provare a creare un nuovo account."
+      add: Aggiungere
+      add_access_code: "Aggiungi Access Code"
+      add_access_code_title: "Aggiungi Access Code"
+      add_permission: "(Add Permission)"
+      add_permission_to_user: "Aggiungi Permesso di {{user}} utente"
+      add_role: "Aggiungi Ruolo"
+      add_role_dialog_title: "Aggiungi Ruolo"
+      add_user_to_role: "Aggiungi utente al ruolo"
+      add_user_to_role_title: "Aggiungere utente a un nuovo ruolo."
       admin: 
         activate_all_inactive_users: "Attivare tutti gli utenti inattivi"
         activate_all_inactive_users_confirm: "Sei sicuro di voler attivare tutti gli utenti inattivi nel sistema? Questo non può essere annullata!"
@@ -27,10 +65,26 @@ it:
       already_logged_in: "Sei già registrato e non hanno bisogno di recuperare la tua password."
       already_registered: "Sei già iscritto?"
       application_base_url_not_set: "Si prega di application_base_url in global_config.yml"
+      bulk_access_code_emails: E-mail
+      bulk_access_code_emails_tip: "Separa gli indirizzi email con una virgola"
+      bulk_access_code_message: Messaggio
+      bulk_access_code_problem: "Problema codice di accesso aggiungendo"
+      bulk_access_code_subject: Soggetto
+      bulk_access_code_tip: "Facoltativo. Se un codice si specifica poi che il codice verrà inviato a tutti gli utenti. Lasciare vuoto questo campo per inviare un codice univoco per ogni utente."
+      bulk_access_codes: "Codici di accesso alla rinfusa"
+      bulk_access_codes_created: "Codici di accesso di massa creata e inviata per e-mail {{email_count}}."
+      bulk_access_codes_description: "Questo genererà un unico codice di accesso unico uso per ciascuna delle e-mail fornito."
+      bulk_access_codes_title: "Codici di accesso alla rinfusa"
       cannot_deactivate_yourself: "Non si può disattivare te stesso!"
+      cant_delete_admin: "Non è possibile eliminare un utente che si trova nel ruolo di amministratore. Rimuovere l&#39;utente dal ruolo di amministratore e riprovare. Si prega di fare attenzione quando si eliminano gli amministratori. Se si eliminano tutti gli account amministratore non sarà più in grado di accedere al sistema di amministrazione."
+      cant_delete_administrator_role: "Non è possibile eliminare il ruolo di amministratore."
+      cant_disable_admin: "Non è possibile disabilitare un amministratore. Si prega di rimuovere l&#39;utente dal ruolo di amministratore e riprovare."
       change_password: "Cambia password"
+      change_permissions: "Modificare i ruoli"
+      change_permissions_for: "Modificare le autorizzazioni per {{user}}"
       change_your_password: "Cambia la tua password"
       choose_member_name: "Nome membro"
+      click_to_sign_up_now: "Clicca qui per registrarti ora."
       complete_profile: "Completa il tuo profilo"
       confirm_delete_account: "Sei sicuro di voler eliminare il tuo account? \\ NIl non può essere annullata."
       confirm_password: "Conferma la password"
@@ -38,9 +92,16 @@ it:
       could_not_find_reset_code: "Impossibile trovare un codice per la reimpostazione della password. Prova a reimpostare la password."
       could_not_find_user_with_email: "Impossibile trovare un utente con tale indirizzo email."
       current_password: "Password attuale"
+      delete: Eliminare
       delete_my_account: "Eliminare il mio account utente e tutti i miei dati."
       delete_this_user: "Elimina questo utente."
+      deleting_user: "l&#39;eliminazione degli utenti ..."
+      edit: Modifica
+      edit_access_code: "Modifica Codice Accesso"
+      edit_access_code_title: "Modifica Codice Accesso"
       edit_profile: "Modifica profilo"
+      edit_role_dialog_title: "Modifica Ruolo"
+      email: E-mail
       email_address: "Indirizzo e-mail"
       email_available: "E-mail disponibile"
       email_empty: "Si prega di inserire un indirizzo e-mail"
@@ -48,6 +109,8 @@ it:
       email_invalid: "E-mail non valido"
       email_not_available: "E-mail già in uso. {{reset_password_help}}"
       email_recover_prompt: "Si prega di fornire l&#39;indirizzo email hai firmato con il recupero della password."
+      expiration_date: "Data di scadenza"
+      expiration_date_tip: "Inserisci la data in cui il codice di accesso non saranno più validi"
       first_name: Nome
       forgot_password: "Hai dimenticato la password"
       forgot_username: "Dimenticato il nome utente"
@@ -56,6 +119,7 @@ it:
       invalid_username: "Nome utente non valido"
       join_application_name: "Join and get it fatto"
       last_name: Cognome
+      login: Accesso
       login_empty: "Si prega di inserire una login"
       login_fail: "Siamo spiacenti, ma non siamo in grado di riconoscere i dati di accesso. Please try again."
       login_out_success: "Sei stato disconnesso."
@@ -91,10 +155,17 @@ it:
       register_for_account: "Registrati per un account"
       remember_me: "Ricordati di me"
       remove_my_account: "Rimuovere il mio account"
+      request_access_code: "Richiesta Codice di Accesso"
       request_username: "Richiesta utente"
       request_username_subject: "Dimenticato nome utente"
       reset_password: "Reset Your Password"
       reset_your_password: "Reset Your Password"
+      role: Ruolo
+      role_delete_confirm: "Sei sicuro di voler cancellare questo ruolo? Tutti i permessi associati saranno cancellati!"
+      role_deleted: "Ruolo soppresso"
+      role_not_deleted: "Ruolo non può essere cancellato"
+      roles: Ruoli
+      save: Salvare
       select_new_password: "Scegliere una nuova password"
       sign_in: Entra
       sign_in_now: "Accedi ora!"
@@ -103,12 +174,20 @@ it:
       sign_up: Iscriviti
       sign_up_now: "Sign-up Now"
       sorry_invalid_reset_code: "Siamo spiacenti, ma non siamo riusciti a individuare il suo account. Se si hanno problemi di provare a copiare e incollare l&#39;URL dalla tua e-mail nel vostro browser o riavviando la procedura di reimpostazione password."
+      submit: Inoltrare
       terms_and_service: "Per segno cliccando su &#39;-up Now&#39; si impegna a rispettare le {{tos_link_anchor}} Termini e condizioni {{link_end}}."
       thanks_sign_up: "Grazie per registrarti!"
       thanks_sign_up_check: "Il tuo account è stato creato. Si prega di consultare il tuo indirizzo e-mail le istruzioni di attivazione per il tuo conto!"
       thanks_sign_up_login: "Grazie per registrarti! Dovresti accedere ora"
+      total_users: "Totale Utenti: {{total}}"
+      unlimited: "Uso illimitato"
+      unlimited_tip: "Controlla qui se il codice di accesso può essere utilizzato un numero illimitato di volte. Andranno a sostituire il limite di utilizzo."
+      update: Aggiornamento
       update_profile: "Aggiorna il tuo profilo"
       update_user: "Aggiorna i tuoi dati utente"
+      update_user_admin: "Aggiornamento utente"
+      use_limit: "Numero di utilizzi"
+      use_limit_tip: "Inserisci il numero di volte che il codice di accesso può essere utilizzato."
       user_account_deleted: "Hai eliminato il tuo account."
       user_disable_problem: "C&#39;è stato un problema disabilitando questo utente."
       user_disabled: "Utente disabile"
@@ -116,14 +195,22 @@ it:
       user_enabled: "Utente abilitato"
       user_marked_active: "Utente è stata contrassegnata come attiva"
       user_marked_inactive: "Utente è stato contrassegnato come inattivo"
+      user_not_activated_error: "Impossibile attivare l&#39;utente"
+      user_not_deactivated_error: "Impossibile disattivare utente"
       user_successfully_deleted: "{{login}} Utente è stato cancellato con successo."
       user_update: "Siete informazioni per gli utenti è stato aggiornato."
+      user_update_sucess: "Utente è stato aggiornato con successo"
       username: Username
       username_available: "Username disponibili"
       username_help: "È possibile utilizzare tra i 6 ei 20 caratteri. Se il nome desiderato non è disponibile provare ad aggiungere numeri o segni di punteggiatura."
       username_not_available: "Nome utente non è disponibile"
       username_recover_prompt: "Si prega di fornire l&#39;indirizzo email che hai utilizzato quando hai creato l&#39;account, il tuo nome utente verrà inviato per email."
       username_sent: "Il tuo nome utente è stato inviato per email. Si prega di controllare la posta elettronica."
+      users_admin: Utenti
+      users_in_role: "Utenti in ruolo: {{role}}"
+      validation_are_required: "sono necessari."
+      validation_is_required: "è necessaria."
+      view_your_account: "Visualizzare il tuo account"
       welcome: Benvenuto
       welcome_email_subject: "Welcome to {{application_name}}"
       welcome_message: "Welcome to muck. Questo sistema fornisce i componenti di base per aiutarvi a costruire il tuo sito web."

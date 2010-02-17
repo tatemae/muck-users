@@ -9,12 +9,50 @@
       role_created: "Rolle er opprettet."
       roles: Roller
     users: 
+      access_code: "Access Code"
+      access_code_add_problem: "Problem å legge adgangskode"
+      access_code_added: "Aksesskode ble lagt"
+      access_code_created: Opprettet
+      access_code_delete_confirm: "Er du sikker på at du vil avbryte denne adgangskode?"
+      access_code_delete_error: "Det oppstod en feil under forsøk på å slette adgangskode"
+      access_code_delete_link: "Slett Aksesskode"
+      access_code_delete_problem: "Kan ikke slette adgangskode det har brukere knyttet til den."
+      access_code_deleted: "Slettet adgangskode."
+      access_code_edit_link: "Rediger Aksesskode"
+      access_code_edit_problem: "Problem redigering adgangskode"
+      access_code_expires: Utgår
+      access_code_fullfill_invites: "Oppfylle Inviter Requests"
+      access_code_fullfill_invites_limit: "Inviter Request Limit"
+      access_code_fullfill_invites_limit_tip: "Skriv inn et tall for å begrense antall forespørsler sendt ut. For eksempel vil inn 100 begrense inviterer til den siste 100 treff"
+      access_code_fullfill_invites_tip: "Sjekk her for å sende invitasjoner til brukere som har bedt om en up. Dette vil ignorere alle e-postene er angitt ovenfor."
+      access_code_help: "Hvis du har mottatt en adgangskode fra oss, vennligst skriv det i boksen ovenfor. Du kan også {{access_request_anchor}} be om en adgangskode {{access_request_anchor_end}}."
+      access_code_new: "Ny Aksesskode"
+      access_code_related_users: "Brukere som har registrert seg med denne koden"
+      access_code_request_count: "Det er for tiden {{access_code_requests_count}} adgangskode forespørsler"
+      access_code_request_thank_you: "Takk for forespørselen. Vi tar kontakt så snart som mulig."
+      access_code_request_tip: "Skriv inn din e-post og vi sender deg en tilgangskode så snart det er tilgjengelig. Takk!"
+      access_code_tip: "Angi en adgangskode."
+      access_code_unlimited: Ubegrenset
+      access_code_update_problem: "Det var et problem oppdatere adgangskoden."
+      access_code_use_limit: "Bruk Limit"
+      access_code_uses: Bruker
+      access_codes: Adgangskoder
       access_denied: "Du har ikke tilgang til den forespurte siden."
+      access_required_warning: "Site tilgang er foreløpig begrenset. Du trenger et gyldig adgang koden for å registrere deg."
       account_activated: "Din konto har blitt aktivert! Du kan nå logge inn."
       account_not_activated: "Din {{application_name}} konto ennå ikke har blitt aktivert."
       activation_complete: "Aktivisering Komplett"
       activation_instructions: "Aktivisering Instruksjoner"
       activation_not_found: "Aktivisering koden ikke funnet. Prøv å opprette en ny konto."
+      add: "Legge til"
+      add_access_code: "Legg Aksesskode"
+      add_access_code_title: "Legg Aksesskode"
+      add_permission: "(Legg Permission)"
+      add_permission_to_user: "Legg Tillatelse til brukeren {{user}}"
+      add_role: "Legg Rolle"
+      add_role_dialog_title: "Legg Rolle"
+      add_user_to_role: "Legg bruker til rolle"
+      add_user_to_role_title: "Legg til brukeren til en ny rolle."
       admin: 
         activate_all_inactive_users: "Aktiver alle inaktive brukere"
         activate_all_inactive_users_confirm: "Er du sikker på at du vil aktivere alle inaktive brukere i systemet? Dette kan ikke gjøres om!"
@@ -28,10 +66,26 @@
       already_logged_in: "Du er allerede logget inn og ikke trenger å gjenopprette passordet ditt."
       already_registered: "Allerede medlem?"
       application_base_url_not_set: "Angi application_base_url i global_config.yml"
+      bulk_access_code_emails: Emails
+      bulk_access_code_emails_tip: "Separate e-poster med komma"
+      bulk_access_code_message: Melding
+      bulk_access_code_problem: "Problem å legge adgangskode"
+      bulk_access_code_subject: Emne
+      bulk_access_code_tip: "Valgfritt. Hvis en kode er angitt da at koden vil bli sendt til alle brukere. La dette feltet stå tomt for å sende en unik kode til hver bruker."
+      bulk_access_codes: "Bulk Adgangskoder"
+      bulk_access_codes_created: "Bulk adgangskoder opprettet og sendt til {{email_count}} emails."
+      bulk_access_codes_description: "Dette vil generere en unik, engangsbruk adgangskoden for hver av e-postene som tilbys."
+      bulk_access_codes_title: "Bulk Adgangskoder"
       cannot_deactivate_yourself: "Du kan ikke deaktivere selv!"
+      cant_delete_admin: "Du kan ikke slette en bruker som er i admin-rollen. Fjern brukeren fra administrator rolle og prøv på nytt. Vær forsiktig når du sletter administratorer. Hvis du sletter alle administratorkontoer du vil ikke lenger kunne logge deg inn til administrasjonen systemet."
+      cant_delete_administrator_role: "Du kan ikke slette administratoren rolle."
+      cant_disable_admin: "Kan ikke deaktivere en administrator. Vennligst fjern brukeren fra administrator rolle og prøv igjen."
       change_password: "Endre passord"
+      change_permissions: "Endre Roller"
+      change_permissions_for: "Endre Tillatelser for {{user}}"
       change_your_password: "Endre passord"
       choose_member_name: "Medlem Navn"
+      click_to_sign_up_now: "Klikk her for å registrere deg nå."
       complete_profile: "Komplett profil"
       confirm_delete_account: "Er du sikker på at du vil slette kontoen? \\ NDette kan ikke angres."
       confirm_password: "Bekreft passord"
@@ -39,9 +93,16 @@
       could_not_find_reset_code: "Kunne ikke finne et passord restarte koden. Prøv å tilbakestille passordet på nytt."
       could_not_find_user_with_email: "Kunne ikke finne en bruker med denne e-postadressen."
       current_password: "Nåværende passord"
+      delete: Slette
       delete_my_account: "Slett min brukerkonto og alle mine data."
       delete_this_user: "Slett denne brukeren."
+      deleting_user: "sletter brukeren ..."
+      edit: Rediger
+      edit_access_code: "Rediger Aksesskode"
+      edit_access_code_title: "Rediger Aksesskode"
       edit_profile: "Rediger profil"
+      edit_role_dialog_title: "Rediger Rolle"
+      email: Epost
       email_address: E-postadresse
       email_available: "E-post tilgjengelig"
       email_empty: "Vennligst skriv en e-postadresse"
@@ -49,6 +110,8 @@
       email_invalid: "Ugyldig e-post"
       email_not_available: "E-post allerede i bruk. {{reset_password_help}}"
       email_recover_prompt: "Vennligst oppgi e-postadressen du registrerte deg med å gjenopprette passordet ditt."
+      expiration_date: Utløpsdato
+      expiration_date_tip: "Angi datoen hvor adgangskoden blir ugyldig"
       first_name: Fornavn
       forgot_password: "Glemt passord"
       forgot_username: "Glemt brukernavn"
@@ -57,6 +120,7 @@
       invalid_username: "Ugyldig brukernavn"
       join_application_name: "Bli med og få det gjort"
       last_name: Etternavn
+      login: Innlogging
       login_empty: "Angi en login"
       login_fail: "Vi beklager, men vi kunne ikke kjenne igjen påloggingsinformasjonen. Please try again."
       login_out_success: "Du er blitt logget ut."
@@ -92,10 +156,17 @@
       register_for_account: "Registrer deg for en konto"
       remember_me: "Remember me"
       remove_my_account: "Fjern Min konto"
+      request_access_code: "Be Aksesskode"
       request_username: "Be Brukernavn"
       request_username_subject: "Glemt brukernavn"
       reset_password: "Tilbakestille passordet"
       reset_your_password: "Tilbakestille passordet"
+      role: Rolle
+      role_delete_confirm: "Er du sikker på at du vil slette denne rollen? Alle tilknyttede tillatelser vil også bli slettet!"
+      role_deleted: "Rolle Slettet"
+      role_not_deleted: "Rolle kunne ikke bli slettet"
+      roles: Roller
+      save: Lagre
       select_new_password: "Velge et nytt passord"
       sign_in: "Logg inn"
       sign_in_now: "Logg deg på nå!"
@@ -104,12 +175,20 @@
       sign_up: "Registrer deg"
       sign_up_now: "Registrer deg nå"
       sorry_invalid_reset_code: "Vi beklager, men vi kunne ikke finne kontoen din. Hvis du har problemer med å prøve å kopiere og lime inn URL-adressen fra e-posten din i nettleseren, eller starte tilbakestille passordet prosessen."
+      submit: "Sende inn"
       terms_and_service: "Ved å klikke på &quot;Registrer deg nå&quot; godtar du å overholde {{tos_link_anchor}} vilkårene {{link_end}}."
       thanks_sign_up: "Takk for at du registrerte deg!"
       thanks_sign_up_check: "Kontoen er opprettet. Sjekk e-post for kontoaktivering instruksjoner!"
       thanks_sign_up_login: "Takk for at du registrerte deg! Du kan logge inn nå"
+      total_users: "Total Users: {{total}}"
+      unlimited: "Ubegrenset bruk"
+      unlimited_tip: "Sjekk her hvis adgangskoden kan brukes et ubegrenset antall ganger. Dette vil overstyre bruken grensen."
+      update: Oppdatering
       update_profile: "Oppdater profil"
       update_user: "Oppdater din brukerinformasjon"
+      update_user_admin: "Oppdater User"
+      use_limit: "Antall Uses"
+      use_limit_tip: "Oppgi antall ganger adgangskoden kan brukes."
       user_account_deleted: "Du har slettet kontoen din."
       user_disable_problem: "Det oppstod et problem deaktivere denne brukeren."
       user_disabled: "Bruker deaktivert"
@@ -117,14 +196,22 @@
       user_enabled: "Bruker aktivert"
       user_marked_active: "Bruker har vært merket som aktiv"
       user_marked_inactive: "Bruker har blitt merket som inaktiv"
+      user_not_activated_error: "Kunne ikke aktivere brukeren"
+      user_not_deactivated_error: "Kunne ikke deaktivere bruker"
       user_successfully_deleted: "Bruker {{login}} er slettet."
       user_update: "Du bruker informasjon har blitt oppdatert."
+      user_update_sucess: "Brukeren ble velykket oppdatert"
       username: Brukernavn
       username_available: "Brukernavn available"
       username_help: "Du kan bruke mellom 6 og 20 tegn. Hvis navnet du ønsker er ikke tilgjengelig prøve å legge til tall eller tegnsetting."
       username_not_available: "Brukernavn ikke tilgjengelig"
       username_recover_prompt: "Oppgi e-post som du brukte da du opprettet kontoen, vil brukernavnet ditt bli sendt til deg."
       username_sent: "Brukernavnet ditt er sendt mailet til deg. Sjekk e-posten."
+      users_admin: Brukere
+      users_in_role: "Brukere i rollen: {{role}}"
+      validation_are_required: "er nødvendige."
+      validation_is_required: kreves.
+      view_your_account: "Se Din konto"
       welcome: Velkommen
       welcome_email_subject: "Velkommen til {{application_name}}"
       welcome_message: "Velkommen til muck. Dette systemet gir grunnleggende komponentene å hjelpe deg å bygge din nettside."

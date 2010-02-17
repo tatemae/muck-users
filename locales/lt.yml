@@ -8,12 +8,50 @@ lt:
       role_created: "Vaidmuo buvo sėkmingai sukurta."
       roles: Vaidmenys
     users: 
+      access_code: "Priėjimo kodas"
+      access_code_add_problem: "Problemos papildant prieigos kodą"
+      access_code_added: "Priėjimo kodas buvo sėkmingai pridėta"
+      access_code_created: Rangovas
+      access_code_delete_confirm: "Ar jūs tikrai norite atšaukti šį prieigos kodą?"
+      access_code_delete_error: "Klaida bandant pašalinti prieigos kodą"
+      access_code_delete_link: "Ištrinti Access Code"
+      access_code_delete_problem: "Negalite pašalinti prieigos kodą ji vartotojai su juo susiję."
+      access_code_deleted: "Išbraukta prieigos kodas."
+      access_code_edit_link: "Redaguoti kodas"
+      access_code_edit_problem: "Problemų redagavimo prieigos kodą"
+      access_code_expires: Expires
+      access_code_fullfill_invites: "Išpildykite Kviesti Prašymai"
+      access_code_fullfill_invites_limit: "Kviesti Užsisakyti Riba"
+      access_code_fullfill_invites_limit_tip: "Įrašykite skaičių sumažinti prašymų skaičių išsiųsta. Pavyzdžiui, jei įvesite 100 apribos kviečia į naujausių 100 prašymus"
+      access_code_fullfill_invites_tip: "Spauskite čia, norėdami siųsti kviečia į vartotojų, kurie prašė pakviesti. Tai bus ignoruoti visus pranešimus, pateiktus aukščiau."
+      access_code_help: "Jei gavote prieigos kodą, prašome įvesti jį į žemiau esantį laukelį. Taip pat galite {{access_request_anchor}} prašyti prieigos kodas {{access_request_anchor_end}}."
+      access_code_new: "Naujas prieigos kodas"
+      access_code_related_users: "Vartotojai, kurie pasirašė šį kodą"
+      access_code_request_count: "Šiuo metu yra {{access_code_requests_count}} prieigos kodo prašo"
+      access_code_request_thank_you: "Dėkojame už jūsų prašymą. Mes su jumis kuo greičiau."
+      access_code_request_tip: "Įveskite savo elektroninio pašto adresą ir mes atsiųsime jums prieigos kodas, kaip tik toks yra. Ačiū!"
+      access_code_tip: "Įveskite kodą."
+      access_code_unlimited: Neribotas
+      access_code_update_problem: "Iškilo problema atnaujinimo prieigos kodas."
+      access_code_use_limit: "Naudojimo riba"
+      access_code_uses: Naudoja
+      access_codes: "Kreipties kodai"
       access_denied: "Jūs neturite leidimo pasiekti norimą puslapį."
+      access_required_warning: "Svetainės ryšys šiuo metu yra apribota. Jūs turite galiojančią prieigą kodas užsiregistruoti."
       account_activated: "Jūsų sąskaita buvo aktyvuota! Dabar galite prisijungti."
       account_not_activated: "Jūsų {{application_name}} sąskaitos dar nebuvo aktyvuota."
       activation_complete: "Aktyvinimas Complete"
       activation_instructions: "Aktyvavimo instrukcijas"
       activation_not_found: "Aktyvacijos kodas nerastas. Pabandykite sukurti naują sąskaitą."
+      add: Pridėti
+      add_access_code: "Pridėti Access Code"
+      add_access_code_title: "Pridėti Access Code"
+      add_permission: "(Pridėti leidimo)"
+      add_permission_to_user: "Pridėti Leidimas vartotojo {{user}}"
+      add_role: "Pridėti Vaidmuo"
+      add_role_dialog_title: "Pridėti Vaidmuo"
+      add_user_to_role: "Pridėti į vartotojo vaidmuo"
+      add_user_to_role_title: "Pridėti vartotoją į naują vaidmenį."
       admin: 
         activate_all_inactive_users: "Aktyvuoti visų neaktyvių Vartotojai"
         activate_all_inactive_users_confirm: "Ar tikrai norite įjungti visų neaktyvių vartotojų sistemoje? Tai negali būti atšauktas!"
@@ -27,10 +65,26 @@ lt:
       already_logged_in: "Jūs jau esate prisijungęs kaip ir nereikia susigrąžinti savo slaptažodį."
       already_registered: "Already a member?"
       application_base_url_not_set: "Nurodykite application_base_url į global_config.yml"
+      bulk_access_code_emails: Laiškai
+      bulk_access_code_emails_tip: "Atskirkite adresus kableliais"
+      bulk_access_code_message: Žinutė
+      bulk_access_code_problem: "Problemos papildant prieigos kodą"
+      bulk_access_code_subject: Dalykas
+      bulk_access_code_tip: "Neprivaloma. Jei kodas yra nurodytas to, kad kodas bus siunčiamas visiems vartotojams. Palikite šį lauką tuščią išsiųsti unikalų kodą į kiekvieną klientą."
+      bulk_access_codes: "Tūrinės kodai"
+      bulk_access_codes_created: "Tūrinės Kreipties kodai sukurtas ir išsiųstas į {{email_count}} el."
+      bulk_access_codes_description: "Tai sukurs unikalų, vienkartinio naudojimo prieigos kodą kiekvienai laiškų sąlyga."
+      bulk_access_codes_title: "Tūrinės kodai"
       cannot_deactivate_yourself: "Jūs negalite išjungti sau!"
+      cant_delete_admin: "Jūs negalite ištrinti vartotoją, kuris yra administratorius vaidmuo. Pašalinti vartotoją iš administratorių vaidmenį ir bandykite dar kartą. Būkite atsargūs trindami administratorių. Jei pašalinsite visus administratorius sąskaitas jums nebebus galima prisijungti prie administravimo sistemą."
+      cant_delete_administrator_role: "Jūs negalite ištrinti administratorius vaidmuo."
+      cant_disable_admin: "Negalima išjungti administratorius. Prašome pašalinti vartotoją iš administratorių vaidmenį ir bandykite dar kartą."
       change_password: "Keisti slaptažodį"
+      change_permissions: "Keisti Vaidmenys"
+      change_permissions_for: "Pakeiskite teises į {{user}}"
       change_your_password: "Keisti slaptažodį"
       choose_member_name: "Valstybės pavadinimas"
+      click_to_sign_up_now: "Spauskite čia norėdami užsiregistruoti dabar."
       complete_profile: "Visiškas profilį"
       confirm_delete_account: "Ar tikrai norite ištrinti sąskaitą? \\ NŠi negali būti atšauktas."
       confirm_password: "Patvirtinkite slaptažodį"
@@ -38,9 +92,16 @@ lt:
       could_not_find_reset_code: "Nepavyko rasti slaptažodžio kodas. Bandykite naują slaptažodį dar kartą."
       could_not_find_user_with_email: "Nepavyko rasti su elektroninio pašto adresą vartotojui."
       current_password: "Dabartinis slaptažodis"
+      delete: Ištrinti
       delete_my_account: "Ištrinti savo vartotojo sąskaitą ir visus savo duomenis."
       delete_this_user: "Ištrinti vartotoją."
+      deleting_user: "ištrinti vartotoją ..."
+      edit: Redaguoti
+      edit_access_code: "Redaguoti kodas"
+      edit_access_code_title: "Redaguoti kodas"
       edit_profile: "Redaguoti profilį"
+      edit_role_dialog_title: "Taisyti Vaidmuo"
+      email: Paštas
       email_address: "Pašto adresas"
       email_available: "Siųsti rasti"
       email_empty: "Prašome įvesti elektroninio pašto adresą"
@@ -48,6 +109,8 @@ lt:
       email_invalid: "Neteisingas el"
       email_not_available: "Elektroninio pašto adresas jau naudojamas. {{reset_password_help}}"
       email_recover_prompt: "Prašome pateikti elektroniniu paštu, kai registravotės susigrąžinti savo slaptažodį."
+      expiration_date: "Galiojimo data"
+      expiration_date_tip: "Įveskite datą, nuo kurių prieigos kodas taps negalioja"
       first_name: Vardas
       forgot_password: "Pamiršote slaptažodį"
       forgot_username: "Pamiršote vartotojo vardą"
@@ -56,6 +119,7 @@ lt:
       invalid_username: "Neteisingas vartotojo vardas"
       join_application_name: "Join and get it Done"
       last_name: Pavardė
+      login: Prisijungimas
       login_empty: "Įveskite Login"
       login_fail: "Atsiprašome, tačiau mes negalėjome atpažinti jūsų prisijungimo informaciją. Bandykite dar kartą."
       login_out_success: "You have been logged out."
@@ -91,10 +155,17 @@ lt:
       register_for_account: "Registruokitės į"
       remember_me: "Prisiminti mane"
       remove_my_account: "Pašalinti Mano sąskaita"
+      request_access_code: "Prašymas Access Code"
       request_username: "Prašymas vardas"
       request_username_subject: "Pamiršote vartotojo vardą"
       reset_password: Slaptažodžio
       reset_your_password: Slaptažodžio
+      role: Vaidmuo
+      role_delete_confirm: "Ar tikrai norite ištrinti šį vaidmenį? Visi susiję leidimai taip pat bus ištrintos!"
+      role_deleted: "Vaidmuo ištrinta"
+      role_not_deleted: "Vaidmuo galėtų būti ne ištrinti"
+      roles: Vaidmenys
+      save: Saugoti
       select_new_password: "Pasirinkti naują slaptažodį"
       sign_in: Prisijungti
       sign_in_now: "Registruotis dabar!"
@@ -103,12 +174,20 @@ lt:
       sign_up: Registruotis
       sign_up_now: Užsiregistruok
       sorry_invalid_reset_code: "Atsiprašome, tačiau mes negalėjome rasti jūsų sąskaitą. Jei turite klausimų, nukopijuokite ir įklijuokite URL iš savo elektroninio pašto adresą į naršyklę arba iš naujo slaptažodžio procesą."
+      submit: Pateikti
       terms_and_service: "Paspaudę mygtuką &quot;Sign-up Now&quot;, jūs sutinkate laikytis {{tos_link_anchor}} Sąlygos {{link_end}}."
       thanks_sign_up: "Dėkojame, kad užsiregistravote!"
       thanks_sign_up_check: "Jūsų paskyra buvo sukurta. Prašome patikrinti savo e-mail sąskaitos aktyvavimo instrukcijas!"
       thanks_sign_up_login: "Dėkojame, kad užsiregistravote! Galite Prisijungti dabar"
+      total_users: "Viso vartotojų: {{total}}"
+      unlimited: "Neribota Panaudojimas"
+      unlimited_tip: "Spauskite čia, jei prieigos kodas gali būti naudojamas neribotą skaičių kartų. Tai pakeis naudojimo ribos."
+      update: Atnaujinti
       update_profile: "Atnaujinkite savo aprašymą"
       update_user: "Atnaujinti savo vartotojo informacija"
+      update_user_admin: "Atnaujinti vartotojo"
+      use_limit: "Taškų panaudojimas"
+      use_limit_tip: "Įveskite kartų prieigos kodas gali būti naudojamas."
       user_account_deleted: "Jūs sėkmingai ištrinti savo sąskaitą."
       user_disable_problem: "Iškilo problema išjungti vartotojas."
       user_disabled: "Vartotojo neįgaliesiems"
@@ -116,14 +195,22 @@ lt:
       user_enabled: "Vartotojo įjungta"
       user_marked_active: "Vartotojas buvo pažymėtas kaip aktyvus"
       user_marked_inactive: "Vartotojas buvo pažymėtas kaip neaktyvus"
+      user_not_activated_error: "Nepavyko aktyvuoti vartotoją"
+      user_not_deactivated_error: "Nepavyko išjungti vartotojas"
       user_successfully_deleted: "Vartotojo {{login}} buvo sėkmingai ištrintas."
       user_update: "Jūs vartotojo informacija buvo atnaujinta."
+      user_update_sucess: "Vartotojas buvo sėkmingai atnaujintas"
       username: Vardas
       username_available: "Nick rasti"
       username_help: "Jūs galite naudoti nuo 6 iki 20 simbolių. Jei norimo nėra pabandykite pridėti numerius ar skyrybos ženklų."
       username_not_available: "Nick nėra"
       username_recover_prompt: "Prašome pateikti laišką, kurį naudojote kurdami sąskaitą, jūsų vartotojo vardas bus išsiųstas jums."
       username_sent: "Jūsų vartotojo vardas buvo išsiųstas paštu. Prašome patikrinti savo el."
+      users_admin: Vartotojai
+      users_in_role: "Vartotojai vaidmuo: {{role}}"
+      validation_are_required: privalomi.
+      validation_is_required: nereikia.
+      view_your_account: "Peržiūrėti Jūsų"
       welcome: Sutikti
       welcome_email_subject: "Sveiki atvykę į {{application_name}}"
       welcome_message: "Sveiki atvykę į šlykštynė. Ši sistema užtikrina pagrindinių elementų, siekiant padėti jums sukurti jūsų svetainę."

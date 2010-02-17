@@ -8,12 +8,50 @@ ko:
       role_created: "역할을 성공적으로 만들었습니다."
       roles: 역할
     users: 
+      access_code: "액세스 코드"
+      access_code_add_problem: "추가 문제 해결 접근 코드"
+      access_code_added: "액세스 코드를 성공적으로 추가되었습니다"
+      access_code_created: 만든날짜
+      access_code_delete_confirm: "당신이이 접근 코드를 취소 하시겠습니까?"
+      access_code_delete_error: "반면에 액세스 코드를 삭제하려고 오류가 발생했습니다"
+      access_code_delete_link: "삭제 악세스 코드"
+      access_code_delete_problem: "그것을 사용자와 연관된 액세스 코드를 삭제할 수없습니다."
+      access_code_deleted: "삭제된 액세스 코드입니다."
+      access_code_edit_link: "편집 액세스 코드"
+      access_code_edit_problem: "문제는 편집을 접근 코드"
+      access_code_expires: 만료
+      access_code_fullfill_invites: "초대 요청을 충족"
+      access_code_fullfill_invites_limit: "초대 신청 한도"
+      access_code_fullfill_invites_limit_tip: "번호를 입력 요청 번호를 전송을 제한합니다. 예를 들어, 입력 100 100 가장 최근의 요청에 초대가 제한됩니다"
+      access_code_fullfill_invites_tip: "여기에 체크를 보낼 사람을 초대를 요청한 사용자에게 초대합니다. 이것은 위에서 지정한 모든 이메일을 무시합니다."
+      access_code_help: "만일 당신이 우리에서 위의 상자에 입력 접근 코드를 받았습니다. 또한 요청할 액세스 코드를 {{access_request_anchor}}. {{access_request_anchor_end}} 수있습니다"
+      access_code_new: "새 Access 코드"
+      access_code_related_users: "이 코드에 가입한 사용자"
+      access_code_request_count: "현재 {{access_code_requests_count}} 접속 코드를 요청합니다"
+      access_code_request_thank_you: "귀하의 요청을 주셔서 감사합니다. 우리는 연락을 최대한 빨리됩니다."
+      access_code_request_tip: "귀하의 이메일을 입력하고 하나로서 사용할 수있습니다 우리는 당신이 최대한 빨리 접근 코드를 보내드립니다. 감사합니다!"
+      access_code_tip: "접근 코드를 입력합니다."
+      access_code_unlimited: 무제한
+      access_code_update_problem: "거기에 문제가 접속 코드를 업데이 트했다."
+      access_code_use_limit: "사용 제한"
+      access_code_uses: 용도
+      access_codes: "액세스 코드"
       access_denied: "당신은 허가를 요청한 페이지에 액세스할 필요가없습니다."
+      access_required_warning: "현재 사이트에 액세스가 제한됩니다. 당신이 가입 기간에 액세스 코드가 필요합니다."
       account_activated: "귀하의 계정이 활성화되었습니다! 이제 로그인할 수있습니다."
       account_not_activated: "귀하의 {{application_name}} 계정은 아직 활성화되지 않았습니다."
       activation_complete: "인증 완료"
       activation_instructions: "활성화 지침"
       activation_not_found: "정품 인증 코드를 찾을 수없습니다. 제발 새 계정을 만들어보십시오."
+      add: 추가
+      add_access_code: "액세스 코드 추가"
+      add_access_code_title: "액세스 코드 추가"
+      add_permission: "() 권한 추가"
+      add_permission_to_user: "사용자가 허가 {{user}} 추가"
+      add_role: "역할 추가"
+      add_role_dialog_title: "역할 추가"
+      add_user_to_role: "역할에 사용자 추가"
+      add_user_to_role_title: "새로운 역할에 사용자를 추가합니다."
       admin: 
         activate_all_inactive_users: "활성화 모든 비활성 사용자"
         activate_all_inactive_users_confirm: "당신의 시스템에있는 모든 비활성 사용자를 활성화 하시겠습니까? 이것은 취소할 수없습니다!"
@@ -27,10 +65,26 @@ ko:
       already_logged_in: "당신은 이미 로그온 귀하의 비밀 번호를 복구할 필요가없습니다."
       already_registered: "이미 회원이십니까?"
       application_base_url_not_set: "제발에 global_config.yml application_base_url 설정"
+      bulk_access_code_emails: 이메일
+      bulk_access_code_emails_tip: "별도의 쉼표로 이메일을"
+      bulk_access_code_message: 메시지
+      bulk_access_code_problem: "추가 문제 해결 접근 코드"
+      bulk_access_code_subject: 주제
+      bulk_access_code_tip: "선택 사항입니다. 만약 코드를 다음 코드를 모든 사용자에게 전송됩니다 지정됩니다. 이 필드는 각 사용자에게 고유의 코드를 보내 비워 둡니다."
+      bulk_access_codes: "대량 액세스 코드"
+      bulk_access_codes_created: "대량 액세스 코드를 만들어 {{email_count}} 이메일 이메일로."
+      bulk_access_codes_description: "이것은 각각의 이메일에 대한 고유의 단일 사용하여 액세스를 제공하는 코드를 생성합니다."
+      bulk_access_codes_title: "대량 액세스 코드"
       cannot_deactivate_yourself: "너 자신을 해제할 수 없다!"
+      cant_delete_admin: "당신은 관리자 역할에 사용자를 삭제할 수없습니다. 관리자 역할에서 다음 다시 시도해 사용자를 제거합니다. 조심하세요, 할 때 관리자가 삭제. 만약 당신이 모든 관리자를 삭제하면 더 이상 관리 시스템에 로그인할 수있을 것입니다 차지하고있다."
+      cant_delete_administrator_role: "당신이 관리자 역할을 삭제할 수없습니다."
+      cant_disable_admin: "관리자가 해제할 수없습니다. 제발 관리자 역할에서 사용자를 제거하고 다시 시도해보십시오."
       change_password: "비밀 번호 변경"
+      change_permissions: "역할 변경"
+      change_permissions_for: "{{user}}에 대한 사용 권한 변경"
       change_your_password: "귀하의 비밀 번호 변경"
       choose_member_name: "회원 이름"
+      click_to_sign_up_now: "여기를 클릭하십시오 지금 가입하십시오."
       complete_profile: "완료 귀하의 프로필"
       confirm_delete_account: "당신이 귀하의 계정을 삭제하려면?시겠습니까 \\ n이 취소할 수없습니다."
       confirm_password: "비밀 번호 확인"
@@ -38,9 +92,16 @@ ko:
       could_not_find_reset_code: "비밀 번호를 재설정 코드를 찾을 수없습니다. 잠시 후 다시 비밀 번호를 재설정하십시오."
       could_not_find_user_with_email: "이메일 주소와 사용자를 찾을 수없습니다."
       current_password: "현재 비밀 번호"
+      delete: 삭제
       delete_my_account: "내 모든 데이터를 내 사용자 계정을 삭제합니다."
       delete_this_user: "해당 사용자를 삭제합니다."
+      deleting_user: "사용자 삭제 ..."
+      edit: 편집
+      edit_access_code: "편집 액세스 코드"
+      edit_access_code_title: "편집 액세스 코드"
       edit_profile: "프로필 수정"
+      edit_role_dialog_title: "편집의 역할"
+      email: 이메일
       email_address: "이메일 주소"
       email_available: "해당 이메일"
       email_empty: "제발 이메일 주소를 입력하십시오"
@@ -48,6 +109,8 @@ ko:
       email_invalid: "잘못된 이메일"
       email_not_available: "이메일 이미 사용했다. {{reset_password_help}}"
       email_recover_prompt: "제발 당신이 암호를 복구와 함께 가입 이메일을 제공합니다."
+      expiration_date: "만료 날짜"
+      expiration_date_tip: "이는 즉시 액세스 코드가 잘못 될 날짜를 입력합니다"
       first_name: 이름
       forgot_password: "비밀 번호 분실"
       forgot_username: "아이디 찾기"
@@ -56,6 +119,7 @@ ko:
       invalid_username: "잘못된 사용자 이름"
       join_application_name: "가입하고 으러"
       last_name: 성
+      login: 로그인
       login_empty: "로그인을 입력하시기 바랍니다"
       login_fail: "죄송 합니다만, 귀하의 로그인 정보를 인식하지 못할 수있습니다. 다시 시도해주십시오."
       login_out_success: 로그아웃되었습니다.
@@ -91,10 +155,17 @@ ko:
       register_for_account: "계정 등록"
       remember_me: "내 계정 정보 기억"
       remove_my_account: "내 계정 삭제"
+      request_access_code: "액세스 요청 코드"
       request_username: "아이디 신청"
       request_username_subject: "잊혀진 이름"
       reset_password: "비밀 번호를 재설정하십시오"
       reset_your_password: "비밀 번호를 재설정하십시오"
+      role: 포지션
+      role_delete_confirm: "당신이이 역할을 삭제하시겠습니까? 관련된 모든 권한도 삭제됩니다!"
+      role_deleted: "역할 삭제"
+      role_not_deleted: "역할을 삭제할 수없습니다"
+      roles: 역할
+      save: 저장
       select_new_password: "선택 새 비밀 번호"
       sign_in: 로그인
       sign_in_now: "지금 가입하세요!"
@@ -103,12 +174,20 @@ ko:
       sign_up: 가입하기
       sign_up_now: 가입하세요
       sorry_invalid_reset_code: "죄송하지만, 우리는 귀하의 계정을 찾을 수없습니다. 만약 당신이 문제를 복사하려고 귀하의 이메일에서 귀하의 브라우저에 URL을 붙여 또는 비밀 번호 재설정 프로세스를 다시 시작하는 데있습니다."
+      submit: 제출하다
       terms_and_service: "&#39;를 클릭 가입하세요&#39;당신 {{tos_link_anchor}} {{link_end}}. 이용 약관을 준수하는 데 동의함으로써"
       thanks_sign_up: "가입해 주셔서 감사합니다!"
       thanks_sign_up_check: "귀하의 계정이 만들어졌습니다. 귀하의 계정을 활성화 지침에 대한 귀하의 전자 메일 확인!"
       thanks_sign_up_login: "가입해 주셔서 감사합니다! 이제 로그인있습니다"
+      total_users: "총 사용자 : {{total}}"
+      unlimited: "무제한 사용"
+      unlimited_tip: "여기에 있는지 확인하십시오 액세스 코드를 시대의 수를 무제한으로 사용할 수있습니다. 이것은 사용 제한이 무시됩니다."
+      update: 업데이트
       update_profile: "업데이트 사용자 프로필"
       update_user: "업데이트 사용자 정보"
+      update_user_admin: "업데이트 사용자"
+      use_limit: "번호를 사용 중"
+      use_limit_tip: "시대의 액세스 코드를 사용할 수있는 번호를 입력합니다."
       user_account_deleted: "당신이 성공적으로 귀하의 계정을 삭제했습니다."
       user_disable_problem: "거기에 문제는 사용자가 해제됐다."
       user_disabled: "사용자 비활성화"
@@ -116,14 +195,22 @@ ko:
       user_enabled: "사용자 설정"
       user_marked_active: "사용자가 활성 상태로 표시되었습니다"
       user_marked_inactive: "사용자가 비활성 상태로 표시되었습니다"
+      user_not_activated_error: "사용자를 활성화하지 못했습니다"
+      user_not_deactivated_error: "사용자를 비활성화하지 못했습니다"
       user_successfully_deleted: "사용자 {{login}}이 성공적으로 삭제되었습니다."
       user_update: "사용자 정보가 업데이 트되었습니다거야."
+      user_update_sucess: "사용자가 성공적으로 업데이 트했습니다"
       username: 아이디
       username_available: 사용자가없습니다
       username_help: "당신은 6과 20 사이의 문자를 사용할 수있습니다. 만약 당신이 원하는 이름을 사용할 수없는 숫자 또는 구두점을 추가해보십시오."
       username_not_available: "사용자 이름을 사용할 수없습니다"
       username_recover_prompt: "제발 당신이 할 때 귀하의 계정을 만들 때 사용한 이메일을 제공, 사용자 이름을 당신에게 이메일로 전송됩니다."
       username_sent: "귀하의 사용자 이름은 당신에게 이메일이 전송되었습니다. 귀하의 이메일을 확인하시기 바랍니다."
+      users_admin: 사용자
+      users_in_role: "역할에 사용자 : {{role}}"
+      validation_are_required: "이 필요합니다."
+      validation_is_required: "이 필요합니다."
+      view_your_account: 계정보기
       welcome: 환영
       welcome_email_subject: "{{application_name}}에 오신 것을 환영합니다"
       welcome_message: "정처없이 헤매다에 오신 것을 환영합니다. 이 시스템은 귀하의 웹사이트 구축을 돕기 위해 기본적인 구성 요소를 제공합니다."

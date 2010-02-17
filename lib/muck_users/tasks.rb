@@ -12,14 +12,17 @@ module MuckUsers
     def define
       
       namespace :muck do
-        namespace :users do
+        
+        namespace :sync do
           desc "Sync files from muck users."
-          task :sync do
+          task :users do
             path = File.join(File.dirname(__FILE__), *%w[.. ..])
             system "rsync -ruv #{path}/db ."
             system "rsync -ruv #{path}/public ."
           end
-
+        end
+        
+        namespace :users do
           desc "Setup default admin user"
           task :create_admin => :environment do
             ['administrator', 'manager', 'editor', 'contributor'].each {|r| Role.create(:rolename => r) }
@@ -38,6 +41,7 @@ module MuckUsers
             puts 'created admin user'
           end
         end
+        
       end
       
     end
