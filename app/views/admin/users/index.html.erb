@@ -1,4 +1,5 @@
 <div>
   <h2><%= t('muck.users.admin_users_title') %></h2>
+  <%= link_to 'Download Users', admin_users_path(:format => 'csv')%>
   <%= render :partial => 'admin/users/table' -%>
 </div>

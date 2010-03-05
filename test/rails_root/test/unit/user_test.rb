@@ -52,7 +52,7 @@ class UserTest < ActiveSupport::TestCase
     
     should_not_allow_mass_assignment_of :crypted_password, :password_salt, :persistence_token, :single_access_token, :perishable_token, :login_count,
                    :failed_login_count, :last_request_at, :last_login_at, :current_login_at, :current_login_ip, :last_login_ip, 
-                   :terms_of_service, :time_zone, :disabled_at, :activated_at, :created_at, :updated_at
+                   :time_zone, :disabled_at, :activated_at, :created_at, :updated_at
                    
     context "named scopes" do
       setup do

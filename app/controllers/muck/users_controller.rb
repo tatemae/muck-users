@@ -146,6 +146,7 @@ class Muck::UsersController < ApplicationController
       respond_to do |format|
         format.html { render :template => "users/#{template}" }
         format.xml { render :xml => @user }
+        format.json { render :json => { :success => true, :user => @user.as_json } }
       end
     end
   
@@ -154,11 +155,13 @@ class Muck::UsersController < ApplicationController
         respond_to do |format|
           format.html { redirect_to local_uri }
           format.xml { render :xml => @user, :status => :created, :location => user_url(@user) }
+          format.json { render :json => { :success => true, :user => @user.as_json } }
         end
       else
         respond_to do |format|
           format.html { render :template => "users/new" }
           format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+          format.json { render :json => { :success => false, :user => @user.as_json } }
         end
       end
     end
@@ -265,6 +268,7 @@ class Muck::UsersController < ApplicationController
         respond_to do |format|
           format.html { render :template => 'users/edit' }
           format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
+          format.json { render :json => { :success => success, :user => @user.as_json, :errors => @user.errors.as_json } }
         end
       end
     end
@@ -279,15 +283,16 @@ class Muck::UsersController < ApplicationController
           end
         end
         format.xml { head :ok }
+        format.json { render :json => { :success => true } }
       end
     end
   
     def permission_denied
       flash[:notice] = t('muck.users.permission_denied')
       respond_to do |format|
-        format.html do
-          redirect_to user_path(current_user)
-        end
+        format.html { redirect_to user_path(current_user) }
+        format.xml { render :xml => t('muck.users.permission_denied'), :status => :unprocessable_entity }
+        format.json { render :json => { :message => t('muck.users.permission_denied') } }
       end
     end
 

@@ -18,17 +18,48 @@ class Muck::UsersControllerTest < ActionController::TestCase
         GlobalConfig.automatically_login_after_account_create = true
       end
       context "on POST to :create" do
-        setup do
-          post_create_user
+        context "html" do
+          setup do
+            post_create_user
+          end
+          should_redirect_to("sign up complete path") { signup_complete_path(assigns(:user)) }
+          should "activate user" do
+            assert assigns(:user).active? == true, "user was not activated"
+          end
+          should "be logged in" do
+            user_session = UserSession.find
+            assert user_session, "user is not logged in"
+          end
         end
-        should_redirect_to("sign up complete path") { signup_complete_path(assigns(:user)) }
-        should "activate user" do
-          assert assigns(:user).active? == true, "user was not activated"
+        context "json" do
+          setup do
+            post_create_user_json
+          end
+          should "return json" do
+            user = JSON.parse(@response.body)
+            assert_equal true, user['success']
+            assert_equal "testguy", user['user']['login']
+          end
+          should "activate user" do
+            assert assigns(:user).active? == true, "user was not activated"
+          end
+          should "be logged in" do
+            user_session = UserSession.find
+            assert user_session, "user is not logged in"
+          end
         end
-        should "be logged in" do
-          user_session = UserSession.find
-          assert user_session, "user is not logged in"
-        end
+        context "xml" do
+          setup do
+            post_create_user_xml
+          end
+          should "activate user" do
+            assert assigns(:user).active? == true, "user was not activated"
+          end
+          should "be logged in" do
+            user_session = UserSession.find
+            assert user_session, "user is not logged in"
+          end
+        end        
       end
       context "on POST to :create with bad login (space in login name)" do
         setup do
@@ -335,24 +366,34 @@ class Muck::UsersControllerTest < ActionController::TestCase
   def put_update_user(user, options = {})
     put :update,
       :id => user.id, 
-      :user => { :login => 'testguy', 
-        :email => rand(1000).to_s + 'testguy@example.com', 
-        :password => 'testpasswrod', 
-        :password_confirmation => 'testpasswrod', 
-        :first_name => 'Ed',
-        :last_name => 'Decker',
-        :terms_of_service => true }.merge(options)
+      :user => user_params(options)
   end
 
   def post_create_user(options = {})
     post :create, 
-      :user => { :login => 'testguy', 
-        :email => rand(1000).to_s + 'testguy@example.com', 
-        :password => 'testpasswrod', 
-        :password_confirmation => 'testpasswrod', 
-        :first_name => 'Ed',
-        :last_name => 'Decker',
-        :terms_of_service => true }.merge(options)
+      :user => user_params(options)
   end
 
+  def post_create_user_json(options = {})
+    post :create, 
+      :user => user_params(options),
+      :format => 'json'
+  end
+  
+  def post_create_user_xml(options = {})
+    post :create, 
+      :user => user_params(options),
+      :format => 'xml'
+  end
+  
+  def user_params(options = {})
+    { :login => 'testguy', 
+      :email => rand(1000).to_s + 'testguy@example.com', 
+      :password => 'testpasswrod', 
+      :password_confirmation => 'testpasswrod', 
+      :first_name => 'Ed',
+      :last_name => 'Decker',
+      :terms_of_service => true }.merge(options)
+  end
+  
 end

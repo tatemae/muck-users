@@ -26,11 +26,20 @@ class Admin::Muck::UsersControllerTest < ActionController::TestCase
     end
     
     context "GET index" do
-      setup do
-        get :index
+      context "html" do
+        setup do
+          get :index
+        end
+        should_respond_with :success
+        should_render_template :index
       end
-      should_respond_with :success
-      should_render_template :index
+      context "csv" do
+        setup do
+          get :index, :format => 'csv'
+        end
+        should_respond_with :success
+        should_render_template :index
+      end
     end
 
     context "GET inactive" do

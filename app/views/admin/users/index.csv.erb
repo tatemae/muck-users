@@ -1,0 +1,7 @@
+login,email,first_name,last_name,login_count,last_login_at,created_at
+<% @users.each do |user|
+  fields = [user.login, user.email, user.first_name, user.last_name, 
+            user.login_count, user.last_login_at, user.created_at
+           ] -%>
+<%= fields.map {|value| "\"#{value}\""}.join(",") %>
+<% end -%>

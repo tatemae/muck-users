@@ -26,17 +26,7 @@ class Muck::UserSessionsController < ApplicationController
     @title = t('muck.users.sign_in_title')
     @user_session = UserSession.new(params[:user_session])
     @user_session.save do |result|
-      if result
-        flash[:notice] = t('muck.users.login_success')
-        respond_to do |format|
-          format.html { redirect_back_or_default user_path(@user_session.user) }
-        end
-      else
-        flash[:notice] = t('muck.users.login_fail')
-        respond_to do |format|
-          format.html { render :template => 'user_sessions/new' }
-        end
-      end
+      after_create_response(result)
     end
   end
   
@@ -48,4 +38,28 @@ class Muck::UserSessionsController < ApplicationController
       format.html { redirect_to logout_complete_path }
     end
   end
+  
+  protected
+  
+    def after_create_response(success)
+      if success
+        flash[:notice] = t('muck.users.login_success')
+        respond_to do |format|
+          format.html { redirect_back_or_default user_path(@user_session.user) }
+        end
+      else
+        flash[:notice] = t('muck.users.login_fail')
+        respond_to do |format|
+          format.html { render :template => 'user_sessions/new' }
+        end
+      end
+    end
+  
+    # override redirect by adding :redirect_to as a hidden field in your form or as a url param
+    def after_destroy_response
+      respond_to do |format|
+        format.html { redirect_to logout_complete_path }
+      end
+    end
+  
 end
