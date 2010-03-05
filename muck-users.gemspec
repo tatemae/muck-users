@@ -66,6 +66,7 @@ Gem::Specification.new do |s|
      "app/views/admin/users/edit.html.erb",
      "app/views/admin/users/inactive.html.erb",
      "app/views/admin/users/inactive_emails.html.erb",
+     "app/views/admin/users/index.csv.erb",
      "app/views/admin/users/index.html.erb",
      "app/views/admin/users/permissions.html.erb",
      "app/views/admin/users/row.js.erb",

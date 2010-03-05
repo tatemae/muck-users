@@ -16,7 +16,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
         @users = User.find(:all)
         headers["Content-Type"] = 'text/csv'
         headers["Content-Disposition"] = "attachment; filename=\"users.csv\"" 
-        render :layout => false 
+        render :template => 'admin/users/index', :layout => false 
       end
     end
   end
