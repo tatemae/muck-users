@@ -12,7 +12,6 @@
 		<div class="button form-row">
 	  	<%= f.submit t('muck.general.save') %>
 	  </div>
-	  <%= hidden_field_tag :redirect_to, edit_user_path(@user) %>
 	<% end %>
 	
 </div>
@@ -27,7 +26,6 @@
   	<div class="button form-row">
   	  <%= submit_tag t('muck.users.change_password'), :class => 'button' %>
   	</div>
-  	<%= hidden_field_tag :redirect_to, edit_user_path(@user) %>
   <% end -%>
 </div>
 

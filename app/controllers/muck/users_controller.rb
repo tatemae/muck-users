@@ -253,14 +253,11 @@ class Muck::UsersController < ApplicationController
       end
     end
   
-    # override redirect by adding :redirect_to as a hidden field in your form or as a url param
-    def after_update_response(success)
+    def after_update_response(success, success_redirect = nil)
       if success
         respond_to do |format|
           format.html do
-            get_redirect_to do
-              redirect_to admin? ? public_user_path(@user) : user_path(@user)
-            end
+            redirect_to success_redirect || (admin? ? public_user_path(@user) : user_path(@user))
           end
           format.xml{ head :ok }
         end
@@ -273,14 +270,11 @@ class Muck::UsersController < ApplicationController
       end
     end
   
-    # override redirect by adding :redirect_to as a hidden field in your form or as a url param
-    def after_destroy_response
+    def after_destroy_response(success_redirect = nil)
       respond_to do |format|
         format.html do
           flash[:notice] = t('muck.users.login_out_success')
-          get_redirect_to do
-            redirect_to(login_url)
-          end
+          redirect_to success_redirect || login_url
         end
         format.xml { head :ok }
         format.json { render :json => { :success => true } }

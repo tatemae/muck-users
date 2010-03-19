@@ -21,8 +21,6 @@
 	<%= f.password_field :password_confirmation, { :label => t('muck.users.confirm_password'),
                                                  :tip => t('muck.users.password_confirmation_help') } -%>
 	
-	<%= hidden_field_tag :redirect_to, redirect_to -%>
-	
 	<% if GlobalConfig.use_recaptcha -%>
 	<div class="recaptcha">
 		<%= recaptcha_tags %>

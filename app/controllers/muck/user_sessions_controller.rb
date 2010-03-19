@@ -55,7 +55,8 @@ class Muck::UserSessionsController < ApplicationController
       end
     end
   
-    # override redirect by adding :redirect_to as a hidden field in your form or as a url param
+    # override redirect by adding a route like this:
+    # map.logout_complete '/login', :controller => 'user_session', :action => 'new'
     def after_destroy_response
       respond_to do |format|
         format.html { redirect_to logout_complete_path }
