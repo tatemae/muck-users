@@ -282,6 +282,15 @@ class Muck::UsersControllerTest < ActionController::TestCase
         assert !@response.body.include?('zzzz')
       end
     end
+    context "empty params" do
+      setup do
+        get :login_search, :q => nil, :format => 'js'
+      end
+      should_respond_with :success
+      should "return all users" do
+        assert assigns(:users)
+      end
+    end
   end
   
   context "POST to is_login_available" do
