@@ -118,6 +118,16 @@ class UserTest < ActiveSupport::TestCase
     end
   end
   
+  context "terms of service set to false" do
+    setup do
+      @user = Factory.build(:user, :terms_of_service => false)
+    end
+    should "not create the user" do
+      assert !@user.valid?
+      assert @user.errors.full_messages.include?(I18n.translate('muck.users.terms_of_service_required'))      
+    end
+  end
+  
   context "a user" do
     should "have full name" do
       assert_difference 'User.count' do

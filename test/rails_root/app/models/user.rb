@@ -35,6 +35,7 @@ class User < ActiveRecord::Base
     c.crypto_provider = Authlogic::CryptoProviders::BCrypt
   end
   acts_as_muck_user
+  validates_terms_of_service
 
   # these are just for testing
   def creator_id

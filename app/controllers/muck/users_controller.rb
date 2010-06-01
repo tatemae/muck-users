@@ -51,6 +51,7 @@ class Muck::UsersController < ApplicationController
     @page_title = t('muck.users.register_account', :application_name => GlobalConfig.application_name)
     cookies.delete :auth_token
     @user = User.new(params[:user])
+    setup_tos
     check_access_code
     check_recaptcha
     success, path = setup_user
@@ -181,6 +182,13 @@ class Muck::UsersController < ApplicationController
       end
     end
   
+    def setup_tos
+      # This value is not mass updatable and must be set manually.
+      if params[:user][:terms_of_service] == '1' || params[:user][:terms_of_service] == true
+        @user.terms_of_service = true
+      end
+    end
+    
     def check_recaptcha
       if GlobalConfig.use_recaptcha
         if !(verify_recaptcha(@user) && @user.valid?)

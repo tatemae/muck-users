@@ -44,6 +44,11 @@ module ActiveRecord
           extend ActiveRecord::Acts::MuckUser::SingletonMethods
           
         end
+        
+        def validates_terms_of_service
+          validate_on_create :accepts_terms_of_service?
+        end
+
       end
 
       # class methods
@@ -196,6 +201,12 @@ module ActiveRecord
 
         def display_name
           CGI::escapeHTML(self.login)
+        end
+        
+        def accepts_terms_of_service?
+          if !self.terms_of_service
+            errors.add_to_base(I18n.translate('muck.users.terms_of_service_required'))
+          end
         end
         
       end 
