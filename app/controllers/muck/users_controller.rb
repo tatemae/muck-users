@@ -184,6 +184,7 @@ class Muck::UsersController < ApplicationController
   
     def setup_tos
       # This value is not mass updatable and must be set manually.
+      return unless params[:user] && params[:user][:terms_of_service]
       if params[:user][:terms_of_service] == '1' || params[:user][:terms_of_service] == true
         @user.terms_of_service = true
       end
