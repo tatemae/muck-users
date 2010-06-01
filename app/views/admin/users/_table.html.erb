@@ -13,5 +13,11 @@
 	<tbody>
 	  <%= render :partial => 'admin/users/row', :collection => @users, :as => :user %>
 	</tbody>
+	<tfoot>
+	  <tr>
+	    <td colspan="7">
+	      <%= will_paginate @users %>
+	    </td>
+	  </tr>
+	</tfoot>
 </table>
-<%= will_paginate @users %>

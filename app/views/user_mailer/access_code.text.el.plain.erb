@@ -1,0 +1,5 @@
+<%= @message %> 
+
+ Κωδικός Πρόσβασης: <%= @code %> 
+
+ <%= link_to translate('muck.users.click_to_sign_up_now'), signup_url(:access_code => @code) %> 

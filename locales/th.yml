@@ -2,216 +2,217 @@
 th: 
   muck: 
     roles: 
-      assign_role: "กำหนด บทบาท"
-      edit_roles: "บทบาท แก้ไข"
+      assign_role: กำหนดบทบาท
+      edit_roles: บทบาทแก้ไข
       remove_role: "บทบาท Remove"
-      role_created: "บทบาท สร้าง สำเร็จ."
+      role_created: บทบาทสำเร็จแล้ว
       roles: บทบาท
     users: 
       access_code: "รหัส Access"
-      access_code_add_problem: "รหัส การ เข้าถึง ปัญหา เพิ่ม"
-      access_code_added: "รหัส ถูก เพิ่ม แล้ว"
-      access_code_created: "การ สร้าง"
-      access_code_delete_confirm: "คุณ แน่ใจ หรือ ว่า ต้องการ ยกเลิก การ ใช้ รหัส นี้"
-      access_code_delete_error: "เกิด ข้อ ผิด พลาด ขณะ พยายาม ลบ รหัส การ เข้าถึง"
-      access_code_delete_link: "รหัส ลบ Access"
-      access_code_delete_problem: "ไม่ สามารถ ลบ รหัส การ เข้า ใช้ มี ผู้ ใช้ ที่ เกี่ยวข้อง."
-      access_code_deleted: "รหัส เข้า ลบ."
-      access_code_edit_link: "รหัส แก้ไข Access"
-      access_code_edit_problem: "ปัญหา รหัส การ เข้า ใช้ แก้ไข"
+      access_code_add_problem: ปัญหารหัสเข้าเพิ่ม
+      access_code_added: รหัสถูกบันทึกเรียบร้อยแล้ว
+      access_code_created: สร้างขึ้น
+      access_code_delete_confirm: คุณแน่ใจหรือว่าต้องการยกเลิกการใช้รหัสนี้
+      access_code_delete_error: เกิดข้อผิดพลาดขณะพยายามลบรหัสการเข้าถึง
+      access_code_delete_link: "รหัส Access ลบ"
+      access_code_delete_problem: ไม่สามารถเข้าลบโค้ดได้ผู้ที่เกี่ยวข้อง
+      access_code_deleted: รหัสเข้าลบ
+      access_code_edit_link: "รหัส Access แก้ไข"
+      access_code_edit_problem: รหัสการเข้าถึงการแก้ไขปัญหา
       access_code_expires: หมดอายุ
-      access_code_fullfill_invites: "ขอ เติม เชิญ"
-      access_code_fullfill_invites_limit: "จำกัด ขอ เชิญ"
-      access_code_fullfill_invites_limit_tip: "ใส่ ตัวเลข เพื่อ จำกัด จำนวน การ ขอ ส่ง. เช่น ใส่ 100 จะ จำกัด ขอ เชิญ ไป ล่าสุด 100 คำขอ"
-      access_code_fullfill_invites_tip: "ตรวจ สอบ ที่ นี่ เพื่อ ส่ง คำ เชิญ ไป ยัง ผู้ ใช้ ที่ ได้ ขอ เชิญ. นี้ จะ ไม่ สนใจ อีเมล ใด ๆ ที่ ระบุ ข้าง ต้น."
-      access_code_help: "ถ้า คุณ ได้ รับ รหัส การ เข้า ใช้ จาก เรา โปรด ใส่ ไว้ ใน กล่อง ข้าง บน. คุณ อาจ {{access_request_anchor}} ขอ รหัส เข้า ใช้ {{access_request_anchor_end}}."
-      access_code_new: "รหัส ใหม่ Access"
-      access_code_related_users: "ผู้ ใช้ ที่ ลง ทะเบียน กับ รหัส นี้"
-      access_code_request_count: "ขณะ นี้ มี การ ขอ รหัส เข้า {{access_code_requests_count}} เป็น"
-      access_code_request_thank_you: "ขอบคุณ สำหรับ คำขอ ของ คุณ. เรา จะ ติดต่อ กลับ โดย เร็ว ที่สุด."
-      access_code_request_tip: "ใส่ อีเมล ของ ท่าน และ เรา จะ ส่ง รหัส เข้า ทันที ที่ หนึ่ง มี. ขอบคุณ!"
-      access_code_tip: "ใส่ รหัส เข้า ใช้."
-      access_code_unlimited: Unlimited
-      access_code_update_problem: "เกิด ปัญหา ใน การ ปรับปรุง รหัส การ เข้าถึง ถูก."
-      access_code_use_limit: "จำกัด การ ใช้"
-      access_code_uses: ใช้
+      access_code_fullfill_invites: ขอเชิญมาเติมเต็ม
+      access_code_fullfill_invites_limit: "จำกัด ขอเชิญ"
+      access_code_fullfill_invites_limit_tip: "ใส่หมายเลขเพื่อ จำกัด จำนวนหน้าส่งออก ตัวอย่างเช่นใส่ 100 จะ จำกัด ขอเชิญไปล่าสุด 100 หน้า"
+      access_code_fullfill_invites_tip: "ตรวจสอบที่นี่เพื่อส่งคำเชิญไปยังผู้ใช้ที่ได้ขอเชิญ นี้จะไม่สนใจอีเมลที่ระบุข้างต้น"
+      access_code_help: "หากคุณได้รับรหัสการเข้าถึงจากเราโปรดใส่ในช่องข้างบน คุณอาจ {{access_request_anchor}} ขอรหัสเข้าใช้ {{access_request_anchor_end}}."
+      access_code_new: "รหัส Access ใหม่"
+      access_code_related_users: ผู้ใช้ที่ลงทะเบียนกับรหัสนี้
+      access_code_request_count: "ตอนนี้ขอรหัสเข้า {{access_code_requests_count}}"
+      access_code_request_thank_you: "ขอบคุณสำหรับคำขอของคุณ เราจะติดต่อโดยเร็วที่สุด"
+      access_code_request_tip: "ใส่อีเมลของคุณและเราจะส่งรหัสเข้าทันทีที่หนึ่งสามารถใช้ได้ Thank you!"
+      access_code_tip: ใส่รหัสเข้า
+      access_code_unlimited: ไม่จำกัด
+      access_code_update_problem: มีปัญหาในการปรับปรุงรหัสการเข้าถึงได้
+      access_code_use_limit: "จำกัด การใช้งาน"
+      access_code_uses: จะใช้
       access_codes: "รหัส Access"
-      access_denied: "คุณ ไม่ ได้ รับ อนุญาต ให้ เข้าถึง หน้า ขอ."
-      access_required_warning: "เข้า เว็บไซต์ ถูก จำกัด อยู่. คุณ ต้อง มี รหัส การ เข้า ใช้ ที่ ถูก ต้อง ลง ทะเบียน."
-      account_activated: "บัญชี ของ คุณ ถูก เปิด ใช้ งาน! คุณ สามารถ login."
-      account_not_activated: "บัญชี {{application_name}} ของ คุณ ยัง ไม่ ได้ เปิด ใช้ งาน."
-      activation_complete: "เปิด ใช้ งาน เสร็จ สมบูรณ์"
-      activation_instructions: "คำ แนะนำ การ เปิด ใช้ งาน"
-      activation_not_found: "รหัส เปิด ใช้ งาน ไม่ พบ. โปรด ลอง สร้าง บัญชี ใหม่."
+      access_denied: คุณไม่ได้รับอนุญาตให้เข้าถึงหน้าขอ
+      access_required_warning: "เข้าถึงเว็บไซต์นี้ถูกจำกัด คุณต้องใช้รหัสที่ถูกต้องในการสมัคร"
+      account_activated: "บัญชีของคุณถูกเปิดใช้งาน! คุณสามารถเข้าสู่ระบบ"
+      account_not_activated: "{{application_name}} บัญชีของคุณยังไม่ได้เปิดใช้งาน"
+      activation_complete: เปิดใช้งานเสร็จสมบูรณ์
+      activation_instructions: คำแนะนำการเปิดใช้งาน
+      activation_not_found: "รหัสเปิดใช้งานไม่พบ โปรดลองสร้างบัญชีใหม่"
       add: เพิ่ม
-      add_access_code: "เพิ่ม รหัส"
-      add_access_code_title: "เพิ่ม รหัส"
+      add_access_code: "เพิ่มรหัส Access"
+      add_access_code_title: "เพิ่มรหัส Access"
       add_permission: "(Add อนุญาต)"
-      add_permission_to_user: "เพิ่ม สิทธิ์ ใน การ {{user}} ผู้ ใช้"
-      add_role: "เพิ่ม บทบาท"
-      add_role_dialog_title: "เพิ่ม บทบาท"
-      add_user_to_role: "เพิ่ม ผู้ ใช้ งาน Role"
-      add_user_to_role_title: "เพิ่ม ผู้ ใช้ บทบาท ใหม่."
+      add_permission_to_user: "เพิ่มการอนุญาตให้ {{user}} ผู้ใช้"
+      add_role: เพิ่มบทบาท
+      add_role_dialog_title: เพิ่มบทบาท
+      add_user_to_role: "เพิ่มผู้ใช้งาน Role"
+      add_user_to_role_title: เพิ่มผู้ใช้มีบทบาทใหม่
       admin: 
-        activate_all_inactive_users: "เปิด ใช้ งาน ทั้งหมด ไม่ ใช้ งาน ผู้ ใช้"
-        activate_all_inactive_users_confirm: "คุณ แน่ใจ หรือ ว่า ต้องการ เปิด ใช้ งาน ผู้ ใช้ งาน ทั้งหมด ใน ระบบ หรือ ไม่ นี้ ไม่ สามารถ ยกเลิก!"
-        search_users: "ผู้ ใช้ ค้นหา"
-        show_emails: "อีเมล แสดง"
-        unactivated_users: "มี {{count}} ผู้ ใช้ unactivated เป็น"
-      admin_requred: "คุณ ต้อง เป็น ผู้ ดูแล การ เข้าถึง คุณลักษณะ นี้."
-      admin_users_title: "ผู้ บริหาร"
-      all_users: "ผู้ ใช้ ทั้งหมด"
-      already_activated: "บัญชี ของ คุณ ถูก เปิด ใช้ งาน แล้ว. คุณ สามารถ เข้า สู่ ระบบ ด้าน ล่าง."
-      already_logged_in: "คุณ เข้า สู่ ระบบ แล้ว และ ไม่ จำเป็น ต้อง กู้ คืน รหัส ผ่าน ของ คุณ."
-      already_registered: สมาชิก?
-      application_base_url_not_set: "กรุณา ตั้ง application_base_url ใน global_config.yml"
+        activate_all_inactive_users: เปิดใช้งานผู้ใช้ทั้งหมดไม่ใช้งาน
+        activate_all_inactive_users_confirm: "คุณแน่ใจหรือว่าต้องการเปิดใช้งานผู้ใช้งานทั้งหมดในระบบ? นี้ไม่สามารถยกเลิกได้!"
+        search_users: ค้นหาผู้ใช้
+        show_emails: แสดงอีเมล
+        unactivated_users: "มีผู้ใช้ {{count}} unactivated เป็น"
+      admin_requred: คุณต้องเป็นผู้ดูแลการเข้าถึงคุณลักษณะนี้
+      admin_users_title: ผู้บริหาร
+      all_users: ผู้ใช้ทั้งหมด
+      already_activated: "บัญชีของคุณถูกเปิดใช้งานแล้ว คุณสามารถเข้าสู่ระบบด้านล่าง"
+      already_logged_in: คุณเข้าสู่ระบบแล้วและไม่จำเป็นต้องกู้คืนรหัสผ่านของคุณ
+      already_registered: เป็นสมาชิกแล้ว?
+      application_base_url_not_set: "กรุณาตั้ง application_base_url ใน global_config.yml"
       bulk_access_code_emails: อีเมล์
-      bulk_access_code_emails_tip: "คั่น อีเมล ด้วย จุลภาค"
-      bulk_access_code_message: ข้อความ
-      bulk_access_code_problem: "รหัส การ เข้าถึง ปัญหา เพิ่ม"
-      bulk_access_code_subject: "สาขา วิชา"
-      bulk_access_code_tip: "ตัว เลือก. ถ้า รหัส ระบุ แล้ว ว่า รหัส จะ ถูก ส่ง ไป ยัง ผู้ ใช้ ทั้งหมด. ออก จาก ช่อง ว่าง ใน การ ส่ง รหัส ซ้ำ กับ ผู้ ใช้ แต่ละ คน นี้."
-      bulk_access_codes: "รหัส กลุ่ม Access"
-      bulk_access_codes_created: "รหัส การ เข้าถึง กลุ่ม สร้าง และ ส่ง อีเมล ไป ยัง อีเมล {{email_count}}."
-      bulk_access_codes_description: "นี้ จะ สร้าง เอกลักษณ์ ให้ ใช้ รหัส เดียว เข้า ใช้ สำหรับ แต่ละ อีเมล์ ที่ ระบุ."
-      bulk_access_codes_title: "รหัส กลุ่ม Access"
-      cannot_deactivate_yourself: "คุณ ไม่ สามารถ ยกเลิก เอง!"
-      cant_delete_admin: "คุณ ไม่ สามารถ ลบ ผู้ ใช้ ที่ อยู่ ใน บทบาท ผู้ ดูแล. ลบ ผู้ ใช้ จาก บทบาท ของ ผู้ ดูแล ระบบ แล้ว ลอง อีก ครั้ง. กรุณา ระมัดระวัง ดูแล เมื่อ ลบ. ถ้า คุณ ลบ บัญชี ผู้ ดูแล ทุก ท่าน จะ ไม่ สามารถ เข้า สู่ ระบบ บริหาร."
-      cant_delete_administrator_role: "คุณ ไม่ สามารถ ลบ บทบาท ของ ผู้ ดูแล ระบบ."
-      cant_disable_admin: "ไม่ สามารถ ปิด การ ใช้ งาน ผู้ ดูแล. โปรด ลบ ผู้ ใช้ จาก บทบาท ดูแล และ ลอง อีก ครั้ง."
-      change_password: "เปลี่ยน รหัส ผ่าน"
-      change_permissions: "บทบาท เปลี่ยน"
-      change_permissions_for: "เปลี่ยน การ อนุญาต สำหรับ {{user}}"
-      change_your_password: "เปลี่ยน รหัส ผ่าน"
-      choose_member_name: "ชื่อ สมาชิก"
-      click_to_sign_up_now: "คลิก ที่ นี่ เพื่อ สมัคร เดี๋ยวนี้."
-      complete_profile: "กรอก ข้อมูล ส่วนตัว ของ คุณ"
-      confirm_delete_account: "คุณ แน่ใจ หรือ ว่า ต้องการ ลบ บัญชี ของ คุณ \\ n ไม่ สามารถ ยกเลิก."
-      confirm_password: "ยืนยัน รหัส ผ่าน"
-      confirm_select_new_password: "เปลี่ยน ยืนยัน รหัส ผ่าน"
-      could_not_find_reset_code: "ไม่ พบ รหัส รีเซ็ต รหัส ผ่าน. โปรด ลอง รีเซ็ต รหัส ผ่าน อีก ครั้ง."
-      could_not_find_user_with_email: "ไม่ พบ ผู้ ใช้ ที่ มี ที่ อยู่ อีเมล ที่."
-      current_password: "รหัส ผ่าน ปัจจุบัน"
+      bulk_access_code_emails_tip: แยกอีเมล์ด้วยเครื่องหมายจุลภาค
+      bulk_access_code_message: Message
+      bulk_access_code_problem: ปัญหารหัสเข้าเพิ่ม
+      bulk_access_code_subject: เรื่อง
+      bulk_access_code_tip: "อุปกรณ์เสริม ถ้าโค้ดมีการระบุแล้วว่ารหัสจะถูกส่งไปยังผู้ใช้ทั้งหมด เว้นฟิลด์นี้ว่างส่งรหัสเฉพาะผู้ใช้แต่ละคน"
+      bulk_access_codes: "กลุ่มรหัส Access"
+      bulk_access_codes_created: "กลุ่มรหัสเข้าใช้สร้างและส่งไป {{email_count}} อีเมล"
+      bulk_access_codes_description: นี้จะสร้างที่ไม่ซ้ำกันใช้รหัสเดียวเข้าใช้งานสำหรับแต่ละอีเมลที่ให้ไว้
+      bulk_access_codes_title: "กลุ่มรหัส Access"
+      cannot_deactivate_yourself: คุณไม่สามารถปิดตัวเอง!
+      cant_delete_admin: "คุณไม่สามารถลบผู้ใช้ที่อยู่ในบทบาทผู้ดูแลระบบ ลบผู้ใช้จากบทบาทของผู้ดูแลระบบแล้วลองใหม่อีกครั้ง โปรดระมัดระวังเมื่อลบผู้บริหาร หากคุณลบบัญชีผู้ดูแลระบบทั้งหมดคุณจะไม่สามารถเข้าสู่ระบบการบริหาร"
+      cant_delete_administrator_role: คุณไม่สามารถลบบทบาทของผู้ดูแลระบบ
+      cant_disable_admin: "ไม่สามารถปิดการใช้งานผู้ดูแลระบบ โปรดลบผู้ใช้จากบทบาทดูแลและลองอีกครั้ง"
+      change_password: เปลี่ยนรหัสผ่าน
+      change_permissions: สับตัว
+      change_permissions_for: "เปลี่ยนการอนุญาตสำหรับ {{user}}"
+      change_your_password: เปลี่ยนรหัสผ่าน
+      choose_member_name: ชื่อสมาชิก
+      click_to_sign_up_now: คลิกที่นี่เพื่อลงทะเบียนตอนนี้
+      complete_profile: กรอกข้อมูลส่วนตัวของคุณ
+      confirm_delete_account: "คุณแน่ใจหรือว่าต้องการลบบัญชีของคุณ \\ n ไม่สามารถยกเลิกได้"
+      confirm_password: ยืนยันรหัสผ่าน
+      confirm_select_new_password: เปลี่ยนรหัสผ่านยืนยัน
+      could_not_find_reset_code: "ไม่พบรหัสรีเซ็ตรหัสผ่าน กรุณาลองตั้งรหัสผ่านของคุณอีกครั้ง"
+      could_not_find_user_with_email: ไม่พบผู้ใช้ที่อยู่อีเมลว่า
+      current_password: รหัสผ่านปัจจุบัน
       delete: ลบ
-      delete_my_account: "ลบ บัญชี ผู้ ใช้ ของ ฉัน และ ข้อมูล ทั้งหมด ของ ฉัน."
-      delete_this_user: "ลบ ผู้ ใช้ นี้."
-      deleting_user: "ลบ ผู้ ใช้ ..."
+      delete_my_account: ลบบัญชีผู้ใช้ของฉันและข้อมูลทั้งหมดของฉัน
+      delete_this_user: ลบผู้ใช้นี้
+      deleting_user: "ลบผู้ใช้ ..."
       edit: Edit
-      edit_access_code: "รหัส แก้ไข Access"
-      edit_access_code_title: "รหัส แก้ไข Access"
-      edit_profile: "แก้ไข โปรไฟล์"
-      edit_role_dialog_title: "บทบาท แก้ไข"
+      edit_access_code: "รหัส Access แก้ไข"
+      edit_access_code_title: "รหัส Access แก้ไข"
+      edit_profile: แก้ไขข้อมูลส่วนตัว
+      edit_role_dialog_title: แก้ไขบทบาท
       email: Email
-      email_address: "ที่ อยู่ อีเมล"
-      email_available: "อีเมล์ ที่ มี"
-      email_empty: "โปรด ป้อน ที่ อยู่ อีเมล"
-      email_help: "โปรด ใช้ ที่ ถูก ต้อง ปัจจุบัน e-mail address. เรา จะ ไม่ แบ่งปัน หรือ อีเมล ขยะ ของ คุณ e-mail address."
-      email_invalid: "อีเมล ไม่ ถูก ต้อง"
-      email_not_available: "อีเมล การ ใช้ งาน แล้ว. {{reset_password_help}}"
-      email_recover_prompt: "กรุณา ให้ อีเมล ที่ คุณ ลง ทะเบียน กับ การ กู้ รหัส ผ่าน ของ คุณ."
-      expiration_date: "วัน หมดอายุ"
-      expiration_date_tip: "ป้อน วัน ที่ เมื่อ ที่ รหัส เข้าถึง จะ กลาย เป็น ที่ ไม่ ถูก ต้อง"
-      first_name: ชื่อ
-      forgot_password: "ลืม รหัส ผ่าน"
-      forgot_username: "ลืม ชื่อ ผู้ ใช้"
-      forgot_your_password: "ลืม รหัส ผ่าน"
-      forgot_your_username: "ลืม ชื่อ ผู้ ใช้ ของ คุณ"
-      invalid_username: "ชื่อ ผู้ ใช้ ไม่ ถูก ต้อง"
-      join_application_name: "เข้า ร่วม และ ได้ รับ มัน กระทำ"
-      last_name: นามสกุล
-      login: ล็อกอิน
-      login_empty: "กรุณา ป้อน เข้า สู่ ระบบ"
-      login_fail: "ขออภัย แต่ เรา ไม่ สามารถ จำ ข้อมูล การ ล็อกอิน ของ คุณ. โปรด ลอง อีก ครั้ง."
-      login_out_success: "คุณ ได้ ออก จาก ระบบ."
-      login_requred: "คุณ ต้อง เข้า สู่ ระบบ เพื่อ ใช้ คุณลักษณะ นี้."
-      login_success: "Login สำเร็จ!"
-      login_title: "Log-in การ บัญชี"
+      email_address: อีเมล์
+      email_available: "Email ใช้ได้"
+      email_empty: กรุณากรอกอีเมล์
+      email_help: "กรุณาใช้ที่ถูกต้องที่อยู่อีเมลปัจจุบัน เราจะไม่ใช้หรืออีเมลขยะที่อยู่อีเมลของคุณ"
+      email_invalid: อีเมลไม่ถูกต้อง
+      email_not_available: "Email การใช้งานแล้ว {{reset_password_help}}"
+      email_recover_prompt: กรุณาให้อีเมลที่คุณลงทะเบียนกับการกู้คืนรหัสผ่านของคุณ
+      expiration_date: วันหมดอายุ
+      expiration_date_tip: เมื่อวันที่ป้อนรหัสเข้าถึงจะกลายเป็นไม่ถูกต้อง
+      first_name: ชื่อแรก
+      forgot_password: ลืมรหัสผ่าน
+      forgot_username: ลืมชื่อผู้ใช้
+      forgot_your_password: ลืมรหัสผ่าน
+      forgot_your_username: "? ลงทะเบียน"
+      invalid_username: ชื่อผู้ใช้ไม่ถูกต้อง
+      join_application_name: เข้าร่วมและได้รับมันกระทำ
+      last_name: "Last Name"
+      login: เข้าสู่ระบบ
+      login_empty: โปรดป้อนการเข้าสู่ระบบ
+      login_fail: "ขออภัย แต่เราไม่สามารถจำข้อมูลการเข้าสู่ระบบ โปรดลองอีกครั้ง"
+      login_out_success: คุณได้ออกจากระบบ
+      login_requred: คุณต้องเข้าสู่ระบบเพื่อเข้าถึงคุณลักษณะนี้
+      login_success: "Login ประสบความสำเร็จ!"
+      login_title: เข้าสู่ระบบในบัญชี
       logout_required: ~
-      my_dashboard: "แผง ควบคุม ของ ฉัน"
+      my_dashboard: แผงควบคุมของฉัน
       name: ชื่อ
       navigation: 
-        all_users: "ผู้ ใช้ ทั้งหมด"
-        inactive_users: "ผู้ ใช้ งาน"
-        search_users: "ผู้ ใช้ ค้นหา"
-      new_password_doesnt_match: "รหัส ผ่าน ใหม่ ไม่ ตรง กับ ยืนยัน รหัส ผ่าน."
-      old_password_incorrect: "รหัส ผ่าน เก่า ของ คุณ ไม่ ถูก ต้อง."
-      password: "รหัส ผ่าน"
-      password_cannot_be_blank: "ช่อง Password ไม่ สามารถ ว่าง."
-      password_confirmation_help: "เพื่อ ให้ แน่ใจ ว่า รหัส ผ่าน ของ คุณ ถูก ต้อง โปรด ป้อน อีก ครั้ง ที่ นี่."
-      password_help: "รหัส ผ่าน ของ คุณ ควร มี อย่าง น้อย หก ตัว อักษร. ผสม ของ บน และ ล่าง ตัว อักษร และ ตัวเลข กรณี ที่ ทำงาน ได้ ดี"
-      password_mismatch: "ไม่ ตรงกัน Password."
-      password_not_reset: "รหัส ผ่าน ไม่ ได้ ตั้ง."
-      password_reset: "รีเซ็ต รหัส ผ่าน."
-      password_reset_email_subject: "คุณ ได้ ขอ เปลี่ยน รหัส ผ่าน {{application_name}} ของ คุณ"
-      password_reset_link_sent: "คำ แนะนำ ใน การ รีเซ็ต รหัส ผ่าน ของ คุณ ไป ถึง คุณ. โปรด ตรวจ สอบ อีเมล ของ คุณ."
-      password_updated: "รหัส ผ่าน ข้อมูล สำเร็จ."
-      permission_denied: "คุณ ไม่ ได้ รับ อนุญาต ให้ ดำเนิน การ เสร็จ ขอ."
-      problem_changing_password: "มี ปัญหา เปลี่ยน รหัส ผ่าน แล้ว. {{errors}}"
-      problem_creating_account: "มี ปัญหา การ สร้าง บัญชี ของ คุณ ถูก. กรุณา แก้ไข ข้อ ผิด พลาด ดัง ต่อ ไป นี้"
-      problem_editing_account: "เกิด ปัญหา ใน การ อัพเดต ข้อมูล ของ คุณ ได้."
-      recover_password: "กู้ คืน รหัส ผ่าน"
-      recover_password_prompt: "(ถ้า คุณ ลืม รหัส ผ่าน คืน ที่ นี่)"
-      register_account: "ลง ทะเบียน บัญชี {{application_name}}"
-      register_for_account: "ลง ทะเบียน สำหรับ บัญชี"
-      remember_me: "จำ ฉัน"
-      remove_my_account: "ลบ บัญชี ของ ฉัน"
-      request_access_code: "ขอ รหัส เข้า"
-      request_username: "ชื่อ ผู้ ขอ"
-      request_username_subject: "ลืม ชื่อ ผู้ ใช้"
-      reset_password: "รีเซ็ต รหัส ผ่าน ของ คุณ"
-      reset_your_password: "รีเซ็ต รหัส ผ่าน ของ คุณ"
+        all_users: ผู้ใช้ทั้งหมด
+        inactive_users: ผู้ใช้งาน
+        search_users: ค้นหาผู้ใช้
+      new_password_doesnt_match: รหัสผ่านใหม่ไม่ตรงกับยืนยันรหัสผ่าน
+      old_password_incorrect: รหัสผ่านเก่าของคุณไม่ถูกต้อง
+      password: รหัสผ่าน
+      password_cannot_be_blank: "เขต Password ไม่สามารถว่าง"
+      password_confirmation_help: เพื่อให้แน่ใจว่ารหัสผ่านของคุณถูกต้องโปรดป้อนอีกครั้งที่นี่
+      password_help: "รหัสผ่านของคุณควรมีอย่างน้อยหกตัวอักษร Mix ของบนและตัวอักษรกรณีที่ต่ำกว่าและตัวเลขทำงานได้ดี"
+      password_mismatch: รหัสผ่านไม่ตรงกัน
+      password_not_reset: รหัสผ่านไม่รีเซ็ต
+      password_reset: รีเซ็ตรหัสผ่าน
+      password_reset_email_subject: "คุณขอเปลี่ยนรหัสผ่าน {{application_name}} ของคุณ"
+      password_reset_link_sent: "คำแนะนำเพื่อรีเซ็ตรหัสผ่านของคุณถูกส่งถึงคุณ กรุณาตรวจสอบอีเมลของคุณ"
+      password_updated: รหัสผ่านสำเร็จแล้ว
+      permission_denied: คุณไม่ได้รับอนุญาตเพื่อให้การดำเนินการขอ
+      problem_changing_password: "มีปัญหาการเปลี่ยนผ่านของคุณ {{errors}}"
+      problem_creating_account: "มีปัญหาในการสร้างบัญชีของคุณได้ กรุณาแก้ไขข้อผิดพลาดดังต่อไปนี้"
+      problem_editing_account: มีปัญหาการปรับปรุงข้อมูลของคุณได้
+      recover_password: "Password Recover"
+      recover_password_prompt: (ถ้าคุณลืมรหัสผ่านคืนได้ที่นี่)
+      register_account: "ลงทะเบียนสำหรับบัญชี {{application_name}}"
+      register_for_account: ลงทะเบียนสมาชิก
+      remember_me: จำข้อมูลไว้
+      remove_my_account: ลบบัญชีของฉัน
+      request_access_code: "รหัส Access Request"
+      request_username: ขอชื่อผู้ใช้
+      request_username_subject: ลืมชื่อผู้ใช้
+      reset_password: รีเซ็ตรหัสผ่านของคุณ
+      reset_your_password: รีเซ็ตรหัสผ่านของคุณ
       role: บทบาท
-      role_delete_confirm: "คุณ แน่ใจ หรือ ว่า ต้องการ ลบ บทบาท นี้ ทุก สิทธิ ที่ เกี่ยวข้อง จะ ถูก ลบ!"
-      role_deleted: "ลบ บทบาท"
-      role_not_deleted: "บทบาท ไม่ สามารถ ลบ"
+      role_delete_confirm: "คุณแน่ใจหรือว่าต้องการลบบทบาทนี้ All สิทธิ์ที่เกี่ยวข้องจะถูกลบ!"
+      role_deleted: ลบบทบาท
+      role_not_deleted: บทบาทไม่สามารถลบ
       roles: บทบาท
-      save: บันทึก
-      select_new_password: "เลือก รหัส ผ่าน ใหม่"
-      sign_in: "เข้า สู่ ระบบ"
-      sign_in_now: "ลงชื่อ เข้า ใช้ วัน นี้"
-      sign_in_title: "เข้า สู่ ระบบ"
-      sign_out_title: "ออก จาก ระบบ"
-      sign_up: "ลง ทะเบียน"
-      sign_up_now: "ลง ทะเบียน เดี๋ยวนี้"
-      sorry_invalid_reset_code: "ขออภัย แต่ เรา ไม่ สามารถ ค้นหา บัญชี ของ คุณ. ถ้า คุณ มี ปัญหา ลอง คัด ลอก และ วาง URL จาก อีเมล ของ คุณ ใน เบ รา เซอร์ ของ คุณ หรือ เริ่ม ต้น กระบวนการ ตั้ง ค่า รหัส ผ่าน."
-      submit: ส่ง
-      terms_and_service: "โดย เข้า สู่ ระบบ คลิก &#39;-up Now&#39; คุณ ยินยอม ที่ จะ ปฏิบัติ ตาม ข้อกำหนด {{tos_link_anchor}} และ เงื่อนไข {{link_end}}."
-      thanks_sign_up: "ขอบคุณ สำหรับ การ สมัคร!"
-      thanks_sign_up_check: "บัญชี ของ คุณ ถูก สร้าง. โปรด ตรวจ สอบ อีเมล ของ คุณ สำหรับ คำ แนะนำ การ เปิด ใช้ งาน บัญชี ของ คุณ!"
-      thanks_sign_up_login: "ขอบคุณ สำหรับ การ สมัคร! คุณ สามารถ เข้า สู่ ระบบ ใน ขณะ นี้"
-      total_users: "ผู้ ใช้ ทั้งหมด: {{total}}"
+      save: ประหยัด
+      select_new_password: เลือกรหัสผ่านใหม่
+      sign_in: ในการเข้าสู่ระบบ
+      sign_in_now: "เข้าสู่ระบบ now!"
+      sign_in_title: ในการเข้าสู่ระบบ
+      sign_out_title: ออกจากระบบ
+      sign_up: "Sign up"
+      sign_up_now: "Sign - up Now"
+      sorry_invalid_reset_code: "ขออภัย แต่เราไม่สามารถค้นหาบัญชีของคุณ ถ้าคุณมีปัญหาลองคัดลอกและวาง URL จากอีเมลของคุณในเบราว์เซอร์ของคุณหรือรีสตาร์ทการตั้งรหัสผ่าน"
+      submit: เสนอ
+      terms_and_service: "โดยคลิก&#39;สมัครวันนี้&#39;คุณยินยอมที่จะปฏิบัติตามข้อกำหนดและเงื่อนไข {{tos_link_anchor}} {{link_end}}."
+      terms_of_service_required: คุณต้องยอมรับเงื่อนไขการให้บริการ
+      thanks_sign_up: ขอขอบคุณที่ลง!
+      thanks_sign_up_check: "บัญชีของคุณถูกสร้างขึ้น กรุณาตรวจสอบ e - mail ของคุณสำหรับคำแนะนำการเปิดใช้บัญชีของคุณ"
+      thanks_sign_up_login: "ขอขอบคุณที่ลง! คุณอาจเข้าสู่ระบบก่อน"
+      total_users: "สมาชิกทั้งหมด : {{total}}"
       unlimited: "ใช้ Unlimited"
-      unlimited_tip: "ตรวจ สอบ ที่ นี่ ถ้า รหัส เข้า ใช้ สามารถ ใช้ ไม่ จำกัด จำนวน ครั้ง. นี้ จะ ยกเลิก การ จำกัด การ ใช้."
-      update: อัพเดต
-      update_profile: "การ ปรับปรุง โปรไฟล์ ของ คุณ"
-      update_user: "Update ข้อมูล ผู้ ใช้ ของ คุณ"
-      update_user_admin: "ผู้ ปรับปรุง"
-      use_limit: "จำนวน การ ใช้"
-      use_limit_tip: "ป้อน จำนวน ครั้ง รหัส การ เข้าถึง สามารถ ใช้."
-      user_account_deleted: "คุณ ได้ ลบ บัญชี ของ คุณ."
-      user_disable_problem: "มี ปัญหา การ ปิด ใช้ งาน ผู้ ใช้ นี้ ถูก."
-      user_disabled: "ผู้ ใช้ งาน"
-      user_enable_problem: "มี ปัญหา ทำให้ ผู้ ใช้ นี้ ถูก."
-      user_enabled: "ผู้ ใช้ งาน"
-      user_marked_active: "ผู้ ได้ รับ การ ระบุ ว่า เป็น งาน"
-      user_marked_inactive: "ผู้ ถูก ทำ เครื่องหมาย เป็น ไม่ ใช้ งาน"
-      user_not_activated_error: "ไม่ สามารถ เปิด ใช้ งาน ผู้ ใช้"
-      user_not_deactivated_error: "ไม่ สามารถ ยกเลิก การ ใช้ งาน ผู้ ใช้"
-      user_successfully_deleted: "{{login}} ผู้ ใช้ ถูก ลบ เรียบร้อย."
-      user_update: "คุณ ข้อมูล ผู้ ได้ รับ การ ปรับปรุง."
-      user_update_sucess: "ผู้ ใช้ แล้ว สำเร็จ"
-      username: "ชื่อ ผู้ ใช้"
-      username_available: "ชื่อ ผู้ ใช้ บริการ"
-      username_help: "คุณ สามารถ ใช้ ระหว่าง 6 ถึง 20 ตัว อักษร. ถ้า ชื่อ ที่ คุณ ต้องการ ไม่ ได้ ลอง เพิ่ม ตัวเลข หรือ เครื่องหมาย วรรค ตอน."
-      username_not_available: "ชื่อ ผู้ ใช้ ไม่ ได้"
-      username_recover_prompt: "กรุณา ให้ อีเมล ที่ คุณ ใช้ เมื่อ คุณ สร้าง บัญชี ชื่อ ผู้ ใช้ ของ คุณ จะ ถูก ส่ง อีเมล ถึง คุณ."
-      username_sent: "ชื่อ ผู้ ใช้ ของ คุณ ถูก ส่ง ไป ถึง คุณ. โปรด ตรวจ สอบ อีเมล ของ คุณ."
-      users_admin: "ผู้ ใช้ งาน"
-      users_in_role: "ผู้ ใช้ ใน บทบาท: {{role}}"
-      validation_are_required: ต้อง.
-      validation_is_required: ต้อง.
-      view_your_account: "ดู บัญชี ของ คุณ"
-      welcome: "ยินดี ต้อนรับ"
-      welcome_email_subject: "ยินดี ต้อนรับ สู่ {{application_name}}"
-      welcome_message: "ยินดี ต้อนรับ สู่ โคลน ต ม. ระบบ นี้ มี องค์ประกอบ พื้นฐาน ที่ จะ ช่วย คุณ สร้าง เว็บไซต์ ของ คุณ."
-      what_is_the_email: "คือ ที่ อยู่ อีเมล ที่ ใช้ เพื่อ สร้าง บัญชี ของ คุณ คือ อะไร"
+      unlimited_tip: "ตรวจสอบที่นี่ถ้ารหัสใช้สามารถใช้ไม่ จำกัด จำนวนครั้ง นี้จะแทนที่การ จำกัด การใช้"
+      update: Update
+      update_profile: ปรับปรุงโปรไฟล์ของคุณ
+      update_user: "Update ข้อมูลผู้ใช้ของคุณ"
+      update_user_admin: ผู้ปรับปรุง
+      use_limit: จำนวนการใช้
+      use_limit_tip: ใส่จำนวนครั้งที่รหัสการเข้าถึงสามารถใช้
+      user_account_deleted: คุณได้ลบบัญชีของคุณ
+      user_disable_problem: มีปัญหาการปิดใช้งานของผู้ใช้นี้ได้
+      user_disabled: ผู้พิการ
+      user_enable_problem: มีปัญหาทำให้ผู้ใช้นี้ได้
+      user_enabled: ผู้ใช้งาน
+      user_marked_active: ผู้ได้รับการทำเครื่องหมายเป็นงาน
+      user_marked_inactive: ผู้ถูกทำเครื่องหมายเป็นไม่ใช้งาน
+      user_not_activated_error: ไม่สามารถเปิดใช้งานผู้ใช้
+      user_not_deactivated_error: ไม่สามารถยกเลิกการใช้งาน
+      user_successfully_deleted: "User {{login}} ถูกลบแล้ว"
+      user_update: คุณข้อมูลผู้ได้รับการปรับปรุง
+      user_update_sucess: ผู้ได้รับการปรับปรุงเรียบร้อยแล้ว
+      username: ชื่อผู้ใช้
+      username_available: ชื่อผู้ใช้
+      username_help: "คุณสามารถใช้ระหว่าง 6 ถึง 20 ตัวอักษร หากชื่อที่คุณต้องการไม่สามารถลองเพิ่มตัวเลขหรือเครื่องหมายวรรคตอน"
+      username_not_available: ชื่อผู้ใช้ไม่ได้
+      username_recover_prompt: กรุณาให้อีเมลที่คุณใช้เมื่อคุณสร้างบัญชีชื่อผู้ใช้ของคุณจะถูกส่งไปยังคุณ
+      username_sent: "ชื่อผู้ใช้ของคุณแล้วส่งอีเมลถึงคุณ กรุณาตรวจสอบอีเมลของคุณ"
+      users_admin: Users
+      users_in_role: "ผู้ใช้ในบทบาท : {{role}}"
+      validation_are_required: จะต้อง
+      validation_is_required: ต้อง
+      view_your_account: ดูข้อมูลส่วนตัว
+      welcome: ยินดีต้อนรับ
+      welcome_email_subject: "Welcome to {{application_name}}"
+      welcome_message: "Welcome to โคลน ระบบนี้มีองค์ประกอบพื้นฐานที่จะช่วยให้คุณสร้างเว็บไซต์ของคุณ"
+      what_is_the_email: เป็นที่อยู่อีเมลที่ใช้ในการสร้างบัญชีของคุณคืออะไร

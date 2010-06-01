@@ -1,0 +1,3 @@
+<p style=";text-align:right;direction:rtl"> <%= @message %> </p>
+<p style=";text-align:right;direction:rtl"> وصول الرمز : <%= @code %> </p>
+<p style=";text-align:right;direction:rtl"> <%= link_to translate('muck.users.click_to_sign_up_now'), signup_url(:access_code => @code) %> </p>

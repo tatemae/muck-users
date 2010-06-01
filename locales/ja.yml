@@ -2,216 +2,217 @@
 ja: 
   muck: 
     roles: 
-      assign_role: 役割の割り当て
+      assign_role: 割り当てる役割
       edit_roles: "[編集]役割"
-      remove_role: を削除する役割
-      role_created: ロールが正常に作成されました。
+      remove_role: 削除の役割
+      role_created: 役割が正常に作成されました。
       roles: ロール
     users: 
       access_code: アクセスコード
-      access_code_add_problem: 問題を追加するアクセスコード
+      access_code_add_problem: 問題追加のアクセスコード
       access_code_added: アクセスコードが正常に追加されました
       access_code_created: 作成
-      access_code_delete_confirm: あなたは、このアクセスコードをキャンセルしてもよろしいですか？
-      access_code_delete_error: 中には、アクセスコードを削除しようとするとエラーが発生しました
+      access_code_delete_confirm: あなたは、このアクセスコードをキャンセルしてよろしいですか？
+      access_code_delete_error: アクセスコードを削除しようとしたときにエラーが発生しました。
       access_code_delete_link: 削除アクセスコード
-      access_code_delete_problem: は、ユーザーに関連付けられているアクセスコードを削除することはできません。
-      access_code_deleted: 削除されたアクセスコードです。
+      access_code_delete_problem: ことができますが、ユーザーが関連付けられているコードアクセスを削除できません。
+      access_code_deleted: 削除されたアクセスコード。
       access_code_edit_link: "[編集]アクセスコード"
-      access_code_edit_problem: 問題の編集のアクセスコード
-      access_code_expires: 有効期限が切れる
-      access_code_fullfill_invites: を満たすINVITEリクエスト
+      access_code_edit_problem: 問題の編集アクセスコード
+      access_code_expires: 有効期限
+      access_code_fullfill_invites: 果たすには要求を招待
       access_code_fullfill_invites_limit: 招待リクエストの制限
-      access_code_fullfill_invites_limit_tip: 番号を入力して要求の数を送信を制限します。たとえば、入力100は、最新の100の要求に招待状が制限されます
-      access_code_fullfill_invites_tip: ここに送信する確認者を招待要求しているユーザーに招待します。これは電子メールを上記の指定は無視されます。
-      access_code_help: "もし私たちからしてください上記のボックスに入力してアクセスコードを受け取った。また、リクエストのアクセスコードを{{access_request_anchor}}. {{access_request_anchor_end}}可能性があります"
+      access_code_fullfill_invites_limit_tip: 番号を要求の数を制限する入力を送った。たとえば、最新の100に要求を招待を制限する100を入力する
+      access_code_fullfill_invites_tip: ここに送信するためにチェックを招待要求しているユーザーに招待します。これは、電子メールを上記で指定した無視されます。
+      access_code_help: "あなたは私たちから、上のボックスに入力してくださいアクセスコードを受け取った場合。また、要求をアクセスコード{{access_request_anchor}}. {{access_request_anchor_end}}可能性があります"
       access_code_new: 新しいアクセスコード
-      access_code_related_users: 人は、このコードを登録したユーザー
+      access_code_related_users: このコードで登録したユーザー
       access_code_request_count: "現在{{access_code_requests_count}}アクセスコードを要求されない"
-      access_code_request_thank_you: あなたのリクエストをいただき、ありがとうございます。我々はタッチで、できるだけ早くすることがあります。
-      access_code_request_tip: あなたのメールアドレスを入力し、一つとして利用されますお客様にすぐにアクセスコードをお送りします。ありがとうございました！
-      access_code_tip: アクセスコードを入力します。
-      access_code_unlimited: アンリミテッド
-      access_code_update_problem: ある問題は、アクセスコードが更新されました。
+      access_code_request_thank_you: お客様のリクエストをいただき、ありがとうございます。我々は、連絡をできるだけ早くされます。
+      access_code_request_tip: あなたのメールアドレスを入力して、私たちはあなたに早く1は入手可能ですアクセスコードをお送りします。ありがとうございました！
+      access_code_tip: アクセスコードを入力してください。
+      access_code_unlimited: 無制限の
+      access_code_update_problem: 問題がアクセスコードを更新した。
       access_code_use_limit: 使用制限
-      access_code_uses: を使用して
+      access_code_uses: 使用
       access_codes: アクセスコード
-      access_denied: アクセス許可は要求されたページにアクセスする必要はありません。
-      access_required_warning: サイトへのアクセスは現在制限されます。サインアップするための有効なアクセスコードが必要です。
-      account_activated: あなたのアカウントが有効にされています！今すぐログインすることができます。
-      account_not_activated: "あなたの{{application_name}}アカウントがまだアクティブ化されていません。"
-      activation_complete: 活性化を完了
-      activation_instructions: アクティベーションの手順
+      access_denied: あなたはアクセス許可を要求されたページにアクセスする必要はありません。
+      access_required_warning: サイトへのアクセスは現在制限されます。あなたが登録に有効なアクセスコードが必要です。
+      account_activated: お客様のアカウントは有効化されています！あなたが現在ログインすることができます。
+      account_not_activated: "あなたの{{application_name}}アカウントはまだアクティブになっていない。"
+      activation_complete: アクティベーション完了
+      activation_instructions: アクティベーション方法
       activation_not_found: アクティベーションコードが見つかりません。してください新しいアカウントを作成してください。
-      add: 追加する
+      add: 追加
       add_access_code: アクセスコードを追加する
       add_access_code_title: アクセスコードを追加する
-      add_permission: （）パーミッションの追加
-      add_permission_to_user: "ユーザー{{user}}にパーミッションの追加"
-      add_role: ロールを追加する
-      add_role_dialog_title: ロールを追加する
+      add_permission: （許可を追加）
+      add_permission_to_user: "ユーザー{{user}}にアクセス許可を追加します。"
+      add_role: 役割を追加します。
+      add_role_dialog_title: 役割を追加します。
       add_user_to_role: ロールにユーザーを追加する
       add_user_to_role_title: 新しいロールにユーザーを追加します。
       admin: 
-        activate_all_inactive_users: アクティブにすべてのアクティブユーザー
-        activate_all_inactive_users_confirm: あなたには、システム内のすべての非アクティブユーザーを有効にしてよろしいですか？これは元に戻すことはできません！
+        activate_all_inactive_users: アクティブ全てアクティブユーザー
+        activate_all_inactive_users_confirm: あなたが確認すると、システム内のすべての非アクティブユーザーを有効にしますか？これは、元に戻すことはできません！
         search_users: ユーザーを検索
         show_emails: 地図をメール
-        unactivated_users: "ようこそ{{count}} unactivatedユーザーがいる"
-      admin_requred: この機能にアクセスする管理者である必要があります。
+        unactivated_users: "また{{count}} unactivatedユーザーがいる"
+      admin_requred: あなたは管理者がこの機能にアクセスする必要があります。
       admin_users_title: ユーザ管理
       all_users: すべてのユーザー
-      already_activated: お客様のアカウントは既に有効になっている。あなたの下には、ログインすることができます。
-      already_logged_in: あなたが既に記録され、あなたのパスワードを回復する必要はありません。
-      already_registered: すでにメンバー？
-      application_base_url_not_set: "どうぞglobal_config.yml application_base_url設定"
-      bulk_access_code_emails: 電子メール
-      bulk_access_code_emails_tip: 別のカンマで区切って電子メール
+      already_activated: お客様のアカウントはすでに有効化されています。あなたは以下のログインできます。
+      already_logged_in: あなたは既に記録され、パスワードを回復する必要はありません。
+      already_registered: 会員登録はお済み？
+      application_base_url_not_set: global_config.ymlでapplication_base_urlを設定してください
+      bulk_access_code_emails: メール
+      bulk_access_code_emails_tip: 別のコンマでメール
       bulk_access_code_message: メッセージ
-      bulk_access_code_problem: 問題を追加するアクセスコード
-      bulk_access_code_subject: 主題
-      bulk_access_code_tip: 省略可能です。場合、コードは、次にそのコードをすべてのユーザーに送信される指定されます。このフィールドは、各ユーザーに一意のコードを送信する空のままに。
+      bulk_access_code_problem: 問題追加のアクセスコード
+      bulk_access_code_subject: 件名
+      bulk_access_code_tip: 省略可能です。コードは、そのコードは、すべてのユーザーに送信される指定された場合。各ユーザーに一意のコードを送信するために、このフィールドを空のままに。
       bulk_access_codes: バルクアクセスコード
-      bulk_access_codes_created: "バルクアクセスコードを作成し、{{email_count}}メールにメールを送った。"
-      bulk_access_codes_description: これは、各電子メールのためのユニークな、単一のに使用するアクセスコードを生成いたします。
+      bulk_access_codes_created: "バルクアクセスコードを作成し、{{email_count}}メールが送られます。"
+      bulk_access_codes_description: これは、各メールのためのユニークな、シングルユースのアクセスコードを生成せていただきます。
       bulk_access_codes_title: バルクアクセスコード
-      cannot_deactivate_yourself: あなた自身を無効にすることはできません！
-      cant_delete_admin: あなたは、管理者ロールにユーザーを削除することはできません。管理者の役割から、もう一度試して、ユーザーを削除します。してください注意するときに削除する管理者。場合、すべての管理者を削除する場合は、もはや管理システムにログインできるようになる占めている。
-      cant_delete_administrator_role: 場合は、管理者ロールを削除することはできません。
-      cant_disable_admin: 管理者を無効にすることはできません。してください管理者の役割からユーザーを削除し、もう一度試してください。
+      cannot_deactivate_yourself: あなたは自分を無効にすることはできません！
+      cant_delete_admin: あなたが管理者ロールのユーザーを削除することはできません。管理者の役割からユーザーを削除し、再度試してください。ご注意を削除するとき、管理者があります。あなたはすべての管理者を削除する場合は、もはや管理システムにログインすることができるでしょう占めている。
+      cant_delete_administrator_role: あなたは管理者の役割を削除することはできません。
+      cant_disable_admin: 管理者を無効にすることはできません。してください管理者の役割からユーザーを削除し、再度試してください。
       change_password: パスワードの変更
-      change_permissions: 変更をロール
-      change_permissions_for: "{{user}}ためのアクセス許可の変更"
-      change_your_password: パスワードを変更する
+      change_permissions: 変更の役割
+      change_permissions_for: "{{user}}のアクセス許可の変更"
+      change_your_password: パスワードの変更
       choose_member_name: メンバー名
-      click_to_sign_up_now: ここをクリック今すぐお申し込みください。
-      complete_profile: 完全にあなたのプロフィール
-      confirm_delete_account: "あなたがあなたのアカウントを削除しますか？しています\\ nこの元に戻すことはできません。"
+      click_to_sign_up_now: ここをクリック今すぐ登録する。
+      complete_profile: あなたのプロフィールを完了
+      confirm_delete_account: "あなたがアカウントを削除しますか？\\ nこのを確認を元に戻すことはできませんか。"
       confirm_password: パスワードの確認
-      confirm_select_new_password: パスワードの確認変更
-      could_not_find_reset_code: パスワードをリセットするコードを見つけることができませんでした。もう一度パスワードをリセットしてください。
-      could_not_find_user_with_email: は、電子メールアドレスを持つユーザーを見つけることができませんでした。
+      confirm_select_new_password: 確認パスワードの変更
+      could_not_find_reset_code: パスワードのリセットコードを見つけることができませんでした。してください、再度パスワードをリセットしてください。
+      could_not_find_user_with_email: その電子メールアドレスを持つユーザーを見つけることができませんでした。
       current_password: 現在のパスワード
-      delete: 削除する
-      delete_my_account: すべてのデータは自分のユーザーアカウントを削除します。
-      delete_this_user: このユーザーを削除します。
-      deleting_user: ユーザーを削除...
+      delete: 削除
+      delete_my_account: 削除自分のユーザーアカウントとすべてのデータ。
+      delete_this_user: 削除このユーザー。
+      deleting_user: ユーザーを削除する...
       edit: "[編集]"
       edit_access_code: "[編集]アクセスコード"
       edit_access_code_title: "[編集]アクセスコード"
       edit_profile: プロフィールを編集
-      edit_role_dialog_title: ロールの編集
+      edit_role_dialog_title: "[編集]役割"
       email: Eメール
       email_address: 電子メールアドレス
-      email_available: ご利用メール
-      email_empty: してください電子メールアドレスを入力します。
-      email_help: 有効な、現在の電子メールアドレスを使用します。私たちと共有しませんか、またはあなたの電子メールアドレスは、スパム。
-      email_invalid: 無効な電子メール
-      email_not_available: "メールですでに使用されている。 {{reset_password_help}}"
-      email_recover_prompt: してくださいあなたのパスワードを回復するためにサインアップし、電子メールを提供します。
+      email_available: 電子メール利用
+      email_empty: メールアドレスを入力してください
+      email_help: 有効な、現在の電子メールアドレスを使用します。我々は、共有することはしたり、電子メールアドレスをスパム。
+      email_invalid: 無効なメール
+      email_not_available: "電子メールは既に使用します。 {{reset_password_help}}"
+      email_recover_prompt: ご自分のパスワードを回復するとサインアップメールを提供します。
       expiration_date: 有効期限
-      expiration_date_tip: これには、アクセスコードが無効になる日付を入力します
-      first_name: 名前
+      expiration_date_tip: その時にアクセスコードが無効になる日付を入力します
+      first_name: ファーストネーム
       forgot_password: パスワードを忘れた場合
       forgot_username: ユーザー名を忘れた
-      forgot_your_password: パスワードをお忘れですか？
-      forgot_your_username: あなたのユーザ名を忘れましたか？
+      forgot_your_password: パスワードを忘れた場合
+      forgot_your_username: ユーザ名を忘れました？
       invalid_username: 無効なユーザー名
-      join_application_name: 参加して、それを成し遂げる
+      join_application_name: 参加して、実行それを得る
       last_name: 姓
       login: ログイン
-      login_empty: してくださいログイン情報を入力
-      login_fail: 大変申し訳ございませんが、お客様のログイン情報を認識できませんでした。もう一度やり直してください。
-      login_out_success: ログアウトしています。
-      login_requred: この機能にアクセスするには、ログインする必要があります。
+      login_empty: ログインしてくださいを入力してください
+      login_fail: 申し訳ありませんが、私たちはあなたのログイン情報を認識できませんでした。もう一度やり直してください。
+      login_out_success: あなたはログインしている。
+      login_requred: あなたはこの機能にアクセスするには、ログインする必要があります。
       login_success: ログインに成功！
-      login_title: ログインアカウントには、
+      login_title: ログインアカウントに
       logout_required: ~
       my_dashboard: マイダッシュボード
-      name: 名前
+      name: 名
       navigation: 
         all_users: すべてのユーザー
-        inactive_users: 非アクティブユーザー
+        inactive_users: アクティブユーザー
         search_users: ユーザーを検索
-      new_password_doesnt_match: 新しいパスワードは、パスワード確認が一致していません。
+      new_password_doesnt_match: 新しいパスワードは、パスワードの確認を一致しません。
       old_password_incorrect: 古いパスワードが間違っています。
       password: パスワード
-      password_cannot_be_blank: "[Password]フィールドを空白にすることはできません。"
-      password_confirmation_help: あなたのパスワードをもう一度ここに入力してください正しいことを確認してください。
-      password_help: パスワードは少なくとも6文字の長さにする必要があります。ミックス上限と下限の場合、文字と数字だけの作品
+      password_cannot_be_blank: パスワードフィールドは空白にすることはできません。
+      password_confirmation_help: パスワードが正しいもう一度ここに入力してくださいいることを確認してください。
+      password_help: パスワードは少なくとも6文字の長さがあります。ミックスと小文字の大文字と数字がうまく機能
       password_mismatch: パスワードが一致しません。
-      password_not_reset: パスワードをリセットできません。
-      password_reset: パスワードをリセットします。
-      password_reset_email_subject: "あなたの{{application_name}}パスワードの変更を要求している"
-      password_reset_link_sent: 手順をメールで送信されているパスワードをリセットします。あなたの電子メールをチェックします。
-      password_updated: パスワードが正常に更新されます。
-      permission_denied: アクセス許可は要求された操作を完了する必要はありません。
-      problem_changing_password: "問題があるパスワードを変更された。 {{errors}}"
-      problem_creating_account: 問題があるアカウントを作成されました。下記のエラーを修正する：
-      problem_editing_account: 問題があるお客様の情報を更新し続けた。
+      password_not_reset: パスワードがリセットされません。
+      password_reset: パスワードのリセット。
+      password_reset_email_subject: "あなたの{{application_name}}パスワードを変更する要求している"
+      password_reset_link_sent: 手順はあなたに電子メールで送信されているパスワードをリセットします。ご使用のメールをチェックします。
+      password_updated: パスワードが正常に更新しました。
+      permission_denied: あなたはアクセス許可を要求されたアクションを完了する必要はありません。
+      problem_changing_password: "問題がパスワードを変更された。 {{errors}}"
+      problem_creating_account: 問題があなたのアカウントを作成されました。以下のエラーを修正：
+      problem_editing_account: 問題がお客様の情報を更新した。
       recover_password: パスワードの回復
-      recover_password_prompt: （もし）あなたのパスワードをここでは回復を忘れて
+      recover_password_prompt: （もしあなたがパスワードを忘れてはこちら）、それを回復する
       register_account: "登録{{application_name}}アカウント"
-      register_for_account: 登録アカウント
-      remember_me: 私記憶
-      remove_my_account: 削除マイアカウント
-      request_access_code: 要求はアクセスコード
+      register_for_account: アカウント登録
+      remember_me: 私を覚えなさい
+      remove_my_account: マイアカウントを削除する
+      request_access_code: 請求アクセスコード
       request_username: リクエスト名
-      request_username_subject: 忘れ名
+      request_username_subject: 忘れられた名
       reset_password: リセットパスワード
       reset_your_password: リセットパスワード
       role: 役割
-      role_delete_confirm: あなたがこの役割を削除してもよろしいですか？関連付けられたすべてのアクセス許可も削除されます！
-      role_deleted: 役割を削除
-      role_not_deleted: ロールは削除できませんでした。
+      role_delete_confirm: あなたはあなたがこの役割を削除しますか？すべての関連するアクセス許可も削除されます！
+      role_deleted: 役割削除
+      role_not_deleted: の役割を削除できませんでした
       roles: ロール
-      save: 保存する
-      select_new_password: "を選択し、[新しいパスワード]"
+      save: 保存
+      select_new_password: 選択して新しいパスワード
       sign_in: ログイン
-      sign_in_now: 今すぐログイン！
+      sign_in_now: ログインする！
       sign_in_title: ログイン
       sign_out_title: サインアウト
       sign_up: サインアップ
       sign_up_now: サインアップ今
-      sorry_invalid_reset_code: 大変申し訳ございませんが、お客様のアカウントを見つけることができませんでした。場合の問題をコピーして、あなたのメールからお使いのブラウザにURLを貼り付けたり、パスワードのリセットプロセスの再起動を行っている。
-      submit: 提出する
-      terms_and_service: "をクリックする&#39;にサインアップ今&#39;を{{tos_link_anchor}}利用規約{{link_end}}.に従うことに同意することにより"
+      sorry_invalid_reset_code: 申し訳ありませんが、私たちはお客様のアカウントを見つけることができなかった。あなたは問題がコピーして、あなたのメールからお使いのブラウザにURLを貼り付け、またはパスワードのリセットプロセスを再起動がある場合。
+      submit: 送信
+      terms_and_service: "クリックすると&#39;サインを今すぐ&#39;あなたは{{tos_link_anchor}}規約{{link_end}}.を遵守することに同意することにより"
+      terms_of_service_required: あなたがサービスの条項に同意する必要があります。
       thanks_sign_up: お申し込みいただきありがとうございます！
-      thanks_sign_up_check: お客様のアカウントが作成されています。あなたのアカウントのアクティベーション手順については、電子メールをチェック！
-      thanks_sign_up_login: お申し込みいただきありがとうございます！今すぐログインすることも
-      total_users: "合計ユーザー数：{{total}}"
-      unlimited: 無制限の使用
-      unlimited_tip: ここでチェックできる場合は、アクセスコードがアクセスを無制限に使用することができます。これは、使用を制限を上書きします。
-      update: 更新する
-      update_profile: プロファイル
-      update_user: アップデートを適用するユーザー情報
-      update_user_admin: 更新ユーザー
-      use_limit: 番号を使用しての
-      use_limit_tip: 回のアクセスコードを使用することができる番号を入力します。
-      user_account_deleted: 正常にアカウントを削除している。
-      user_disable_problem: 問題がある、このユーザーを無効にされた。
-      user_disabled: ユーザーが無効に
-      user_enable_problem: 問題がある、このユーザーを有効にされた。
-      user_enabled: 有効なユーザー
-      user_marked_active: ユーザがアクティブとしてマークされている
+      thanks_sign_up_check: お客様のアカウントが作成されています。お客様のアカウントのアクティベーション手順については、電子メールをチェック！
+      thanks_sign_up_login: お申し込みいただきありがとうございます！これでログインできます
+      total_users: "合計ユーザー：{{total}}"
+      unlimited: アンリミテッド使用
+      unlimited_tip: ここ場合、アクセスコードが何回でも無制限に使用することができますを確認します。これは、使用の制限を上書きします。
+      update: 更新
+      update_profile: プロフィールの更新
+      update_user: 更新するユーザー情報
+      update_user_admin: 更新ユーザ
+      use_limit: 数使用の
+      use_limit_tip: 回のアクセスコードを使用することができます番号を入力します。
+      user_account_deleted: あなたが正常にアカウントを削除しました。
+      user_disable_problem: 問題がこのユーザーを無効にされた。
+      user_disabled: ユーザーが無効になって
+      user_enable_problem: 問題がこのユーザーを有効にされた。
+      user_enabled: ユーザーが有効になって
+      user_marked_active: ユーザーがアクティブとしてマークされて
       user_marked_inactive: ユーザーが非アクティブとしてマークされている
-      user_not_activated_error: ていないユーザーを有効でした。
-      user_not_deactivated_error: ていないユーザーが無効でした。
+      user_not_activated_error: ユーザーを有効にできませんでした。
+      user_not_deactivated_error: ユーザーを無効にすることができませんでした
       user_successfully_deleted: "ユーザー{{login}}が正常に削除されました。"
-      user_update: ユーザ情報が更新されている。
+      user_update: あなたは、ユーザー情報を更新されていますしています。
       user_update_sucess: ユーザーが正常に更新されました
       username: ユーザー名
-      username_available: ユーザー名は使用
-      username_help: を6と20の間の文字を使用することができます。する場合は、名前を利用されていない数字や句読点を追加してください。
-      username_not_available: ユーザー名は使用できません
-      username_recover_prompt: してくださいするときに、アカウントの作成に使用した電子メールを提供し、お客様のユーザー名をメールで送信されます。
-      username_sent: あなたのユーザ名をメールで送信されています。してくださいあなたの電子メールをチェックします。
+      username_available: ユーザー名利用
+      username_help: あなたは6〜20文字を使用することができます。あなたは名前が利用できない場合は数字または句読点を追加してください。
+      username_not_available: ユーザー名は利用できません
+      username_recover_prompt: してください電子メールをするときには、アカウントの作成に使用する、あなたのユーザ名はあなたに送信されます。
+      username_sent: あなたのユーザ名はあなたにメール送信されました。してくださいあなたの電子メールをチェックします。
       users_admin: ユーザー
-      users_in_role: "の役割のユーザー：{{role}}"
-      validation_are_required: が必要です。
+      users_in_role: "ロールのユーザー：{{role}}"
+      validation_are_required: 必要があります。
       validation_is_required: が必要です。
-      view_your_account: ビューは、アカウント
-      welcome: ようこそ
-      welcome_email_subject: "ようこそ{{application_name}}する"
-      welcome_message: ようこそ小屋の掃除をする。このシステムはあなたのウェブサイトの構築を支援するために基本的なコンポーネントを提供します。
-      what_is_the_email: どのような電子メールアドレスのアカウントを作成するために使用ですか？
+      view_your_account: プロフィールアカウント
+      welcome: 歓迎
+      welcome_email_subject: "ようこそ{{application_name}}に"
+      welcome_message: ようこそマックする。このシステムはあなたのウェブサイトを構築するための基本的なコンポーネントを提供します。
+      what_is_the_email: 何のメールアカウントを作成するために使用されるアドレスですか？
