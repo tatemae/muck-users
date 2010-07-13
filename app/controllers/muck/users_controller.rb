@@ -106,8 +106,16 @@ class Muck::UsersController < ApplicationController
       end
     end
     respond_to do |format|
-      format.html { render :text => result }
-      format.js { render :text => result }
+      if ! @user.errors.on(:login) && ! result.blank?
+        format.html { render :partial => 'users/available', :locals => { :message => result } }
+        format.js { render :partial => 'users/available', :locals => { :message => result } }
+      else
+        format.html { render :partial => 'users/unavailable', :locals => { :message => result } }
+        format.js { render :partial => 'users/unavailable', :locals => { :message => result } }
+      end
+      
+      #format.html { render :text => result }
+      #format.js { render :text => result }
     end
   end
 
@@ -126,10 +134,24 @@ class Muck::UsersController < ApplicationController
     else
       recover_password_prompt = render_to_string :partial => 'users/recover_password_via_email_link', :locals => { :email => params[:user_email] }
       result = t('muck.users.email_not_available', :reset_password_help => recover_password_prompt)
+      respond_to do |format|
+        format.html { render :partial => 'users/unavailable', :locals => { :message => result } }
+        format.js { render :partial => 'users/unavailable', :locals => { :message => result } }
+        
+      end
+      return
     end
     respond_to do |format|
-      format.html { render :text => result }
-      format.js { render :text => result }
+      if errors.blank? && ! result.nil?
+        format.html { render :partial => 'users/available', :locals => { :message => result } }
+        format.js { render :partial => 'users/available', :locals => { :message => result } }
+      else
+        format.html { render :partial => 'users/unavailable', :locals => { :message => result } }
+        format.js { render :partial => 'users/unavailable', :locals => { :message => result } }
+      end
+      
+      #format.html { render :text => result }
+      #format.js { render :text => result }
     end
   end
 
