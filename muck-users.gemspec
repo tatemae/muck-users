@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "0.3.18"
+  s.version = "0.3.19"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-06-01}
+  s.date = %q{2010-07-13}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -691,9 +691,11 @@ Gem::Specification.new do |s|
      "app/views/user_mailer/welcome_notification.text.zh.plain.erb",
      "app/views/user_sessions/new.html.erb",
      "app/views/username_request/new.html.erb",
+     "app/views/users/_available.html.erb",
      "app/views/users/_recover_password_via_email_link.html.erb",
      "app/views/users/_signup_form.html.erb",
      "app/views/users/_signup_form_javascript.html.erb",
+     "app/views/users/_unavailable.html.erb",
      "app/views/users/_user.html.erb",
      "app/views/users/activation_confirmation.html.erb",
      "app/views/users/activation_instructions.html.erb",
@@ -767,6 +769,8 @@ Gem::Specification.new do |s|
      "public/images/admin/source/User.png",
      "public/images/admin/source/roles.png",
      "public/images/admin/user.gif",
+     "public/images/icon_no.gif",
+     "public/images/icon_success.gif",
      "public/images/profile_default.jpg",
      "public/javascripts/muck-users.js",
      "rails/init.rb",
