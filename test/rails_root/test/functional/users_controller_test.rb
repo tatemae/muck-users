@@ -299,21 +299,21 @@ class Muck::UsersControllerTest < ActionController::TestCase
         post :is_login_available
       end
       should_respond_with :success
-      should_render_text ""
+      should_render_text '<span class="unavailable"></span>'
     end
     context "empty login" do
       setup do
         post :is_login_available, :user_login => ''
       end
       should_respond_with :success
-      should_render_text I18n.t('muck.users.login_empty')
+      should_render_text '<span class="unavailable">' + I18n.t('muck.users.login_empty') + '</span>'
     end
     context "valid login" do
       setup do
         post :is_login_available, :user_login => 'testdude1945'
       end
       should_respond_with :success
-      should_render_text I18n.t('muck.users.username_available')
+      should_render_text '<span class="available">' + I18n.t('muck.users.username_available') + '</span>'
     end
     context "invalid login" do
       setup do
@@ -338,28 +338,28 @@ class Muck::UsersControllerTest < ActionController::TestCase
         post :is_email_available
       end
       should_respond_with :success
-      should_render_text ""
+      should_render_text '<span class="available"></span>'
     end
     context "empty email" do
       setup do
         post :is_email_available, :user_email => ''
       end
       should_respond_with :success
-      should_render_text I18n.t('muck.users.email_empty')
+      should_render_text '<span class="available">' + I18n.t('muck.users.email_empty') + '</span>'
     end
     context "valid email" do
       setup do
         post :is_email_available, :user_email => 'testdude1945@example.com'
       end
       should_respond_with :success
-      should_render_text I18n.t('muck.users.email_available')
+      should_render_text '<span class="available">' + I18n.t('muck.users.email_available') + '</span>'
     end
     context "invalid email" do
       setup do
         post :is_email_available, :user_email => 'testdude1945@com'
       end
       should_respond_with :success
-      should_render_text I18n.t('muck.users.email_invalid')
+      should_render_text '<span class="unavailable">' + I18n.t('muck.users.email_invalid') + '</span>'
     end
     context "email not available" do
       setup do

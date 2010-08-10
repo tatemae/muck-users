@@ -106,7 +106,7 @@ class Muck::UsersController < ApplicationController
       end
     end
     respond_to do |format|
-      if ! @user.errors.on(:login) && ! result.blank?
+      if !@user.blank? && !@user.errors.on(:login) && !result.blank?
         format.html { render :partial => 'users/available', :locals => { :message => result } }
         format.js { render :partial => 'users/available', :locals => { :message => result } }
       else
