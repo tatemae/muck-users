@@ -50,7 +50,7 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
         @access_code.code = AccessCode.random_code
         @access_code.save!
       end
-      UserMailer.deliver_access_code(email, @access_code.subject, @access_code.message, @access_code.code)
+      UserMailer.access_code(email, @access_code.subject, @access_code.message, @access_code.code).deliver
     end
     AccessCodeRequest.mark_fullfilled(access_code_requests) if access_code_requests
     flash[:notice] = translate('muck.users.bulk_access_codes_created', :email_count => emails.count)

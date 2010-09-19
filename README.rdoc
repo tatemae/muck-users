@@ -132,7 +132,7 @@ After installing the engine just create a user model thus:
 
   class User < ActiveRecord::Base
     acts_as_authentic
-    acts_as_muck_user
+    include MuckUsers::Models::User
   end
 
 Then you will be able to go to:

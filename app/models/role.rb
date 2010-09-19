@@ -17,7 +17,7 @@ class Role < ActiveRecord::Base
   validates_presence_of :rolename
   validates_uniqueness_of :rolename
 
-  named_scope :by_alpha, :order => 'roles.rolename ASC'
+  scope :by_alpha, order('roles.rolename ASC')
 
   # roles can be defined as symbols.  We want to store them as strings in the database
   def rolename= val

@@ -1,23 +1,9 @@
 require 'muck_users/exceptions'
-require 'active_record/secure_methods'
-require 'muck_users/muck_custom_form_builder'
-
-ActionController::Base.send :include, ActionController::AuthenticApplication
-ActiveRecord::Base.send :include, ActiveRecord::SecureMethods
-ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckUser }
-ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckAccessCode }
-ActiveRecord::Base.class_eval { include ActiveRecord::Acts::MuckAccessCodeRequest }
-ActiveRecord::Base.class_eval { include MuckUsers::Exceptions }
-ActionController::Base.send :helper, MuckUsersHelper
-
-I18n.load_path += Dir[ File.join(File.dirname(__FILE__), '..', 'locales', '*.{rb,yml}') ]
-
-# Add admin link for users and roles
-# MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_users'), '/admin/users', '/images/admin/user.gif') rescue nil
-# MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_access_codes'), '/admin/users', '/images/admin/user.gif') rescue nil
-MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_users'), '/admin/users') rescue nil
-MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_roles'), '/admin/roles') rescue nil
-MuckEngine.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_access_codes'), '/admin/access_codes') rescue nil
-
-# Add users to the dashboard
-MuckEngine.add_muck_dashboard_item('admin/users/dashboard_widget') rescue nil
+require 'muck_users/secure_methods'
+require 'muck_users/form_builder'
+require 'muck_users/models/access_code'
+require 'muck_users/models/access_code_request'
+require 'muck_users/models/user'
+require 'muck_users/mailers/user_mailer'
+require 'muck_users/controllers/authentic_application'
+require 'muck_users/engine'

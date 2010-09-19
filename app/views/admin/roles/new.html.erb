@@ -1,4 +1,4 @@
-<% custom_form_for @role, :url => admin_roles_path, :html => { :class => 'ajax' } do |f| %>
+<% muck_form_for @role, :url => admin_roles_path, :html => { :class => 'ajax' } do |f| %>
   <%= f.text_field :rolename %>
   <%= f.submit translate('muck.users.add') %>
 <% end %>
