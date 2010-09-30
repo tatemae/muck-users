@@ -21,9 +21,6 @@ describe Muck::UsernameRequestController do
       post :create, :request_username => { :email => @user.email }
     end
     it { should set_the_flash.to(I18n.translate('muck.users.username_sent')) }
-    it "should send the user's username" do
-      @user.should_receive(:deliver_username_request!)
-    end
     it {should redirect_to(login_path)}
   end
   

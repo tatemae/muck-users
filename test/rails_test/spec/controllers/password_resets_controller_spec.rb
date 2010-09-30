@@ -19,10 +19,7 @@ describe Muck::PasswordResetsController do
       before(:each) do
         post :create, :reset_password => { :email => @user.email } 
       end
-      it { should set_the_flash.to(I18n.translate('muck.users.password_reset_link_sent')) }
-      it "should send password reset instructions" do
-        assigns(:user).should_receive(:deliver_password_reset_instructions!)
-      end      
+      it { should set_the_flash.to(I18n.translate('muck.users.password_reset_link_sent')) }    
       it {should redirect_to(login_path)}
     end
     describe "bad email - fail to reset password" do
@@ -37,10 +34,7 @@ describe Muck::PasswordResetsController do
         @inactive_user = Factory(:user, :activated_at => nil)
         post :create, :reset_password => { :email => @inactive_user.email }
       end      
-      it { should set_the_flash.to(I18n.translate('muck.users.password_reset_link_sent')) }
-      it "should send password not active instructions" do
-        assigns(:user).should_receive(:deliver_password_reset_instructions!)
-      end      
+      it { should set_the_flash.to(I18n.translate('muck.users.password_reset_link_sent')) }    
       it{should redirect_to(login_path)}
     end
     describe "get edit" do
