@@ -176,6 +176,7 @@ de:
       sorry_invalid_reset_code: "Es tut uns leid, aber wir konnten nicht gefunden werden Ihrem Konto. Sie sind mit Fragen versuchen Kopieren und Einfügen der URL aus Ihrer E-Mail in Ihrem Browser oder ein Neustart des Passwort zurücksetzen Prozess."
       submit: Senden
       terms_and_service: "Durch Klicken auf &quot;Jetzt anmelden&quot; erklären Sie sich mit dem %{tos_link_anchor} AGB-nachzukommen .-.-."
+      terms_and_service_tip: "Um sich zu registrieren, müssen Sie den Bedingungen zustimmen. Sie können diese Richtlinien, bevor Sie fortfahren, indem Sie auf den Link überprüfen."
       terms_of_service_required: "Sie müssen den Nutzungsbedingungen zu."
       thanks_sign_up: "Vielen Dank für Ihre Anmeldung!"
       thanks_sign_up_check: "Ihr Konto wurde erstellt. Bitte überprüfen Sie Ihre E-Mail für Ihre Account-Aktivierung beachten!"

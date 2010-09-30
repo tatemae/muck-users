@@ -176,6 +176,7 @@ gl:
       sorry_invalid_reset_code: "Sentímolo, pero non podemos localizar a túa conta. Se estás a ter problemas probe copiar e pegar a URL do seu correo-e no seu navegador ou reiniciar o proceso de redefinición de contrasinal."
       submit: Enviar
       terms_and_service: "Se preme en &quot;Rexístrese agora&quot; Acepta cumprir cos Termos e Condicións %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Para dar de alta, ten que aceptar os termos e condicións. Pode revisar estas políticas antes de continuar facendo clic na ligazón."
       terms_of_service_required: "Ten que aceptar as condicións de servizo."
       thanks_sign_up: "Grazas por rexistrar!"
       thanks_sign_up_check: "A súa conta foi creada. Por favor, comprobe o seu correo electrónico para o seu instrucións de activación da conta!"

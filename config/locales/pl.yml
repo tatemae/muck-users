@@ -176,6 +176,7 @@ pl:
       sorry_invalid_reset_code: "Przykro nam, ale nie może zlokalizować konta. Jeśli masz problemy spróbuj skopiować i wkleić adres URL z wiadomości e-mail w przeglądarce lub ponownym uruchomieniu proces resetowania hasła."
       submit: Wyślij
       terms_and_service: "Klikając na &quot;Zarejestruj się teraz&quot; zgadzasz się zgodnie z zasadami %{tos_link_anchor} Warunki%{link_end}."
+      terms_and_service_tip: "Aby się zarejestrować musisz zaakceptować warunki. można się zapoznać przed przystąpieniem do tych zasad, klikając na link."
       terms_of_service_required: "Musisz zaakceptować warunki korzystania z usługi."
       thanks_sign_up: "Dziękujemy za zarejestrowanie się!"
       thanks_sign_up_check: "Twoje konto zostało utworzone. Proszę sprawdzić e-mail do instrukcji aktywacji konta!"

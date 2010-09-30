@@ -176,6 +176,7 @@ hu:
       sorry_invalid_reset_code: "Sajnáljuk, de nem tudtuk megtalálni a fiókját. Ha nem próbálja kérdések másolás és beillesztés az URL-mail címet a böngészőbe, vagy újraindítani a reset jelszó folyamatot."
       submit: Beküldése
       terms_and_service: "Ha rákattintunk &quot;Iratkozzon fel most&quot; Ön vállalja, hogy betartja a %{tos_link_anchor} Általános Szerződési Feltételek%{link_end}."
+      terms_and_service_tip: "Annak érdekében, hogy nyilvántartásba el kell fogadnia a feltételeket. Lehet, felülvizsgálja ezeket a politikákat mielőtt rákattint a linkre."
       terms_of_service_required: "El kell fogadnia a felhasználási feltételeket."
       thanks_sign_up: "Köszönjük, hogy regisztrálsz!"
       thanks_sign_up_check: "Fiókja hoztak létre. Kérjük, ellenőrizze az e-mail fiókja aktiválási utasításokat!"

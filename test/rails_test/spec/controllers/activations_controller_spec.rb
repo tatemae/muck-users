@@ -2,6 +2,8 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Muck::ActivationsController do
 
+  render_views
+  
   before(:each) do
     activate_authlogic
   end

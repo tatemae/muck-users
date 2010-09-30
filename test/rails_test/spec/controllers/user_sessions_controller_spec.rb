@@ -2,6 +2,8 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Muck::UserSessionsController do
 
+  render_views
+  
   it { should filter_param(:password) }
   
   before(:each) do
@@ -9,6 +11,7 @@ describe Muck::UserSessionsController do
     @good_password = 'test'
     @user = Factory(:user, :login => @login, :password => @good_password, :password_confirmation => @good_password)
   end
+  
   describe "get new" do
     before(:each) do
       get :new
@@ -16,6 +19,7 @@ describe Muck::UserSessionsController do
     it { should respond_with :success }
     it { should render_template :new }
   end
+  
   describe "login and redirect" do
     before(:each) do
       post :create, :user_session => { :login => @login, :password => @good_password }
@@ -26,6 +30,7 @@ describe Muck::UserSessionsController do
     end
     it {should redirect_to(user_path(@user))}
   end
+  
   describe "fail login" do
     before(:each) do
       post :create, :user_session => { :login => @login, :password => 'bad password' }

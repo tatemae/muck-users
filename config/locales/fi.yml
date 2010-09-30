@@ -176,6 +176,7 @@ fi:
       sorry_invalid_reset_code: "Pahoittelemme, mutta emme voineet paikallistaa tilin. Jos sinulla on ongelmia yrittää kopioimalla URL-osoitteen sähköpostiisi selaimeen tai uudelleenkäynnistystä nollata salasanan prosessi."
       submit: Lähetä
       terms_and_service: "Klikkaamalla &quot;Kirjaudu nyt&quot; sitoudut noudattamaan %{tos_link_anchor} käyttöehtojen%{link_end}."
+      terms_and_service_tip: "Jotta rekisteri sinun tulee hyväksyä ehdot. Voit tarkistaa nämä ehdot ennen kuin jatkat klikkaamalla linkkiä."
       terms_of_service_required: "Sinun täytyy hyväksyä käyttöehdot."
       thanks_sign_up: "Kiitos rekisteröitymisestä!"
       thanks_sign_up_check: "Tilisi on luotu. Tarkista sähköpostisi tilin aktivointi ohjeet!"

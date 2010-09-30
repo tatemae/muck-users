@@ -176,6 +176,7 @@ hr:
       sorry_invalid_reset_code: "Žao nam je, ali nismo mogli pronaći svoj račun. Ako imate pitanja pokušati kopirati i zalijepiti URL iz vaše e-pošte u svom pregledniku ili ponovno vraćanje izvorne lozinke proces."
       submit: Podnijeti
       terms_and_service: "Klikom na &quot;Prijavite se odmah&quot;, vi se slažete da u skladu s Uvjetima i odredbama %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Kako bi se prijavili morate pristati na uvjete i odredbe. Možete pregledati te politika prije nastavka klikom na link."
       terms_of_service_required: "Morate prihvatiti uvjete pružanja usluge."
       thanks_sign_up: "Hvala što ste se prijavili!"
       thanks_sign_up_check: "Vaš korisnički račun je kreiran. Molimo Vas da provjerite e-poštu za vaše upute aktivacija računa!"

@@ -176,6 +176,7 @@ lv:
       sorry_invalid_reset_code: "Atvainojiet, taču mēs nevarējām atrast jūsu kontu. Ja Jums ir jautājumi, mēģiniet kopēt un ielīmēt URL no e-pasta savā pārlūkprogrammā vai atkārtoti atjaunotu paroli procesu."
       submit: Iesniegt
       terms_and_service: "Noklikšķinot uz &quot;Sign-up Now&quot; jūs piekrītat ievērot %{tos_link_anchor} Noteikumiem%{link_end}."
+      terms_and_service_tip: "Lai reģistrētos Jums ir jāpiekrīt noteikumiem un nosacījumiem. Jūs varat pārskatīt šo politiku, pirms procedūras, noklikšķinot uz saites."
       terms_of_service_required: "Jums ir jāpiekrīt pakalpojuma sniegšanas noteikumiem."
       thanks_sign_up: "Paldies par pierakstīšanos!"
       thanks_sign_up_check: "Jūsu konts ir izveidots. Lūdzu, pārbaudiet savu e-pasta jūsu konta aktivizēšanas instrukcijas!"

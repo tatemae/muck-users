@@ -176,6 +176,7 @@ tl:
       sorry_invalid_reset_code: "Ikinalulungkot namin, ngunit hindi namin mahanap ang iyong account. Kung ikaw ay nakakaranas ng mga isyu subukang kopyahin at idikit ang mga URL mula sa inyong email sa iyong browser o i-restart ang proseso-reset ang password."
       submit: Ibigay
       terms_and_service: "Sa pag-click &#39;Sign-up Ngayon&#39; ayon ka na sumunod sa mga Tuntunin %{tos_link_anchor} at Kundisyon%{link_end}."
+      terms_and_service_tip: "Upang magparehistro kayo ay dapat pumayag sa mga tuntunin at kundisyon. Maaari mong suriin ang mga patakaran bago magpatuloy sa pamamagitan ng pag-click sa link."
       terms_of_service_required: "Kailangan mong tanggapin ang mga tuntunin ng serbisyo."
       thanks_sign_up: "Salamat sa pag-sign up!"
       thanks_sign_up_check: "Ang iyong account ay nalikha na. Mangyaring suriin ang iyong e-mail para sa iyong mga tagubilin account activation!"

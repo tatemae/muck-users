@@ -176,6 +176,7 @@ ro:
       sorry_invalid_reset_code: "Ne pare rău, dar nu am putut localiza contul dumneavoastră. Dacă aveţi probleme încercaţi să copiaţi şi să inseraţi URL-ul de la adresa dvs. de email în browser-ul dvs. sau reluarea procesului de resetare a parolei."
       submit: Trimite
       terms_and_service: "Făcând clic pe &quot;Înregistraţi-vă acum&quot;, sunteţi de acord să respecte Termenii şi condiţiile %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "În scopul de a înregistra, trebuie să fiţi de acord cu termenii şi condiţiile. Puteţi revizui aceste politici înainte de a continua, făcând clic pe link-ul."
       terms_of_service_required: "Trebuie să acceptaţi termenii de serviciu."
       thanks_sign_up: "Vă mulţumim pentru semnarea-te!"
       thanks_sign_up_check: "Contul dvs. a fost creat. Vă rugăm să verificaţi de e-mail pentru instrucţiuni de activare cont!"

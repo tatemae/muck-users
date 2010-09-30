@@ -176,6 +176,7 @@ nl:
       sorry_invalid_reset_code: "Het spijt ons, maar we konden niet vinden uw account. Als u problemen ondervindt proberen te kopiëren en plakken van de URL van uw e-mail in uw browser of het herstarten van de reset wachtwoord proces."
       submit: Indienen
       terms_and_service: "Door te klikken op &quot;Sign-up Now &#39;gaat u ermee akkoord te voldoen aan de %{tos_link_anchor} Voorwaarden%{link_end}."
+      terms_and_service_tip: "Om te kunnen registreren moet je akkoord met de voorwaarden en condities. U kunt dit beleid door voordat u verder gaat door te klikken op de link."
       terms_of_service_required: "U moet akkoord met de voorwaarden van de dienstverlening."
       thanks_sign_up: "Bedankt voor uw aanmelding!"
       thanks_sign_up_check: "Uw account is aangemaakt. Gelieve uw e-mail voor uw account te activeren instructies!"

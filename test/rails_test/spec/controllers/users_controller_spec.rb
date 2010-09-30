@@ -2,6 +2,8 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Muck::UsersController do
 
+  render_views
+  
   it { should require_login :welcome, :get }
   it { should require_login :edit, :get }
   

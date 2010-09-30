@@ -176,6 +176,7 @@ tr:
       sorry_invalid_reset_code: "Üzgünüz, ama biz hesap bulamadık. Eğer sorunlar yaşıyorsanız kopyalamayı deneyin ve tarayıcınızın halinde e-posta URL yapıştırma veya sıfırlama parola sürecini yeniden başlatmayı."
       submit: Gönderin
       terms_and_service: "Tıklayarak size .-.-. %{tos_link_anchor} Koşulları-uymayı &#39;-up Şimdi kaydol&#39;"
+      terms_and_service_tip: "Amacıyla şartları ve koşulları kabul etmeniz gerekir kayıt için. Eğer linke tıklayarak devam etmeden önce bu politikaları gözden geçirebilir."
       terms_of_service_required: "Eğer hizmet koşullarını kabul etmeniz gerekir."
       thanks_sign_up: "kayıt için teşekkürler!"
       thanks_sign_up_check: "Hesabınız yaratıldı. Hesap etkinleştirme talimatları için e-posta kontrol edin!"

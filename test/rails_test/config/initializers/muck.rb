@@ -52,3 +52,9 @@ MuckUsers.configure do |config|
   config.let_users_delete_their_account = false   # Turn on/off ability for users to delete their own account. It is not recommended that you let 
                                                   # users delete their own accounts since the delete can cascade through the system with unknown results.
 end
+
+
+if defined?(ActiveRecord)
+  # Don't Include Active Record class name as root for JSON serialized output.
+  ActiveRecord::Base.include_root_in_json = false
+end

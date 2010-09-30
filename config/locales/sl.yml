@@ -176,6 +176,7 @@ sl:
       sorry_invalid_reset_code: "Žal nam je, vendar nismo mogli najti vaš račun. Če imate vprašanja, poskusite kopiranje in lepljenje URL od vaše e-pošte v brskalnik ali ponovni zagon ponastavitev gesla proces."
       submit: Pošlji
       terms_and_service: "S klikom na &quot;Sign-up Now&quot; se strinjate, da v skladu s pogoji %{tos_link_anchor} in pogoji%{link_end}."
+      terms_and_service_tip: "Za registracijo se morate strinjati s pogoji. Si lahko ogledate te politike, preden nadaljujete s klikom na povezavo."
       terms_of_service_required: "Morate sprejeti pogoje storitve."
       thanks_sign_up: "Hvala za podpis gor!"
       thanks_sign_up_check: "Vaš račun je bil ustvarjen. Prosimo, preverite vaše e-pošte za vaš navodila aktiviranje računa!"

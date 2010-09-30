@@ -176,6 +176,7 @@ sq:
       sorry_invalid_reset_code: "Na vjen keq, por ne nuk mund të gjetur llogarinë tuaj. Nëse keni çështje të përpiqet kopjimi dhe pasting URL e email-it tuaj në shfletuesin tuaj ose rifillimin e procesit të reset password."
       submit: Submit
       terms_and_service: "Duke klikuar tek &#39;Sign-up Now&#39; jeni dakord në përputhje me Termat dhe Kushtet %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Për t&#39;u regjistruar ju duhet të bien dakord me termat dhe kushtet. Ju mund të shqyrtojë këto politika para se të vazhdoni duke klikuar në linkun."
       terms_of_service_required: "Ju duhet të pranoni kushtet e shërbimit."
       thanks_sign_up: "Faleminderit për nënshkrimin!"
       thanks_sign_up_check: "Llogaria juaj është krijuar. Ju lutem kontrolloni e-mailin tuaj për aktivizimin e llogarisë udhëzimet tuaja!"

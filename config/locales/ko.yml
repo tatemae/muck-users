@@ -176,6 +176,7 @@ ko:
       sorry_invalid_reset_code: "죄송합니다,하지만 우리는 귀하의 계정을 찾을 수 없습니다. 당신이 문제가 발생하면 복사하여 브라우저에 귀하의 이메일에서 URL을 붙여넣거나 비밀 번호 재설정 프로세스를 다시 시작."
       submit: 제출
       terms_and_service: "클릭하여 당신이 .-.-. %{tos_link_anchor} 이용 약관 - 준수하는 데 동의 &#39;업 지금 가입&#39;"
+      terms_and_service_tip: "하기 위해서 당신은 이용 약관에 동의하셔야 등록. 당신이 링크를 클릭하여 계속 진행하기 전에 이러한 정책을 검토 수도 있습니다."
       terms_of_service_required: "당신은 서비스 약관에 동의하셔야합니다."
       thanks_sign_up: "가입해 주셔서 감사합니다!"
       thanks_sign_up_check: "귀하의 계정이 만들어졌습니다. 귀하의 계정 활성화 지침은 사용자의 전자 메일을 확인하세요!"

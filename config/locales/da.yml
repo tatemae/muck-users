@@ -176,6 +176,7 @@ da:
       sorry_invalid_reset_code: "Vi beklager, men vi kunne ikke finde din konto. Hvis du har problemer så prøv at kopiere og indsætte webadressen fra din e-mail i din browser eller genstarte nulstille adgangskoden processen."
       submit: Indsend
       terms_and_service: "Ved at klikke på &#39;Tilmeld dig nu&#39; accepterer du at overholde %{tos_link_anchor} Betingelser og vilkår%{link_end}."
+      terms_and_service_tip: "For at registrere skal du acceptere de vilkår og betingelser. Du kan gennemgå disse politikker, før du fortsætter ved at klikke på linket."
       terms_of_service_required: "Du skal acceptere vilkårene i tjenesten."
       thanks_sign_up: "Tak for din tilmelding!"
       thanks_sign_up_check: "Din konto er blevet oprettet. Tjek venligst din e-mail til din konto aktivering instruktioner!"

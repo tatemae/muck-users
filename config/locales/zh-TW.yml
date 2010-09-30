@@ -176,6 +176,7 @@ zh-TW:
       sorry_invalid_reset_code: 很抱歉，但我們無法找到您的帳戶。如果您有問題，可以再複製和粘貼的URL從您的電子郵件到您的瀏覽器或重新啟動重置密碼的過程。
       submit: 提交
       terms_and_service: "通過點擊&#39;登錄了現在&#39;你同意遵守%{tos_link_anchor}條款和條件，.-.-."
+      terms_and_service_tip: 為了註冊，你必須同意的條款和條件。你可以閱讀這些政策在繼續之前通過點擊鏈接。
       terms_of_service_required: 您必須接受服務條款。
       thanks_sign_up: 感謝您了！
       thanks_sign_up_check: 您的帳戶已創建。請檢查您的電子郵件帳戶的激活說明！

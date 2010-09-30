@@ -176,6 +176,7 @@ pt-PT:
       sorry_invalid_reset_code: "Lamentamos, mas não conseguimos localizar a sua conta. Se você estiver com problemas tente copiar e colar a URL do seu e-mail em seu navegador ou reiniciando o processo de redefinição de senha."
       submit: Enviar
       terms_and_service: "Ao clicar em &quot;Cadastre-se agora&quot; você concorda em cumprir com os Termos e Condições %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Para se cadastrar, você deve concordar com os termos e condições. Você pode rever essas políticas antes de prosseguir, clicando no link."
       terms_of_service_required: "Você deve aceitar os termos de serviço."
       thanks_sign_up: "Obrigado por se inscrever!"
       thanks_sign_up_check: "Sua conta foi criada. Por favor, verifique seu e-mail para o seu instruções de ativação de conta!"

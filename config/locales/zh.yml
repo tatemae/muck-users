@@ -176,6 +176,7 @@ zh:
       sorry_invalid_reset_code: 很抱歉，但我们无法找到您的帐户。如果您有问题，可以再复制并粘贴到浏览器从您的电子邮件网址或重新启动重置密码的过程。
       submit: 提交
       terms_and_service: "通过点击&#39;登录了现在&#39;你同意与%{tos_link_anchor}条款和条件，遵守.-.-."
+      terms_and_service_tip: 为了注册，你必须同意的条款和条件。你可以先检讨通过点击链接进行这些政策。
       terms_of_service_required: 您必须接受服务条款。
       thanks_sign_up: 感谢您了！
       thanks_sign_up_check: 您的帐户已创建。请为您的帐户启动说明你的电子邮件！

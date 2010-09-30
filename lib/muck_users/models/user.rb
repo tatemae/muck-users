@@ -45,7 +45,7 @@ module MuckUsers
       module ClassMethods
         
         def inactive_count
-          self.count :conditions => "activated_at is null"
+          self.inactive.count
         end
 
         def activate_all
@@ -169,11 +169,13 @@ module MuckUsers
       end
               
       def activate!
-        self.update_attribute(:activated_at, Time.now.utc)
+        self.activated_at = Time.now.utc
+        self.save!
       end
       
       def deactivate!
-        self.update_attribute(:activated_at, nil)
+        self.activated_at = nil
+        self.save!
       end
       
       def short_name

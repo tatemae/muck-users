@@ -2,6 +2,8 @@ require File.dirname(__FILE__) + '/../../spec_helper'
 
 describe Admin::Muck::RolesController do
 
+  render_views
+  
   it { should require_login(:index, :get) }
   it { should require_login(:show, :get) }
   it { should require_login(:new, :get) }

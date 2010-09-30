@@ -1,7 +1,9 @@
 require File.dirname(__FILE__) + '/../../spec_helper'
 
 describe Admin::Muck::AccessCodesController do
-
+  
+  render_views
+  
   it { should require_login :index, :get }
   it { should require_login :bulk, :get }
   it { should require_login :show, :get }

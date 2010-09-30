@@ -70,7 +70,7 @@ id:
       bulk_access_code_message: Pesan
       bulk_access_code_problem: "Masalah menambahkan kode akses"
       bulk_access_code_subject: Subyek
-      bulk_access_code_tip: "Opsional. Jika kode ditetapkan maka kode akan dikirimkan ke semua pengguna. Membiarkan field ini kosong untuk mengirim kode unik untuk tiap user."
+      bulk_access_code_tip: "Opsional. Jika kode tersebut ditentukan maka kode akan dikirimkan ke semua pengguna. Membiarkan field ini kosong untuk mengirim kode unik untuk tiap user."
       bulk_access_codes: "Kode Akses Massal"
       bulk_access_codes_created: "Bulk kode akses dibuat dan email ke email %{email_count}."
       bulk_access_codes_description: "Ini akan menghasilkan kode, menggunakan akses tunggal yang unik untuk setiap email yang disediakan."
@@ -176,9 +176,10 @@ id:
       sorry_invalid_reset_code: "Kami minta maaf, tapi kami tidak dapat menemukan account Anda. Jika Anda mengalami masalah coba salin dan sisipkan URL dari email anda ke browser anda atau restart proses reset password."
       submit: Menyerahkan
       terms_and_service: "Dengan mengklik &#39;Daftar-up Sekarang&#39; Anda setuju untuk mematuhi Syarat dan Ketentuan %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Untuk mendaftar Anda harus menyetujui persyaratan dan kondisi. Anda dapat meninjau kebijakan ini sebelum melanjutkan dengan mengklik pada link."
       terms_of_service_required: "Anda harus menerima persyaratan layanan."
       thanks_sign_up: "Terima kasih telah mendaftar!"
-      thanks_sign_up_check: "Akun Anda telah dibuat. Silakan cek e-mail Anda untuk mendapatkan petunjuk aktivasi account anda!"
+      thanks_sign_up_check: "Akun Anda telah dibuat. Silakan cek e-mail Anda untuk instruksi aktivasi account anda!"
       thanks_sign_up_login: "Terima kasih telah mendaftar! Anda dapat login sekarang"
       total_users: "Total Pengguna: %{total}"
       unlimited: "Menggunakan Unlimited"

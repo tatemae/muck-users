@@ -176,6 +176,7 @@ cs:
       sorry_invalid_reset_code: "Je nám líto, ale my jsme nemohli najít účet. Pokud máte problémy zkuste kopírování a vkládání URL z e-mailového do prohlížeče nebo restartovat resetovat heslo procesu."
       submit: Odeslat
       terms_and_service: "Kliknutím na tlačítko &#39;Sign-up nyní&#39; souhlasíte dodržovat Všeobecné podmínky %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Abyste se mohli zaregistrovat, musíte souhlasit s podmínkami. Můžete přezkoumat tyto politiky před zahájením kliknutím na tento odkaz."
       terms_of_service_required: "Musíte souhlasit s podmínkami služby."
       thanks_sign_up: "Díky za registraci!"
       thanks_sign_up_check: "Váš účet byl vytvořen. Zkontrolujte prosím, zda váš e-mail pro vaše pokyny aktivace účtu!"

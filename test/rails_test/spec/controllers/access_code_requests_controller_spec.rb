@@ -2,6 +2,8 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Muck::AccessCodeRequestsController do
 
+  render_views
+  
   describe "GET show" do
     before(:each) do
       get :show

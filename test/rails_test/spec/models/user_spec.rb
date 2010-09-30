@@ -253,7 +253,7 @@ describe User do
         @user_inactive = Factory(:user, :activated_at => nil )
       end
       it "should activate the user" do
-        @user_inactive.should_receive(:update_attribute)
+        @user_inactive.should_not be_active
         @user_inactive.activate!
         @user_inactive.reload
         @user_inactive.should be_active
@@ -265,7 +265,7 @@ describe User do
         @user = Factory(:user)
       end
       it "should activate the user" do
-        @user.should_receive(:update_attribute)
+        @user.should be_active
         @user.deactivate!
         @user.reload
         @user.should_not be_active

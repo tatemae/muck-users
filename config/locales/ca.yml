@@ -176,6 +176,7 @@ ca:
       sorry_invalid_reset_code: "Ho sentim, però no vam poder localitzar al seu compte. Si teniu problemes proveu de copiar i enganxar l&#39;adreça del seu correu electrònic en el navegador o reiniciant el procés de restabliment de contrasenya."
       submit: Enviar
       terms_and_service: "En fer clic a &quot;Registrar ara&quot; es compromet a complir amb els Termes i Condicions %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Per registrar-se, ha d&#39;acceptar els termes i condicions. Vostè pot revisar aquestes polítiques abans de procedir fent clic a l&#39;enllaç."
       terms_of_service_required: "Has d&#39;acceptar els termes del servei."
       thanks_sign_up: "Gràcies per registrar-te!"
       thanks_sign_up_check: "El seu compte ha estat creada. Si us plau, revisi el seu correu electrònic les instruccions per a la seva activació del compte!"

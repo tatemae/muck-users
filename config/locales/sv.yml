@@ -176,6 +176,7 @@ sv:
       sorry_invalid_reset_code: "Vi är ledsna, men vi kunde inte hitta ditt konto. Om du har problem att försöka kopiera och klistra in webbadressen från din e-post i webbläsaren eller starta om återställa lösenordet processen."
       submit: "Skicka in"
       terms_and_service: "Genom att klicka på &quot;Registrera dig nu&quot; godkänner du att följa %{tos_link_anchor} Villkor%{link_end}."
+      terms_and_service_tip: "För att registrera dig måste godkänna villkoren. Du kan gå igenom dessa riktlinjer innan du fortsätter genom att klicka på länken."
       terms_of_service_required: "Du måste godkänna användarvillkoren."
       thanks_sign_up: "Tack för att registrera dig!"
       thanks_sign_up_check: "Ditt konto har skapats. Kontrollera din e-post för dina instruktioner kontoaktivering!"

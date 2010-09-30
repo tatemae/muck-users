@@ -176,6 +176,7 @@ mt:
       sorry_invalid_reset_code: "We&#39;re sorry, imma aħna ma setgħetx issib il-kont tiegħek. Jekk qed ikollok kwistjonijiet tipprova tikkopja u pasta il-URL mill email tiegħek fil-browser tiegħek jew jerġa-proċess password reset."
       submit: Issottometti
       terms_and_service: "Billi tikklikkja &quot;Sign-up Now&quot; Taqbel li jikkonformaw mal-Termini u Kundizzjonijiet %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Sabiex jirreġistraw trid taqbel mat-termini u kundizzjonijiet. Inti tista &#39;tirrevedi dawn il-politiki qabel ma tipproċedi billi tikklikkja fuq il-link."
       terms_of_service_required: "Inti trid taċċetta l-termini ta &#39;servizz."
       thanks_sign_up: "Grazzi għall-iffirmar sa!"
       thanks_sign_up_check: "kont tiegħek ġie maħluq. Jekk jogħġbok iċċekkja l-email tiegħek għal struzzjonijiet tiegħek attivazzjoni kont!"

@@ -176,6 +176,7 @@ es:
       sorry_invalid_reset_code: "Lo sentimos, pero no pudimos localizar a su cuenta. Si tiene problemas intente copiar y pegar la dirección de su correo electrónico en el navegador o reiniciando el proceso de restablecimiento de contraseña."
       submit: Enviar
       terms_and_service: "Al hacer clic en &quot;Regístrese ahora&quot; se compromete a cumplir con los Términos y Condiciones %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Para registrarse, debe aceptar los términos y condiciones. Usted puede revisar estas políticas antes de proceder haciendo clic en el enlace."
       terms_of_service_required: "Debes aceptar los términos del servicio."
       thanks_sign_up: "¡Gracias por registrarte!"
       thanks_sign_up_check: "Su cuenta ha sido creada. Por favor, revise su correo electrónico las instrucciones para su activación de la cuenta!"

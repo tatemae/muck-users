@@ -176,6 +176,7 @@ lt:
       sorry_invalid_reset_code: "Atsiprašome, tačiau mes negalėjome rasti jūsų sąskaitos. Jei turite klausimų pabandyti nukopijuoti ir įklijuoti iš savo elektroninio pašto adresą į savo naršyklės arba iš naujo slaptažodžio procesą."
       submit: Pateikti
       terms_and_service: "Paspaudę mygtuką &quot;Sign-up Now&quot;, jūs sutinkate laikytis %{tos_link_anchor} Terminai ir sąlygos%{link_end}."
+      terms_and_service_tip: "Norėdami užsiregistruoti, turite sutikti su terminais ir sąlygomis. Jūs galite peržiūrėti šias taisykles prieš pradedant, paspaudę ant šios nuorodos."
       terms_of_service_required: "Jūs turite sutikti su paslaugos teikimo sąlygomis."
       thanks_sign_up: "Ačiū už registraciją!"
       thanks_sign_up_check: "Jūsų paskyra buvo sukurta. Prašome patikrinti savo elektroninio pašto paskyros aktyvavimo instrukcijomis!"

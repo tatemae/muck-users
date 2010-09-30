@@ -2,6 +2,8 @@ require File.dirname(__FILE__) + '/../../spec_helper'
 
 describe Admin::Muck::UsersController do
 
+  render_views
+  
   it { should require_login :index, :get }
   it { should require_login :inactive, :get }
   it { should require_login :inactive_emails, :get }
@@ -73,7 +75,6 @@ describe Admin::Muck::UsersController do
           end
           it { should respond_with :success }
           it { should render_template :index }
-          it { response.body.should include('john') }
         end
         describe 'search first name' do
           before(:each) do
@@ -110,18 +111,18 @@ describe Admin::Muck::UsersController do
         end
         describe 'search first name' do
           before(:each) do
-            post :search, :query => 'john'
+            post :search, :query => 'john', :format => 'js'
           end
           it { should respond_with :success }
-          it { should render_template :index }
+          it { should render_template 'admin/users/_table' }
           it { response.body.should include('john') }
         end
         describe 'search last name' do
           before(:each) do
-            post :search, :query => 'smith'
+            post :search, :query => 'smith', :format => 'js'
           end
           it { should respond_with :success }
-          it { should render_template :index }
+          it { should render_template 'admin/users/_table' }
           it { response.body.should include('john') }
         end
         describe 'search email' do
@@ -129,7 +130,7 @@ describe Admin::Muck::UsersController do
             post :search, :query => 'john.smith@example.com', :format => 'js'
           end
           it { should respond_with :success }
-          it { should render_template :index }
+          it { should render_template 'admin/users/_table' }
           it { response.body.should include('john') }
         end
       end

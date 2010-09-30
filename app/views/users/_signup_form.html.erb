@@ -1,4 +1,4 @@
-<% muck_form_for :user, :url => users_path, :html => {:id => "register-user-form", :name => 'register-user-form'} do |f| -%>
+<%= muck_form_for :user, :url => users_path, :html => {:id => "register-user-form", :name => 'register-user-form'} do |f| -%>
 
 	<%= output_errors(t('muck.users.problem_creating_account'), {:class => 'help-box'}, user) %>
 	
@@ -38,4 +38,4 @@
   	<%= f.submit t('muck.users.sign_up_now') %>
   </div>
   
-<% end %>
+<% end -%>

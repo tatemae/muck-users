@@ -89,7 +89,7 @@ vi:
       confirm_delete_account: "Bạn có chắc chắn muốn xóa tài khoản của bạn \\ nĐiều này không thể được hoàn tác?."
       confirm_password: "Xác nhận mật khẩu"
       confirm_select_new_password: "Xác nhận Thay đổi mật khẩu"
-      could_not_find_reset_code: "Không thể tìm thấy một mã thiết lập lại mật khẩu. Hãy thử đặt lại mật khẩu của bạn."
+      could_not_find_reset_code: "Không thể tìm thấy một mã thiết lập lại mật khẩu. Hãy thử đặt lại mật khẩu của bạn một lần nữa."
       could_not_find_user_with_email: "Không thể tìm thấy một người sử dụng với địa chỉ email."
       current_password: "Mật khẩu hiện tại"
       delete: Xóa
@@ -176,6 +176,7 @@ vi:
       sorry_invalid_reset_code: "Chúng tôi xin lỗi, nhưng chúng tôi không thể xác định vị trí tài khoản của bạn. Nếu bạn đang gặp vấn đề sao chép và dán URL từ email của bạn vào trình duyệt của bạn hoặc khởi động lại quá trình đặt lại mật khẩu."
       submit: Gửi
       terms_and_service: "Bằng cách nhấn vào &quot;Sign-up Now &#39;bạn đồng ý tuân thủ các Điều khoản và Điều kiện %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Để đăng ký bạn phải đồng ý với các điều khoản và điều kiện. Bạn có thể xem xét lại các chính sách này trước khi tiếp tục bằng cách nhấp vào liên kết."
       terms_of_service_required: "Bạn phải chấp nhận các điều khoản của dịch vụ."
       thanks_sign_up: "Cảm ơn bạn đã đăng ký!"
       thanks_sign_up_check: "tài khoản của bạn đã được tạo ra. Xin vui lòng kiểm tra email của bạn để được hướng dẫn kích hoạt tài khoản của bạn!"

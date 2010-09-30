@@ -176,6 +176,7 @@ et:
       sorry_invalid_reset_code: "Vabandame, kuid me ei suutnud leida oma konto. Kui teil on küsimusi proovida kopeerida ja kleepida URL oma e-posti brauseri või taaskäivitamine reset parooli protsessi."
       submit: Esitama
       terms_and_service: "Klikkides &quot;Sign-up Now&quot;, nõustud sa järgima %{tos_link_anchor} Tingimused%{link_end}."
+      terms_and_service_tip: "Registreerimiseks pead nõustuma tingimustega. Te võite vaadata need poliitika enne jätkamist, klõpsates lingil."
       terms_of_service_required: "Peate nõustuma kasutustingimustega."
       thanks_sign_up: Täname!
       thanks_sign_up_check: "Sinu konto on loodud. Palun kontrollige oma e-posti konto aktiveerimise juhised!"

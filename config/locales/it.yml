@@ -176,6 +176,7 @@ it:
       sorry_invalid_reset_code: "Siamo spiacenti, ma non siamo riusciti a individuare il tuo account. Se si hanno problemi provare a copiare e incollare l&#39;URL dal vostro e-mail nel tuo browser o riavviando il processo di reimpostazione password."
       submit: Invia
       terms_and_service: "Cliccando su &#39;Iscriviti adesso&#39; si impegna a rispettare i Termini e Condizioni %{tos_link_anchor}%{link_end}."
+      terms_and_service_tip: "Per registrarsi è necessario accettare i termini e le condizioni. Si possono rivedere tali politiche, prima di procedere facendo clic sul link."
       terms_of_service_required: "È necessario accettare i termini di servizio."
       thanks_sign_up: "Grazie per registrarti!"
       thanks_sign_up_check: "Il tuo account è stato creato. Controlla la tua e-mail le istruzioni per l&#39;attivazione del vostro account!"
