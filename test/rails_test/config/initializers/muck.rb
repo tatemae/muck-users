@@ -1,7 +1,14 @@
 MuckEngine.configure do |config|
   
   # Global application values.  These are used to display the app name, send emails, and configure where system emails go.
-  config.application_url = 'localhost:3000'     # Url of 
+  if Rails.env.production?
+    config.application_url = 'www.#{domain_name}'     # Url of the application in production
+  elsif Rails.env.staging?
+    config.application_url = 'www.#{domain_name}'     # Url of the application on staging
+  else
+    config.application_url = 'localhost:3000'         # Url of the application for test or development
+  end
+  
   config.application_name = 'Example App'       # Common name for your application.  i.e. My App, Billy Bob, etc
   config.from_email = 'support@example.com'     # Emails will come from this address i.e. noreply@example.com, support@example.com, system@example.com, etc
   config.from_email_name = 'Example App'        # This will show up as the name on emails.  i.e. support@example.com <Example>
@@ -15,7 +22,7 @@ MuckEngine.configure do |config|
   # Email server configuration
   # Sendgrid is easy: https://sendgrid.com/user/signup
   config.email_server_address = "smtp.sendgrid.net"   # Email server address.  'smtp.sendgrid.net' works for sendgrid
-  config.email_user_name = 'admin@example.com'        # Email server username
+  config.email_user_name = 'username'                 # Email server username
   config.email_password = 'password'                  # Email server password
   config.base_domain = 'example.com'                  # Basedomain that emails will come from
     
@@ -39,9 +46,8 @@ MuckUsers.configure do |config|
   # if you use recaptcha you will need to also provide a public and private key available from http://recaptcha.net.
   config.use_recaptcha = false      # This will turn on recaptcha during registration. This is an alternative to sending the 
                                     # user a confirm email and can help reduce spam registrations.
-  config.recaptcha_pub_key = 'GET_A_RECAPTCHA_KEY(TODO)'  # key available from http://recaptcha.net
-  config.recaptcha_priv_key = 'GET_A_RECAPTCHA_KEY(TODO)'
 
+  config.require_access_code = false              # Only let a user sign up if they have an access code
   config.let_users_delete_their_account = false   # Turn on/off ability for users to delete their own account. It is not recommended that you let 
                                                   # users delete their own accounts since the delete can cascade through the system with unknown results.
 end

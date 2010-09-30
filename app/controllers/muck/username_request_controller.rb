@@ -1,5 +1,4 @@
 class Muck::UsernameRequestController < ApplicationController
-  unloadable
   
   ssl_allowed :new, :create
   before_filter :not_logged_in_required

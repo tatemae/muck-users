@@ -1,0 +1,5 @@
+<p>Hello <%= h(@user.login) %>,</p>
+
+<p>Your login for <%= MuckEngine.configuration.application_name %> is <%= h(@user.login) %>.</p>
+
+<a href="<%= @root_url %>"><%= @root_url %></a>

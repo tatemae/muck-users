@@ -1,5 +1,6 @@
 require 'muck_users/exceptions'
 require 'muck_users/secure_methods'
+require 'muck_users/config'
 require 'muck_users/form_builder'
 require 'muck_users/models/access_code'
 require 'muck_users/models/access_code_request'

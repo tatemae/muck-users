@@ -22,36 +22,44 @@ module MuckUsers
       end
 
       def password_not_active_instructions(user)
-        muck_setup_email(user)
-        subject   I18n.t('muck.users.account_not_activated', :application_name => MuckEngine.configuration.application_name)
-        body      :user => user
+        @user = user
+        mail(:to => user.email, :subject => I18n.t('muck.users.account_not_activated', :application_name => MuckEngine.configuration.application_name)) do |format|
+          format.html
+          format.text
+        end
       end
 
       def password_reset_instructions(user)
-        muck_setup_email(user)
-        subject   I18n.t('muck.users.password_reset_email_subject', :application_name => MuckEngine.configuration.application_name)
-        body      :user => user
+        @user = user
+        mail(:to => user.email, :subject => I18n.t('muck.users.password_reset_email_subject', :application_name => MuckEngine.configuration.application_name)) do |format|
+          format.html
+          format.text
+        end
       end
 
       def welcome_notification(user)
-        muck_setup_email(user)
-        subject   I18n.t('muck.users.welcome_email_subject', :application_name => MuckEngine.configuration.application_name)
-        body      :user => user,
-                  :application_name => MuckEngine.configuration.application_name
+        @user = user
+        mail(:to => user.email, :subject => I18n.t('muck.users.welcome_email_subject', :application_name => MuckEngine.configuration.application_name)) do |format|
+          format.html
+          format.text
+        end
       end
 
       def username_request(user)
-        muck_setup_email(user)
-        subject   I18n.t('muck.users.request_username_subject', :application_name => MuckEngine.configuration.application_name)
-        body      :user => user,
-                  :application_name => MuckEngine.configuration.application_name
+        @user = user
+        mail(:to => user.email, :subject => I18n.t('muck.users.request_username_subject', :application_name => MuckEngine.configuration.application_name)) do |format|
+          format.html
+          format.text
+        end
       end
 
       def access_code(email, subject, message, code)
-        muck_setup_email(email)
-        subject       subject
-        body          :message => message, :code => code
-        content_type  "text/html"
+        @message = message
+        @code = code
+        mail(:to => email, :subject => subject) do |format|
+          format.html
+          format.text
+        end
       end
     
     end

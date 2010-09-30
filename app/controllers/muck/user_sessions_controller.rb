@@ -1,5 +1,4 @@
 class Muck::UserSessionsController < ApplicationController
-  unloadable
   
   ssl_required :new, :create
   before_filter :login_required, :only => :destroy

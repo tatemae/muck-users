@@ -1,5 +1,4 @@
 class Muck::UsersController < ApplicationController
-  unloadable
 
   ssl_required :show, :new, :edit, :create, :update
   before_filter :not_logged_in_required, :only => [:new, :create] 
@@ -34,7 +33,7 @@ class Muck::UsersController < ApplicationController
   end
 
   def new
-    @page_title = t('muck.users.register_account', :application_name => GlobalConfig.application_name)
+    @page_title = t('muck.users.register_account', :application_name => MuckEngine.configuration.application_name)
     @user = User.new
     standard_response('new')
   end
@@ -48,7 +47,7 @@ class Muck::UsersController < ApplicationController
   end
     
   def create
-    @page_title = t('muck.users.register_account', :application_name => GlobalConfig.application_name)
+    @page_title = t('muck.users.register_account', :application_name => MuckEngine.configuration.application_name)
     cookies.delete :auth_token
     @user = User.new(params[:user])
     setup_tos
@@ -70,7 +69,7 @@ class Muck::UsersController < ApplicationController
   end
 
   def destroy
-    return unless admin? || GlobalConfig.let_users_delete_their_account
+    return unless admin? || MuckUsers.configuration.let_users_delete_their_account
     @user = admin? ? User.find(params[:id]) : User.find(current_user)
     if @user.destroy
       flash[:notice] = t("muck.users.user_account_deleted")
@@ -99,14 +98,14 @@ class Muck::UsersController < ApplicationController
     elsif !User.login_exists?(params[:user_login])
       @user = User.new(:login => params[:user_login])
       @user.valid? # we aren't interested in the output of this.
-      if @user.errors.on(:login)
-        result = "#{t('muck.users.invalid_username')} <br /> #{t('muck.users.username')} #{@user.errors.on(:login)}"
+      if !@user.errors[:login].blank?
+        result = "#{t('muck.users.invalid_username')} <br /> #{t('muck.users.username')} #{@user.errors[:login]}"
       else
         result = t('muck.users.username_available')
       end
     end
     respond_to do |format|
-      if !@user.blank? && !@user.errors.on(:login) && !result.blank?
+      if !@user.blank? && @user.errors[:login].blank? && !result.blank?
         format.html { render :partial => 'users/available', :locals => { :message => result } }
         format.js { render :partial => 'users/available', :locals => { :message => result } }
       else
@@ -160,7 +159,7 @@ class Muck::UsersController < ApplicationController
     def valid_email?(email)
       user = User.new(:email => email)
       user.valid?
-      if user.errors[:email]
+      if !user.errors[:email].blank?
         [false, user.errors[:email]]
       else
         [true, '']
@@ -193,7 +192,7 @@ class Muck::UsersController < ApplicationController
   
     # Sign up methods
     def check_access_code
-      if GlobalConfig.require_access_code
+      if MuckUsers.configuration.require_access_code
         access_code, valid_code = AccessCode.valid_code?(params[:user][:access_code_code])
         if valid_code
           @user.access_code = access_code
@@ -213,7 +212,7 @@ class Muck::UsersController < ApplicationController
     end
     
     def check_recaptcha
-      if GlobalConfig.use_recaptcha
+      if MuckUsers.configuration.use_recaptcha
         if !(verify_recaptcha(@user) && @user.valid?)
           raise ActiveRecord::RecordInvalid, @user
         end
@@ -221,8 +220,8 @@ class Muck::UsersController < ApplicationController
     end
   
     def setup_user
-      if GlobalConfig.automatically_activate
-        if GlobalConfig.automatically_login_after_account_create
+      if MuckUsers.configuration.automatically_activate
+        if MuckUsers.configuration.automatically_login_after_account_create
           setup_user_login
         else
           setup_user_no_login

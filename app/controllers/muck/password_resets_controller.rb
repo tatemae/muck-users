@@ -1,5 +1,4 @@
 class Muck::PasswordResetsController < ApplicationController
-  unloadable
   
   ssl_required :edit, :update
   ssl_allowed :new, :create

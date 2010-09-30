@@ -1,5 +1,4 @@
 class Muck::ActivationsController < ApplicationController
-  unloadable
   
   ssl_required :new
   before_filter :not_logged_in_required, :only => [:new]

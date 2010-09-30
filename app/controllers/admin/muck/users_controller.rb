@@ -1,5 +1,4 @@
 class Admin::Muck::UsersController < Admin::Muck::BaseController
-  unloadable
     
   before_filter :get_user, :only => [:edit, :update, :destroy, :permissions]
   before_filter :setup_subnavigation
@@ -46,23 +45,11 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
     end
   end
 
-  def search_results
-    @users = User.do_search( params[:query] ).paginate(:page => @page, :per_page => @per_page )
-  end
-
   def search
-    search_results
+    @users = User.where( params[:query] ).paginate(:page => @page, :per_page => @per_page )
     respond_to do |format|
-      format.html do
-        render :template => 'admin/users/index'
-      end
-    end
-  end
-
-  def ajax_search
-    search_results
-    respond_to do |format|
-      format.html { render :partial => 'admin/users/table', :layout => false }
+      format.html { render :template => 'admin/users/index' }
+      format.js { render :partial => 'admin/users/table', :layout => false }
     end
   end
 
@@ -146,7 +133,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   end
   
   protected
-
+    
     def update_permissions(message = '')
       flash[:notice] = message unless message.blank?
       respond_to do |format|

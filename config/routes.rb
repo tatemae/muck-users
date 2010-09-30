@@ -53,7 +53,6 @@ Rails.application.routes.draw do
         post :search
         get :inactive_emails
         get :activate_all
-        post :ajax_search
       end
       member do
         get :permissions

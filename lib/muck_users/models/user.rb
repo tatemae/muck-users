@@ -8,12 +8,17 @@ module MuckUsers
         has_many :permissions
         has_many :roles, :through => :permissions
 
-        scope :by_newest, order("created_at DESC")
-        scope :active, where("activated_at IS NOT NULL")
-        scope :inactive, where("activated_at IS NULL")
-        scope :recent, lambda { { :conditions => ['created_at > ?', 1.week.ago] } }
-        scope :by_login_alpha, order("login ASC")
-        scope :by_login, lambda { |*args| { :conditions => ["login LIKE ?", args.first + '%'] } }
+        scope :active, where("users.activated_at IS NOT NULL")
+        scope :inactive, where("users.activated_at IS NULL")
+        
+        scope :by_newest, order("users.created_at DESC")
+        scope :by_oldest, order("users.created_at ASC")
+        scope :by_latest, order("users.updated_at DESC")
+        scope :newer_than, lambda { |*args| where("users.created_at > ?", args.first || DateTime.now) }
+        scope :older_than, lambda { |*args| where("users.created_at < ?", args.first || 1.day.ago.to_s(:db)) }
+        
+        scope :by_login_alpha, order("users.login ASC")
+        scope :by_login, lambda { |*args| { :conditions => ["users.login LIKE ?", args.first + '%'] } }
         
         belongs_to :access_code
         accepts_nested_attributes_for :access_code
@@ -37,21 +42,18 @@ module MuckUsers
       end
 
       module ClassMethods
-        def do_search(query)
-          User.search(query)
-        end
         
         def inactive_count
-          User.count :conditions => "activated_at is null"
+          self.count :conditions => "activated_at is null"
         end
 
         def activate_all
-          User.update_all("activated_at = '#{Time.now}'", 'activated_at IS NULL')
+          self.update_all("activated_at = '#{Time.now}'", 'activated_at IS NULL')
         end
 
         # checks to see if a given login is already in the database
         def login_exists?(login)
-          if User.find_by_login(login).nil?
+          if self.find_by_login(login).nil?
             false
           else
             true
@@ -60,14 +62,19 @@ module MuckUsers
 
         # checks to see if a given email is already in the database
         def email_exists?(email)
-          if User.find_by_email(email).nil?
+          if self.find_by_email(email).nil?
             false
           else
             true
           end
         end
+        
+        def validates_terms_of_service
+          validate(:accepts_terms_of_service?, :on => :create)
+        end
           
       end
+      
       
       def deliver_welcome_email
         UserMailer.welcome_notification(self).deliver if MuckUsers.configuration.send_welcome
@@ -184,13 +191,9 @@ module MuckUsers
         CGI::escapeHTML(self.login)
       end
       
-      def validates_terms_of_service
-        validate_on_create :accepts_terms_of_service?
-      end
-      
       def accepts_terms_of_service?
         if !self.terms_of_service
-          errors.add_to_base(I18n.translate('muck.users.terms_of_service_required'))
+          self.errors[:base] << I18n.translate('muck.users.terms_of_service_required')
         end
       end
       

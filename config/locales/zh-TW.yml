@@ -9,91 +9,91 @@ zh-TW:
       roles: 角色
     users: 
       access_code: 接入碼
-      access_code_add_problem: 問題補充接入碼
+      access_code_add_problem: 添加訪問代碼問題
       access_code_added: 訪問代碼已成功添加
       access_code_created: 創建
       access_code_delete_confirm: 你確定要取消此訪問代碼？
       access_code_delete_error: 錯誤發生在試圖刪除訪問代碼
       access_code_delete_link: 刪除訪問代碼
-      access_code_delete_problem: 無法刪除訪問代碼與它有關聯的用戶。
+      access_code_delete_problem: 無法刪除訪問代碼中有用戶與之關聯。
       access_code_deleted: 刪除訪問代碼。
       access_code_edit_link: 編輯接入碼
       access_code_edit_problem: 訪問代碼編輯問題
       access_code_expires: 過期
-      access_code_fullfill_invites: 請履行邀請
+      access_code_fullfill_invites: 履行INVITE請求
       access_code_fullfill_invites_limit: 邀請請求限制
-      access_code_fullfill_invites_limit_tip: "輸入一個數字，以限制人數的要求發出。例如，輸入 100將限制邀請到最近的100要求"
-      access_code_fullfill_invites_tip: 入住這裡，向用戶發送邀請誰要求發出邀請。這將忽略任何上面指定的電子郵件。
-      access_code_help: "如果您收到來自我們的訪問代碼，請輸入它在上面的框中。您可能還 {{access_request_anchor}}要求接入碼 {{access_request_anchor_end}}."
-      access_code_new: 新的接入碼
-      access_code_related_users: 用戶是誰簽署了這項代碼
-      access_code_request_count: "目前{{access_code_requests_count}}訪問代碼的請求"
-      access_code_request_thank_you: 謝謝您的要求。我們將在盡快聯繫。
-      access_code_request_tip: 請輸入您的電子郵件，我們會向您發送訪問代碼只要有可用的。謝謝！
+      access_code_fullfill_invites_limit_tip: "輸入一個數字，以限制人數的要求寄了出去。例如，輸入 100將限制邀請到最近的100個請求"
+      access_code_fullfill_invites_tip: 選擇此處，可向用戶發送邀請誰要求邀請。這將忽略任何上面指定的電子郵件。
+      access_code_help: "如果您收到一個訪問代碼從我們，請填寫在上面的框中。您可能還 %{access_request_anchor}請求訪問代碼 .-.-."
+      access_code_new: 新的接入代碼
+      access_code_related_users: 用戶誰簽署與此代碼
+      access_code_request_count: "目前有%{access_code_requests_count}訪問代碼請求"
+      access_code_request_thank_you: 謝謝您的要求。我們會在盡快聯繫。
+      access_code_request_tip: 輸入您的電子郵件，我們會向您發送訪問代碼只要一可用。謝謝！
       access_code_tip: 輸入訪問代碼。
       access_code_unlimited: 無限
-      access_code_update_problem: 有一個問題更新訪問代碼。
-      access_code_use_limit: 使用極限
+      access_code_update_problem: 有一個問題更新的接入碼。
+      access_code_use_limit: 使用限制
       access_code_uses: 用途
-      access_codes: 接入碼
-      access_denied: 您沒有權限訪問所請求的頁面。
-      access_required_warning: 目前網站訪問限制。你需要一個有效的接入碼進行註冊。
-      account_activated: 您的帳戶已被激活！現在，您可以登錄。
-      account_not_activated: "您{{application_name}}帳戶尚未被激活。"
+      access_codes: 訪問代碼
+      access_denied: 您沒有權限訪問請求的頁面。
+      access_required_warning: 目前網站的訪問限制。你需要一個有效的接入碼進行註冊。
+      account_activated: 您的帳戶已激活！現在，您可以登錄。
+      account_not_activated: "您%{application_name}帳戶尚未被激活。"
       activation_complete: 激活完成
       activation_instructions: 啟動說明
-      activation_not_found: 激活碼沒有找到。請嘗試創建一個新帳戶。
-      add: 加
+      activation_not_found: 激活代碼找不到。請嘗試創建一個新帳戶。
+      add: 新增
       add_access_code: 新增接入碼
       add_access_code_title: 新增接入碼
       add_permission: （添加許可）
-      add_permission_to_user: "添加到用戶的權限 {{user}}"
-      add_role: 添加角色
-      add_role_dialog_title: 添加角色
+      add_permission_to_user: "添加權限用戶 %{user}"
+      add_role: 新增角色
+      add_role_dialog_title: 新增角色
       add_user_to_role: 添加用戶到角色
       add_user_to_role_title: 添加用戶到一個新的角色。
       admin: 
         activate_all_inactive_users: 激活所有非活動用戶
-        activate_all_inactive_users_confirm: 你確定要激活所有不活動的用戶在系統中？這不能被撤消！
+        activate_all_inactive_users_confirm: 你確定要激活所有非活動用戶的系統？這不能被撤銷！
         search_users: 搜索用戶
         show_emails: 顯示電子郵件
-        unactivated_users: "有{{count}}未活化用戶"
+        unactivated_users: "未激活用戶有%{count}"
       admin_requred: 您必須是管理員才能訪問此功能。
       admin_users_title: 用戶管理
       all_users: 所有用戶
       already_activated: 您的帳戶已經被激活。您可以登錄以下。
-      already_logged_in: 您已經登錄，並不需要恢復您的密碼。
+      already_logged_in: 您已經登錄，不需要恢復密碼。
       already_registered: 已經是會員？
-      application_base_url_not_set: "請設定 application_base_url在global_config.yml"
+      application_base_url_not_set: "請設置 application_base_url在global_config.yml"
       bulk_access_code_emails: 電子郵件
-      bulk_access_code_emails_tip: 用逗號分隔電子郵件地址
-      bulk_access_code_message: 信息
-      bulk_access_code_problem: 問題補充接入碼
-      bulk_access_code_subject: 主題
-      bulk_access_code_tip: 可選。如果一個代碼，然後指定該代碼將被發送到所有用戶。給這一領域的空白，以一個獨特的代碼發送到每個用戶。
+      bulk_access_code_emails_tip: 用逗號分隔電子郵件
+      bulk_access_code_message: 消息
+      bulk_access_code_problem: 添加訪問代碼問題
+      bulk_access_code_subject: 科目
+      bulk_access_code_tip: 可選。如果代碼被指定，那麼該代碼將被發送到所有用戶。給這一領域的空白發送一個唯一的代碼，每個用戶。
       bulk_access_codes: 大量接碼
-      bulk_access_codes_created: "散裝訪問代碼創建並通過電子郵件發送給 {{email_count}}電子郵件。"
+      bulk_access_codes_created: "散裝訪問代碼創建並通過電子郵件發送給 %{email_count}電子郵件。"
       bulk_access_codes_description: 這將產生一個獨特的，一次性訪問代碼的每個電子郵件提供。
       bulk_access_codes_title: 大量接碼
-      cannot_deactivate_yourself: 你不能停用吧！
-      cant_delete_admin: 你不能刪除一個用戶在admin角色。刪除用戶從管理員的角色，然後再試一次。請小心刪除管理員。如果您刪除所有管理員帳戶您將不再能夠登錄到管理系統。
-      cant_delete_administrator_role: 您不能刪除管理員的作用。
-      cant_disable_admin: 無法禁用管理員。請刪除用戶從管理員的角色，然後再試一次。
+      cannot_deactivate_yourself: 您不能停用，你自己！
+      cant_delete_admin: 您不能刪除用戶是在管理的作用。刪除用戶從管理員的角色，然後再試一次。請小心刪除管理員。如果您刪除所有的管理員帳戶，您將不再能夠登錄到管理系統。
+      cant_delete_administrator_role: 您不能刪除管理員角色。
+      cant_disable_admin: 無法禁用管理員。請刪除用戶從管理員角色，然後再試一次。
       change_password: 更改密碼
-      change_permissions: 變化中的作用
-      change_permissions_for: "更改權限 {{user}}"
+      change_permissions: 更改角色
+      change_permissions_for: "更改權限 %{user}"
       change_your_password: 更改您的密碼
       choose_member_name: 會員名稱
       click_to_sign_up_now: 點擊這裡立即註冊。
       complete_profile: 完成您的個人資料
-      confirm_delete_account: "你確定要刪除帳戶？\\ n這不能被撤消。"
+      confirm_delete_account: "你確定要刪除自己的帳戶？\\ n這無法復原。"
       confirm_password: 確認密碼
       confirm_select_new_password: 確認密碼更改
       could_not_find_reset_code: 找不到密碼重設代碼。請嘗試重置您的密碼。
-      could_not_find_user_with_email: 找不到與該用戶的電子郵件地址。
+      could_not_find_user_with_email: 無法找到用戶使用該電子郵件地址。
       current_password: 當前密碼
       delete: 刪除
-      delete_my_account: 刪除我的用戶帳戶和我的所有數據。
+      delete_my_account: 刪除我的用戶帳戶和所有我的數據。
       delete_this_user: 刪除此用戶。
       deleting_user: "刪除用戶 ..."
       edit: 編輯
@@ -104,56 +104,56 @@ zh-TW:
       email: 電郵
       email_address: 電郵地址
       email_available: 電子郵件可用
-      email_empty: 請輸入一個電子郵件地址
-      email_help: 請使用一個有效的，當前電子郵件地址。我們絕不會分享或垃圾郵件的電子郵件地址。
+      email_empty: 請輸入電子郵件地址
+      email_help: 請使用有效的，目前的電子郵件地址。我們絕不會分享或垃圾郵件的電子郵件地址。
       email_invalid: 無效的電子郵件
-      email_not_available: "電子郵件已在使用中。 {{reset_password_help}}"
-      email_recover_prompt: 請提供您註冊時使用的電子郵件，以恢復您的密碼。
-      expiration_date: 到期日
-      expiration_date_tip: 輸入日期後，該接入代碼將成為無效
+      email_not_available: "電子郵件已在使用。 %{reset_password_help}"
+      email_recover_prompt: 請提供您註冊時使用電子郵件來恢復密碼。
+      expiration_date: 失效日期
+      expiration_date_tip: 輸入日期後，該密碼將失效
       first_name: 名字
       forgot_password: 忘記密碼
       forgot_username: 忘記用戶名
       forgot_your_password: 忘記密碼？
       forgot_your_username: 忘記用戶名？
-      invalid_username: 無效的用戶名
-      join_application_name: 加入就可以了
+      invalid_username: 用戶名無效
+      join_application_name: 加入並完成它
       last_name: 姓
-      login: 註冊
+      login: 登錄
       login_empty: 請輸入登錄
       login_fail: 很抱歉，但我們無法識別您的登錄信息。請再試一次。
-      login_out_success: 您已經登出。
+      login_out_success: 您已登出。
       login_requred: 您必須先登錄才能訪問此功能。
       login_success: 登錄成功！
       login_title: 登錄到您的帳戶
       logout_required: ~
-      my_dashboard: 我的儀表板
+      my_dashboard: 我的控制台
       name: 名稱
       navigation: 
         all_users: 所有用戶
-        inactive_users: 不活躍的用戶
+        inactive_users: 非活動用戶
         search_users: 搜索用戶
       new_password_doesnt_match: 新密碼不符合密碼確認。
       old_password_incorrect: 您的舊密碼不正確。
       password: 密碼
       password_cannot_be_blank: 密碼字段不能為空。
-      password_confirmation_help: 為了確保您的密碼是正確的，請在這裡輸入一次。
-      password_help: 您的密碼應至少6個字符長。上一個組合和小寫字母和數字效果很好
+      password_confirmation_help: 為了確保您的密碼正確，請重新輸入在這裡。
+      password_help: 您的密碼應至少為六個字符。混音上和小寫字母和數字效果很好
       password_mismatch: 密碼不匹配。
-      password_not_reset: 密碼不重置。
+      password_not_reset: 密碼不被復位。
       password_reset: 密碼重置。
-      password_reset_email_subject: "您已要求更改您的密碼 {{application_name}}"
-      password_reset_link_sent: 說明重置您的密碼被發送給您。請檢查您的電子郵件。
+      password_reset_email_subject: "您已要求更改密碼 %{application_name}"
+      password_reset_link_sent: 說明重置您的密碼已經發送給你。請檢查您的電子郵件。
       password_updated: 密碼已成功更新。
-      permission_denied: 您沒有權限以完成所要求的行動。
-      problem_changing_password: "有一個問題，改變你的密碼。 {{errors}}"
+      permission_denied: 您沒有權限來完成要求的動作。
+      problem_changing_password: "有一個問題，改變你的密碼。 %{errors}"
       problem_creating_account: 有一個問題，建立帳戶。請更正以下錯誤：
-      problem_editing_account: 有一個問題，更新您的信息。
+      problem_editing_account: 有一個問題更新您的信息。
       recover_password: 恢復密碼
       recover_password_prompt: （如果您忘記了密碼恢復它在這裡）
-      register_account: "註冊一個帳戶 {{application_name}}"
+      register_account: "註冊一個 %{application_name}帳戶"
       register_for_account: 註冊一個帳戶
-      remember_me: 記得我
+      remember_me: 記住我
       remove_my_account: 刪除我的帳戶
       request_access_code: 要求接入碼
       request_username: 要求用戶名
@@ -162,27 +162,27 @@ zh-TW:
       reset_your_password: 重置您的密碼
       role: 角色
       role_delete_confirm: 你確定要刪除這個角色？所有相關的權限也將被刪除！
-      role_deleted: 角色刪除
+      role_deleted: 刪除角色
       role_not_deleted: 角色不能被刪除
       roles: 角色
       save: 保存
       select_new_password: 選擇一個新密碼
-      sign_in: 登陸
+      sign_in: 登錄
       sign_in_now: 馬上註冊！
-      sign_in_title: 登陸
+      sign_in_title: 登錄
       sign_out_title: 登出
-      sign_up: 報名
+      sign_up: 趕快註冊
       sign_up_now: 登錄了現在
       sorry_invalid_reset_code: 很抱歉，但我們無法找到您的帳戶。如果您有問題，可以再複製和粘貼的URL從您的電子郵件到您的瀏覽器或重新啟動重置密碼的過程。
       submit: 提交
-      terms_and_service: "通過點擊&#39;註冊了現在&#39;，你同意遵守{{tos_link_anchor}}條款和條件 {{link_end}}."
+      terms_and_service: "通過點擊&#39;登錄了現在&#39;你同意遵守%{tos_link_anchor}條款和條件，.-.-."
       terms_of_service_required: 您必須接受服務條款。
-      thanks_sign_up: 感謝您註冊！
-      thanks_sign_up_check: 您的帳戶已創建。請檢查您的電子郵件帳戶的啟動說明！
-      thanks_sign_up_login: 感謝您註冊！現在您可以登錄
-      total_users: "共有用戶：{{total}}"
-      unlimited: 無限的用途
-      unlimited_tip: 在這裡檢查，如果訪問代碼可用於無限次數。這將取代使用限制。
+      thanks_sign_up: 感謝您了！
+      thanks_sign_up_check: 您的帳戶已創建。請檢查您的電子郵件帳戶的激活說明！
+      thanks_sign_up_login: 感謝您了！現在，您可以登陸
+      total_users: "共有用戶：%{total}"
+      unlimited: 無限制使用
+      unlimited_tip: 在這裡檢查，如果訪問代碼可用於無限次數。這將覆蓋使用的限制。
       update: 更新
       update_profile: 更新您的個人資料
       update_user: 更新您的用戶信息
@@ -196,23 +196,23 @@ zh-TW:
       user_enabled: 用戶啟用
       user_marked_active: 用戶已被標記為活動
       user_marked_inactive: 用戶已被標記為無效
-      user_not_activated_error: 無法激活用戶
-      user_not_deactivated_error: 用戶無法停用
-      user_successfully_deleted: "用戶 {{login}}已成功刪除。"
+      user_not_activated_error: 不能激活用戶
+      user_not_deactivated_error: 用戶無法關閉
+      user_successfully_deleted: "用戶 %{login}已成功刪除。"
       user_update: 你的用戶信息已更新。
       user_update_sucess: 用戶已成功更新
       username: 用戶名
-      username_available: 用戶名可用
-      username_help: 您可以使用6至20個字符。如果你想要的名字沒有嘗試加入數字或標點符號。
+      username_available: 使用者名稱
+      username_help: 您可以使用6至20個字符。如果您想要的名稱不可嘗試加入數字或標點符號。
       username_not_available: 用戶名不可用
       username_recover_prompt: 請提供您的電子郵件時使用您創建帳戶，您的用戶將通過電子郵件發送給您。
-      username_sent: 您的用戶名已發送電子郵件給您。請檢查您的電子郵件。
+      username_sent: 您的用戶名已被送往電子郵件發送給您。請檢查您的電子郵件。
       users_admin: 用戶
-      users_in_role: "用戶角色：{{role}}"
+      users_in_role: "用戶角色：%{role}"
       validation_are_required: 是必需的。
       validation_is_required: 是必需的。
       view_your_account: 查看您的帳戶
       welcome: 歡迎
-      welcome_email_subject: "歡迎 {{application_name}}"
-      welcome_message: 歡迎淤泥。該系統提供了基本組件，幫助您建立您的網站。
-      what_is_the_email: 什麼是電子郵件地址用於創建自己的帳戶？
+      welcome_email_subject: "歡迎來到 %{application_name}"
+      welcome_message: 歡迎來到淤泥。該系統提供了基本的組件，幫助您建立自己的網站。
+      what_is_the_email: 什麼是電子郵件地址，用於創建自己的帳戶？

@@ -1,5 +1,4 @@
 class Admin::Muck::RolesController < Admin::Muck::BaseController
-  unloadable
   
   def index
     @roles = Role.by_alpha

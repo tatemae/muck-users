@@ -5,104 +5,114 @@
 The muck users engine is part of the muck framework and relies upon the muck_engine as well as authlogic.
 Both gems should be installed automatically when you install the muck_users engine.
 
-Then
-  sudo gem install muck-users
-
-Use search logic for searching users.  Add this to environment.rb:
+Make sure that your 'Gemfile' contains the following:
 
   config.gem "authlogic"
-  config.gem "searchlogic"
+  config.gem "muck-users"
 
-  
-In addition, you will need to install the ssl_requirement plugin (http://github.com/rails/ssl_requirement/tree/master) into your Rails project:
-
-  ruby script/plugin install ssl_requirement
-
-If you used the muck template to create your rails application you will have a global_config.yml file.  If not then you will need to create a 
-global_config.yml file and then add the following to environment.rb right above Rails::Initializer.run do |config|
+If you used the muck template to create your rails application you will have a secrets.yml file.  If not then you will need to create a 
+secrets.yml file and then add the following to environment.rb right above Rails::Initializer.run do |config|
 
   require 'ostruct'
   require 'yaml'
-  ::GlobalConfig = OpenStruct.new(YAML.load_file("#{RAILS_ROOT}/config/global_config.yml")[RAILS_ENV])
+  ::Secrets = OpenStruct.new(YAML.load_file("\#{RAILS_ROOT}/config/secrets.yml")[RAILS_ENV])
 
+Omit secrets.yml from your version control system and use it to keep sensitive data like email server credentials
 
-Inside of global_config.yml add the following changing the emails to match your application:
+  email_user_name: 'TODO_admin@#{domain_name}'    # Email server username
+  email_password = 'TODO_password'                # Email server password
 
-  default: &DEFAULT
-
-    # Sent in emails to users
-    application_name: 'Name of my application'
-    from_email: 'support@example.com'
-    support_email: 'support@example.com'
-    admin_email: 'admin@example.com'
-    
-    require_access_code: false # Determines whether or not a access code is required to sign up.
+  production:
+    <<: *DEFAULT
+    # Add production only secrets
+  staging:
+    <<: *DEFAULT
+    # Add staging only secrets
+  development:
+    <<: *DEFAULT
+    # Development specific
+  test:
+    <<: *DEFAULT
+    # Test specific
   
-=== Users migration
-The users table is frequently one of the most significant of any application.  A migration to create users is not included in this
-gem so that the users tables can be customized appropriately.  Here's an example migration:
 
-  class CreateUsers < ActiveRecord::Migration
+=== Configuration
 
-    def self.up
-      create_table :users, :force => true do |t|
-        t.string   :login
-        t.string   :email
-        t.string   :first_name
-        t.string   :last_name
-        t.string   :crypted_password
-        t.string   :password_salt
-        t.string   :persistence_token
-        t.string   :single_access_token
-        t.string   :perishable_token
-        t.integer  :login_count,         :null => false, :default => 0
-        t.integer  :failed_login_count,  :null => false, :default => 0
-        t.datetime :last_request_at                                   
-        t.datetime :last_login_at 
-        t.datetime :current_login_at                                  
-        t.string   :current_login_ip                                  
-        t.string   :last_login_ip
-        t.boolean  :terms_of_service,   :default => false, :null => false
-        t.string   :time_zone,          :default => "UTC"
-        t.datetime :disabled_at
-        t.datetime :activated_at
-        t.timestamps
-      end
+Create an initializer and add the following adjusting the settings to meet your specific needs:
 
-      add_index :users, :login
-      add_index :users, :email
-      add_index :users, :persistence_token
-      add_index :users, :perishable_token
-      add_index :users, :single_access_token
-      add_index :users, :last_request_at
+  MuckEngine.configure do |config|
+  
+    # Global application values.  These are used to display the app name, send emails, and configure where system emails go.
+    if Rails.env.production?
+      config.application_url = 'www.#{domain_name}'     # Url of the application in production
+    elsif Rails.env.staging?
+      config.application_url = 'www.#{domain_name}'     # Url of the application on staging
+    else
+      config.application_url = 'localhost:3000'         # Url of the application for test or development
     end
+  
+    config.application_name = 'Example App'       # Common name for your application.  i.e. My App, Billy Bob, etc
+    config.from_email = 'support@example.com'     # Emails will come from this address i.e. noreply@example.com, support@example.com, system@example.com, etc
+    config.from_email_name = 'Example App'        # This will show up as the name on emails.  i.e. support@example.com <Example>
+    config.support_email = 'support@example.com'  # Support email for your application.  This is used for contact us etc.
+    config.admin_email = 'admin@example.com'      # Admin email for your application
+    config.customer_service_number = '1-800-'     # Phone number if you have one (optional)
+  
+    # Email charset.  No need to change this unless you have a good reason to change the encoding.
+    config.mail_charset = 'utf-8'
 
-    def self.down
-      drop_table :users
-    end
+    # Email server configuration
+    # Sendgrid is easy: https://sendgrid.com/user/signup
+    config.email_server_address = "smtp.sendgrid.net"   # Email server address.  'smtp.sendgrid.net' works for sendgrid
+    config.email_user_name = Secrets.email_user_name    # Email server username
+    config.email_password = Secrets.email_password      # Email server password
+    config.base_domain = 'example.com'                  # Basedomain that emails will come from
+    
+    # ssl
+    config.enable_ssl = false # Enable ssl if you have an ssl certificate installed.  This will provide security between the client and server.
+  
+    # Google Analtyics Configuration.  This will enable Google Analytics on your site and will be used if your template includes:
+    #                                  <%= render :partial => 'layouts/global/google_analytics' %>
+    config.google_tracking_code = ""                    # Get a tracking code here: http://www.google.com/analytics/. The codes look like this: 'UA-9685000-0'
+    config.google_tracking_set_domain = "example.com"   # Base domain provided to Google Analytics. Useful if you are using subdomains but want all traffic 
+                                                # recorded into one account.
   end
 
+  MuckUsers.configure do |config|
+    config.automatically_activate = true                    # Automatically active a users account during registration. If true the user won't get a 
+                                                            # 'confirm account' email. If false then the user will need to confirm their account via an email.
+    config.automatically_login_after_account_create = true  # Automatically log the user in after they have setup their account. This should be false if you 
+                                                            # require them to activate their account.
+    config.send_welcome = true                              # Send out a welcome email after the user has signed up.
 
+    # if you use recaptcha you will need to also provide a public and private key available from http://recaptcha.net.
+    config.use_recaptcha = false      # This will turn on recaptcha during registration. This is an alternative to sending the 
+                                      # user a confirm email and can help reduce spam registrations.
+
+    config.require_access_code = false              # Only let a user sign up if they have an access code
+    config.let_users_delete_their_account = false   # Turn on/off ability for users to delete their own account. It is not recommended that you let 
+                                                    # users delete their own accounts since the delete can cascade through the system with unknown results.
+  end
+
+  
 == Usage
 
 There are a couple of routes that muck-users will look for:
 
 Route to the site home page:
 
-  map.root '', :controller => 'default', :action => 'index'
+  root :to => "default#index"
 
 Route to a public user page (this could also go to home etc. if needed)
-
-  map.public_user '/profiles/:id', :controller => 'profiles', :action => 'show'
+  match '/profiles/:id' => 'profiles#show', :as => :public_user
   
 This is the path that a user will be redirected to if they attempt to access another user's dashboard page.
 
 By default when a user logs out they are sent to the login page.  You can add a new route and change the behavior:
  
-  map.logout_complete '/login', :controller => 'user_session', :action => 'new'
+  match '/login' => 'user_session#new', :as => :logout_complete
 
-
-muck-users sends out emails that need to be able to generate links.  Be sure to set a value for application_url in global_config.yml
+muck-users sends out emails that need to be able to generate links.  Be sure to set a value for MuckEngine.configuration.application_url.
 
 === Helpers
 Muck users provides an autocomplete login search.  To enable this functionality create a text box with the class 'login-search' and add 
@@ -140,4 +150,4 @@ http//:localhost:3000/login
 http//:localhost:3000/signup
 
 
-Copyright (c) 2009 Tatemae, released under the MIT license
+Copyright (c) 2009-2010 Tatemae, released under the MIT license

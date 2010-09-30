@@ -1,5 +1,5 @@
 class Muck::AccessCodeRequestsController < ApplicationController
-  unloadable
+
   layout 'popup'
 
   ssl_required :new, :create

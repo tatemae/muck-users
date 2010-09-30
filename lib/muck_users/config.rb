@@ -20,18 +20,19 @@ module MuckUsers
     # if you use recaptcha you will need to also provide a public and private key available from http://recaptcha.net.
     attr_accessor :use_recaptcha      # This will turn on recaptcha during registration. This is an alternative to sending the 
                                       # user a confirm email and can help reduce spam registrations.
-    attr_accessor :recaptcha_pub_key  # key available from http://recaptcha.net
-    attr_accessor :recaptcha_priv_key
     
     attr_accessor :let_users_delete_their_account   # Turn on/off ability for users to delete their own account. It is not recommended that you let 
                                                     # users delete their own accounts since the delete can cascade through the system with unknown results.
 
+    attr_accessor :require_access_code # Require that the user have an access code to be able to sign up.
+    
     def initialize
       self.automatically_activate = true
       self.automatically_login_after_account_create = true
       self.send_welcome = true
       self.use_recaptcha = false
       self.let_users_delete_their_account = false
+      self.require_access_code = false
     end
     
   end

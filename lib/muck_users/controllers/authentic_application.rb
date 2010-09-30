@@ -141,7 +141,7 @@ module MuckUsers
       def permission_denied
         respond_to do |format|
           format.html do
-            domain_name = GlobalConfig.application_url
+            domain_name = MuckEngine.configuration.application_url
             raise t('muck.users.application_base_url_not_set') if domain_name.blank?
             http_referer = session[:refer_to]
             if http_referer.nil?
