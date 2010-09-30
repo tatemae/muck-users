@@ -136,7 +136,6 @@ class Muck::UsersController < ApplicationController
       respond_to do |format|
         format.html { render :partial => 'users/unavailable', :locals => { :message => result } }
         format.js { render :partial => 'users/unavailable', :locals => { :message => result } }
-        
       end
       return
     end
@@ -148,9 +147,6 @@ class Muck::UsersController < ApplicationController
         format.html { render :partial => 'users/unavailable', :locals => { :message => result } }
         format.js { render :partial => 'users/unavailable', :locals => { :message => result } }
       end
-      
-      #format.html { render :text => result }
-      #format.js { render :text => result }
     end
   end
 

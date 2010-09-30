@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 require 'user_mailer'
 
-class UserMailerTest < ActiveSupport::TestCase
+describe UserMailer do
 
   describe "deliver emails" do
 

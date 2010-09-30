@@ -1,8 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class Muck::PasswordResetsControllerTest < ActionController::TestCase
-
-  tests Muck::PasswordResetsController
+describe Muck::PasswordResetsController do
 
    describe "password reset controller" do
      before(:each) do
@@ -69,4 +67,5 @@ class Muck::PasswordResetsControllerTest < ActionController::TestCase
       it { should render_template :edit }
     end
   end
+  
 end

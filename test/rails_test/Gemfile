@@ -8,6 +8,9 @@ gem 'mysql'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem 'will_paginate', "~> 3.0.pre2"
 
+# TODO Remove this once the validation_reflection gem is released for Rails 3 and the version has been updated in muck-engine
+gem "validation_reflection", :git => "http://github.com/redinger/validation_reflection.git", :branch => "rails-3"
+
 gem "bcrypt-ruby", :require => "bcrypt"
 gem 'overlord'
 

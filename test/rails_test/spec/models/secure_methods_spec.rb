@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
-class SecureMethodsTest < ActiveSupport::TestCase
+describe "SecureMethods" do
 
   describe "check creator method" do
     before(:each) do
@@ -8,10 +8,10 @@ class SecureMethodsTest < ActiveSupport::TestCase
       @another_user = Factory(:user)
     end
     it "should return true if creators are equal" do
-      assert @user.send(:check_creator, @user)
+      @user.send(:check_creator, @user).should be_true
     end
     it "should return false if creators are different" do
-      assert_equal false, @another_user.send(:check_creator, @user)
+      @another_user.send(:check_creator, @user).should be_false
     end
   end
   describe "check user method" do
@@ -20,10 +20,10 @@ class SecureMethodsTest < ActiveSupport::TestCase
       @another_user = Factory(:user)
     end
     it "should return true if users are equal" do
-      assert @user.send(:check_user, @user)
+      @user.send(:check_user, @user).should be_true
     end
     it "should return false if users are different" do
-      assert_equal false, @another_user.send(:check_user, @user)
+      @another_user.send(:check_user, @user).should be_false
     end
   end
   describe "check sharer method" do
@@ -32,10 +32,10 @@ class SecureMethodsTest < ActiveSupport::TestCase
       @another_user = Factory(:user)
     end
     it "should return true if sharers are equal" do
-      assert @user.send(:check_sharer, @user)
+      @user.send(:check_sharer, @user).should be_true
     end
     it "should return false if sharers are different" do
-      assert_equal false, @another_user.send(:check_sharer, @user)
+      @another_user.send(:check_sharer, @user).should be_false
     end
   end
   describe "check method" do
@@ -44,12 +44,13 @@ class SecureMethodsTest < ActiveSupport::TestCase
       @admin = Factory(:user)
     end
     it "should  return false when user is nil" do
-      assert_equal false, @user.send(:check, nil, :user_id)
+      @user.send(:check, nil, :user_id).should be_false
     end
     it "should return true when user is different but an admin" do
       @admin.add_to_role('administrator')
       @admin.reload
-      assert @user.send(:check, @admin, :user_id)
+      @user.send(:check, @admin, :user_id).should be_true
     end
   end
+  
 end

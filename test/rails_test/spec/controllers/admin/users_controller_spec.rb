@@ -63,31 +63,31 @@ describe Admin::Muck::UsersController do
           end
           it { should respond_with :success }
           it { should render_template :index }
-          it { should render_text 'john' }
+          it { response.body.should include('john') }
         end
         describe 'search first name' do
           before(:each) do
-            post :search, :query => { :first_name => 'john' }
+            post :search, :query => 'john'
           end
           it { should respond_with :success }
           it { should render_template :index }
-          it { should render_text 'john' }
+          it { response.body.should include('john') }
         end
         describe 'search last name' do
           before(:each) do
-            post :search, :query => { :last_name => 'smith' }
+            post :search, :query => 'smith'
           end
           it { should respond_with :success }
           it { should render_template :index }
-          it { should render_text 'john' }
+          it { response.body.should include('john') }
         end
         describe 'search email' do
           before(:each) do
-            post :search, :query => { :email => 'john.smith@example.com' }
+            post :search, :query => 'john.smith@example.com'
           end
           it { should respond_with :success }
           it { should render_template :index }
-          it { should render_text 'john' }
+          it { response.body.should include('john') }
         end
       end
       describe 'js' do
@@ -100,27 +100,27 @@ describe Admin::Muck::UsersController do
         end
         describe 'search first name' do
           before(:each) do
-            post :search, :query => { :first_name => 'john' }, :format => 'js'
+            post :search, :query => 'john'
           end
           it { should respond_with :success }
           it { should render_template :index }
-          it { should render_text 'john' }
+          it { response.body.should include('john') }
         end
         describe 'search last name' do
           before(:each) do
-            post :search, :query => { :last_name => 'smith' }, :format => 'js'
+            post :search, :query => 'smith'
           end
           it { should respond_with :success }
           it { should render_template :index }
-          it { should render_text 'john' }
+          it { response.body.should include('john') }
         end
         describe 'search email' do
           before(:each) do
-            post :search, :query => { :email => 'john.smith@example.com' }, :format => 'js'
+            post :search, :query => 'john.smith@example.com', :format => 'js'
           end
           it { should respond_with :success }
           it { should render_template :index }
-          it { should render_text 'john' }
+          it { response.body.should include('john') }
         end
       end
     end
@@ -155,7 +155,7 @@ describe Admin::Muck::UsersController do
       end
       it { should respond_with :success }
       it "should not have errors" do
-        assigns(:user).errors.should be_nil
+        assigns(:user).errors.should be_empty
       end
     end
 

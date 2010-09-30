@@ -25,6 +25,7 @@ en:
       add_user_to_role: Add User to Role
       add_access_code_title: Add Access Code
       terms_and_service: By clicking 'Sign-up Now' you agree to comply with the %{tos_link_anchor}Terms and Conditions%{link_end}.
+      terms_and_service_tip: In order to register you must agree to the terms and conditions. You may review these policies before proceeding by clicking on the link.
       password_reset_link_sent: Instructions to reset your password have been emailed to you. Please check your email.
       deleting_user: deleting user...
       forgot_your_username: Forgot your username?

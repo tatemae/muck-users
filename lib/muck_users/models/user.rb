@@ -39,6 +39,7 @@ module MuckUsers
                        :failed_login_count, :last_request_at, :last_login_at, :current_login_at, :current_login_ip, :last_login_ip, 
                        :terms_of_service, :time_zone, :disabled_at, :activated_at, :created_at, :updated_at
       
+        validates_terms_of_service if MuckUsers.configuration.validate_terms_of_service
       end
 
       module ClassMethods

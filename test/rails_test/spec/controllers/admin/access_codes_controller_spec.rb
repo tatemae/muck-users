@@ -102,7 +102,7 @@ describe Admin::Muck::AccessCodesController do
           before(:each) do
             post :bulk_create, :access_code => @params.merge(:emails => '')
           end
-          it {should not_set_the_flash}
+          it { should_not set_the_flash }
           it { should respond_with :success }
           it { should render_template "admin/access_codes/bulk" }
           it "should set errors on access_code" do
@@ -152,7 +152,7 @@ describe Admin::Muck::AccessCodesController do
         end
         it { should respond_with :success }
         it "should not have errors" do
-          assigns(:access_code).errors.should be_nil
+          assigns(:access_code).errors.should be_empty
         end
       end
   

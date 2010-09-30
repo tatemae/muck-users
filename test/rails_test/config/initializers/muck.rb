@@ -48,6 +48,7 @@ MuckUsers.configure do |config|
                                     # user a confirm email and can help reduce spam registrations.
 
   config.require_access_code = false              # Only let a user sign up if they have an access code
+  config.validate_terms_of_service = true         # Require that the accept terms of service before signing up.
   config.let_users_delete_their_account = false   # Turn on/off ability for users to delete their own account. It is not recommended that you let 
                                                   # users delete their own accounts since the delete can cascade through the system with unknown results.
 end

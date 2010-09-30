@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Muck::UserSessionsController do
 
-  it {should filter_params :password}
+  it { should filter_param(:password) }
   
   before(:each) do
     @login = 'quentin'
@@ -22,7 +22,7 @@ describe Muck::UserSessionsController do
     end
     it "should create a user session" do
       assert user_session = UserSession.find
-      assert_equal @user, user_session.user        
+      @user.should == user_session.user        
     end
     it {should redirect_to(user_path(@user))}
   end
@@ -31,7 +31,7 @@ describe Muck::UserSessionsController do
       post :create, :user_session => { :login => @login, :password => 'bad password' }
     end
     it "should not create a user session" do
-      assert_nil UserSession.find
+      UserSession.find.should be_nil
     end
     it { should respond_with :success }
     it { should render_template :new }
@@ -48,7 +48,7 @@ describe Muck::UserSessionsController do
         delete :destroy
       end
       it "should logout by destroying the user session" do
-        assert_nil UserSession.find
+        UserSession.find.should be_nil
       end
       it {should redirect_to(logout_complete_path)}
     end

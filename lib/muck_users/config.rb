@@ -24,7 +24,8 @@ module MuckUsers
     attr_accessor :let_users_delete_their_account   # Turn on/off ability for users to delete their own account. It is not recommended that you let 
                                                     # users delete their own accounts since the delete can cascade through the system with unknown results.
 
-    attr_accessor :require_access_code # Require that the user have an access code to be able to sign up.
+    attr_accessor :require_access_code        # Require that the user have an access code to be able to sign up.
+    attr_accessor :validate_terms_of_service  # Require that the accept terms of service before signing up.
     
     def initialize
       self.automatically_activate = true
@@ -33,6 +34,7 @@ module MuckUsers
       self.use_recaptcha = false
       self.let_users_delete_their_account = false
       self.require_access_code = false
+      self.validate_terms_of_service = false
     end
     
   end

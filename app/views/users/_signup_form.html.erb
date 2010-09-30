@@ -2,11 +2,11 @@
 
 	<%= output_errors(t('muck.users.problem_creating_account'), {:class => 'help-box'}, user) %>
 	
-	<% if MuckUsers.configuration.require_access_code -%>
+	<% if true || MuckUsers.configuration.require_access_code -%>
     <%= f.text_field :access_code_code, { :label => translate('muck.users.access_code'), 
-                                        :extra_html => translate('muck.users.access_code_help', 
-                                                          :access_request_anchor => %Q{<a class="fancy-pop iframe" href="#{new_access_code_request_path}">},
-                                                          :access_request_anchor_end => "</a>") } -%>
+                                          :extra_html => translate('muck.users.access_code_help', 
+                                            :access_request_anchor => %Q{<a class="fancy-pop iframe" href="#{new_access_code_request_path}">},
+                                            :access_request_anchor_end => "</a>").html_safe } -%>
   <% end -%>
   
 	<%= f.text_field :login, { :label => t('muck.users.choose_member_name'), 
@@ -21,10 +21,17 @@
 	<%= f.password_field :password_confirmation, { :label => t('muck.users.confirm_password'),
                                                  :tip => t('muck.users.password_confirmation_help') } -%>
 	
+	<% if MuckUsers.configuration.validate_terms_of_service -%>
+    <div class="checklist">
+      <%= f.check_box :terms_of_service, { :label => t('muck.users.terms_and_service', :tos_link_anchor => '<a href="/terms_of_service">', :link_end => '</a>').html_safe,
+     																		   :tip => t('muck.users.terms_and_service_tip') } -%>
+    </div>
+  <% end -%>
+  
 	<% if MuckUsers.configuration.use_recaptcha -%>
-	<div class="recaptcha">
-		<%= recaptcha_tags %>
-	</div>
+  	<div class="recaptcha">
+  		<%= recaptcha_tags %>
+  	</div>
 	<% end -%>
 	
 	<div class="button form-row">

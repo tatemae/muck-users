@@ -46,7 +46,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   end
 
   def search
-    @users = User.where( params[:query] ).paginate(:page => @page, :per_page => @per_page )
+    @users = User.where("first_name LIKE ? OR last_name LIKE ? OR email LIKE ?", params[:query], params[:query], params[:query] ).paginate(:page => @page, :per_page => @per_page )
     respond_to do |format|
       format.html { render :template => 'admin/users/index' }
       format.js { render :partial => 'admin/users/table', :layout => false }
