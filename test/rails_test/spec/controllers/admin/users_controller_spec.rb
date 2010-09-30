@@ -7,6 +7,9 @@ describe Admin::Muck::UsersController do
   it { should require_login :inactive_emails, :get }
   it { should require_login :activate_all, :post }
   it { should require_login :search, :post }
+  it { should require_login :edit, :get }
+  it { should require_login :update, :post }
+  it { should require_login :destroy, :delete }
   
   describe "logged in not admin" do
     before(:each) do
@@ -14,7 +17,14 @@ describe Admin::Muck::UsersController do
       activate_authlogic
       login_as @user
     end
-    it {should require_role('admin', :index, :get)}
+    it { should require_role 'admin', :index, :get }
+    it { should require_role 'admin', :inactive, :get }
+    it { should require_role 'admin', :inactive_emails, :get }
+    it { should require_role 'admin', :activate_all, :post }
+    it { should require_role 'admin', :search, :post }
+    it { should require_role 'admin', :edit, :get }
+    it { should require_role 'admin', :update, :post }
+    it { should require_role 'admin', :destroy, :delete }
   end
   
   describe "logged in as admin" do

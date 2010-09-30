@@ -234,26 +234,102 @@ describe User do
     end
   end
 
-  describe "inactive users" do
-    before(:each) do
-      @user = Factory(:user, :activated_at => nil)
+  describe "activating/deactivating users" do
+    describe "inactive users" do
+      before(:each) do
+        @user = Factory(:user, :activated_at => nil)
+      end
+      it "should have at least one inactive user" do
+        User.inactive_count.should > 0
+      end
+      it "should be able to activate all users" do
+        User.activate_all.should be_true
+        User.inactive_count.should == 0
+      end
     end
-    it "should have at least one inactive user" do
-      User.inactive_count.should > 0
+
+    describe "activate!" do
+      before(:each) do
+        @user_inactive = Factory(:user, :activated_at => nil )
+      end
+      it "should activate the user" do
+        @user_inactive.should_receive(:update_attribute)
+        @user_inactive.activate!
+        @user_inactive.reload
+        @user_inactive.should be_active
+      end
     end
-    it "should be able to activate all users" do
-      User.activate_all.should be_true
-      User.inactive_count.should == 0
+
+    describe "deactivate!" do
+      before(:each) do
+        @user = Factory(:user)
+      end
+      it "should activate the user" do
+        @user.should_receive(:update_attribute)
+        @user.deactivate!
+        @user.reload
+        @user.should_not be_active
+      end
     end
   end
-
-  describe "find and activate an inactive user" do
-    before(:each) do
-      @user_inactive = Factory(:user, :activated_at => nil )
-      @user_active = Factory(:user )
+  
+  describe "emails" do
+    before(:all) do
+      @email = mock(:email, :deliver)
+    end
+    describe "deliver_welcome_email" do
+      before(:each) do
+        @user = Factory(:user)
+        @send_welcome = MuckUsers.configuration.send_welcome
+        MuckUsers.configuration.send_welcome = true
+      end
+      after(:each) do
+        MuckUsers.configuration.send_welcome = @send_welcome
+      end
+      it "should deliver activation instructions" do
+        UserMailer.should_receive(:welcome_notification).with(@user).and_return(@email)
+        @user.deliver_welcome_email
+      end
+    end
+  
+    describe "deliver_activation_confirmation" do
+      before(:each) do
+        @user = Factory(:user)
+      end
+      it "should deliver activation instructions" do
+        @user.should_receive(:reset_perishable_token!)
+        UserMailer.should_receive(:activation_confirmation).with(@user).and_return(@email)
+        @user.deliver_activation_confirmation!
+      end
+    end
+  
+    describe "deliver_activation_instructions" do
+      before(:each) do
+        @user = Factory(:user)
+      end
+      it "should deliver activation instructions" do
+        @user.should_receive(:reset_perishable_token!)
+        UserMailer.should_receive(:activation_instructions).with(@user).and_return(@email)
+        @user.deliver_activation_instructions!
+      end
+    end
+  
+    describe "deliver_password_reset_instructions" do
+      before(:each) do
+        @user_inactive = Factory(:user, :activated_at => nil)
+        @user_active = Factory(:user)
+      end
+      it "should send password reset instructions" do
+        UserMailer.should_receive(:password_reset_instructions).and_return(@email)
+        @user_active.deliver_password_reset_instructions!
+      end
+      it "should send not active instructions" do
+        UserMailer.should_receive(:password_not_active_instructions).and_return(@email)
+        @user_inactive.deliver_password_reset_instructions!
+      end
     end
   end
-
+  
   describe "user exists" do
     before(:each) do
       @user = Factory(:user, :login => 'atestguytoo', :email => 'atestguytoo@example.com')
