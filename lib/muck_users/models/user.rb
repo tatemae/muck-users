@@ -1,6 +1,7 @@
+# include MuckUsers::Models::MuckUser
 module MuckUsers
   module Models
-    module User
+    module MuckUser
       extend ActiveSupport::Concern
       
       included do

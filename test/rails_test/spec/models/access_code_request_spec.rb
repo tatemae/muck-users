@@ -6,7 +6,7 @@ describe AccessCodeRequest do
     @access_code_request = Factory(:access_code_request)
   end
   
-  subject { @access_code_request }
+  
   
   it { should validate_presence_of :email }
   it { should validate_uniqueness_of :email }

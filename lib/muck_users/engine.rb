@@ -13,7 +13,6 @@ module MuckUsers
       app.config.filter_parameters << :password_confirmation
     end   
 
-    #initializer 'muck_users.add_admin_ui_links', :after => "i18n.callbacks" do
     initializer 'muck_users.add_admin_ui_links', :after => 'muck_engine.add_admin_ui_links' do
       # Add users to the dashboard
       MuckEngine.configuration.add_muck_dashboard_item('admin/users/dashboard_widget')
@@ -41,12 +40,6 @@ module MuckUsers
       ActiveSupport.on_load(:active_record) do
         include MuckUsers::SecureMethods
         include MuckUsers::Exceptions
-      end
-    end
-   
-    initializer 'muck_engine.i18n' do
-      ActiveSupport.on_load(:i18n) do
-        I18n.load_path += Dir[ File.join(File.dirname(__FILE__), '..', '..', 'rails_i18n', '*.{rb,yml}') ]
       end
     end
     

@@ -16,7 +16,7 @@ GIT
 PATH
   remote: /Users/jbasdf/projects/muck-engine
   specs:
-    muck-engine (3.0.0)
+    muck-engine (3.0.1)
       overlord
       validation_reflection (>= 1.0.0.rc.1)
       will_paginate

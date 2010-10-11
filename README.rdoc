@@ -15,7 +15,7 @@ secrets.yml file and then add the following to environment.rb right above Rails:
 
   require 'ostruct'
   require 'yaml'
-  ::Secrets = OpenStruct.new(YAML.load_file("\#{RAILS_ROOT}/config/secrets.yml")[RAILS_ENV])
+  ::Secrets = OpenStruct.new(YAML.load_file(File.expand_path('../secrets.yml', __FILE__))[Rails.env.to_sym])
 
 Omit secrets.yml from your version control system and use it to keep sensitive data like email server credentials
 
@@ -142,7 +142,7 @@ After installing the engine just create a user model thus:
 
   class User < ActiveRecord::Base
     acts_as_authentic
-    include MuckUsers::Models::User
+    include MuckUsers::Models::MuckUser
   end
 
 Then you will be able to go to:

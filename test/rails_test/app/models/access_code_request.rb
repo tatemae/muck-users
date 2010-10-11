@@ -1,3 +1,3 @@
 class AccessCodeRequest < ActiveRecord::Base
-  include MuckUsers::Models::AccessCodeRequest
+  include MuckUsers::Models::MuckAccessCodeRequest
 end

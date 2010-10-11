@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-09-30}
+  s.date = %q{2010-10-05}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -1100,7 +1100,6 @@ Gem::Specification.new do |s|
      "test/rails_test/public/stylesheets/styles.css",
      "test/rails_test/public/stylesheets/themes/blue/styles.css",
      "test/rails_test/public/stylesheets/themes/red/styles.css",
-     "test/rails_test/script/rails",
      "test/rails_test/spec/controllers/access_code_requests_controller_spec.rb",
      "test/rails_test/spec/controllers/activations_controller_spec.rb",
      "test/rails_test/spec/controllers/admin/access_codes_controller_spec.rb",
@@ -1115,7 +1114,6 @@ Gem::Specification.new do |s|
      "test/rails_test/spec/models/permission_spec.rb",
      "test/rails_test/spec/models/role_spec.rb",
      "test/rails_test/spec/models/secure_methods_spec.rb",
-     "test/rails_test/spec/models/user_mailer_spec.rb",
      "test/rails_test/spec/models/user_spec.rb",
      "test/rails_test/spec/spec_helper.rb"
   ]
@@ -1171,12 +1169,12 @@ Gem::Specification.new do |s|
      "test/rails_test/spec/controllers/user_sessions_controller_spec.rb",
      "test/rails_test/spec/controllers/username_request_controller_spec.rb",
      "test/rails_test/spec/controllers/users_controller_spec.rb",
+     "test/rails_test/spec/mailers/user_mailer_spec.rb",
      "test/rails_test/spec/models/access_code_request_spec.rb",
      "test/rails_test/spec/models/access_code_spec.rb",
      "test/rails_test/spec/models/permission_spec.rb",
      "test/rails_test/spec/models/role_spec.rb",
      "test/rails_test/spec/models/secure_methods_spec.rb",
-     "test/rails_test/spec/models/user_mailer_spec.rb",
      "test/rails_test/spec/models/user_spec.rb",
      "test/rails_test/spec/spec_helper.rb"
   ]

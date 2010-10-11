@@ -1,6 +1,7 @@
+# include MuckUsers::Models::MuckAccessCode
 module MuckUsers
   module Models
-    module AccessCode
+    module MuckAccessCode
       extend ActiveSupport::Concern
     
       included do
