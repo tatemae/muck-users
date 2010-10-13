@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-10-05}
+  s.date = %q{2010-10-12}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -1109,6 +1109,7 @@ Gem::Specification.new do |s|
      "test/rails_test/spec/controllers/user_sessions_controller_spec.rb",
      "test/rails_test/spec/controllers/username_request_controller_spec.rb",
      "test/rails_test/spec/controllers/users_controller_spec.rb",
+     "test/rails_test/spec/mailers/user_mailer_spec.rb",
      "test/rails_test/spec/models/access_code_request_spec.rb",
      "test/rails_test/spec/models/access_code_spec.rb",
      "test/rails_test/spec/models/permission_spec.rb",
@@ -1185,20 +1186,17 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<authlogic>, [">= 0"])
-      s.add_runtime_dependency(%q<searchlogic>, [">= 0"])
       s.add_runtime_dependency(%q<bcrypt-ruby>, [">= 0"])
       s.add_runtime_dependency(%q<muck-engine>, [">= 0"])
       s.add_runtime_dependency(%q<friendly_id>, [">= 0"])
     else
       s.add_dependency(%q<authlogic>, [">= 0"])
-      s.add_dependency(%q<searchlogic>, [">= 0"])
       s.add_dependency(%q<bcrypt-ruby>, [">= 0"])
       s.add_dependency(%q<muck-engine>, [">= 0"])
       s.add_dependency(%q<friendly_id>, [">= 0"])
     end
   else
     s.add_dependency(%q<authlogic>, [">= 0"])
-    s.add_dependency(%q<searchlogic>, [">= 0"])
     s.add_dependency(%q<bcrypt-ruby>, [">= 0"])
     s.add_dependency(%q<muck-engine>, [">= 0"])
     s.add_dependency(%q<friendly_id>, [">= 0"])

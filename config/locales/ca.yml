@@ -89,7 +89,7 @@ ca:
       confirm_delete_account: "Esteu segur que voleu eliminar el seu compte? \\ NNo es pot desfer."
       confirm_password: "Confirmar contrasenya"
       confirm_select_new_password: "Confirmar canvi de contrasenya"
-      could_not_find_reset_code: "No s&#39;ha trobat un codi per restablir contrasenya. Si us plau, intenti restablir la contrasenya de nou."
+      could_not_find_reset_code: "No s&#39;ha pogut trobar un codi per restablir contrasenya. Si us plau, intenti restablir la contrasenya de nou."
       could_not_find_user_with_email: "No s&#39;ha trobat un usuari amb aquesta adreça de correu electrònic."
       current_password: "Contrasenya actual"
       delete: Eliminar
