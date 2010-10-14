@@ -8,8 +8,8 @@ gem 'mysql'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem "bcrypt-ruby", :require => "bcrypt"
 
-gem 'muck-engine', :require => 'muck_engine', :path => "~/projects/muck-engine"
-gem 'muck-users', :require => 'muck_users', :path => '../../'
+gem 'muck-engine', :path => "~/projects/muck-engine"
+gem 'muck-users', :path => '../../'
 
 if RUBY_VERSION < '1.9'
   gem "ruby-debug"

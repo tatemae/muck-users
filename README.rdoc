@@ -2,8 +2,8 @@
 
 == Installation
 
-The muck users engine is part of the muck framework and relies upon the muck_engine as well as authlogic.
-Both gems should be installed automatically when you install the muck_users engine.
+The muck users engine is part of the muck framework and relies upon the muck-engine as well as authlogic.
+Both gems should be installed automatically when you install the muck-users engine.
 
 Make sure that your 'Gemfile' contains the following:
 
@@ -15,7 +15,7 @@ secrets.yml file and then add the following to environment.rb right above Rails:
 
   require 'ostruct'
   require 'yaml'
-  ::Secrets = OpenStruct.new(YAML.load_file(File.expand_path('../secrets.yml', __FILE__))[Rails.env.to_sym])
+  ::Secrets = OpenStruct.new(YAML.load_file(File.expand_path('../secrets.yml', __FILE__))[Rails.env])
 
 Omit secrets.yml from your version control system and use it to keep sensitive data like email server credentials
 
