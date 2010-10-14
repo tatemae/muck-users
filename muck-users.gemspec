@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2010-10-12}
+  s.date = %q{2010-10-13}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -450,17 +450,17 @@ Gem::Specification.new do |s|
      "db/migrate/20090327231918_create_users.rb",
      "db/migrate/20100123035450_create_access_codes.rb",
      "db/migrate/20100123233654_create_access_code_requests.rb",
-     "lib/muck_users.rb",
-     "lib/muck_users/config.rb",
-     "lib/muck_users/controllers/authentic_application.rb",
-     "lib/muck_users/engine.rb",
-     "lib/muck_users/exceptions.rb",
-     "lib/muck_users/form_builder.rb",
-     "lib/muck_users/mailers/user_mailer.rb",
-     "lib/muck_users/models/access_code.rb",
-     "lib/muck_users/models/access_code_request.rb",
-     "lib/muck_users/models/user.rb",
-     "lib/muck_users/secure_methods.rb",
+     "lib/muck-users.rb",
+     "lib/muck-users/config.rb",
+     "lib/muck-users/controllers/authentic_application.rb",
+     "lib/muck-users/engine.rb",
+     "lib/muck-users/exceptions.rb",
+     "lib/muck-users/form_builder.rb",
+     "lib/muck-users/mailers/user_mailer.rb",
+     "lib/muck-users/models/access_code.rb",
+     "lib/muck-users/models/access_code_request.rb",
+     "lib/muck-users/models/user.rb",
+     "lib/muck-users/secure_methods.rb",
      "lib/tasks/muck_users.rake",
      "muck-users.gemspec",
      "public/images/admin/roles.gif",
@@ -1116,7 +1116,8 @@ Gem::Specification.new do |s|
      "test/rails_test/spec/models/role_spec.rb",
      "test/rails_test/spec/models/secure_methods_spec.rb",
      "test/rails_test/spec/models/user_spec.rb",
-     "test/rails_test/spec/spec_helper.rb"
+     "test/rails_test/spec/spec_helper.rb",
+     "test/rails_test/test/fixtures/rails.png"
   ]
   s.homepage = %q{http://github.com/jbasdf/muck_users}
   s.rdoc_options = ["--charset=UTF-8"]
