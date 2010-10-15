@@ -1,3 +1,3 @@
 class UserMailer < ActionMailer::Base
-  include MuckUsers::Mailers::UserMailer
+  include MuckUsers::Mailers::MuckUserMailer
 end

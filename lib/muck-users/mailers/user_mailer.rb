@@ -1,6 +1,7 @@
+# include MuckUsers::Mailers::MuckUserMailer
 module MuckUsers
   module Mailers
-    module UserMailer
+    module MuckUserMailer
 
       extend ActiveSupport::Concern
       
