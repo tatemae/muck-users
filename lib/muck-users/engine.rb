@@ -43,5 +43,9 @@ module MuckUsers
       end
     end
     
+    initializer 'muck-users.form' do
+      MuckEngine::FormBuilder.send :include, MuckUsers::FormBuilder
+    end
+    
   end
 end

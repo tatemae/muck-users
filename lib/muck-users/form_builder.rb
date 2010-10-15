@@ -8,5 +8,3 @@ module MuckUsers
   
   end
 end
-    
-MuckEngine::FormBuilder.send :include, MuckUsers::FormBuilder
