@@ -274,8 +274,8 @@ describe User do
   end
   
   describe "emails" do
-    before(:all) do
-      @email = mock(:email, :deliver)
+    before(:each) do
+      @email = RSpec::Mocks::Mock.new('Email')
     end
     describe "deliver_welcome_email" do
       before(:each) do
@@ -287,6 +287,7 @@ describe User do
         MuckUsers.configuration.send_welcome = @send_welcome
       end
       it "should deliver activation instructions" do
+        @email.should_receive(:deliver)
         UserMailer.should_receive(:welcome_notification).with(@user).and_return(@email)
         @user.deliver_welcome_email
       end
@@ -298,6 +299,7 @@ describe User do
       end
       it "should deliver activation instructions" do
         @user.should_receive(:reset_perishable_token!)
+        @email.should_receive(:deliver)
         UserMailer.should_receive(:activation_confirmation).with(@user).and_return(@email)
         @user.deliver_activation_confirmation!
       end
@@ -309,6 +311,7 @@ describe User do
       end
       it "should deliver activation instructions" do
         @user.should_receive(:reset_perishable_token!)
+        @email.should_receive(:deliver)
         UserMailer.should_receive(:activation_instructions).with(@user).and_return(@email)
         @user.deliver_activation_instructions!
       end
@@ -321,10 +324,12 @@ describe User do
       end
       it "should send password reset instructions" do
         UserMailer.should_receive(:password_reset_instructions).and_return(@email)
+        @email.should_receive(:deliver)
         @user_active.deliver_password_reset_instructions!
       end
       it "should send not active instructions" do
         UserMailer.should_receive(:password_not_active_instructions).and_return(@email)
+        @email.should_receive(:deliver)
         @user_inactive.deliver_password_reset_instructions!
       end
     end

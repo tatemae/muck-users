@@ -9,14 +9,14 @@ gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => '
 gem "bcrypt-ruby", :require => "bcrypt"
 
 gem 'muck-engine', :path => "~/projects/muck-engine"
-gem 'muck-users', :path => '../../'
+gem 'muck-users', :path => "~/projects/muck-users"
 
 if RUBY_VERSION < '1.9'
   gem "ruby-debug"
 end
 
 group :test, :development do
-  gem "rspec-rails", ">=2.0.0.beta.22"
+  gem "rspec-rails", ">=2.0.0"
   gem "cucumber-rails"
 end
 
@@ -28,7 +28,7 @@ group :test do
   gem "factory_girl"
   gem "cucumber"
   gem "rcov"
-  gem "rspec", ">=2.0.0.beta.22"
+  gem "rspec", ">=2.0.0"
   gem "database_cleaner"
   gem "spork"
   gem "launchy"
