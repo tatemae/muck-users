@@ -17,7 +17,7 @@ PATH
 PATH
   remote: /Users/jbasdf/projects/muck-users
   specs:
-    muck-users (3.0.0)
+    muck-users (3.0.2)
       authlogic
       bcrypt-ruby
       friendly_id

@@ -105,6 +105,11 @@ module MuckUsers
         UserMailer.username_request(self).deliver
       end
       
+      # Build a random password
+      def generate_password
+        self.password = Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{self.email}--#{self.id}")
+      end
+      
       # Since password reset doesn't need to change openid_identifier,
       # we save without block as usual.
       def reset_password!(user)
