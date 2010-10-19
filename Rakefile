@@ -30,7 +30,7 @@ begin
     gem.rubyforge_project = "muck-users"
     gem.add_dependency "authlogic"
     gem.add_dependency "bcrypt-ruby"
-    gem.add_dependency "muck-engine"
+    gem.add_dependency "muck-engine", ">=3.0.3"
     gem.add_dependency "friendly_id"
   end
   Jeweler::RubyforgeTasks.new do |rubyforge|
