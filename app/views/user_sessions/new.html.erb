@@ -1,5 +1,5 @@
 <div id="sign_in" class="common-form">
-  <%= muck_form_for @user_session, :url => user_session_path, :html => { :id => 'sign_in_form', :name => 'sign_in_form' } do |f| -%>
+  <%= muck_form_for :user_session, :url => user_session_path, :html => { :id => 'sign_in_form', :name => 'sign_in_form' } do |f| -%>
     <h1><%= I18n.t('muck.users.login_title') %></h1>
     <%= output_errors(t('muck.users.login_fail'), {:class => 'help-box'}) %>
 	  <%= f.text_field :login, { :label => I18n.t('muck.users.username'), :class => 'login', :hide_required => true, :hide_control_error => true } -%>
