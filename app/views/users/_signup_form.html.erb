@@ -10,12 +10,12 @@
   <% end -%>
   
 	<%= f.text_field :login, { :label => t('muck.users.choose_member_name'), 
-	                           :extra_html => '', 
+	                           :extra_html => '<span id="username-availibility"></span>', 
 	                           :tip => t('muck.users.username_help'),
 	                           :required_label => t('muck.users.username') } -%>
 	<%= f.text_field :email, { :label => t('muck.users.email_address'),
 	                           :tip => t('muck.users.email_help'),
-	                           :extra_html => '' } -%>
+	                           :extra_html => '<span id="email-availibility"></span>' } -%>
 	<%= f.password_field :password, { :label => t('muck.users.password'),
 	                                  :tip => t('muck.users.password_help')} -%>
 	<%= f.password_field :password_confirmation, { :label => t('muck.users.confirm_password'),
