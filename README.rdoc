@@ -119,9 +119,9 @@ Muck users provides an autocomplete login search.  To enable this functionality 
 the following code to include the needed javascript and css:
 
   <% content_for :head do -%>
-  <%= javascript_include_tag 'jquery/jquery.autocomplete.min' %>
+  <%= javascript_include_tag 'jquery/jquery.autocomplete.min.js' %>
   <%= javascript_include_tag 'muck-users' %>
-  <%= stylesheet_link_tag 'jquery/jquery.autocomplete' %>
+  <%= stylesheet_link_tag 'jquery/jquery.autocomplete.js' %>
   <% end -%>
 
 If you override the users controller you will also need to include login_search in your routes:
