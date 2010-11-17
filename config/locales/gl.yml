@@ -37,6 +37,8 @@ gl:
       access_code_uses: Usos
       access_codes: "Códigos de acceso"
       access_denied: "Non ten permiso para acceder á páxina solicitada."
+      access_request_email: E-mail
+      access_request_name: Nome
       access_required_warning: "Entrar ao sitio está restrinxida. Precisa un código de acceso válido para rexistrarte."
       account_activated: "A súa conta foi activada! Agora pode acceder."
       account_not_activated: "Súa conta %{application_name} aínda non foi activado."

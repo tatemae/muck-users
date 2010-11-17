@@ -37,6 +37,8 @@ sr:
       access_code_uses: Користи
       access_codes: "Приступних кодова који су"
       access_denied: "Немате дозволу да приступите тражене странице."
+      access_request_email: Е-маил
+      access_request_name: Име
       access_required_warning: "Сајт је тренутно ограничен приступ. Потребан вам је важећи приступни код да бисте се пријавили."
       account_activated: "Ваш налог је активиран! Сада можете приступити сајту."
       account_not_activated: "Ваш %{application_name} налог још није активиран."

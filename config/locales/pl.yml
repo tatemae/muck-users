@@ -37,6 +37,8 @@ pl:
       access_code_uses: Używa
       access_codes: "Kody dostępu"
       access_denied: "Nie masz dostępu do żądanej strony."
+      access_request_email: E-mail
+      access_request_name: Nazwa
       access_required_warning: "Dostęp do strony jest obecnie ograniczony. Musisz kodu dostępu, aby się zarejestrować."
       account_activated: "Twoje konto zostało aktywowane! Możesz teraz zalogować."
       account_not_activated: "Twoje konto %{application_name} nie zostało jeszcze aktywowane."

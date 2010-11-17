@@ -37,6 +37,8 @@ th:
       access_code_uses: การใช้ประโยชน์
       access_codes: รหัสการเข้าใช้
       access_denied: คุณไม่ได้รับอนุญาตให้เข้าถึงหน้าเว็บที่ขอ
+      access_request_email: Email
+      access_request_name: ชื่อ
       access_required_warning: "เข้าไปในเว็บจะถูก จำกัด ในขณะนี้ คุณต้องมีรหัสการเข้าใช้งานที่ถูกต้องในการสมัคร"
       account_activated: "บัญชีของคุณถูกเปิดใช้งาน! ขณะนี้คุณสามารถเข้าสู่ระบบ"
       account_not_activated: "%{application_name} บัญชีของคุณยังไม่ได้เปิดใช้งาน"

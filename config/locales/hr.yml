@@ -37,6 +37,8 @@ hr:
       access_code_uses: Koristi
       access_codes: "Pristupni kodovi"
       access_denied: "Nemate ovlasti za pristup traženoj stranici."
+      access_request_email: E-mail
+      access_request_name: Ime
       access_required_warning: "Pristupa stranicama je trenutno ograničena. Trebate valjani pristup kod da se prijavite."
       account_activated: "Vaš račun je aktiviran! Sada se možete prijaviti."
       account_not_activated: "Vaš %{application_name} račun još nije aktiviran."

@@ -7,21 +7,21 @@ GIT
       activesupport
 
 PATH
-  remote: ~/projects/muck-engine
-  specs:
-    muck-engine (3.0.8)
-      overlord
-      validation_reflection
-      will_paginate (~> 3.0.beta)
-
-PATH
-  remote: ~/projects/muck-users
+  remote: ../
   specs:
     muck-users (3.1.0)
       authlogic
       bcrypt-ruby
       friendly_id
       muck-engine (>= 3.0.3)
+
+PATH
+  remote: ~/projects/muck-engine
+  specs:
+    muck-engine (3.0.8)
+      overlord
+      validation_reflection
+      will_paginate (~> 3.0.beta)
 
 GEM
   remote: http://rubygems.org/

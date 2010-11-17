@@ -37,6 +37,8 @@ ar:
       access_code_uses: يستخدم
       access_codes: "رموز الوصول"
       access_denied: "ليس لديك إذن للوصول إلى الصفحة المطلوبة."
+      access_request_email: "البريد الإلكتروني"
+      access_request_name: اسم
       access_required_warning: "يقتصر الوصول إلى الموقع حاليا. كنت في حاجة الى رمز وصول صالح إلى قم بالتسجيل."
       account_activated: "لقد تم تنشيط حسابك! يمكنك تسجيل الدخول الآن."
       account_not_activated: "لم لديك حساب بعد %{application_name} تم تفعيلها."

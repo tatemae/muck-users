@@ -37,6 +37,8 @@ ca:
       access_code_uses: Usos
       access_codes: "Codis d&#39;Accés"
       access_denied: "Vostè no té permís per accedir a la pàgina sol licitada."
+      access_request_email: "Correu electrònic"
+      access_request_name: Nom
       access_required_warning: "L&#39;accés al lloc està restringit actualment. Es necessita un codi d&#39;accés vàlid per a inscriure&#39;s."
       account_activated: "El seu compte ha estat activat! Ara pot entrar."
       account_not_activated: "El vostre compte %{application_name} encara no ha estat activat."
@@ -89,7 +91,7 @@ ca:
       confirm_delete_account: "Esteu segur que voleu eliminar el seu compte? \\ NNo es pot desfer."
       confirm_password: "Confirmar contrasenya"
       confirm_select_new_password: "Confirmar canvi de contrasenya"
-      could_not_find_reset_code: "No s&#39;ha pogut trobar un codi per restablir contrasenya. Si us plau, intenti restablir la contrasenya de nou."
+      could_not_find_reset_code: "No s&#39;ha trobat un codi per restablir contrasenya. Si us plau, intenti restablir la contrasenya de nou."
       could_not_find_user_with_email: "No s&#39;ha trobat un usuari amb aquesta adreça de correu electrònic."
       current_password: "Contrasenya actual"
       delete: Eliminar

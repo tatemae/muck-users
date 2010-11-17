@@ -37,6 +37,8 @@ vi:
       access_code_uses: "Sử dụng"
       access_codes: "Mã truy cập"
       access_denied: "Bạn không có quyền truy cập trang được yêu cầu."
+      access_request_email: Email
+      access_request_name: Tên
       access_required_warning: "truy cập trang web hiện tại đang bị hạn chế. Bạn cần một mã truy cập hợp lệ để đăng ký."
       account_activated: "Tài khoản của bạn đã được kích hoạt! Bạn có thể đăng nhập."
       account_not_activated: "%{application_name} Tài khoản của bạn chưa được kích hoạt."
@@ -207,7 +209,7 @@ vi:
       username_help: "Bạn có thể sử dụng từ 6 đến 20 ký tự. Nếu tên bạn muốn không có thử thêm nhiều con số hay dấu chấm câu."
       username_not_available: "Tên người dùng không có sẵn"
       username_recover_prompt: "Hãy cung cấp email mà bạn sử dụng khi bạn tạo tài khoản, tên người dùng của bạn sẽ được gửi qua email cho bạn."
-      username_sent: "tên người dùng của bạn đã được gửi qua email cho bạn. Hãy kiểm tra email của bạn."
+      username_sent: "tên người dùng của bạn đã được gửi qua email cho bạn. Xin kiểm tra lại Email của bạn."
       users_admin: "Người dùng"
       users_in_role: "Người sử dụng trong vai trò: %{role}"
       validation_are_required: "được yêu cầu."

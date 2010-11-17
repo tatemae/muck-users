@@ -37,6 +37,8 @@ es:
       access_code_uses: Usos
       access_codes: "Códigos de Acceso"
       access_denied: "Usted no tiene permiso para acceder a la página solicitada."
+      access_request_email: "Correo electrónico"
+      access_request_name: Nombre
       access_required_warning: "El acceso al sitio está restringido actualmente. Se necesita un código de acceso válido para inscribirse."
       account_activated: "Su cuenta ha sido activada! Ahora puede iniciar la sesión."
       account_not_activated: "Su cuenta %{application_name} aún no ha sido activada."

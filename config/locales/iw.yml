@@ -37,6 +37,8 @@ iw:
       access_code_uses: משתמש
       access_codes: "קודי גישה"
       access_denied: "אין לך הרשאה לגשת אל הדף המבוקש."
+      access_request_email: דוא&quot;ל
+      access_request_name: שם
       access_required_warning: "הגישה לאתר מוגבלת כרגע. אתה צריך קוד גישה חוקית כדי להירשם."
       account_activated: "החשבון שלך הופעל! עכשיו אתה יכול להתחבר."
       account_not_activated: "החשבון %{application_name} שלך עדיין לא הופעל."

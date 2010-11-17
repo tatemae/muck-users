@@ -37,6 +37,8 @@ sv:
       access_code_uses: Använder
       access_codes: Koder
       access_denied: "Du har inte behörighet att komma åt den begärda sidan."
+      access_request_email: E-post
+      access_request_name: Namn
       access_required_warning: "Tillgång till webbplatsen är för närvarande begränsad. Du behöver en giltig kod att registrera dig."
       account_activated: "Ditt konto har aktiverats! Du kan nu logga in."
       account_not_activated: "Ditt %{application_name} konto har ännu inte aktiverats."

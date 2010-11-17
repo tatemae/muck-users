@@ -38,6 +38,8 @@
       access_code_uses: Bruker
       access_codes: Tilgangskoder
       access_denied: "Du har ikke tilgang til den forespurte siden."
+      access_request_email: E-post
+      access_request_name: Navn
       access_required_warning: "Site se er for øyeblikket begrenset. Du trenger en gyldig brukerkode å registrere deg."
       account_activated: "Din konto har blitt aktivert! Du kan nå logge inn."
       account_not_activated: "Din %{application_name} konto ennå ikke har blitt aktivert."

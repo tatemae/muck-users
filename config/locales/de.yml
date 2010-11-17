@@ -37,6 +37,8 @@ de:
       access_code_uses: Verwendet
       access_codes: Zugangscodes
       access_denied: "Sie haben keine Berechtigung, die angeforderte Seite zuzugreifen."
+      access_request_email: E-Mail
+      access_request_name: Name
       access_required_warning: "Zugang zur Website ist derzeit eingeschränkt. Sie benötigen einen gültigen Zugangscode um sich anzumelden."
       account_activated: "Ihr Konto wurde aktiviert! Sie können sich jetzt anmelden."
       account_not_activated: "Ihre %{application_name} Konto wurde noch nicht aktiviert."

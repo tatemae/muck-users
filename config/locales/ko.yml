@@ -37,6 +37,8 @@ ko:
       access_code_uses: 용도
       access_codes: "액세스 코드"
       access_denied: "당신은 요청한 페이지에 액세스할 수있는 권한이 없습니다."
+      access_request_email: "이메일 보내기"
+      access_request_name: 이름
       access_required_warning: "사이트 액세스가 현재 제한됩니다. 당신은 가입 올바른 접근 암호가 필요합니다."
       account_activated: "귀하의 계정이 활성화되었습니다! 이제 로그인하실 수 있습니다."
       account_not_activated: "귀하의 %{application_name} 계정이 아직 활성화되지 않았습니다."

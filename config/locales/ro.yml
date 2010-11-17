@@ -37,6 +37,8 @@ ro:
       access_code_uses: Utilizeaza
       access_codes: "Coduri de acces"
       access_denied: "Nu aveţi permisiunea de a accesa pagina solicitată."
+      access_request_email: E-mail
+      access_request_name: Numele
       access_required_warning: "Site-ul este în prezent de acces restricţionat. Aveţi nevoie de un cod de acces valabil pentru a vă înscrie."
       account_activated: "Contul dvs. a fost activat! Acum va puteti autentifica."
       account_not_activated: "Dvs. %{application_name} cont nu a fost încă activat."

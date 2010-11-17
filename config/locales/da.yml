@@ -37,6 +37,8 @@ da:
       access_code_uses: Bruger
       access_codes: Adgangskoder
       access_denied: "Du har ikke tilladelse til at se den ønskede side."
+      access_request_email: E-mail
+      access_request_name: Navn
       access_required_warning: "Site adgang er i øjeblikket begrænset. Du skal have en gyldig adgangskode for at tilmelde dig."
       account_activated: "Din konto er blevet aktiveret! Du kan nu logge ind."
       account_not_activated: "Din %{application_name} konto er endnu ikke blevet aktiveret."

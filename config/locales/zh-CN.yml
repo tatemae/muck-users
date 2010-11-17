@@ -37,6 +37,8 @@ zh-CN:
       access_code_uses: 用途
       access_codes: 访问代码
       access_denied: 您没有权限访问请求的页面。
+      access_request_email: 电邮
+      access_request_name: 名称
       access_required_warning: 目前网站的访问限制。你需要一个有效的接入码进行注册。
       account_activated: 您的帐户已激活！现在，您可以登录。
       account_not_activated: "您%{application_name}帐户尚未被激活。"

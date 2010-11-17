@@ -37,6 +37,8 @@ ja:
       access_code_uses: 使用
       access_codes: アクセスコード
       access_denied: あなたがリクエストされたページにアクセスする権限を持っていません。
+      access_request_email: Eメール
+      access_request_name: 名
       access_required_warning: サイトへのアクセスは現在制限されています。あなたがサインアップして有効なアクセスコードが必要です。
       account_activated: アカウントが有効化されている！これで、ログインすることができます。
       account_not_activated: "あなたの%{application_name}アカウントがまだアクティブにされていません。"

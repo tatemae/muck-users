@@ -37,6 +37,8 @@ uk:
       access_code_uses: Використання
       access_codes: "Коди доступу"
       access_denied: "У вас немає дозволу на доступ до запитуваної сторінці."
+      access_request_email: "Електронна пошта"
+      access_request_name: Назва
       access_required_warning: "Сайт доступ в даний час обмежений. Ви повинні правильний код доступу, щоб зареєструватися."
       account_activated: "Ваш обліковий запис була активована! Тепер Ви можете Увійти."
       account_not_activated: "Ваш %{application_name} рахунок ще не був активований."

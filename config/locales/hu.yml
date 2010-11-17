@@ -37,6 +37,8 @@ hu:
       access_code_uses: Felhasználás
       access_codes: "Hozzáférési kódok"
       access_denied: "Önnek nincs joga a kért oldal."
+      access_request_email: E-mail
+      access_request_name: Név
       access_required_warning: "Site hozzáférés jelenleg korlátozott. Szüksége van egy érvényes belépési kód a regisztráció."
       account_activated: "Fiókja lett aktiválva! Most már be."
       account_not_activated: "Ön %{application_name} véve még nem lett aktiválva."

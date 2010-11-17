@@ -37,6 +37,8 @@ hi:
       access_code_uses: "का उपयोग करता है"
       access_codes: "एक्सेस कोड"
       access_denied: "आप अनुरोधित पेज तक पहुँच की अनुमति नहीं है."
+      access_request_email: ईमेल
+      access_request_name: नाम
       access_required_warning: "साइट का उपयोग वर्तमान में सीमित है. आप एक वैध का उपयोग कोड की जरूरत के लिए साइन अप."
       account_activated: "आपका खाता सक्रिय हो गया है! अब आप लॉग इन कर सकते हैं."
       account_not_activated: "आपके %{application_name} खाता अभी तक सक्रिय नहीं किया गया."

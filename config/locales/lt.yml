@@ -37,6 +37,8 @@ lt:
       access_code_uses: Naudoja
       access_codes: "Kreipties kodai"
       access_denied: "Jūs neturite leidimo patekti į norimą puslapį."
+      access_request_email: Paštas
+      access_request_name: Vardas
       access_required_warning: "Svetainės prieigos šiuo metu yra apribota. Jūs turite galiojančią prieigą kodas užsiregistruoti."
       account_activated: "Jūsų sąskaita buvo aktyvuota! Dabar galite prisijungti."
       account_not_activated: "Jūsų %{application_name} sąskaitos dar nebuvo aktyvuota."

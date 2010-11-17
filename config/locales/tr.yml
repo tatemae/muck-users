@@ -37,6 +37,8 @@ tr:
       access_code_uses: Kullanır
       access_codes: "Giriş Kodları"
       access_denied: "Eğer istenen sayfaya erişim izni yok."
+      access_request_email: E-posta
+      access_request_name: Adı
       access_required_warning: "Siteye erişmek şu anda sınırlıdır. Kaydolmak için geçerli bir erişim kodu gerekir."
       account_activated: "Hesabınızı aktive oldu! Şimdi giriş yapabilirsiniz."
       account_not_activated: "Senin %{application_name} hesabı henüz aktif değil."
@@ -197,7 +199,7 @@ tr:
       user_enabled: "Kullanıcı etkin"
       user_marked_active: "Kullanıcı aktif olarak işaretlenmiş"
       user_marked_inactive: "Kullanıcı aktif olarak işaretlenmiş"
-      user_not_activated_error: "Couldn&#39;t kullanıcı etkinleştirmek"
+      user_not_activated_error: "Couldn&#39;t kullanıcı aktif"
       user_not_deactivated_error: "Couldn&#39;t kullanıcı devre dışı bırakmak"
       user_successfully_deleted: "Kullanıcı %{login} başarıyla silindi."
       user_update: "Eğer kullanıcı bilgileri güncellendi konum."

@@ -37,6 +37,8 @@ nl:
       access_code_uses: Gebruikt
       access_codes: Toegangscodes
       access_denied: "Je hebt geen toestemming om de gevraagde pagina te openen."
+      access_request_email: E-mail
+      access_request_name: Naam
       access_required_warning: "Toegang tot de site is momenteel beperkt. U hebt een geldige toegangscode aan te melden."
       account_activated: "Uw account is geactiveerd! U kunt nu inloggen."
       account_not_activated: "Uw %{application_name} account is nog niet geactiveerd."

@@ -37,6 +37,8 @@ zh-TW:
       access_code_uses: 用途
       access_codes: 訪問代碼
       access_denied: 您沒有權限訪問請求的頁面。
+      access_request_email: 電郵
+      access_request_name: 名稱
       access_required_warning: 目前網站的訪問限制。你需要一個有效的接入碼進行註冊。
       account_activated: 您的帳戶已激活！現在，您可以登錄。
       account_not_activated: "您%{application_name}帳戶尚未被激活。"

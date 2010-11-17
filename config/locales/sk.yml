@@ -37,6 +37,8 @@ sk:
       access_code_uses: Používa
       access_codes: "Prístupové kódy"
       access_denied: "Nemáte oprávnenie pre prístup na požadovanú stránku."
+      access_request_email: E-mail
+      access_request_name: Meno
       access_required_warning: "Priamy prístup je v súčasnosti obmedzený. Budete potrebovať platný prístupový kód je možné sa prihlásiť."
       account_activated: "Váš účet bol aktivovaný! Teraz sa môžete prihlásiť."
       account_not_activated: "Váš %{application_name} účet ešte nebol aktivovaný."

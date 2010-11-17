@@ -37,6 +37,8 @@ bg:
       access_code_uses: Използва
       access_codes: "Кодове за достъп"
       access_denied: "Не е необходимо разрешение за достъп до исканата страница."
+      access_request_email: Email
+      access_request_name: Име
       access_required_warning: "Достъп на сайта в момента е ограничен. Имате нужда от валиден код за достъп да се регистрирате."
       account_activated: "Вашият профил е активиран! Сега можете да влезете."
       account_not_activated: "Вашият %{application_name} сметка все още не е активиран."

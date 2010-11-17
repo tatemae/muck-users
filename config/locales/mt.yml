@@ -37,6 +37,8 @@ mt:
       access_code_uses: Użi
       access_codes: "Aċċess Kodiċijiet"
       access_denied: "Inti ma għandekx permess għall-aċċess għall-paġna mitluba."
+      access_request_email: Email
+      access_request_name: Isem
       access_required_warning: "aċċess tas-sit bħalissa huwa ristrett. Ikollok bżonn ta &#39;kodiċi ta&#39; aċċess validu biex jiffirmaw."
       account_activated: "kont tiegħek ġie attivat! Inti tista &#39;issa login."
       account_not_activated: "kont %{application_name} tiegħek għadha ma ġiet attivata."

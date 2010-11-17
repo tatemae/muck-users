@@ -37,6 +37,8 @@ tl:
       access_code_uses: Gumagamit
       access_codes: "Access Codes"
       access_denied: "Ikaw ay walang pahintulot na magamit ang hiniling na pahina."
+      access_request_email: Email
+      access_request_name: Pangalan
       access_required_warning: "Site ng access ay kasalukuyang limitado. Kailangan mo ng isang wastong code ng access sa mga mag-sign up."
       account_activated: "Ang iyong account ay aktibo! Maaari mo na ngayong mag-login."
       account_not_activated: "Ang iyong %{application_name} account ay hindi pa ginawang aktibo."

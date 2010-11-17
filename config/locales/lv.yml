@@ -37,6 +37,8 @@ lv:
       access_code_uses: Izmanto
       access_codes: "Piekļuves kodi"
       access_denied: "Jums nav atļaujas piekļūt pieprasīto lapu."
+      access_request_email: E-pasts
+      access_request_name: Vārds
       access_required_warning: "Vietā piekļuvi šobrīd ir ierobežota. Jums nepieciešama derīga piekļuves kodu, lai pierakstītos."
       account_activated: "Jūsu konts ir aktivizēts! Tagad Jūs varat pieslēgties."
       account_not_activated: "Jūsu %{application_name} konts vēl nav aktivizēts."

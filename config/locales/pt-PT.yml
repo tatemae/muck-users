@@ -37,6 +37,8 @@ pt-PT:
       access_code_uses: Usos
       access_codes: "Códigos de Acesso"
       access_denied: "Você não tem permissão para acessar a página solicitada."
+      access_request_email: E-mail
+      access_request_name: Nome
       access_required_warning: "Acesso ao site está restrita. Você precisa de um código de acesso válido para se inscrever."
       account_activated: "Sua conta foi ativada! Você pode agora login."
       account_not_activated: "Sua conta %{application_name} ainda não foi ativado."

@@ -37,6 +37,8 @@ fa:
       access_code_uses: "موارد استفاده"
       access_codes: "دسترسی به کد"
       access_denied: "شما اجازه انجام این کار برای دسترسی به صفحه مورد درخواست شما وجود ندارد."
+      access_request_email: "پست الکترونیکی"
+      access_request_name: نام
       access_required_warning: "دسترسی به سایت در حال حاضر محدود است. شما باید کد دسترسی معتبر به ثبت نام کنید."
       account_activated: "حساب کاربری شما فعال شده است! شما هم اکنون می توانید وارد سایت شوید."
       account_not_activated: "حساب کاربری شما %{application_name} هنوز فعال شده است."

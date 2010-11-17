@@ -37,6 +37,8 @@ sq:
       access_code_uses: Përdor
       access_codes: "Qasja Codes"
       access_denied: "Ju nuk keni leje për të hyrë në faqen e kërkuar."
+      access_request_email: Email
+      access_request_name: Emri
       access_required_warning: "qasje Site është e kufizuar aktualisht. Ju duhet një kod të vlefshme akses për të nënshkruar."
       account_activated: "Llogaria juaj ka qenë e aktivizuar! Ju tani mund të identifikoheni."
       account_not_activated: "llogari %{application_name} juaj nuk është aktivizuar akoma."

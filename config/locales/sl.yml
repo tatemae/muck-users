@@ -37,6 +37,8 @@ sl:
       access_code_uses: Uporabe
       access_codes: "Kode za dostop"
       access_denied: "Nimate dovoljenja za dostop do zahtevane strani."
+      access_request_email: E-pošta
+      access_request_name: Ime
       access_required_warning: "Dostopa do strani je trenutno omejena. Potrebujete veljaven dostop do kode, da se prijavite."
       account_activated: "Vaš račun je aktiviran! Sedaj lahko prijavite."
       account_not_activated: "Vaš %{application_name} račun še ni bil aktiviran."

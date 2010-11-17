@@ -37,6 +37,8 @@ et:
       access_code_uses: Kasutab
       access_codes: Pääsukoodid
       access_denied: "Sul ei ole õigust siseneda Soovitud lehekülge."
+      access_request_email: Email
+      access_request_name: Nimi
       access_required_warning: "Saidi juurdepääs on praegu piiratud. Sa pead kehtiv väljahelistamise koodi sisse logida."
       account_activated: "Sinu konto on aktiveeritud! Saad nüüd sisse logida."
       account_not_activated: "Sinu %{application_name} konto ei ole veel aktiveeritud."

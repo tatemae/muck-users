@@ -37,6 +37,8 @@ fi:
       access_code_uses: Käyttää
       access_codes: Tunnusluvut
       access_denied: "Sinulla ei ole lupaa käyttää pyydettyä sivua."
+      access_request_email: Sähköposti
+      access_request_name: Nimi
       access_required_warning: "Sivuston pääsy on tällä hetkellä rajoitettu. Tarvitset tunnuksen rekisteröityä."
       account_activated: "Tilisi on aktivoitu! Voit nyt kirjautua."
       account_not_activated: "Sinun %{application_name} tili ei ole vielä aktivoitu."

@@ -37,6 +37,8 @@ id:
       access_code_uses: Menggunakan
       access_codes: "Kode Akses"
       access_denied: "Anda tidak memiliki izin untuk mengakses halaman yang diminta."
+      access_request_email: Email
+      access_request_name: Nama
       access_required_warning: "Akses situs saat ini dibatasi. Anda memerlukan kode akses yang berlaku untuk mendaftar."
       account_activated: "Account Anda telah diaktifkan! Sekarang Anda dapat login."
       account_not_activated: "Anda %{application_name} account belum diaktifkan."
@@ -70,7 +72,7 @@ id:
       bulk_access_code_message: Pesan
       bulk_access_code_problem: "Masalah menambahkan kode akses"
       bulk_access_code_subject: Subyek
-      bulk_access_code_tip: "Opsional. Jika kode ditetapkan maka kode akan dikirimkan ke semua pengguna. Membiarkan field ini kosong untuk mengirim kode unik untuk tiap user."
+      bulk_access_code_tip: "Opsional. Jika kode tersebut ditentukan maka kode akan dikirimkan ke semua pengguna. Membiarkan field ini kosong untuk mengirim kode unik untuk tiap user."
       bulk_access_codes: "Kode Akses Massal"
       bulk_access_codes_created: "Bulk kode akses dibuat dan email ke email %{email_count}."
       bulk_access_codes_description: "Ini akan menghasilkan kode, menggunakan akses tunggal yang unik untuk setiap email yang disediakan."

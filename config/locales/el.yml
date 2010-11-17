@@ -37,6 +37,8 @@ el:
       access_code_uses: Χρήσεις
       access_codes: "Κωδικοί πρόσβασης"
       access_denied: "Δεν έχετε δικαίωμα πρόσβασης τη σελίδα που ζητήθηκε."
+      access_request_email: Email
+      access_request_name: Όνομα
       access_required_warning: "Site πρόσβαση περιορίζεται επί του παρόντος. Χρειάζεστε έναν έγκυρο κωδικό πρόσβασης για να εγγραφείτε."
       account_activated: "Ο λογαριασμός σας έχει ενεργοποιηθεί! Μπορείτε τώρα να συνδεθείτε."
       account_not_activated: "%{application_name} Λογαριασμός σας δεν έχει ακόμα ενεργοποιηθεί."

@@ -37,6 +37,8 @@ ru:
       access_code_uses: Использование
       access_codes: "Коды доступа"
       access_denied: "У вас нет разрешения на доступ к запрашиваемой странице."
+      access_request_email: "Электронная почта"
+      access_request_name: Название
       access_required_warning: "Сайт доступ в настоящее время ограничен. Вы должны правильный код доступа, чтобы зарегистрироваться."
       account_activated: "Ваша учетная запись была активирована! Теперь Вы можете Войти."
       account_not_activated: "Ваш %{application_name} счет еще не был активирован."
