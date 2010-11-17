@@ -6,8 +6,8 @@ require 'rspec/core/rake_task'
 desc 'Default: run specs.'
 task :default => :spec
 RSpec::Core::RakeTask.new(:spec) do |t|
-  t.rspec_opts = ["--color", "-c", "-f progress", "-r test/rails_test/spec/spec_helper.rb"]
-  t.pattern = 'test/rails_test/spec/**/*_spec.rb'  
+  t.rspec_opts = ["--color", "-c", "-f progress", "-r test/spec/spec_helper.rb"]
+  t.pattern = 'test/spec/**/*_spec.rb'  
 end
 
 desc 'Translate this gem'
@@ -32,7 +32,7 @@ begin
     gem.add_dependency "bcrypt-ruby"
     gem.add_dependency "muck-engine", ">=3.0.3"
     gem.add_dependency "friendly_id"
-    gem.files.exclude 'test' # exclude test directory
+    gem.test_files.exclude 'test/**' # exclude test directory
   end
   Jeweler::RubyforgeTasks.new do |rubyforge|
     rubyforge.doc_task = "rdoc"
@@ -45,12 +45,10 @@ end
 begin
   require 'rcov/rcovtask'
   Rcov::RcovTask.new do |t|
-    #t.libs << 'lib'
-    t.libs << 'test/rails_test/lib'
-    t.pattern = 'test/rails_test/test/**/*_test.rb'
+    t.libs << 'test/lib'
+    t.pattern = 'test/spec/**/*_spec.rb'
     t.verbose = true
     t.output_dir = 'coverage'
-    t.rcov_opts << '--exclude "gems/*"'
   end
 rescue LoadError
   task :rcov do
@@ -66,7 +64,6 @@ Rake::RDocTask.new do |rdoc|
   else
     version = ""
   end
-
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title = "muck-users #{version}"
   rdoc.rdoc_files.include('README*')

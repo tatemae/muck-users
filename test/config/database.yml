@@ -1,0 +1,15 @@
+development:
+  adapter: mysql
+  database: muck_users_development
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
+
+test:
+  adapter: mysql
+  database: muck_users_test
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
