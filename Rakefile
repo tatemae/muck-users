@@ -32,6 +32,7 @@ begin
     gem.add_dependency "bcrypt-ruby"
     gem.add_dependency "muck-engine", ">=3.0.3"
     gem.add_dependency "friendly_id"
+    gem.files.exclude 'test' # exclude test directory
   end
   Jeweler::RubyforgeTasks.new do |rubyforge|
     rubyforge.doc_task = "rdoc"

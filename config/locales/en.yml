@@ -211,6 +211,8 @@ en:
       email_recover_prompt: Please provide the email you signed up with to recover your password.
       thanks_sign_up: Thanks for signing up!
       reset_password: Reset Your Password
+      access_request_email: Email
+      access_request_name: Name
     roles: 
       role_created: Role was successfully created.
       assign_role: Assign Role
