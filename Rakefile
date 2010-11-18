@@ -27,11 +27,12 @@ begin
     gem.homepage = "http://github.com/jbasdf/muck_users"
     gem.description = "Easily add user signup, login and other features to your application"
     gem.authors = ["Justin Ball", "Joel Duffin"]
-    gem.rubyforge_project = "muck-users"
+    
     gem.add_dependency "authlogic"
     gem.add_dependency "bcrypt-ruby"
     gem.add_dependency "muck-engine", ">=3.0.3"
     gem.add_dependency "friendly_id"
+    gem.files.exclude 'test/**'
     gem.test_files.exclude 'test/**' # exclude test directory
   end
   Jeweler::RubyforgeTasks.new do |rubyforge|
