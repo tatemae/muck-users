@@ -285,7 +285,13 @@ class Muck::UsersController < ApplicationController
       if success
         respond_to do |format|
           format.html do
-            redirect_to success_redirect || (admin? ? public_user_path(@user) : user_path(@user))
+            if(success_redirect)
+              redirect_to success_redirect
+            elsif current_user == @user
+              redirect_to user_path(@user)
+            else # admin
+              redirect_to public_user_path(@user)
+            end  
           end
           format.xml{ head :ok }
         end

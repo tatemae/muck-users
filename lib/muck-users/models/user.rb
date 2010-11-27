@@ -38,7 +38,7 @@ module MuckUsers
         # prevents a user from submitting a crafted form that bypasses activation
         attr_protected :crypted_password, :password_salt, :persistence_token, :single_access_token, :perishable_token, :login_count,
                        :failed_login_count, :last_request_at, :last_login_at, :current_login_at, :current_login_ip, :last_login_ip, 
-                       :terms_of_service, :time_zone, :disabled_at, :activated_at, :created_at, :updated_at
+                       :terms_of_service, :disabled_at, :activated_at, :created_at, :updated_at
       
         validates_terms_of_service if MuckUsers.configuration.validate_terms_of_service
       end

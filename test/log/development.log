@@ -2995,3 +2995,186 @@ Migrating to AddNameToAccessCodeRequests (20101117172951)
   [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20090426041103')[0m
   [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20100123035450')
   [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20100123233654')[0m
+  [1m[36mSQL (69.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (134.8ms)[0m  DROP DATABASE IF EXISTS `muck_users_test`
+  [1m[36mSQL (1.0ms)[0m  [1mCREATE DATABASE `muck_users_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (179.9ms)[0m  [1mCREATE TABLE `access_code_requests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `code_sent_at` datetime, `created_at` datetime, `updated_at` datetime, `name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `access_code_requests`
+  [1m[36mSQL (309.0ms)[0m  [1mCREATE INDEX `index_access_code_requests_on_email` ON `access_code_requests` (`email`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (181.5ms)[0m  [1mCREATE TABLE `access_codes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `uses` int(11) DEFAULT 0 NOT NULL, `unlimited` tinyint(1) DEFAULT 0 NOT NULL, `expires_at` datetime, `use_limit` int(11) DEFAULT 1 NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (5.3ms)[0m  SHOW KEYS FROM `access_codes`
+  [1m[36mSQL (228.4ms)[0m  [1mCREATE INDEX `index_access_codes_on_code` ON `access_codes` (`code`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (253.5ms)[0m  [1mCREATE TABLE `countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(128) DEFAULT '' NOT NULL, `abbreviation` varchar(3) DEFAULT '' NOT NULL, `sort` int(11) DEFAULT 1000 NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (2.0ms)[0m  SHOW KEYS FROM `countries`
+  [1m[36mSQL (209.3ms)[0m  [1mCREATE INDEX `index_countries_on_abbreviation` ON `countries` (`abbreviation`)[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `countries`
+  [1m[36mSQL (245.0ms)[0m  [1mCREATE INDEX `index_countries_on_name` ON `countries` (`name`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (175.5ms)[0m  [1mCREATE TABLE `languages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `english_name` varchar(255), `locale` varchar(255), `supported` tinyint(1) DEFAULT 1, `is_default` tinyint(1) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `languages`
+  [1m[36mSQL (206.1ms)[0m  [1mCREATE INDEX `index_languages_on_locale` ON `languages` (`locale`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `languages`
+  [1m[36mSQL (192.2ms)[0m  [1mCREATE INDEX `index_languages_on_name` ON `languages` (`name`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (206.4ms)[0m  [1mCREATE TABLE `permissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role_id` int(11) NOT NULL, `user_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (195.5ms)[0m  [1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rolename` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (189.5ms)[0m  [1mCREATE TABLE `states` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(128) DEFAULT '' NOT NULL, `abbreviation` varchar(3) DEFAULT '' NOT NULL, `country_id` bigint NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `states`
+  [1m[36mSQL (210.6ms)[0m  [1mCREATE INDEX `index_states_on_abbreviation` ON `states` (`abbreviation`)[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `states`
+  [1m[36mSQL (207.0ms)[0m  [1mCREATE INDEX `index_states_on_country_id` ON `states` (`country_id`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `states`
+  [1m[36mSQL (227.2ms)[0m  [1mCREATE INDEX `index_states_on_name` ON `states` (`name`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (215.2ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255), `email` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `terms_of_service` tinyint(1) DEFAULT 0 NOT NULL, `time_zone` varchar(255) DEFAULT 'UTC', `disabled_at` datetime, `created_at` datetime, `activated_at` datetime, `updated_at` datetime, `identity_url` varchar(255), `url_key` varchar(255), `access_code_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (211.3ms)[0m  [1mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (210.8ms)[0m  [1mCREATE INDEX `index_users_on_last_request_at` ON `users` (`last_request_at`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (144.4ms)[0m  [1mCREATE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (151.0ms)[0m  [1mCREATE INDEX `index_users_on_persistence_token` ON `users` (`persistence_token`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (143.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (149.2ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101117172951')
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20090320174818')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20090327231918')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20090402234137')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20090426041056')
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20090426041103')[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20100123035450')
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20100123233654')[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (41.9ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (22.0ms)[0m  DROP DATABASE IF EXISTS `muck_users_test`
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE DATABASE `muck_users_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (128.1ms)[0m  [1mCREATE TABLE `access_code_requests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `code_sent_at` datetime, `created_at` datetime, `updated_at` datetime, `name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `access_code_requests`
+  [1m[36mSQL (178.4ms)[0m  [1mCREATE INDEX `index_access_code_requests_on_email` ON `access_code_requests` (`email`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (127.2ms)[0m  [1mCREATE TABLE `access_codes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `uses` int(11) DEFAULT 0 NOT NULL, `unlimited` tinyint(1) DEFAULT 0 NOT NULL, `expires_at` datetime, `use_limit` int(11) DEFAULT 1 NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `access_codes`
+  [1m[36mSQL (151.8ms)[0m  [1mCREATE INDEX `index_access_codes_on_code` ON `access_codes` (`code`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (125.8ms)[0m  [1mCREATE TABLE `countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(128) DEFAULT '' NOT NULL, `abbreviation` varchar(3) DEFAULT '' NOT NULL, `sort` int(11) DEFAULT 1000 NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `countries`
+  [1m[36mSQL (146.5ms)[0m  [1mCREATE INDEX `index_countries_on_abbreviation` ON `countries` (`abbreviation`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `countries`
+  [1m[36mSQL (123.2ms)[0m  [1mCREATE INDEX `index_countries_on_name` ON `countries` (`name`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (123.8ms)[0m  [1mCREATE TABLE `languages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `english_name` varchar(255), `locale` varchar(255), `supported` tinyint(1) DEFAULT 1, `is_default` tinyint(1) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `languages`
+  [1m[36mSQL (129.1ms)[0m  [1mCREATE INDEX `index_languages_on_locale` ON `languages` (`locale`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `languages`
+  [1m[36mSQL (128.6ms)[0m  [1mCREATE INDEX `index_languages_on_name` ON `languages` (`name`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (135.9ms)[0m  [1mCREATE TABLE `permissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role_id` int(11) NOT NULL, `user_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (123.8ms)[0m  [1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rolename` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (131.9ms)[0m  [1mCREATE TABLE `states` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(128) DEFAULT '' NOT NULL, `abbreviation` varchar(3) DEFAULT '' NOT NULL, `country_id` bigint NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `states`
+  [1m[36mSQL (124.6ms)[0m  [1mCREATE INDEX `index_states_on_abbreviation` ON `states` (`abbreviation`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `states`
+  [1m[36mSQL (137.4ms)[0m  [1mCREATE INDEX `index_states_on_country_id` ON `states` (`country_id`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `states`
+  [1m[36mSQL (125.5ms)[0m  [1mCREATE INDEX `index_states_on_name` ON `states` (`name`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.9ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255), `email` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `terms_of_service` tinyint(1) DEFAULT 0 NOT NULL, `time_zone` varchar(255) DEFAULT 'UTC', `disabled_at` datetime, `created_at` datetime, `activated_at` datetime, `updated_at` datetime, `identity_url` varchar(255), `url_key` varchar(255), `access_code_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (130.9ms)[0m  [1mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (125.0ms)[0m  [1mCREATE INDEX `index_users_on_last_request_at` ON `users` (`last_request_at`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (139.4ms)[0m  [1mCREATE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (126.3ms)[0m  [1mCREATE INDEX `index_users_on_persistence_token` ON `users` (`persistence_token`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (134.4ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (128.6ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101117172951')
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20090320174818')[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20090327231918')
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20090402234137')[0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20090426041056')
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20090426041103')[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20100123035450')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20100123233654')[0m
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (30.3ms)[0m  DROP DATABASE IF EXISTS `muck_users_test`
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE DATABASE `muck_users_test` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (241.1ms)[0m  [1mCREATE TABLE `access_code_requests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `code_sent_at` datetime, `created_at` datetime, `updated_at` datetime, `name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `access_code_requests`
+  [1m[36mSQL (167.5ms)[0m  [1mCREATE INDEX `index_access_code_requests_on_email` ON `access_code_requests` (`email`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (121.6ms)[0m  [1mCREATE TABLE `access_codes` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `code` varchar(255), `uses` int(11) DEFAULT 0 NOT NULL, `unlimited` tinyint(1) DEFAULT 0 NOT NULL, `expires_at` datetime, `use_limit` int(11) DEFAULT 1 NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `access_codes`
+  [1m[36mSQL (145.1ms)[0m  [1mCREATE INDEX `index_access_codes_on_code` ON `access_codes` (`code`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (124.5ms)[0m  [1mCREATE TABLE `countries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(128) DEFAULT '' NOT NULL, `abbreviation` varchar(3) DEFAULT '' NOT NULL, `sort` int(11) DEFAULT 1000 NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `countries`
+  [1m[36mSQL (136.7ms)[0m  [1mCREATE INDEX `index_countries_on_abbreviation` ON `countries` (`abbreviation`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `countries`
+  [1m[36mSQL (128.5ms)[0m  [1mCREATE INDEX `index_countries_on_name` ON `countries` (`name`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (129.1ms)[0m  [1mCREATE TABLE `languages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `english_name` varchar(255), `locale` varchar(255), `supported` tinyint(1) DEFAULT 1, `is_default` tinyint(1) DEFAULT 0) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `languages`
+  [1m[36mSQL (121.7ms)[0m  [1mCREATE INDEX `index_languages_on_locale` ON `languages` (`locale`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `languages`
+  [1m[36mSQL (126.7ms)[0m  [1mCREATE INDEX `index_languages_on_name` ON `languages` (`name`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (120.4ms)[0m  [1mCREATE TABLE `permissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role_id` int(11) NOT NULL, `user_id` int(11) NOT NULL, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (123.3ms)[0m  [1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `rolename` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (131.3ms)[0m  [1mCREATE TABLE `states` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(128) DEFAULT '' NOT NULL, `abbreviation` varchar(3) DEFAULT '' NOT NULL, `country_id` bigint NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `states`
+  [1m[36mSQL (130.2ms)[0m  [1mCREATE INDEX `index_states_on_abbreviation` ON `states` (`abbreviation`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `states`
+  [1m[36mSQL (134.5ms)[0m  [1mCREATE INDEX `index_states_on_country_id` ON `states` (`country_id`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `states`
+  [1m[36mSQL (128.9ms)[0m  [1mCREATE INDEX `index_states_on_name` ON `states` (`name`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (116.5ms)[0m  [1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255), `email` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `crypted_password` varchar(255), `password_salt` varchar(255), `persistence_token` varchar(255) NOT NULL, `single_access_token` varchar(255) NOT NULL, `perishable_token` varchar(255) NOT NULL, `login_count` int(11) DEFAULT 0 NOT NULL, `failed_login_count` int(11) DEFAULT 0 NOT NULL, `last_request_at` datetime, `current_login_at` datetime, `last_login_at` datetime, `current_login_ip` varchar(255), `last_login_ip` varchar(255), `terms_of_service` tinyint(1) DEFAULT 0 NOT NULL, `time_zone` varchar(255) DEFAULT 'UTC', `disabled_at` datetime, `created_at` datetime, `activated_at` datetime, `updated_at` datetime, `identity_url` varchar(255), `url_key` varchar(255), `access_code_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.8ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (143.4ms)[0m  [1mCREATE INDEX `index_users_on_email` ON `users` (`email`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (126.5ms)[0m  [1mCREATE INDEX `index_users_on_last_request_at` ON `users` (`last_request_at`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (139.5ms)[0m  [1mCREATE INDEX `index_users_on_login` ON `users` (`login`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (117.6ms)[0m  [1mCREATE INDEX `index_users_on_persistence_token` ON `users` (`persistence_token`)[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (135.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `schema_migrations`
+  [1m[36mSQL (145.5ms)[0m  [1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20101117172951')
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20090320174818')[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20090327231918')
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20090402234137')[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20090426041056')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20090426041103')[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20100123035450')
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20100123233654')[0m
