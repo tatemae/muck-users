@@ -7,5 +7,10 @@
     <div class="button form-row">
       <%= submit_tag t('muck.users.reset_password') %>
     </div>
+    <div class="form-row">
+      <span class="instruction"><%= link_to I18n.t('muck.users.sign_in_now'), login_url %></span> |
+      <span class="instruction"><%= link_to I18n.t('muck.users.register_for_account'), signup_url  %></span> | 
+  		<span class="instruction"><%= link_to I18n.t('muck.users.forgot_your_username'), forgot_username_path %></span>
+  	</div>
   <% end -%>
 </div>
