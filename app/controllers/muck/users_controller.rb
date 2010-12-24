@@ -132,9 +132,9 @@ class Muck::UsersController < ApplicationController
       end
     else
       recover_password_prompt = render_to_string :partial => 'users/recover_password_via_email_link', :locals => { :email => params[:user_email] }
-      result = t('muck.users.email_not_available', :reset_password_help => recover_password_prompt)
+      result = t('muck.users.email_not_available', :reset_password_help => recover_password_prompt.html_safe).html_safe
       respond_to do |format|
-        format.html { render :partial => 'users/unavailable', :locals => { :message => result } }
+        format.html { render :partial => 'users/unavailable', :locals => { :message => result.html_safe } }
         format.js { render :partial => 'users/unavailable', :locals => { :message => result } }
       end
       return
