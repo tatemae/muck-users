@@ -148,14 +148,26 @@ module MuckUsers
         return false if user.nil?
         self.id == user.id || user.admin?
       end
-              
-      def to_xml(options = {})
+      
+      def add_exclude_fields(options = {})
+        options ||= {}
         options[:except] ||= []
-        options[:except] << :email << :crypted_password << :salt << :remember_token << :remember_token_expires_at << :activation_code
+        options[:except] << :crypted_password << :salt << :remember_token << :remember_token_expires_at << :activation_code
         options[:except] << :activated_at << :password_reset_code << :enabled << :terms_of_service << :can_send_messages << :identity_url
-        options[:except] << :tmp_password << :protected_profile << :public_profile    
+        options[:except] << :tmp_password << :protected_profile << :public_profile << :disabled_at << :current_login_ip << :access_code_id
+        options[:except] << :failed_login_count << :last_login_ip
         options[:except] << :password_salt << :perishable_token << :persistence_token << :single_access_token
-        super
+        options
+      end
+                
+      def to_xml(options = {})
+        options = add_exclude_fields(options)
+        super(options)
+      end
+      
+      def as_json(options = {})
+        options = add_exclude_fields(options)
+        super(options)
       end
               
       # Authlogic automatically executes the following methods
