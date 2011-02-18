@@ -1,6 +1,6 @@
 <h3><%=translate('muck.users.request_access_code') %></h3>
 <%= output_errors('Problem adding access code', {:class => 'help-box'}, @access_code_request) %>
-<%= muck_form_for :access_code_request, :url => access_code_requests_path do |f| -%>
+<%= muck_form_for :access_code_request, :url => access_code_requests_path, :html => { :class => 'ajax beta_code_request_form' } do |f| -%>
   <%= f.text_field :email, { :label => translate('muck.users.access_request_email')  } -%>
   <%= f.text_field :name, { :label => translate('muck.users.access_request_name')  } -%>
   <%= f.submit translate('muck.users.submit') %>

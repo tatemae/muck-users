@@ -16,12 +16,20 @@ class Muck::AccessCodeRequestsController < ApplicationController
     
   def create
     @page_title = t('muck.users.request_access_code')
-    @access_code_request = AccessCodeRequest.new(params[:access_code_request])
-    if @access_code_request.save
-      redirect_to access_code_request_path(@access_code_request)
-    else
-      render :action => "access_code_requests/new"
+    @access_code_request = AccessCodeRequest.create(params[:access_code_request])
+    respond_to do |format|
+      format.js do
+        render :template => 'access_code_requests/create.js', :layout => false
+      end
+      format.html do
+        if @access_code_request
+          redirect_to access_code_request_path(@access_code_request)
+        else
+          render :template => "access_code_requests/new"
+        end
+      end
     end
+        
   end
 
 end

@@ -114,6 +114,21 @@ By default when a user logs out they are sent to the login page.  You can add a 
 
 muck-users sends out emails that need to be able to generate links.  Be sure to set a value for MuckEngine.configuration.application_url.
 
+=== Beta Codes
+muck-users includes the ability to require a code to sign up. Add a sign up form to collect emails:
+
+  <%= muck_form_for :access_code_request, :url => access_code_requests_path, :html => { :class => 'ajax beta_code_request_form' } do |f| -%>
+    <%= f.text_field :email, { :label => translate('muck.users.access_request_email')  } -%>
+    <%= f.text_field :name, { :label => translate('muck.users.access_request_name')  } -%>
+    <%= f.submit translate('muck.users.submit') %>
+  <% end -%>
+
+Note that using the css classes 'ajax beta_code_request_form' will result in an ajax submission. Both classes are important for the request to work.
+
+All emails will be stored in the database. Access the admin to send out beta codes:
+  
+  http://yoursite.com/admin/access_codes
+
 === Helpers
 Muck users provides an autocomplete login search.  To enable this functionality create a text box with the class 'login-search' and add 
 the following code to include the needed javascript and css:

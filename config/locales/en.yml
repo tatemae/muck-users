@@ -8,6 +8,7 @@ en:
       join_application_name: Join and get it done
       email_help: Please use a valid, current e-mail address. We will never share or spam your e-mail address.
       logout_required: ""
+      access_code_thank_you: Thank you for your interest. We'll get you a code as soon as possible.
       access_code_fullfill_invites_limit_tip: Enter a number to limit the number of requests sent out.  For example, entering 100 will limit the invites to the most recent 100 requests
       access_required_warning: Site access is currently restricted.  You need a valid access code to sign up.
       login_out_success: You have been logged out.
