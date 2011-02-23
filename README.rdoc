@@ -114,6 +114,12 @@ By default when a user logs out they are sent to the login page.  You can add a 
 
 muck-users sends out emails that need to be able to generate links.  Be sure to set a value for MuckEngine.configuration.application_url.
 
+=== Assets
+
+Calling rake muck:sync:users will pull in images, javascript and other assets. 
+The javascript is automatically included when needed and does not need to be added to the head of your document.
+It is recommended that you include muck-users.css or copy it's content's and modify it as needed.
+
 === Beta Codes
 muck-users includes the ability to require a code to sign up. Add a sign up form to collect emails:
 

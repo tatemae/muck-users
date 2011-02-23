@@ -8,7 +8,6 @@ en:
       join_application_name: Join and get it done
       email_help: Please use a valid, current e-mail address. We will never share or spam your e-mail address.
       logout_required: ""
-      access_code_thank_you: Thank you for your interest. We'll get you a code as soon as possible.
       access_code_fullfill_invites_limit_tip: Enter a number to limit the number of requests sent out.  For example, entering 100 will limit the invites to the most recent 100 requests
       access_required_warning: Site access is currently restricted.  You need a valid access code to sign up.
       login_out_success: You have been logged out.
@@ -26,7 +25,6 @@ en:
       add_user_to_role: Add User to Role
       add_access_code_title: Add Access Code
       terms_and_service: By clicking 'Sign-up Now' you agree to comply with the %{tos_link_anchor}Terms and Conditions%{link_end}.
-      terms_and_service_tip: In order to register you must agree to the terms and conditions. You may review these policies before proceeding by clicking on the link.
       password_reset_link_sent: Instructions to reset your password have been emailed to you. Please check your email.
       deleting_user: deleting user...
       forgot_your_username: Forgot your username?
@@ -42,19 +40,23 @@ en:
       access_code_delete_error: An error occured while trying to delete the access code
       access_code_fullfill_invites: Fulfill Invite Requests
       access_code_unlimited: Unlimited
-      user_update_sucess: User was successfully updated
       welcome: Welcome
       bulk_access_codes_created: Bulk access codes created and emailed to %{email_count} emails.
       users_in_role: "Users in role: %{role}"
       current_password: Current Password
+      user_update_sucess: User was successfully updated
       problem_creating_account: "There was a problem creating your account.  Please correct the following errors:"
+      terms_of_service_required: You must accept the terms of service.
       password_confirmation_help: To ensure that your password is correct please enter it again here.
       edit_access_code_title: Edit Access Code
+      access_request_name: Name
       thanks_sign_up_login: Thanks for signing up! You may login now
       already_activated: Your account has already been activated. You can log in below.
+      access_request_email: Email
       password: Password
       account_not_activated: Your %{application_name} account has not yet been activated.
       sorry_invalid_reset_code: We're sorry, but we could not locate your account. If you are having issues try copying and pasting the URL from your email into your browser or restarting the reset password process.
+      update_user_admin: Update User
       problem_changing_password: There was a problem changing your password. %{errors}
       access_code_delete_problem: Cannot delete access code it has users associated with it.
       user_enable_problem: There was a problem enabling this user.
@@ -79,7 +81,6 @@ en:
       cannot_deactivate_yourself: You cannot deactivate yourself!
       bulk_access_codes_description: This will generate a unique, single use access code for each of the emails provided.
       add: Add
-      terms_of_service_required: You must accept the terms of service.
       admin: 
         activate_all_inactive_users_confirm: Are you sure you want to activate all inactive users in the system?  This cannot be undone!
         activate_all_inactive_users: Activate All Inactive Users
@@ -88,6 +89,7 @@ en:
         unactivated_users: There are %{count} unactivated users
       request_username: Request Username
       name: Name
+      terms_and_service_tip: In order to register you must agree to the terms and conditions. You may review these policies before proceeding by clicking on the link.
       sign_in_now: Sign in now!
       my_dashboard: My Dashboard
       confirm_select_new_password: Confirm Password Change
@@ -105,6 +107,7 @@ en:
       delete_this_user: Delete this user.
       username_help: You can use between 6 and 20 characters. If the name you want isn't available try adding numbers or punctuation.
       edit_role_dialog_title: Edit Role
+      request_access_code_instruction: Please provide the following information and we'll provide you with an access code as soon as possible.
       username_not_available: Username not available
       remove_my_account: Remove My Account
       email_available: Email available
@@ -117,12 +120,13 @@ en:
       access_code_added: Access Code was successfully added
       change_permissions: Change Roles
       what_is_the_email: What is the email address used to create your account?
-      activation_complete: Activation Complete
-      welcome_message: Welcome to muck.  This system provides the basic components to help you build your website.
-      register_account: Register for a %{application_name} account
       password_reset: Password reset.
+      register_account: Register for a %{application_name} account
+      welcome_message: Welcome to muck.  This system provides the basic components to help you build your website.
+      activation_complete: Activation Complete
       access_code_uses: Uses
       recover_password_prompt: (If you forgot your password recover it here)
+      access_code_thank_you: Thank you for your interest. We'll get you a code as soon as possible.
       username: Username
       user_marked_active: User has been marked as active
       all_users: All Users
@@ -202,7 +206,6 @@ en:
       user_update: Your user information has been updated.
       update_profile: Update your profile
       update_user: Update your user information
-      update_user_admin: Update User
       choose_member_name: Member Name
       access_denied: You don't have permission to access the requested page.
       username_available: Username available
@@ -212,8 +215,6 @@ en:
       email_recover_prompt: Please provide the email you signed up with to recover your password.
       thanks_sign_up: Thanks for signing up!
       reset_password: Reset Your Password
-      access_request_email: Email
-      access_request_name: Name
     roles: 
       role_created: Role was successfully created.
       assign_role: Assign Role
