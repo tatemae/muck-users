@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "3.1.6"
+  s.version = "3.1.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2011-02-17}
+  s.date = %q{2011-02-22}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -471,15 +471,15 @@ Gem::Specification.new do |s|
     "public/images/icon_no.gif",
     "public/images/icon_success.gif",
     "public/images/profile_default.jpg",
-    "public/javascripts/muck-users.js"
+    "public/javascripts/muck-users.js",
+    "public/stylesheets/muck-users.css"
   ]
   s.homepage = %q{http://github.com/jbasdf/muck_users}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.5.2}
   s.summary = %q{Easy to use user engine for Rails}
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
