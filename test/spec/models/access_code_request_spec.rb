@@ -48,7 +48,31 @@ describe AccessCodeRequest do
   end
   
   describe "mark_fullfilled" do
-    AccessCodeRequest.mark_fullfilled(AccessCodeRequest.get_requests)
+    it "should mark the request fullfilled" do
+      AccessCodeRequest.mark_fullfilled(AccessCodeRequest.get_requests)
+      @access_code_request.code_sent_at.should_not be_blank
+    end
   end
   
+  describe "send_access_code" do
+    before do
+      @access_code_request = Factory(:access_code_request)
+      @subject = "test subject"
+      @message = "test message"
+    end
+    it "should create an access code" do
+      lambda {
+        @access_code_request.send_access_code(@subject, @message)
+      }.should change(AccessCode, :count)
+    end
+    it "should send the user an email with the access code" do
+      UserMailer.should_receive(:access_code)
+      @access_code_request.send_access_code(@subject, @message)
+    end
+    it "should mark the request fullfilled" do
+      AccessCodeRequest.should_receive(:mark_fullfilled)
+      @access_code_request.send_access_code(@subject, @message)
+    end
+  end
+
 end

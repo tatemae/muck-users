@@ -31,6 +31,15 @@ module MuckUsers
         
       end
 
+      def send_access_code(subject, message)
+        access_code = AccessCode.create!(:unlimited => false,
+                                         :use_limit => 1,
+                                         :uses => 0,
+                                         :code => AccessCode.random_code)
+        UserMailer.access_code(self.email, subject, message, access_code.code).deliver
+        success = AccessCodeRequest.mark_fullfilled(self)
+      end
+      
     end
   end
 end

@@ -1,0 +1,17 @@
+<h2><%=translate('muck.users.unfullfilled_access_code_requests') %></h2>
+<table class="adminTable" cellspacing="0" cellpadding="0">
+  <thead>
+    <tr>
+      <th><%=translate('muck.users.access_code_requests_name') %></th>
+      <th><%=translate('muck.users.access_code_requests_email') %></th>
+      <th><%=translate('muck.users.access_code_requests_signed_up_on') %></th>
+      <th><%=translate('muck.users.access_code_requests_code_sent_on') %></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody id="current-access-code-requests">
+    <%= render :partial => 'admin/access_code_requests/access_code_request', :collection => @unfullfilled_requests %>
+  </tbody>
+</table>
+<%= will_paginate @unfullfilled_requests %>

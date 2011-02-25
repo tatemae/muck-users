@@ -1,0 +1,14 @@
+<tr id="<%=access_code_request.dom_id('row')%>">
+  <td><%= access_code_request.name %></td>
+  <td><%= access_code_request.email %></td>
+  <td><%= format_date(access_code_request.created_at) %></td>
+  <td>
+    <% if access_code_request.code_sent_at -%>
+      <%= format_date(access_code_request.code_sent_at) %>
+    <% else -%>
+      <%= link_to(translate('muck.users.send_code'), send_code_admin_access_code_request_path(access_code_request.id), { :class => 'dialog-pop', :title => translate('muck.users.send_access_code_request_title') }) %>
+    <% end -%>
+  </td>
+  <td><%= link_to(translate('muck.users.edit'), edit_admin_access_code_request_path(access_code_request.id), { :class => 'dialog-pop', :title => translate('muck.users.edit_access_code_request_title') }) %></td>
+  <td><%= link_to(translate('muck.users.delete'), admin_access_code_request_path(access_code_request.id), :class => 'ajax-delete', :title => translate('muck.users.access_code_request_delete_confirm')) %></td>
+</tr>

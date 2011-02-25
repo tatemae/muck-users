@@ -1,0 +1,19 @@
+<div id="send-access-code-single">
+  <h3><%=translate('muck.users.send_access_code_request_title') %></h3>
+  <%= output_errors(translate('muck.users.access_code_request_send_problem'), {:class => 'help-box'}, @access_code_request) %>
+  <%= muck_form_for @access_code_request, :url => admin_access_code_request_path(@access_code_request), :html => { :method => :put, :class => 'ajax' } do |f| -%>
+    <p><%=translate('muck.users.send_access_code_instructions') %></p>
+    <div class="form-row">
+      <label><%= translate('muck.users.access_code_subject')%></label>
+      <%= text_field_tag :subject -%>
+    </div>
+    <div class="form-row">
+      <label><%= translate('muck.users.access_code_message')%></label>
+      <%= text_area_tag :message -%>  
+    </div>
+    <div class="form-row">
+      <%= f.submit translate('muck.users.send_access_code') %>
+    </div>
+    <%= hidden_field :send_access_code, true %>
+  <% end -%>
+</div>

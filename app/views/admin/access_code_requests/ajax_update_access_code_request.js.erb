@@ -1,0 +1,2 @@
+jQuery('#<%=@access_code_request.dom_id('row')%>').replaceWith('<%=escape_javascript(render(:partial => 'admin/access_code_requests/access_code_request', :locals => { :access_code_request => @access_code_request } ))%>');
+jQuery('.dialog').dialog('close');
