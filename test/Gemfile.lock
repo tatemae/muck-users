@@ -18,7 +18,7 @@ PATH
 PATH
   remote: ~/projects/muck-engine
   specs:
-    muck-engine (3.2.3)
+    muck-engine (3.2.4)
       overlord
       validation_reflection
       will_paginate (~> 3.0.beta)

@@ -42,7 +42,7 @@ describe Admin::Muck::AccessCodeRequestsController do
           get :send_code, :id => @access_code_request.to_param
         end
         it { should respond_with :success }
-        it { should render_template :edit }
+        it { should render_template :send_code }
       end
       
       describe "GET edit" do
@@ -55,7 +55,7 @@ describe Admin::Muck::AccessCodeRequestsController do
   
       describe "PUT to update" do
         before(:each) do
-          put :update, :id => @access_code_request.to_param, :access_code_request => {:code => 'testcodetoo', :expires_at => Date.new((DateTime.now.year + 2), 10, 10) }, :format => 'js'
+          put :update, :id => @access_code_request.to_param, :access_code_request => { :email => 'test@example.com' }, :format => 'js'
         end
         it { should respond_with :success }
         it "should not have errors" do
@@ -73,11 +73,11 @@ describe Admin::Muck::AccessCodeRequestsController do
           
       describe "fail on PUT to update" do
         before(:each) do
-          put :update, :id => @access_code_request.to_param, :access_code_request => {:code => nil, :expires_at => Date.new((DateTime.now.year + 2), 10, 10) }, :format => 'js'
+          put :update, :id => @access_code_request.to_param, :access_code_request => { :email => nil }, :format => 'js'
         end
         it { should respond_with :success }
         it "should have errors on access code's 'code' field" do
-          assigns(:access_code_request).errors[:code].should_not be_empty
+          assigns(:access_code_request).errors[:email].should_not be_empty
         end
       end
       

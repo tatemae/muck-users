@@ -31,7 +31,7 @@ class Admin::Muck::AccessCodeRequestsController < Admin::Muck::BaseController
     end
     
   rescue => ex
-    flash[:error] = ex
+    flash[:error] = ex.to_s
     output_admin_messages
   end
   
