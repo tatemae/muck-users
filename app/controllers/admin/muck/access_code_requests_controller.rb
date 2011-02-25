@@ -11,15 +11,15 @@ class Admin::Muck::AccessCodeRequestsController < Admin::Muck::BaseController
   end
   
   def send_code
+    @expires_at = 1.year.from_now
     @access_code_request = AccessCodeRequest.find(params[:id])
     render :template => "admin/access_code_requests/send_code", :layout => false
   end
   
   def update
-    debugger
     @access_code_request = AccessCodeRequest.find(params[:id])
     if params[:send_access_code]
-      @success = @access_code_request.send_access_code(params[:subject], params[:message])
+      @success = @access_code_request.send_access_code(params[:subject], params[:message], params[:expires_at])
     else
       @success = @access_code_request.update_attributes(params[:access_code_request])
     end

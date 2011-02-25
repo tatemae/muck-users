@@ -37,6 +37,14 @@ describe Admin::Muck::AccessCodeRequestsController do
         it { should render_template :index }
       end
       
+      describe "GET send_code" do
+        before(:each) do
+          get :send_code, :id => @access_code_request.to_param
+        end
+        it { should respond_with :success }
+        it { should render_template :edit }
+      end
+      
       describe "GET edit" do
         before(:each) do
           get :edit, :id => @access_code_request.to_param

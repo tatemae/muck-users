@@ -4,12 +4,16 @@
   <%= muck_form_for @access_code_request, :url => admin_access_code_request_path(@access_code_request), :html => { :method => :put, :class => 'ajax' } do |f| -%>
     <p><%=translate('muck.users.send_access_code_instructions') %></p>
     <div class="form-row">
-      <label><%= translate('muck.users.access_code_subject')%></label>
-      <%= text_field_tag :subject -%>
+      <label><%= translate('muck.users.access_code_subject') %></label>
+      <%= text_field_tag :subject, params[:subject] -%>
     </div>
     <div class="form-row">
-      <label><%= translate('muck.users.access_code_message')%></label>
-      <%= text_area_tag :message -%>  
+      <label><%= translate('muck.users.access_code_message') %></label>
+      <%= text_area_tag :message, params[:message] -%>  
+    </div>
+    <div class="form-row">
+      <label><%= translate('muck.users.expiration_date') %></label>
+      <%= text_field_tag :expires_at, params[:expires_at] || @expires_at, :class => 'date_pick' -%>  
     </div>
     <div class="form-row">
       <%= f.submit translate('muck.users.send_access_code') %>
@@ -17,3 +21,9 @@
     <%= hidden_field :send_access_code, true %>
   <% end -%>
 </div>
+
+<script type="text/javascript" language="JavaScript">
+  jQuery(document).ready(function(){
+    jQuery('.date_pick').datepicker();
+  });
+</script>

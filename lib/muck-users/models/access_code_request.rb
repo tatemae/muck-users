@@ -24,20 +24,21 @@ module MuckUsers
         end
         
         def mark_fullfilled(access_code_requests)
-          access_code_requests.each do |request|
-            request.update_attribute(:code_sent_at, DateTime.now)
+          access_code_requests.each do |r|
+            r.update_attribute(:code_sent_at, DateTime.now)
           end
         end
         
       end
 
-      def send_access_code(subject, message)
+      def send_access_code(subject, message, expires_at)
         access_code = AccessCode.create!(:unlimited => false,
                                          :use_limit => 1,
                                          :uses => 0,
-                                         :code => AccessCode.random_code)
+                                         :code => AccessCode.random_code,
+                                         :expires_at => expires_at)
         UserMailer.access_code(self.email, subject, message, access_code.code).deliver
-        success = AccessCodeRequest.mark_fullfilled(self)
+        success = AccessCodeRequest.mark_fullfilled([self])
       end
       
     end
