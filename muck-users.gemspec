@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "3.1.7"
+  s.version = "3.1.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2011-02-22}
+  s.date = %q{2011-02-24}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "app/controllers/admin/muck/access_code_requests_controller.rb",
     "app/controllers/admin/muck/access_codes_controller.rb",
     "app/controllers/admin/muck/roles_controller.rb",
     "app/controllers/admin/muck/users_controller.rb",
@@ -35,6 +36,13 @@ Gem::Specification.new do |s|
     "app/views/access_code_requests/create.js.erb",
     "app/views/access_code_requests/new.html.erb",
     "app/views/access_code_requests/show.html.erb",
+    "app/views/admin/access_code_requests/_access_code_request.html.erb",
+    "app/views/admin/access_code_requests/_form.html.erb",
+    "app/views/admin/access_code_requests/ajax_update_access_code_request.js.erb",
+    "app/views/admin/access_code_requests/destroy.js.erb",
+    "app/views/admin/access_code_requests/edit.html.erb",
+    "app/views/admin/access_code_requests/index.html.erb",
+    "app/views/admin/access_code_requests/send_code.html.erb",
     "app/views/admin/access_codes/_access_code.html.erb",
     "app/views/admin/access_codes/_form.html.erb",
     "app/views/admin/access_codes/_user.html.erb",
