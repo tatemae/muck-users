@@ -31,6 +31,19 @@ describe Muck::UserSessionsController do
     it {should redirect_to(user_path(@user))}
   end
   
+  describe "login success and render json" do
+    before(:each) do
+      post :create, :user_session => { :login => @login, :password => @good_password }, :format => 'json'
+    end
+    it "should create a user session" do
+      assert user_session = UserSession.find
+      @user.should == user_session.user        
+    end
+    it "should render true" do
+      @response.body.should include('true')
+    end
+  end
+  
   describe "fail login" do
     before(:each) do
       post :create, :user_session => { :login => @login, :password => 'bad password' }
@@ -42,6 +55,18 @@ describe Muck::UserSessionsController do
     it { should render_template :new }
   end
 
+  describe "fail login json" do
+    before(:each) do
+      post :create, :user_session => { :login => @login, :password => 'bad password' }, :format => 'json'
+    end
+    it "should not create a user session" do
+      UserSession.find.should be_nil
+    end
+    it "should render false" do
+      @response.body.should include('false')
+    end
+  end
+  
   describe "authlogic enabled" do
     before(:each) do
       @user = Factory(:user)
@@ -56,6 +81,30 @@ describe Muck::UserSessionsController do
         UserSession.find.should be_nil
       end
       it {should redirect_to(logout_complete_path)}
+    end
+  end
+  
+  describe "GET login_check" do
+    before do
+      @user = Factory(:user)
+      activate_authlogic
+    end
+    describe "logged in" do
+      before do
+       login_as(@user)
+        get :login_check
+      end
+      it "should render json with logged in true" do
+        @response.body.should include('true')
+      end
+    end
+    describe "not logged in" do
+      before do
+        get :login_check
+      end
+      it "should render json with logged in false" do
+        @response.body.should include('false')
+      end
     end
   end
   

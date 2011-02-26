@@ -18,10 +18,10 @@ PATH
 PATH
   remote: ~/projects/muck-engine
   specs:
-    muck-engine (3.2.4)
+    muck-engine (3.2.6)
       overlord
       validation_reflection
-      will_paginate (~> 3.0.beta)
+      will_paginate (~> 3.0.pre2)
 
 GEM
   remote: http://rubygems.org/

@@ -38,18 +38,25 @@ class Muck::UserSessionsController < ApplicationController
     end
   end
   
+  def login_check
+    render :json => { :logged_in => logged_in? }
+  end
+  
   protected
   
     def after_create_response(success)
       if success
-        flash[:notice] = t('muck.users.login_success')
         respond_to do |format|
-          format.html { redirect_back_or_default user_path(@user_session.user) }
+          format.html do
+            flash[:notice] = t('muck.users.login_success')
+            redirect_back_or_default(user_path(@user_session.user))
+          end
+          format.json { render :json => { :logged_in => true, :message => t('muck.users.login_success') } }
         end
       else
-        flash[:notice] = t('muck.users.login_fail')
         respond_to do |format|
-          format.html { render :template => 'user_sessions/new' }
+          format.html { render :template => 'user_sessions/new', :notice => t('muck.users.login_fail') }
+          format.json { render :json => { :logged_in => false, :message => t('muck.users.login_fail') } }
         end
       end
     end

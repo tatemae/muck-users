@@ -43,7 +43,9 @@ Rails.application.routes.draw do
   resources :access_code_requests, :controller => 'muck/access_code_requests'
 
   # page a user is taken to when they log out
-  match '/login' => 'user_session#new', :as => :logout_complete
+  match '/login' => 'user_sessions#new', :as => :logout_complete, :controller => 'muck/user_sessions'
+  
+  match '/login_check' => 'user_sessions#login_check', :controller => 'muck/user_sessions'
   
   # admin
   namespace :admin do
