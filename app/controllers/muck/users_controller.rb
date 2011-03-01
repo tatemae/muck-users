@@ -10,9 +10,9 @@ class Muck::UsersController < ApplicationController
     @user ||= current_user
     if @user == current_user
       @page_title = @user.to_param
-      standard_response('show')
+      standard_response('show', true)
     else
-      redirect_to public_user_path(@user)
+      standard_response('show', false, public_user_path(@user))
     end
   end
   
@@ -35,15 +35,13 @@ class Muck::UsersController < ApplicationController
   def new
     @page_title = t('muck.users.register_account', :application_name => MuckEngine.configuration.application_name)
     @user = User.new
-    standard_response('new')
+    standard_response('new', true)
   end
   
   def edit
     @page_title = t('muck.users.update_profile')
     @user = admin? ? User.find(params[:id]) : current_user
-    respond_to do |format|
-      format.html { render :template => 'users/edit' }
-    end
+    standard_response('edit', true)
   end
     
   def create
@@ -162,12 +160,20 @@ class Muck::UsersController < ApplicationController
       end
     end
   
-    def standard_response(template)
-      respond_to do |format|
-        format.html { render :template => "users/#{template}" }
-        format.xml { render :xml => @user }
-        format.json { render :json => { :success => true, :user => @user.as_json } }
-      end
+    def standard_response(template, success = true, failure_path = '')
+      if success
+        respond_to do |format|
+          format.html { render :template => "users/#{template}" }
+          format.xml { render :xml => @user }
+          format.json { render :json => { :success => true, :user => @user.as_json } }
+        end
+      else 
+        respond_to do |format|
+          format.html { redirect_to failure_path }
+          format.xml { render :xml => @user }
+          format.json { render :json => { :success => false } }
+        end
+      end  
     end
   
     def after_create_response(success, local_uri = '')

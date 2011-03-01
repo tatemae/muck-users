@@ -36,7 +36,10 @@ module MuckUsers
         unless logged_in?
           store_location
           flash[:notice] = I18n.t('muck.users.login_requred')
-          redirect_to login_path
+          respond_to do |format|
+            format.html { redirect_to login_path }
+            format.json { render :json => { :success => false, :logged_in => false, :message => I18n.t('muck.users.login_requred') } }
+          end
         end
       end
 

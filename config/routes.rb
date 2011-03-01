@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   match '/users/activation_complete/:id' => 'muck/users#welcome',                 :as => :activation_complete
   match '/signup_complete_activate/:id'  => 'muck/users#activation_instructions', :as => :signup_complete_activation_required
   match 'account'                        => 'muck/users#show',                    :as => :account
+  match 'current_user'                   => 'muck/users#show'
   
   # activations
   resources :activations, :controller => 'muck/activations'
@@ -38,14 +39,11 @@ Rails.application.routes.draw do
   match '/login'                     => 'muck/user_sessions#new',     :as => :login, :constraints => { :protocol => muck_routes_protocol }
   match '/logout'                    => 'muck/user_sessions#destroy', :as => :logout, :constraints => { :protocol => muck_routes_protocol }
   match '/signup_complete_login/:id' => 'muck/user_sessions#new',     :as => :signup_complete_login_required
+  match '/login'                     => 'muck/user_sessions#new',     :as => :logout_complete
+  match '/login_check'               => 'muck/user_sessions#login_check'
   
   # Access codes
   resources :access_code_requests, :controller => 'muck/access_code_requests'
-
-  # page a user is taken to when they log out
-  match '/login' => 'user_sessions#new', :as => :logout_complete, :controller => 'muck/user_sessions'
-  
-  match '/login_check' => 'user_sessions#login_check', :controller => 'muck/user_sessions'
   
   # admin
   namespace :admin do

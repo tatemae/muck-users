@@ -35,6 +35,7 @@ class Muck::UserSessionsController < ApplicationController
     flash[:notice] = t('muck.users.login_out_success')
     respond_to do |format|
       format.html { redirect_to logout_complete_path }
+      format.json { render :json => { :logged_in => false, :message => t('muck.users.login_out_success') } }
     end
   end
   
@@ -51,7 +52,7 @@ class Muck::UserSessionsController < ApplicationController
             flash[:notice] = t('muck.users.login_success')
             redirect_back_or_default(user_path(@user_session.user))
           end
-          format.json { render :json => { :logged_in => true, :message => t('muck.users.login_success') } }
+          format.json { render :json => { :logged_in => true, :message => t('muck.users.login_success'), :user => @user.to_json } }
         end
       else
         respond_to do |format|

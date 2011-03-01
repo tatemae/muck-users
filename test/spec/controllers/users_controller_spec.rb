@@ -192,6 +192,17 @@ describe Muck::UsersController do
       it { should render_template :show }
     end
     
+    describe "on GET to show (json)" do
+      before(:each) do
+        get :show, :format => 'json'
+      end
+      it { should respond_with :success }
+      it "should render user information as json" do
+        data = JSON.parse(response.body)
+        data['user'].should_not be_blank
+      end
+    end
+    
     describe "on GET to edit" do
       before(:each) do
         get :edit, :id => @user.to_param
