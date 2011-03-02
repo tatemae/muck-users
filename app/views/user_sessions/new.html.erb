@@ -6,7 +6,8 @@
 	  <%= f.password_field :password, { :label => I18n.t('muck.users.password'), :class => 'password', :hide_required => true, :hide_control_error => true } -%>
 	  <%= f.check_box :remember_me, { :label => I18n.t('muck.users.remember_me'), :class => 'checkbox', :hide_required => true, :hide_control_error => true } %>
     <div class="button form-row">
-      <%= submit_tag I18n.t('muck.users.sign_in') %>
+      <%= submit_tag I18n.t('muck.users.sign_in'), :class => 'wait-button' %>
+      <div class="waiting" style="display:none;"><%=translate('muck.users.signin_wait') %></div>
     </div>
     <div class="form-row">
       <span class="instruction"><%= link_to I18n.t('muck.users.register_for_account'), signup_url  %></span> | 

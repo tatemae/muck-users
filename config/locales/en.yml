@@ -2,235 +2,237 @@
 en: 
   muck: 
     users: 
-      sign_up_now: Sign-up Now
-      old_password_incorrect: Your old password is incorrect.
-      bulk_access_code_emails_tip: Separate emails with a comma
-      join_application_name: Join and get it done
-      access_code_request_delete_confirm: Are you sure you want to cancel this access code request?
-      email_help: Please use a valid, current e-mail address. We will never share or spam your e-mail address.
-      logout_required: ""
-      access_code_fullfill_invites_limit_tip: Enter a number to limit the number of requests sent out.  For example, entering 100 will limit the invites to the most recent 100 requests
-      access_required_warning: Site access is currently restricted.  You need a valid access code to sign up.
-      login_out_success: You have been logged out.
-      sign_out_title: Sign Out
-      cant_disable_admin: Can't disable an administrator.  Please remove the user from the administrator role and try again.
-      already_registered: Already a member?
-      activation_not_found: Activation code not found. Please try creating a new account.
-      use_limit_tip: Enter the number of times the access code can be used.
-      login_title: Log-in to your Account
-      user_disable_problem: There was a problem disabling this user.
-      access_code: Access Code
-      change_permissions_for: Change Permissions for %{user}
-      login_success: Login successful!
-      change_password: Change Password
-      add_user_to_role: Add User to Role
+      add_access_code: Add Access Code
+      cant_delete_admin: You can't delete a user that is in the admin role.  Remove the user from the administrator role and then try again.  Please be careful when deleting administrators.  If you delete all administrator accounts you will no longer be able to login to the administration system.
+      sign_in_now: Sign in now!
       add_access_code_title: Add Access Code
-      terms_and_service: By clicking 'Sign-up Now' you agree to comply with the %{tos_link_anchor}Terms and Conditions%{link_end}.
-      password_reset_link_sent: Instructions to reset your password have been emailed to you. Please check your email.
-      deleting_user: deleting user...
-      forgot_your_username: Forgot your username?
-      email: Email
-      access_code_fullfill_invites_tip: Check here to send invites to users who have requested an invite.  This will ignore any emails specified above.
-      login_requred: You must be logged in to access this feature.
-      recover_password: Recover Password
-      confirm_delete_account: Are you sure you want to delete your account?\nThis can not be undone.
-      access_code_deleted: Deleted access code.
-      password_updated: Password successfully updated.
-      username_sent: Your username has been sent emailed to you. Please check your Email.
-      add_permission: (Add Permission)
-      access_code_delete_error: An error occured while trying to delete the access code
-      access_code_fullfill_invites: Fulfill Invite Requests
-      access_code_unlimited: Unlimited
-      welcome: Welcome
-      bulk_access_codes_created: Bulk access codes created and emailed to %{email_count} emails.
-      users_in_role: "Users in role: %{role}"
-      current_password: Current Password
-      user_update_sucess: User was successfully updated
-      problem_creating_account: "There was a problem creating your account.  Please correct the following errors:"
-      terms_of_service_required: You must accept the terms of service.
-      password_confirmation_help: To ensure that your password is correct please enter it again here.
-      edit_access_code_title: Edit Access Code
-      access_request_name: Name
-      thanks_sign_up_login: Thanks for signing up! You may login now
-      already_activated: Your account has already been activated. You can log in below.
-      access_code_requests_signed_up_on: Signed up on
-      access_request_email: Email
-      password: Password
-      account_not_activated: Your %{application_name} account has not yet been activated.
-      sorry_invalid_reset_code: We're sorry, but we could not locate your account. If you are having issues try copying and pasting the URL from your email into your browser or restarting the reset password process.
-      update_user_admin: Update User
-      problem_changing_password: There was a problem changing your password. %{errors}
-      access_code_delete_problem: Cannot delete access code it has users associated with it.
-      access_code_requests_email: Email
-      user_enable_problem: There was a problem enabling this user.
-      access_code_tip: Enter a access code.
-      email_empty: Please enter an email address
-      select_new_password: Select a New Password
-      bulk_access_code_emails: Emails
-      bulk_access_code_subject: Subject
-      access_code_delete_link: Delete Access Code
+      login_title: Log-in to your Account
+      old_password_incorrect: Your old password is incorrect.
+      username_recover_prompt: Please provide the email that you used when you created your account, your username will be emailed to you.
+      add_permission_to_user: Add Permission to user %{user}
       request_access_code: Request Access Code
-      first_name: First Name
-      forgot_username: Forgot Username
-      account_activated: Your account has been activated! You can now login.
-      already_logged_in: You are already logged in and don't need to recover your password.
-      email_invalid: Invalid email
-      validation_is_required: is required.
-      user_disabled: User disabled
-      invalid_username: Invalid username
-      access_code_requests_code_sent_on: Code Sent on
-      update: Update
-      could_not_find_user_with_email: Could not find a user with that email address.
-      password_reset_email_subject: You have requested to change your %{application_name} password
-      cannot_deactivate_yourself: You cannot deactivate yourself!
-      bulk_access_codes_description: This will generate a unique, single use access code for each of the emails provided.
-      add: Add
+      access_code_related_users: Users who signed up with this code
+      unlimited_tip: Check here if the access code can be used an unlimited number of times.  This will override the use limit.
+      login_empty: Please enter a login
+      activation_instructions: Activation Instructions
+      sign_up_now: Sign-up Now
+      login_fail: We're sorry, but we couldn't recognize your login information.  Please try again.
+      bulk_access_codes_title: Bulk Access Codes
+      account_not_activated: Your %{application_name} account has not yet been activated.
+      access_code_added: Access Code was successfully added
+      confirm_delete_account: Are you sure you want to delete your account?\nThis can not be undone.
+      bulk_access_code_message: Message
+      view_your_account: View Your Account
+      password_mismatch: Password mismatch.
+      username_not_available: Username not available
       admin: 
         activate_all_inactive_users_confirm: Are you sure you want to activate all inactive users in the system?  This cannot be undone!
         activate_all_inactive_users: Activate All Inactive Users
         show_emails: Show Emails
         search_users: Search Users
         unactivated_users: There are %{count} unactivated users
-      request_username: Request Username
-      name: Name
-      terms_and_service_tip: In order to register you must agree to the terms and conditions. You may review these policies before proceeding by clicking on the link.
-      sign_in_now: Sign in now!
-      my_dashboard: My Dashboard
+      invalid_username: Invalid username
+      last_name: Last Name
+      user_update: Your user information has been updated.
       confirm_select_new_password: Confirm Password Change
-      use_limit: Number of Uses
-      access_code_subject: Subject
-      add_role: Add Role
-      admin_users_title: User Administration
-      edit_access_code: Edit Access Code
-      click_to_sign_up_now: Click here to sign up now.
-      forgot_password: Forgot Password
-      login: Login
-      validation_are_required: are required.
-      user_not_activated_error: Could not activate user
-      password_not_reset: Password not reset.
-      save: Save
-      delete_this_user: Delete this user.
-      username_help: You can use between 6 and 20 characters. If the name you want isn't available try adding numbers or punctuation.
-      edit_role_dialog_title: Edit Role
-      change_permissions: Change Roles
-      send_access_code_request_title: Send Code
-      access_code_created: Created
-      username_not_available: Username not available
-      remove_my_account: Remove My Account
-      email_available: Email available
-      thanks_sign_up_check: Your account has been created. Please check your e-mail for your account activation instructions!
-      user_enabled: User enabled
-      request_access_code_instruction: Please provide the following information and we'll provide you with an access code as soon as possible.
-      delete_my_account: Delete my user account and all my data.
-      activation_instructions: Activation Instructions
-      edit: Edit
-      what_is_the_email: What is the email address used to create your account?
-      access_code_added: Access Code was successfully added
-      password_reset: Password reset.
-      register_account: Register for a %{application_name} account
-      welcome_message: Welcome to muck.  This system provides the basic components to help you build your website.
-      activation_complete: Activation Complete
-      access_code_uses: Uses
-      recover_password_prompt: (If you forgot your password recover it here)
-      access_code_thank_you: Thank you for your interest. We'll get you a code as soon as possible.
-      username: Username
-      user_marked_active: User has been marked as active
-      all_users: All Users
-      access_code_request_tip: Enter your email and we'll send you an access code as soon as one is available. Thank you!
-      password_mismatch: Password mismatch.
+      email_invalid: Invalid email
+      user_disable_problem: There was a problem disabling this user.
+      email_not_available: Email already in use. %{reset_password_help}
+      total_users: "Total Users: %{total}"
       add_role_dialog_title: Add Role
-      user_account_deleted: You have successfully deleted your account.
-      new_password_doesnt_match: New password does not match the password confirmation.
-      add_permission_to_user: Add Permission to user %{user}
-      sign_in: Sign In
-      role_deleted: Role Deleted
-      complete_profile: Complete Your Profile
-      access_codes: Access Codes
-      access_code_delete_confirm: Are you sure you want to cancel this access code?
-      expiration_date_tip: Enter the date upon which the access code will become invalid
+      submit: Submit
+      application_base_url_not_set: Please set application_base_url in global_config.yml
+      add_role: Add Role
+      login_requred: You must be logged in to access this feature.
+      reset_password: Reset Your Password
+      permission_denied: You don't have permission to complete the requested action.
+      access_code_delete_problem: Cannot delete access code it has users associated with it.
+      access_code_unlimited: Unlimited
+      access_code_use_limit: Use Limit
+      access_code_fullfill_invites_limit: Invite Request Limit
+      activation_complete: Activation Complete
+      edit_role_dialog_title: Edit Role
+      already_logged_in: You are already logged in and don't need to recover your password.
+      forgot_your_username: Forgot your username?
+      access_code_created: Created
+      bulk_access_code_problem: Problem adding access code
+      signup_wait: Signing you up. Please wait.
+      password_not_reset: Password not reset.
+      my_dashboard: My Dashboard
+      bulk_access_codes_description: This will generate a unique, single use access code for each of the emails provided.
+      cannot_deactivate_yourself: You cannot deactivate yourself!
+      user_disabled: User disabled
+      access_code_request_delete_confirm: Are you sure you want to cancel this access code request?
+      role_delete_confirm: Are you sure you want to delete this role?  All associated permissions will also be deleted!
+      role: Role
+      username: Username
+      access_code: Access Code
+      already_registered: Already a member?
+      all_users: All Users
+      login_out_success: You have been logged out.
+      validation_are_required: are required.
+      request_username: Request Username
+      send_access_code: Send Code
+      send_code: Send Code
       problem_editing_account: There was a problem updating your information.
+      edit: Edit
+      access_code_subject: Subject
+      thanks_sign_up: Thanks for signing up!
+      access_code_request_send_problem: There was a problem sending the code
+      sign_in: Sign In
+      user_enabled: User enabled
+      name: Name
+      bulk_access_code_emails: Emails
+      role_not_deleted: Role could not be deleted
       navigation: 
         inactive_users: Inactive Users
         all_users: All Users
         search_users: Search Users
-      user_marked_inactive: User has been marked as inactive
-      access_code_request_thank_you: Thank you for your request.  We'll be in touch as soon as possible.
-      send_access_code_instructions: Provide a message and body that will be sent in the email along with the code that will let the user create an account.
-      access_code_requests_name: Name
-      access_code_fullfill_invites_limit: Invite Request Limit
-      bulk_access_code_tip: Optional. If a code is specified then that code will be sent to all users.  Leave this field empty to send a unique code to each user.
-      role: Role
-      bulk_access_codes_title: Bulk Access Codes
-      users_admin: Users
-      username_recover_prompt: Please provide the email that you used when you created your account, your username will be emailed to you.
-      access_code_expires: Expires
-      user_successfully_deleted: User %{login} was successfully deleted.
-      application_base_url_not_set: Please set application_base_url in global_config.yml
-      cant_delete_admin: You can't delete a user that is in the admin role.  Remove the user from the administrator role and then try again.  Please be careful when deleting administrators.  If you delete all administrator accounts you will no longer be able to login to the administration system.
-      access_code_update_problem: There was a problem updating the access code.
-      user_not_deactivated_error: Could not deactivate user
-      total_users: "Total Users: %{total}"
-      password_cannot_be_blank: Password field cannot be blank.
-      access_code_edit_link: Edit Access Code
-      access_code_edit_problem: Problem editing access code
-      bulk_access_code_problem: Problem adding access code
-      submit: Submit
-      confirm_password: Confirm Password
-      edit_access_code_request_title: Edit Request
-      add_user_to_role_title: Add user to a new role.
-      expiration_date: Expiration Date
-      edit_access_code_request: Edit Access Code Request
-      role_not_deleted: Role could not be deleted
-      roles: Roles
-      access_code_related_users: Users who signed up with this code
-      login_empty: Please enter a login
-      welcome_email_subject: Welcome to %{application_name}
-      access_code_new: New Access Code
-      sign_in_title: Sign In
-      edit_profile: Edit Profile
-      admin_requred: You must be an administrator to access this feature.
-      delete: Delete
-      password_help: Your password should be at least six characters long. A Mix of upper and lower-case letters and numbers works well
-      login_fail: We're sorry, but we couldn't recognize your login information.  Please try again.
-      email_not_available: Email already in use. %{reset_password_help}
-      access_code_request_send_problem: There was a problem sending the code
-      access_code_request_edit_problem: Problem editing access code request
-      access_code_add_problem: Problem adding access code
-      sign_up: Sign up
-      change_your_password: Change Your Password
-      forgot_your_password: Forgot your password?
-      send_code: Send Code
-      role_delete_confirm: Are you sure you want to delete this role?  All associated permissions will also be deleted!
-      unlimited: Unlimited Uses
-      remember_me: Remember me
-      reset_your_password: Reset Your Password
-      access_code_message: Message
-      access_code_use_limit: Use Limit
-      access_code_help: If you received a access code from us, please enter it in the box above. You may also %{access_request_anchor}request a access code%{access_request_anchor_end}.
+      access_code_uses: Uses
+      select_new_password: Select a New Password
+      login: Login
+      access_code_requests_code_sent_on: Code Sent on
       email_address: Email Address
-      send_access_code: Send Code
-      cant_delete_administrator_role: You can't delete the administrator role.
-      view_your_account: View Your Account
+      access_code_help: If you received a access code from us, please enter it in the box above. You may also %{access_request_anchor}request a access code%{access_request_anchor_end}.
+      delete: Delete
+      bulk_access_codes_created: Bulk access codes created and emailed to %{email_count} emails.
+      access_required_warning: Site access is currently restricted.  You need a valid access code to sign up.
+      unlimited: Unlimited Uses
+      access_code_thank_you: Thank you for your interest. We'll get you a code as soon as possible.
+      access_code_delete_link: Delete Access Code
+      access_code_tip: Enter a access code.
+      change_password: Change Password
+      use_limit_tip: Enter the number of times the access code can be used.
+      roles: Roles
+      problem_creating_account: "There was a problem creating your account.  Please correct the following errors:"
+      welcome_message: Welcome to muck.  This system provides the basic components to help you build your website.
+      what_is_the_email: What is the email address used to create your account?
+      delete_my_account: Delete my user account and all my data.
+      change_permissions: Change Roles
+      access_code_requests_email: Email
+      password_reset_link_sent: Instructions to reset your password have been emailed to you. Please check your email.
+      access_code_add_problem: Problem adding access code
+      user_not_deactivated_error: Could not deactivate user
+      account_activated: Your account has been activated! You can now login.
+      welcome: Welcome
+      update: Update
+      already_activated: Your account has already been activated. You can log in below.
+      welcome_email_subject: Welcome to %{application_name}
+      deleting_user: deleting user...
+      add_user_to_role: Add User to Role
+      logout_required: ""
+      edit_access_code_request_title: Edit Request
+      access_code_deleted: Deleted access code.
+      register_account: Register for a %{application_name} account
       request_username_subject: Forgotten username
-      could_not_find_reset_code: Could not find a password reset code.  Please try resetting your password again.
-      register_for_account: Register for an account
-      unfullfilled_access_code_requests: Unfulfilled Access Code Requests
-      access_code_request_count: There are currently %{access_code_requests_count} access code requests
-      bulk_access_code_message: Message
-      bulk_access_codes: Bulk Access Codes
-      add_access_code: Add Access Code
-      user_update: Your user information has been updated.
-      update_profile: Update your profile
-      update_user: Update your user information
-      choose_member_name: Member Name
-      access_denied: You don't have permission to access the requested page.
-      username_available: Username available
-      permission_denied: You don't have permission to complete the requested action.
-      unlimited_tip: Check here if the access code can be used an unlimited number of times.  This will override the use limit.
-      last_name: Last Name
+      password_cannot_be_blank: Password field cannot be blank.
+      role_deleted: Role Deleted
+      confirm_password: Confirm Password
+      users_admin: Users
+      email_help: Please use a valid, current e-mail address. We will never share or spam your e-mail address.
+      access_code_fullfill_invites: Fulfill Invite Requests
+      change_your_password: Change Your Password
+      access_code_request_thank_you: Thank you for your request.  We'll be in touch as soon as possible.
+      sign_up: Sign up
+      access_code_requests_signed_up_on: Signed up on
+      access_code_new: New Access Code
+      access_code_requests_name: Name
+      first_name: First Name
+      thanks_sign_up_login: Thanks for signing up! You may login now
+      sign_in_title: Sign In
+      problem_changing_password: There was a problem changing your password. %{errors}
+      access_code_expires: Expires
+      remove_my_account: Remove My Account
+      save: Save
+      user_not_activated_error: Could not activate user
+      update_user_admin: Update User
+      username_sent: Your username has been sent emailed to you. Please check your Email.
       email_recover_prompt: Please provide the email you signed up with to recover your password.
-      thanks_sign_up: Thanks for signing up!
-      reset_password: Reset Your Password
+      choose_member_name: Member Name
+      user_account_deleted: You have successfully deleted your account.
+      password_reset: Password reset.
+      delete_this_user: Delete this user.
+      use_limit: Number of Uses
+      user_successfully_deleted: User %{login} was successfully deleted.
+      new_password_doesnt_match: New password does not match the password confirmation.
+      password_confirmation_help: To ensure that your password is correct please enter it again here.
+      add_permission: (Add Permission)
+      send_access_code_instructions: Provide a message and body that will be sent in the email along with the code that will let the user create an account.
+      password_reset_email_subject: You have requested to change your %{application_name} password
+      update_user: Update your user information
+      sorry_invalid_reset_code: We're sorry, but we could not locate your account. If you are having issues try copying and pasting the URL from your email into your browser or restarting the reset password process.
+      activation_not_found: Activation code not found. Please try creating a new account.
+      signin_wait: Signing you in. Please wait.
+      bulk_access_codes: Bulk Access Codes
+      access_code_request_edit_problem: Problem editing access code request
+      admin_requred: You must be an administrator to access this feature.
+      expiration_date_tip: Enter the date upon which the access code will become invalid
+      remember_me: Remember me
+      add_user_to_role_title: Add user to a new role.
+      access_code_edit_link: Edit Access Code
+      access_code_update_problem: There was a problem updating the access code.
+      access_code_request_tip: Enter your email and we'll send you an access code as soon as one is available. Thank you!
+      send_access_code_request_title: Send Code
+      could_not_find_user_with_email: Could not find a user with that email address.
+      validation_is_required: is required.
+      recover_password: Recover Password
+      join_application_name: Join and get it done
+      bulk_access_code_tip: Optional. If a code is specified then that code will be sent to all users.  Leave this field empty to send a unique code to each user.
+      bulk_access_code_emails_tip: Separate emails with a comma
+      password_updated: Password successfully updated.
+      register_for_account: Register for an account
+      recover_password_prompt: (If you forgot your password recover it here)
+      forgot_password: Forgot Password
+      access_denied: You don't have permission to access the requested page.
+      edit_access_code: Edit Access Code
+      edit_access_code_title: Edit Access Code
+      access_code_fullfill_invites_tip: Check here to send invites to users who have requested an invite.  This will ignore any emails specified above.
+      username_available: Username available
+      access_code_message: Message
+      access_code_delete_confirm: Are you sure you want to cancel this access code?
+      user_marked_active: User has been marked as active
+      bulk_access_code_subject: Subject
+      could_not_find_reset_code: Could not find a password reset code.  Please try resetting your password again.
+      edit_profile: Edit Profile
+      forgot_username: Forgot Username
+      users_in_role: "Users in role: %{role}"
+      email_empty: Please enter an email address
+      access_code_request_count: There are currently %{access_code_requests_count} access code requests
+      unfullfilled_access_code_requests: Unfulfilled Access Code Requests
+      complete_profile: Complete Your Profile
+      forgot_your_password: Forgot your password?
+      request_access_code_instruction: Please provide the following information and we'll provide you with an access code as soon as possible.
+      update_profile: Update your profile
+      username_help: You can use between 6 and 20 characters. If the name you want isn't available try adding numbers or punctuation.
+      user_update_sucess: User was successfully updated
+      login_success: Login successful!
+      change_permissions_for: Change Permissions for %{user}
+      password_help: Your password should be at least six characters long. A Mix of upper and lower-case letters and numbers works well
+      access_code_fullfill_invites_limit_tip: Enter a number to limit the number of requests sent out.  For example, entering 100 will limit the invites to the most recent 100 requests
+      edit_access_code_request: Edit Access Code Request
+      user_marked_inactive: User has been marked as inactive
+      terms_and_service_tip: In order to register you must agree to the terms and conditions. You may review these policies before proceeding by clicking on the link.
+      terms_and_service: By clicking 'Sign-up Now' you agree to comply with the %{tos_link_anchor}Terms and Conditions%{link_end}.
+      expiration_date: Expiration Date
+      add: Add
+      terms_of_service_required: You must accept the terms of service.
+      password: Password
+      access_request_email: Email
+      current_password: Current Password
+      sign_out_title: Sign Out
+      email_available: Email available
+      thanks_sign_up_check: Your account has been created. Please check your e-mail for your account activation instructions!
+      admin_users_title: User Administration
+      user_enable_problem: There was a problem enabling this user.
+      access_code_delete_error: An error occured while trying to delete the access code
+      email: Email
+      cant_delete_administrator_role: You can't delete the administrator role.
+      reset_your_password: Reset Your Password
+      access_code_edit_problem: Problem editing access code
+      access_codes: Access Codes
+      click_to_sign_up_now: Click here to sign up now.
+      access_request_name: Name
+      cant_disable_admin: Can't disable an administrator.  Please remove the user from the administrator role and try again.
     roles: 
       role_created: Role was successfully created.
       assign_role: Assign Role

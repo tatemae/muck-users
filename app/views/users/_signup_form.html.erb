@@ -35,7 +35,8 @@
 	<% end -%>
 	
 	<div class="button form-row">
-  	<%= f.submit t('muck.users.sign_up_now') %>
+  	<%= f.submit t('muck.users.sign_up_now'), :class => 'wait-button' %>
+    <div class="waiting" style="display:none;"><%=translate('muck.users.signup_wait') %></div>
   </div>
   
 <% end -%>
