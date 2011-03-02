@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "3.1.10"
+  s.version = "3.1.11"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
@@ -395,6 +395,7 @@ Gem::Specification.new do |s|
     "app/views/user_mailer/welcome_notification.zh-CN.html.erb",
     "app/views/user_mailer/welcome_notification.zh-TW.html.erb",
     "app/views/user_mailer/welcome_notification.zh.html.erb",
+    "app/views/user_sessions/_form.erb",
     "app/views/user_sessions/new.html.erb",
     "app/views/username_request/new.html.erb",
     "app/views/users/_available.html.erb",
