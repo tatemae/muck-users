@@ -1,0 +1,19 @@
+<div id="sign_in" class="common-form">
+  <%= muck_form_for :user_session, :url => user_session_path, :html => { :id => 'sign_in_form', :name => 'sign_in_form' } do |f| -%>
+    <h1><%= title || I18n.t('muck.users.login_title') %></h1>
+    <%= output_errors(t('muck.users.login_fail'), {:class => 'help-box'}) %>
+	  <%= f.text_field :login, { :label => I18n.t('muck.users.username'), :class => 'login', :hide_required => true, :hide_control_error => true } -%>
+	  <%= f.password_field :password, { :label => I18n.t('muck.users.password'), :class => 'password', :hide_required => true, :hide_control_error => true } -%>
+	  <%= capture(f, &block) if block -%>
+	  <%= f.check_box :remember_me, { :label => I18n.t('muck.users.remember_me'), :class => 'checkbox', :hide_required => true, :hide_control_error => true } %>
+    <div class="button form-row">
+      <%= submit_tag I18n.t('muck.users.sign_in'), :class => 'wait-button' %>
+      <div class="waiting" style="display:none;"><%=translate('muck.users.signin_wait') %></div>
+    </div>
+    <div class="form-row">
+      <% unless exclude_register_link -%><span class="instruction"><%= link_to I18n.t('muck.users.register_for_account'), signup_url  %></span> | <% end -%>
+  		<% unless exclude_forgot_password_link -%><span class="instruction"><%= link_to I18n.t('muck.users.forgot_your_password'), forgot_password_path %></span> | <% end -%>
+      <% unless exclude_forgot_username_link -%><span class="instruction"><%= link_to I18n.t('muck.users.forgot_your_username'), forgot_username_path %></span> <% end -%>
+  	</div>
+  <% end %>
+</div>

@@ -74,6 +74,14 @@ module MuckUsers
         def validates_terms_of_service
           validate(:accepts_terms_of_service?, :on => :create)
         end
+        
+        def parse_name(name)
+          return '' if name.blank?
+          names = name.split(' ')
+          return '' if names.length <= 0
+          return [names[0], names[0]] if names.length == 1
+          [names[0], names.slice(1, names.length).join(' ')]
+        end
           
       end
       

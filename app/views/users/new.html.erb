@@ -1,6 +1,1 @@
-<div id="registration" class="common-form">
-	<h1><%= t('muck.users.register_account', :application_name => MuckEngine.configuration.application_name) %></h1>
-	<p><%= t('muck.users.already_registered') %> <a href="<%=login_url%>"><%= t('muck.users.sign_in_now') %></a></p>
-  <%= signup_form(@user) -%>
-</div>
-<%= signup_form_javascript -%>
+<%= signup_form(@user) -%>

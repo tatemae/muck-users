@@ -1,42 +1,49 @@
-<%= muck_form_for :user, :url => users_path, :html => {:id => "register-user-form", :name => 'register-user-form'} do |f| -%>
+<div id="registration" class="common-form">
+	<h1><%= title || t('muck.users.register_account', :application_name => MuckEngine.configuration.application_name) %></h1>
+	<p><%= t('muck.users.already_registered') %> <a href="<%=login_url%>"><%= t('muck.users.sign_in_now') %></a></p>
+  <%= muck_form_for :user, :url => users_path, :html => {:id => "register-user-form", :name => 'register-user-form'} do |f| -%>
 
-	<%= output_errors(t('muck.users.problem_creating_account'), {:class => 'help-box'}, user) %>
-	
-	<% if MuckUsers.configuration.require_access_code -%>
-    <%= f.text_field :access_code_code, { :label => translate('muck.users.access_code'), 
-                                          :extra_html => translate('muck.users.access_code_help', 
-                                            :access_request_anchor => %Q{<a class="fancy-access-request iframe" href="#{new_access_code_request_path}">},
-                                            :access_request_anchor_end => "</a>").html_safe } -%>
-  <% end -%>
-  
-	<%= f.text_field :login, { :label => t('muck.users.choose_member_name'), 
-	                           :extra_html => '<span id="username-availibility"></span>', 
-	                           :tip => t('muck.users.username_help'),
-	                           :required_label => t('muck.users.username') } -%>
-	<%= f.text_field :email, { :label => t('muck.users.email_address'),
-	                           :tip => t('muck.users.email_help'),
-	                           :extra_html => '<span id="email-availibility"></span>' } -%>
-	<%= f.password_field :password, { :label => t('muck.users.password'),
-	                                  :tip => t('muck.users.password_help')} -%>
-	<%= f.password_field :password_confirmation, { :label => t('muck.users.confirm_password'),
-                                                 :tip => t('muck.users.password_confirmation_help') } -%>
-	
-	<% if MuckUsers.configuration.validate_terms_of_service -%>
-    <div class="checklist">
-      <%= f.check_box :terms_of_service, { :label => t('muck.users.terms_and_service', :tos_link_anchor => '<a href="/terms_of_service">', :link_end => '</a>').html_safe,
-     																		   :tip => t('muck.users.terms_and_service_tip') } -%>
+  	<%= output_errors(t('muck.users.problem_creating_account'), {:class => 'help-box'}, user) %>
+
+  	<% if MuckUsers.configuration.require_access_code -%>
+      <%= f.text_field :access_code_code, { :label => translate('muck.users.access_code'), 
+                                            :extra_html => translate('muck.users.access_code_help', 
+                                              :access_request_anchor => %Q{<a class="fancy-access-request iframe" href="#{new_access_code_request_path}">},
+                                              :access_request_anchor_end => "</a>").html_safe } -%>                                        
+    <% end -%>
+
+  	<%= f.text_field :login, { :label => t('muck.users.choose_member_name'), 
+  	                           :extra_html => '<span id="username-availibility"></span>', 
+  	                           :tip => t('muck.users.username_help'),
+  	                           :required_label => t('muck.users.username') } -%>
+  	<%= f.text_field :email, { :label => t('muck.users.email_address'),
+  	                           :tip => t('muck.users.email_help'),
+  	                           :extra_html => '<span id="email-availibility"></span>' } -%>
+  	<%= f.password_field :password, { :label => t('muck.users.password'),
+  	                                  :tip => t('muck.users.password_help')} -%>
+  	<%= f.password_field :password_confirmation, { :label => t('muck.users.confirm_password'),
+                                                   :tip => t('muck.users.password_confirmation_help') } -%>
+
+  	<%= capture(f, &block) if block -%>
+
+  	<% if MuckUsers.configuration.validate_terms_of_service -%>
+      <div class="checklist">
+        <%= f.check_box :terms_of_service, { :label => t('muck.users.terms_and_service', :tos_link_anchor => '<a href="/terms_of_service">', :link_end => '</a>').html_safe,
+       																		   :tip => t('muck.users.terms_and_service_tip') } -%>
+      </div>
+    <% end -%>
+
+  	<% if MuckUsers.configuration.use_recaptcha -%>
+    	<div class="recaptcha">
+    		<%= recaptcha_tags %>
+    	</div>
+  	<% end -%>
+
+  	<div class="button form-row">
+    	<%= f.submit t('muck.users.sign_up_now'), :class => 'wait-button' %>
+      <div class="waiting" style="display:none;"><%=translate('muck.users.signup_wait') %></div>
     </div>
+
   <% end -%>
-  
-	<% if MuckUsers.configuration.use_recaptcha -%>
-  	<div class="recaptcha">
-  		<%= recaptcha_tags %>
-  	</div>
-	<% end -%>
-	
-	<div class="button form-row">
-  	<%= f.submit t('muck.users.sign_up_now'), :class => 'wait-button' %>
-    <div class="waiting" style="display:none;"><%=translate('muck.users.signup_wait') %></div>
-  </div>
-  
-<% end -%>
+</div>
+<%= signup_form_javascript -%>

@@ -412,4 +412,21 @@ describe User do
       @user.can_edit?( @anotheruser ).should be_true
     end
   end
+  
+  describe "parse_name" do
+    before do
+      @name = "george smith"
+      @with_middle_name = "john jacob smith"
+    end
+    it "should parse the first name" do
+      User.parse_name(@name)[0].should == "george"
+    end
+    it "should parse the last name" do
+      User.parse_name(@name)[1].should == "smith"
+    end
+    it "should include the middle name the last name" do
+      User.parse_name(@with_middle_name)[1].should == "jacob smith"
+    end
+  end
+  
 end
