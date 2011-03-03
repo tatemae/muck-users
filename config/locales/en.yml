@@ -198,7 +198,9 @@ en:
       users_in_role: "Users in role: %{role}"
       email_empty: Please enter an email address
       access_code_request_count: There are currently %{access_code_requests_count} access code requests
+      access_code_requests: Access Code Requests
       unfullfilled_access_code_requests: Unfulfilled Access Code Requests
+      fullfilled_access_code_requests: Fulfilled Access Code Requests
       complete_profile: Complete Your Profile
       forgot_your_password: Forgot your password?
       request_access_code_instruction: Please provide the following information and we'll provide you with an access code as soon as possible.

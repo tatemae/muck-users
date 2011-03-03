@@ -1,8 +1,5 @@
 <h2><%=translate('muck.users.access_codes') %></h2>
-<p>
-  <%= link_to translate('muck.users.access_code_new'), new_admin_access_code_path, { :class => 'dialog-pop', :title => translate('muck.users.add_access_code_title') } %> 
-  <%= link_to translate('muck.users.bulk_access_codes'), bulk_admin_access_codes_path %>
-</p>
+<%= render :partial => 'admin/access_codes/access_code_nav' %>
 <table class="adminTable" cellspacing="0" cellpadding="0">
   <thead>
     <tr>

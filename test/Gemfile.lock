@@ -9,19 +9,11 @@ GIT
 PATH
   remote: ../
   specs:
-    muck-users (3.1.10)
+    muck-users (3.1.12)
       authlogic
       bcrypt-ruby
       friendly_id
       muck-engine (>= 3.0.3)
-
-PATH
-  remote: ~/projects/muck-engine
-  specs:
-    muck-engine (3.2.6)
-      overlord
-      validation_reflection
-      will_paginate (~> 3.0.pre2)
 
 GEM
   remote: http://rubygems.org/
@@ -110,6 +102,10 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    muck-engine (3.2.6)
+      overlord
+      validation_reflection
+      will_paginate (~> 3.0.pre2)
     mysql (2.8.1)
     nokogiri (1.4.4)
     overlord (3.0.2)
@@ -185,7 +181,7 @@ DEPENDENCIES
   database_cleaner
   factory_girl
   launchy
-  muck-engine!
+  muck-engine
   muck-users!
   mysql
   rails (= 3.0.4)

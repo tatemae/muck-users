@@ -1,7 +1,5 @@
 <h2><%=translate('muck.users.access_code') %></h2>
-<%= link_to(translate('muck.users.access_code_edit_link'), edit_admin_access_code_path(@access_code.id)) %>
-<%= link_to(translate('muck.users.access_code_delete_link'), admin_access_code_path(@access_code.id), :class => 'ajax-delete', :title => translate('muck.users.access_code_delete_confirm')) %>
-
+<%= render :partial => 'admin/access_codes/access_code_nav' %>
 <table class="adminTable" cellspacing="0" cellpadding="0">
   <thead>
     <tr>
@@ -11,6 +9,8 @@
       <th><%=translate('muck.users.access_code_unlimited') %></th>
       <th><%=translate('muck.users.access_code_expires') %></th>
       <th><%=translate('muck.users.access_code_created') %></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
   <%= render :partial => 'admin/access_codes/access_code', :object => @access_code %>

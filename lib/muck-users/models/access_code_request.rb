@@ -9,6 +9,7 @@ module MuckUsers
         validates_uniqueness_of :email
         
         scope :unfullfilled, where('access_code_requests.code_sent_at IS NULL')
+        scope :fullfilled, where('access_code_requests.code_sent_at IS NOT NULL')
         scope :by_newest, order("created_at DESC")
         scope :by_oldest, order("created_at ASC")
       end

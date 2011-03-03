@@ -1,7 +1,13 @@
 class Admin::Muck::AccessCodeRequestsController < Admin::Muck::BaseController
   
   def index
-    @unfullfilled_requests = AccessCodeRequest.unfullfilled.by_newest.paginate(:page => @page, :per_page => @per_page)
+    if params[:fullfilled]
+      @title = translate('muck.users.fullfilled_access_code_requests')
+      @access_code_requests = AccessCodeRequest.fullfilled.by_newest.paginate(:page => @page, :per_page => @per_page)
+    else
+      @title = translate('muck.users.unfullfilled_access_code_requests')
+      @access_code_requests = AccessCodeRequest.unfullfilled.by_newest.paginate(:page => @page, :per_page => @per_page)
+    end
     render :template => 'admin/access_code_requests/index'
   end
   

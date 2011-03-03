@@ -22,7 +22,6 @@ module MuckUsers
       MuckEngine.configuration.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_users'), '/admin/users')
       MuckEngine.configuration.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_roles'), '/admin/roles')
       MuckEngine.configuration.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_access_codes'), '/admin/access_codes')
-      MuckEngine.configuration.add_muck_admin_nav_item(I18n.translate('muck.engine.admin_access_code_requests'), '/admin/access_code_requests')
     end
             
     initializer 'muck-users.controllers' do

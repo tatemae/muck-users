@@ -22,12 +22,23 @@ describe AccessCodeRequest do
         @fullfilled = Factory(:access_code_request, :code_sent_at => DateTime.now)
         @unfullfilled = Factory(:access_code_request)
       end
-      it "should sort by code" do
+      it "should find unfullfilled requests" do
         assert !AccessCodeRequest.unfullfilled.include?(@fullfilled)
         assert AccessCodeRequest.unfullfilled.include?(@unfullfilled)
       end
     end
     
+    describe "fullfilled" do
+      before(:each) do
+        AccessCodeRequest.delete_all
+        @fullfilled = Factory(:access_code_request, :code_sent_at => DateTime.now)
+        @unfullfilled = Factory(:access_code_request)
+      end
+      it "should find fullfilled requests" do
+        assert AccessCodeRequest.unfullfilled.include?(@fullfilled)
+        assert !AccessCodeRequest.unfullfilled.include?(@unfullfilled)
+      end
+    end
   end
   
   describe "get emails" do

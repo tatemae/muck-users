@@ -1,4 +1,6 @@
-<h2><%=translate('muck.users.unfullfilled_access_code_requests') %></h2>
+<h2><%=translate('muck.users.access_code_requests') %></h2>
+<%= render :partial => 'admin/access_codes/access_code_nav' %>
+<h3><%= @title %></h3>
 <table class="adminTable" cellspacing="0" cellpadding="0">
   <thead>
     <tr>
@@ -11,7 +13,7 @@
     </tr>
   </thead>
   <tbody id="current-access-code-requests">
-    <%= render :partial => 'admin/access_code_requests/access_code_request', :collection => @unfullfilled_requests %>
+    <%= render :partial => 'admin/access_code_requests/access_code_request', :collection => @access_code_requests %>
   </tbody>
 </table>
-<%= will_paginate @unfullfilled_requests %>
+<%= will_paginate @access_code_requests %>

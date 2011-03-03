@@ -1,4 +1,5 @@
 <h2><%=translate('muck.users.bulk_access_codes_title') %></h2>
+<%= render :partial => 'admin/access_codes/access_code_nav' %>
 <p><%=translate('muck.users.bulk_access_codes_description') %></p>
 <%= output_errors(translate('muck.users.bulk_access_code_problem'), {:class => 'help-box'}, @access_code) %>
 <%= muck_form_for :access_code, :url => bulk_create_admin_access_codes_path, :html => {:class => "standard-form alt"} do |f| -%>
