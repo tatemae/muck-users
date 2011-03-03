@@ -4,6 +4,7 @@ module MuckUsersHelper
   def signup_form(user, redirect_to = nil, options = {}, &block)
     options[:html] = {} if options[:html].nil?
     options[:title] = nil if options[:title].blank?
+    options[:subtitle] = nil if options[:subtitle].blank?
     raw_block_to_partial('users/signup_form', options.merge(:user => user, :redirect_to => redirect_to), &block)
   end
   

@@ -53,6 +53,8 @@ class Muck::UsersController < ApplicationController
     check_recaptcha
     success, path = setup_user
     after_create_response(success, path)
+  rescue MuckUsers::Exceptions::InvalidAccessCode, ActiveRecord::RecordInvalid => ex
+    after_create_response(false)
   end
 
   def update
@@ -200,7 +202,7 @@ class Muck::UsersController < ApplicationController
           @user.access_code = access_code
         else
           flash[:notice] = translate('muck.users.access_required_warning')
-          raise Exceptions::InvalidAccessCode
+          raise MuckUsers::Exceptions::InvalidAccessCode
         end
       end
     end

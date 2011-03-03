@@ -28,6 +28,7 @@ module MuckUsers
     initializer 'muck-users.controllers' do
       ActiveSupport.on_load(:action_controller) do
         include MuckUsers::AuthenticApplication
+        include MuckUsers::Exceptions
       end
     end
     

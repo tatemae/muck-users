@@ -1,15 +1,22 @@
 <div id="registration" class="common-form">
 	<h1><%= title || t('muck.users.register_account', :application_name => MuckEngine.configuration.application_name) %></h1>
-	<p><%= t('muck.users.already_registered') %> <a href="<%=login_url%>"><%= t('muck.users.sign_in_now') %></a></p>
+	<p>
+	  <% if subtitle -%>
+	    <%= subtitle.html_safe %>
+	  <% else -%>
+	    <%= t('muck.users.already_registered') %> <a href="<%=login_url%>"><%= t('muck.users.sign_in_now') %></a>
+	  <% end -%>
+	</p>
   <%= muck_form_for :user, :url => users_path, :html => {:id => "register-user-form", :name => 'register-user-form'} do |f| -%>
 
   	<%= output_errors(t('muck.users.problem_creating_account'), {:class => 'help-box'}, user) %>
 
   	<% if MuckUsers.configuration.require_access_code -%>
       <%= f.text_field :access_code_code, { :label => translate('muck.users.access_code'), 
-                                            :extra_html => translate('muck.users.access_code_help', 
-                                              :access_request_anchor => %Q{<a class="fancy-access-request iframe" href="#{new_access_code_request_path}">},
-                                              :access_request_anchor_end => "</a>").html_safe } -%>                                        
+                                            :extra_html => '<p id="access_code_help">' + 
+                                              translate('muck.users.access_code_help', 
+                                                :access_request_anchor => %Q{<a class="fancy-access-request iframe" href="#{new_access_code_request_path}">},
+                                                :access_request_anchor_end => "</a>") + '<p>'.html_safe } -%>
     <% end -%>
 
   	<%= f.text_field :login, { :label => t('muck.users.choose_member_name'), 
