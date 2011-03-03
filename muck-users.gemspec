@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "3.1.12"
+  s.version = "3.1.13"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2011-03-02}
+  s.date = %q{2011-03-03}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -42,8 +42,9 @@ Gem::Specification.new do |s|
     "app/views/admin/access_code_requests/destroy.js.erb",
     "app/views/admin/access_code_requests/edit.html.erb",
     "app/views/admin/access_code_requests/index.html.erb",
-    "app/views/admin/access_code_requests/send_code.html.erb",
+    "app/views/admin/access_code_requests/send_code.erb",
     "app/views/admin/access_codes/_access_code.html.erb",
+    "app/views/admin/access_codes/_access_code_nav.html.erb",
     "app/views/admin/access_codes/_form.html.erb",
     "app/views/admin/access_codes/_user.html.erb",
     "app/views/admin/access_codes/ajax_create_access_code.js.erb",
@@ -460,6 +461,7 @@ Gem::Specification.new do |s|
     "db/migrate/20100123035450_create_access_codes.rb",
     "db/migrate/20100123233654_create_access_code_requests.rb",
     "db/migrate/20101117172951_add_name_to_access_code_requests.rb",
+    "db/migrate/20110303183433_add_sent_to_to_access_codes.rb",
     "lib/muck-users.rb",
     "lib/muck-users/config.rb",
     "lib/muck-users/controllers/authentic_application.rb",
