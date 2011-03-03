@@ -18,24 +18,36 @@
     <%= f.text_area :message, { :label => translate('muck.users.bulk_access_code_message') } -%>
   </div>
   <div class="span-11 column">
-    <%= f.text_area :emails, { :label => translate('muck.users.bulk_access_code_emails'),
-                                :tip => translate('muck.users.bulk_access_code_emails_tip')  } -%>
-
+    <div>
+      <% if @access_code_requests_count > 0 -%>
+        <%= f.check_box :send_requests, { :label => translate('muck.users.access_code_fullfill_invites'),
+                                          :tip => translate('muck.users.access_code_fullfill_invites_tip') } -%>
+        <p><%=translate('muck.users.access_code_request_count', :access_code_requests_count => @access_code_requests_count) %></p>                                  
+        <%= f.text_field :send_request_limit, { :label => translate('muck.users.access_code_fullfill_invites_limit'),
+                                                :tip => translate('muck.users.access_code_fullfill_invites_limit_tip') } -%>
+      <% end -%>
+    </div>
     <% if @access_code_requests_count > 0 -%>
-      <p><%=translate('muck.users.access_code_request_count', :access_code_requests_count => @access_code_requests_count) %></p>
-      <%= f.check_box :send_requests, { :label => translate('muck.users.access_code_fullfill_invites'),
-                                        :tip => translate('muck.users.access_code_fullfill_invites_tip') } -%>
-
-      <%= f.text_field :send_request_limit, { :label => translate('muck.users.access_code_fullfill_invites_limit'),
-                                              :tip => translate('muck.users.access_code_fullfill_invites_limit_tip') } -%>
+      <p style="text-align:center;font-weight:bold;font-size:24px;margin:15px;0"><%=translate('muck.users.bulk_access_codes_or') %></p>
     <% end -%>
+    <div id="email-list">
+      <%= f.text_area :emails, { :label => translate('muck.users.bulk_access_code_emails'),
+                                 :tip => translate('muck.users.bulk_access_code_emails_tip')  } -%>
+    </div>
+    <div id="email-list-not-included-message" style="display:none;">
+      <p>Fulfilling requests prevents you from sending out invites to a list of emails.</p>
+    </div>
   </div>
   <div class="span-24 column center">
-    <%= f.submit translate('muck.users.save') %>
+    <%= f.submit translate('muck.users.send_access_codes') %>
   </div>
 <% end -%>
 <script type="text/javascript" language="JavaScript">
   jQuery(document).ready(function(){
     jQuery('.date_pick').datepicker();
   });
+  jQuery("#access_code_send_requests").click(function(){
+		jQuery('#email-list').toggle();
+		jQuery('#email-list-not-included-message').toggle();
+	});
 </script>

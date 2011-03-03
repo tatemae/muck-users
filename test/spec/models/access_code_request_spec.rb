@@ -35,8 +35,8 @@ describe AccessCodeRequest do
         @unfullfilled = Factory(:access_code_request)
       end
       it "should find fullfilled requests" do
-        assert AccessCodeRequest.unfullfilled.include?(@fullfilled)
-        assert !AccessCodeRequest.unfullfilled.include?(@unfullfilled)
+        assert !AccessCodeRequest.unfullfilled.include?(@fullfilled)
+        assert AccessCodeRequest.unfullfilled.include?(@unfullfilled)
       end
     end
   end

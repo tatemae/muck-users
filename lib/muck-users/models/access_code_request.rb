@@ -6,7 +6,6 @@ module MuckUsers
     
       included do
         validates_presence_of :email
-        validates_uniqueness_of :email
         
         scope :unfullfilled, where('access_code_requests.code_sent_at IS NULL')
         scope :fullfilled, where('access_code_requests.code_sent_at IS NOT NULL')

@@ -21,5 +21,4 @@ jQuery(document).ready(function() {
 		autoFill: true,
 		mustMatch: false
 	});
-	jQuery('a.fancy-access-request').fancybox({'hideOnContentClick':false, 'overlayShow':true, 'width':375, 'height':300 });
 });

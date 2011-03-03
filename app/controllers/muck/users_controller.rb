@@ -34,7 +34,11 @@ class Muck::UsersController < ApplicationController
 
   def new
     @page_title = t('muck.users.register_account', :application_name => MuckEngine.configuration.application_name)
-    @user = User.new
+    @user = User.new(:access_code_code => params[:access_code])
+    if(params[:access_code])
+      @access_code = AccessCode.find_by_code(params[:access_code])
+      @user.email = @access_code.sent_to
+    end
     standard_response('new', true)
   end
   
@@ -198,6 +202,7 @@ class Muck::UsersController < ApplicationController
     def check_access_code
       if MuckUsers.configuration.require_access_code
         access_code, valid_code = AccessCode.valid_code?(params[:user][:access_code_code])
+        debugger
         if valid_code
           @user.access_code = access_code
         else

@@ -16,7 +16,7 @@ module MuckUsers
         scope :active, where('access_codes.expires_at > Now() AND access_codes.uses <= use_limit')
 
         # Used to make bulk access code easier to deal with
-        attr_accessor :emails, :subject, :message, :send_requests, :send_request_limit
+        attr_accessor :emails, :subject, :message, :send_request_limit
                   
       end
 
@@ -68,7 +68,17 @@ module MuckUsers
       def expired?
         self.expires_at? && self.expires_at < Time.now
       end
-        
-    end
+
+      def send_requests=(sr)
+        @send_request = sr
+      end
+
+      def send_requests
+        return false if @send_request == '0'
+        return false if @send_request == 'false'
+        return @send_request
+      end
+              
+    end    
   end
 end

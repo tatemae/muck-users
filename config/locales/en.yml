@@ -77,6 +77,7 @@ en:
       problem_editing_account: There was a problem updating your information.
       edit: Edit
       access_code_subject: Subject
+      bulk_access_codes_or: OR
       thanks_sign_up: Thanks for signing up!
       access_code_request_send_problem: There was a problem sending the code
       sign_in: Sign In
@@ -89,11 +90,12 @@ en:
         all_users: All Users
         search_users: Search Users
       access_code_uses: Uses
+      access_code_sent_to: Sent To
       select_new_password: Select a New Password
       login: Login
       access_code_requests_code_sent_on: Code Sent on
-      email_address: Email Address
       access_code_help: If you received a access code from us, please enter it in the box above. You may also %{access_request_anchor}request a access code%{access_request_anchor_end}.
+      email_address: Email Address
       delete: Delete
       bulk_access_codes_created: Bulk access codes created and emailed to %{email_count} emails.
       access_required_warning: Site access is currently restricted.  You need a valid access code to sign up.
@@ -107,8 +109,8 @@ en:
       problem_creating_account: "There was a problem creating your account.  Please correct the following errors:"
       welcome_message: Welcome to muck.  This system provides the basic components to help you build your website.
       what_is_the_email: What is the email address used to create your account?
-      delete_my_account: Delete my user account and all my data.
       change_permissions: Change Roles
+      delete_my_account: Delete my user account and all my data.
       access_code_requests_email: Email
       password_reset_link_sent: Instructions to reset your password have been emailed to you. Please check your email.
       access_code_add_problem: Problem adding access code
@@ -135,6 +137,7 @@ en:
       access_code_request_thank_you: Thank you for your request.  We'll be in touch as soon as possible.
       sign_up: Sign up
       access_code_requests_signed_up_on: Signed up on
+      list_access_codes: List Access Codes
       access_code_new: New Access Code
       access_code_requests_name: Name
       first_name: First Name
@@ -154,6 +157,7 @@ en:
       delete_this_user: Delete this user.
       use_limit: Number of Uses
       user_successfully_deleted: User %{login} was successfully deleted.
+      access_code_requests: Access Code Requests
       new_password_doesnt_match: New password does not match the password confirmation.
       password_confirmation_help: To ensure that your password is correct please enter it again here.
       add_permission: (Add Permission)
@@ -162,11 +166,11 @@ en:
       update_user: Update your user information
       sorry_invalid_reset_code: We're sorry, but we could not locate your account. If you are having issues try copying and pasting the URL from your email into your browser or restarting the reset password process.
       activation_not_found: Activation code not found. Please try creating a new account.
-      signin_wait: Signing you in. Please wait.
       bulk_access_codes: Bulk Access Codes
       access_code_request_edit_problem: Problem editing access code request
       admin_requred: You must be an administrator to access this feature.
       expiration_date_tip: Enter the date upon which the access code will become invalid
+      signin_wait: Signing you in. Please wait.
       remember_me: Remember me
       add_user_to_role_title: Add user to a new role.
       access_code_edit_link: Edit Access Code
@@ -179,6 +183,7 @@ en:
       join_application_name: Join and get it done
       bulk_access_code_tip: Optional. If a code is specified then that code will be sent to all users.  Leave this field empty to send a unique code to each user.
       bulk_access_code_emails_tip: Separate emails with a comma
+      send_access_codes: Send Codes
       password_updated: Password successfully updated.
       register_for_account: Register for an account
       recover_password_prompt: (If you forgot your password recover it here)
@@ -198,12 +203,11 @@ en:
       users_in_role: "Users in role: %{role}"
       email_empty: Please enter an email address
       access_code_request_count: There are currently %{access_code_requests_count} access code requests
-      access_code_requests: Access Code Requests
       unfullfilled_access_code_requests: Unfulfilled Access Code Requests
-      fullfilled_access_code_requests: Fulfilled Access Code Requests
       complete_profile: Complete Your Profile
       forgot_your_password: Forgot your password?
       request_access_code_instruction: Please provide the following information and we'll provide you with an access code as soon as possible.
+      fullfilled_access_code_requests: Fulfilled Access Code Requests
       update_profile: Update your profile
       username_help: You can use between 6 and 20 characters. If the name you want isn't available try adding numbers or punctuation.
       user_update_sucess: User was successfully updated
@@ -228,8 +232,8 @@ en:
       user_enable_problem: There was a problem enabling this user.
       access_code_delete_error: An error occured while trying to delete the access code
       email: Email
-      cant_delete_administrator_role: You can't delete the administrator role.
       reset_your_password: Reset Your Password
+      cant_delete_administrator_role: You can't delete the administrator role.
       access_code_edit_problem: Problem editing access code
       access_codes: Access Codes
       click_to_sign_up_now: Click here to sign up now.

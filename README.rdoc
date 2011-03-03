@@ -114,6 +114,11 @@ By default when a user logs out they are sent to the login page.  You can add a 
 
 muck-users sends out emails that need to be able to generate links.  Be sure to set a value for MuckEngine.configuration.application_url.
 
+muck-users will let you require an access code to sign up. If you enable this option your sign up form will add a link for a beta code. 
+To make it a popup add this to your application.js
+
+  jQuery('a.fancy-access-request').fancybox({'hideOnContentClick':false, 'overlayShow':true, 'width':375, 'height':300 });
+
 === Assets
 
 Calling rake muck:sync:users will pull in images, javascript and other assets. 

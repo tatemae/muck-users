@@ -95,4 +95,22 @@ describe AccessCode do
     AccessCode.random_code.length.should > 0
   end
   
+  describe "send_requests" do
+    before do
+      @access_code = Factory(:access_code)
+    end
+    it "should return false if set to '0'" do
+      @access_code.send_requests = '0'
+      @access_code.send_requests.should be_false
+    end
+    it "should return false if set to 'false'" do
+      @access_code.send_requests = 'false'
+      @access_code.send_requests.should be_false
+    end
+    it "should return true if set to true" do
+      @access_code.send_requests = true
+      @access_code.send_requests.should be_true      
+    end
+  end
+  
 end

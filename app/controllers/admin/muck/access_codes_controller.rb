@@ -24,8 +24,7 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   end
   
   def bulk
-    @access_code = AccessCode.new
-    @access_code.code = AccessCode.random_code
+    @access_code = AccessCode.new(:expires_at => 1.year.since)
     @access_code_requests_count = AccessCodeRequest.unfullfilled.count
     render :template => 'admin/access_codes/bulk'
   end
@@ -48,6 +47,7 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
         @access_code.use_limit = 1
         @access_code.uses = 0
         @access_code.code = AccessCode.random_code
+        @access_code.sent_to = email
         @access_code.save!
       end
       UserMailer.access_code(email, @access_code.subject, @access_code.message, @access_code.code).deliver
