@@ -9,7 +9,7 @@ describe AccessCodeRequest do
   
   
   it { should validate_presence_of :email }
-  it { should validate_uniqueness_of :email }
+  #it { should validate_uniqueness_of :email }
 
   describe "named scopes" do
     it {should scope_by_newest}
