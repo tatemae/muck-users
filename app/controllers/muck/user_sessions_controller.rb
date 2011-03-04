@@ -56,7 +56,10 @@ class Muck::UserSessionsController < ApplicationController
         end
       else
         respond_to do |format|
-          format.html { render :template => 'user_sessions/new', :notice => t('muck.users.login_fail') }
+          format.html do
+            flash[:notice] = t('muck.users.login_fail')
+            render :template => 'user_sessions/new'
+          end
           format.json { render :json => { :logged_in => false, :message => t('muck.users.login_fail') } }
         end
       end
