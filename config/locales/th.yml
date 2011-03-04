@@ -25,11 +25,24 @@ th:
       access_code_fullfill_invites_limit_tip: "กดหมายเลขเพื่อ จำกัด จำนวนของการร้องขอที่ถูกส่งออก ตัวอย่างเช่นใส่ 100 จะ จำกัด ขอเชิญชวนให้ล่าสุด 100 หน้าถูกแสดง"
       access_code_fullfill_invites_tip: "ตรวจสอบที่นี่เพื่อส่งคำเชิญถึงผู้ใช้ที่ขอเชิญ นี้จะไม่สนใจอีเมลใด ๆ ที่ระบุไว้ข้างต้น"
       access_code_help: "ถ้าคุณได้รับรหัสเข้าใช้งานจากเราโปรดใส่ไว้ในช่องด้านบน คุณอาจขอรหัส %{access_request_anchor} - .-.-."
+      access_code_message: ข้อความ
       access_code_new: รหัสใหม่
+      access_code_not_found: "เราไม่สามารถหารหัสที่ให้ไว้ กรุณาติดต่อเรา %{contact_us_anchor} - .-.- หรือขอรหัสอื่น %{contact_us_anchor_end} - .-.-."
       access_code_related_users: ผู้ใช้ที่ลงทะเบียนกับรหัสนี้
       access_code_request_count: "ขณะนี้มี %{access_code_requests_count} หน้าถูกแสดงรหัสการเข้าถึง"
+      access_code_request_delete_confirm: คุณแน่ใจหรือว่าต้องการยกเลิกการนี้ขอรหัสเข้าใช้งาน?
+      access_code_request_edit_problem: การแก้ไขปัญหาการเข้าถึงขอรหัส
+      access_code_request_send_problem: มีปัญหาในการส่งรหัสเป็น
       access_code_request_thank_you: "ขอบคุณสำหรับคำขอของคุณ เราจะติดต่อกลับโดยเร็วที่สุด"
       access_code_request_tip: "กรุณาใส่อีเมลของคุณและเราจะส่งรหัสการเข้าถึงได้ทันทีที่หนึ่งสามารถใช้ได้ ขอขอบคุณ!"
+      access_code_requests: "Access ขอรหัส"
+      access_code_requests_code_sent_on: รหัสส่งให้ใน
+      access_code_requests_email: Email
+      access_code_requests_name: ชื่อ
+      access_code_requests_signed_up_on: ลงชื่อสมัครเมื่อ
+      access_code_sent_to: ส่งตัวมา
+      access_code_subject: เรื่อง
+      access_code_thank_you: "ขอขอบคุณที่ให้ความสนใจ เราจะให้รหัสโดยเร็วที่สุด"
       access_code_tip: ใส่รหัสการเข้าถึง
       access_code_unlimited: "ไม่ จำกัด"
       access_code_update_problem: เกิดปัญหาในการปรับปรุงรหัสการเข้าถึงได้
@@ -67,6 +80,7 @@ th:
       already_logged_in: คุณจะถูกบันทึกไว้แล้วในและไม่จำเป็นต้องกู้คืนรหัสผ่านของคุณ
       already_registered: เป็นสมาชิกอยู่แล้วหรือไม่
       application_base_url_not_set: "กรุณาตั้งค่า application_base_url ใน global_config.yml"
+      beta_code_not_required: คุณจะถูกบันทึกไว้แล้วในและเพื่อให้คุณอาจจะไม่ได้ต้องการโค้ดเบต้า
       bulk_access_code_emails: อีเมล์
       bulk_access_code_emails_tip: คั่นอีเมลด้วยเครื่องหมายจุลภาค
       bulk_access_code_message: ข้อความ
@@ -76,6 +90,7 @@ th:
       bulk_access_codes: รหัสการเข้าใช้จำนวนมาก
       bulk_access_codes_created: "เข้าถึงกลุ่มรหัสที่สร้างขึ้นและส่งอีเมลไปยังอีเมล %{email_count}"
       bulk_access_codes_description: นี้จะสร้างที่ไม่ซ้ำกันให้ใช้รหัสเดียวเข้าใช้งานสำหรับแต่ละอีเมลที่ให้ไว้
+      bulk_access_codes_or: OR
       bulk_access_codes_title: รหัสการเข้าใช้จำนวนมาก
       cannot_deactivate_yourself: คุณไม่สามารถยกเลิกการใช้งานด้วยตัวคุณเอง
       cant_delete_admin: "คุณไม่สามารถลบผู้ใช้ที่อยู่ในบทบาทผู้ดูแลระบบ ลบผู้ใช้จากบทบาทของผู้ดูแลระบบแล้วลองใหม่อีกครั้ง โปรดระวังว่าเมื่อลบผู้บริหาร ถ้าคุณลบบัญชีผู้ดูแลระบบทั้งหมดคุณจะไม่สามารถเข้าสู่ระบบการบริหาร"
@@ -100,6 +115,8 @@ th:
       deleting_user: "การลบผู้ใช้ ..."
       edit: Edit
       edit_access_code: แก้ไขรหัส
+      edit_access_code_request: ขอแก้ไขรหัส
+      edit_access_code_request_title: ขอแก้ไข
       edit_access_code_title: แก้ไขรหัส
       edit_profile: แก้ไขข้อมูลส่วนตัว
       edit_role_dialog_title: แก้ไขบทบาท
@@ -118,9 +135,11 @@ th:
       forgot_username: ลืมชื่อผู้ใช้
       forgot_your_password: ลืมรหัสผ่าน
       forgot_your_username: ลืมชื่อผู้ใช้ของคุณหรือไม่
+      fullfilled_access_code_requests: การขอรหัสการเติมเต็ม
       invalid_username: ชื่อผู้ใช้ไม่ถูกต้อง
       join_application_name: เข้าร่วมและได้รับการสร้างมันขึ้นมา
       last_name: "Last Name"
+      list_access_codes: รหัสการเข้าใช้รายการ
       login: เข้าสู่ระบบ
       login_empty: โปรดป้อนเข้าสู่ระบบ
       login_fail: "ขออภัย แต่เราไม่สามารถจำข้อมูลการเข้าสู่ระบบของคุณ โปรดลองอีกครั้ง"
@@ -158,6 +177,7 @@ th:
       remember_me: จำข้อมูลไว้
       remove_my_account: ลบบัญชีของฉัน
       request_access_code: รหัสขอ
+      request_access_code_instruction: โปรดระบุข้อมูลต่อไปนี้และเราจะให้รหัสการเข้าถึงโดยเร็วที่สุด
       request_username: ขอชื่อผู้ใช้
       request_username_subject: ลืมชื่อผู้ใช้
       reset_password: กำหนดรหัสผ่านใหม่
@@ -169,12 +189,19 @@ th:
       roles: บทบาท
       save: บันทึก
       select_new_password: เลือกรหัสผ่านใหม่
+      send_access_code: ส่งรหัส
+      send_access_code_instructions: ระบุข้อความและร่างกายที่จะถูกส่งให้ในอีเมล์พร้อมกับรหัสที่จะช่วยให้ผู้ใช้สร้างบัญชี
+      send_access_code_request_title: ส่งรหัส
+      send_access_codes: ส่งรหัส
+      send_code: ส่งรหัส
       sign_in: เข้าสู่ระบบ
       sign_in_now: เข้าสู่ระบบในขณะนี้!
       sign_in_title: เข้าสู่ระบบ
       sign_out_title: ออกจากระบบ
       sign_up: ลงทะเบียน
       sign_up_now: ลงทะเบียนตอนนี้
+      signin_wait: คุณเข้าใช้การเข้าสู่ระบบโปรดรอสักครู่
+      signup_wait: "การเข้าสู่ระบบคุณขึ้น โปรดรอสักครู่"
       sorry_invalid_reset_code: "ขออภัย แต่เราไม่สามารถค้นหาบัญชีของคุณ หากคุณมีปัญหาลองคัดลอกและวาง URL จากอีเมลของคุณลงในเบราว์เซอร์ของคุณหรือเริ่มต้นกระบวนการตั้งค่ารหัสผ่าน"
       submit: เสนอ
       terms_and_service: "โดยการคลิก&#39;ลงทะเบียนตอนนี้&#39;คุณยินยอมที่จะปฏิบัติตามข้อตกลงและเงื่อนไข %{tos_link_anchor} - .-.-."
@@ -184,6 +211,7 @@ th:
       thanks_sign_up_check: "บัญชีของคุณถูกสร้างขึ้น กรุณาตรวจสอบอีเมลของคุณเพื่อขอคำแนะนำการเปิดใช้งานบัญชีของคุณ"
       thanks_sign_up_login: "ขอขอบคุณสำหรับการลงทะเบียน! คุณสามารถเข้าสู่ระบบก่อน"
       total_users: "สมาชิกทั้งหมด : %{total}"
+      unfullfilled_access_code_requests: การขอรหัสไม่ได้ผล
       unlimited: "ใช้ไม่ จำกัด"
       unlimited_tip: "ตรวจสอบที่นี่ถ้ารหัสการเข้าถึงสามารถใช้งานได้ไม่ จำกัด จำนวนครั้ง นี้จะแทนที่การ จำกัด การใช้"
       update: Update
@@ -202,7 +230,7 @@ th:
       user_not_activated_error: ไม่สามารถเปิดใช้งานผู้ใช้
       user_not_deactivated_error: ไม่สามารถยกเลิกการใช้งานผู้ใช้
       user_successfully_deleted: "%{login} ผู้ใช้ถูกลบเรียบร้อยแล้ว"
-      user_update: คุณเป็นข้อมูลที่ผู้ใช้ได้รับการปรับปรุง
+      user_update: ข้อมูลผู้ใช้ของคุณได้รับการปรับปรุง
       user_update_sucess: ผู้ได้รับการปรับปรุงเรียบร้อยแล้ว
       username: ชื่อผู้ใช้
       username_available: ชื่อผู้ใช้ใช้ได้

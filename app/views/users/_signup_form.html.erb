@@ -12,6 +12,15 @@
   	<%= output_errors(t('muck.users.problem_creating_account'), {:class => 'help-box'}, user) %>
 
   	<% if MuckUsers.configuration.require_access_code -%>
+  	  <% if @access_code_not_found -%>
+  	    <p class="notice" id="access-code-not-found-msg">
+  	      <%= translate('muck.users.access_code_not_found', 
+  	          :contact_us_anchor => %Q{<a class="contact-us" href="/contact">},
+              :contact_us_anchor_end => "</a>",
+              :access_request_anchor => %Q{<a class="fancy-access-request iframe" href="#{new_access_code_request_path}">},
+              :access_request_anchor_end => "</a>").html_safe %>
+        </p>
+  	  <% end -%>
       <%= f.text_field :access_code_code, { :label => translate('muck.users.access_code'), 
                                             :extra_html => '<p id="access_code_help">' + 
                                               translate('muck.users.access_code_help', 
@@ -47,7 +56,7 @@
   	<% end -%>
 
   	<div class="button form-row">
-    	<%= f.submit t('muck.users.sign_up_now'), :class => 'wait-button' %>
+    	<%= f.submit t('muck.users.sign_up_now') %>
       <div class="waiting" style="display:none;"><%=translate('muck.users.signup_wait') %></div>
     </div>
 

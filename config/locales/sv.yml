@@ -21,15 +21,28 @@ sv:
       access_code_edit_problem: "Problem redigera kod"
       access_code_expires: Upphör
       access_code_fullfill_invites: "Uppfyll Bjud Begäran"
-      access_code_fullfill_invites_limit: "Bjud Begär Limit"
+      access_code_fullfill_invites_limit: "Bjud Request Limit"
       access_code_fullfill_invites_limit_tip: "Ange ett nummer för att begränsa antalet ansökningar skickats ut. Till exempel kommer in 100 begränsa inbjuder till det senaste 100 sidvisningar"
       access_code_fullfill_invites_tip: "Kolla här för att skicka inbjudningar till användare som har begärt en inbjudan. Detta kommer att ignorera alla e-postmeddelanden som anges ovan."
       access_code_help: "Om du fick en kod från oss, anger du den i rutan ovan. Du kan också %{access_request_anchor} begära en kod%{access_request_anchor_end}."
+      access_code_message: Meddelande
       access_code_new: "Nya Växelprefix"
+      access_code_not_found: "Vi kunde inte hitta den kod som tillhandahålls. Vänligen %{contact_us_anchor} kontakta oss%{contact_us_anchor_end} eller %{access_request_anchor} begära att en annan kod%{access_request_anchor_end}."
       access_code_related_users: "Användare som registrerat sig med denna kod"
       access_code_request_count: "Det finns för närvarande %{access_code_requests_count} kod förfrågningar"
+      access_code_request_delete_confirm: "Är du säker på att du vill avbryta denna begäran kod?"
+      access_code_request_edit_problem: "Problemet redigerar kodsbegäran"
+      access_code_request_send_problem: "Det fanns ett problem med att skicka koden"
       access_code_request_thank_you: "Tack för din förfrågan. Vi hör av oss så snart som möjligt."
       access_code_request_tip: "Skriv in din email och så skickar vi dig en kod så snart det finns en tillgänglig. Tack!"
+      access_code_requests: "Växelprefix Begäran"
+      access_code_requests_code_sent_on: "Som skickades på"
+      access_code_requests_email: E-post
+      access_code_requests_name: Namn
+      access_code_requests_signed_up_on: "Registrerat dig på"
+      access_code_sent_to: "Skickat till"
+      access_code_subject: Angående
+      access_code_thank_you: "Tack för ditt intresse. Vi hjälper dig en kod så snart som möjligt."
       access_code_tip: "Ange en behörighetskod."
       access_code_unlimited: Obegränsat
       access_code_update_problem: "Det fanns ett problem att uppdatera kod."
@@ -67,6 +80,7 @@ sv:
       already_logged_in: "Du är redan inloggad och inte behöver återställa ditt lösenord."
       already_registered: "Redan medlem?"
       application_base_url_not_set: "Ställ application_base_url i global_config.yml"
+      beta_code_not_required: "Du är redan inloggad och så har du förmodligen inte verkligen ha en beta kod."
       bulk_access_code_emails: E-postmeddelanden
       bulk_access_code_emails_tip: "Separera e-post med kommatecken"
       bulk_access_code_message: Meddelande
@@ -76,6 +90,7 @@ sv:
       bulk_access_codes: "Bulk Koder"
       bulk_access_codes_created: "Bulk koder skapas och skickas till %{email_count} e-post."
       bulk_access_codes_description: "Detta kommer att generera en unik, enda kod använda Access för varje e-post tillhandahålls."
+      bulk_access_codes_or: ELLER
       bulk_access_codes_title: "Bulk Koder"
       cannot_deactivate_yourself: "Du kan inte avaktivera dig själv!"
       cant_delete_admin: "Du kan inte radera en användare som är i admin roll. Ta bort användaren från administratören roll och sedan försöka igen. Var försiktig när du raderar administratörer. Om du raderar alla administratörskonton du inte längre kommer att kunna logga in på sin förvaltning."
@@ -100,6 +115,8 @@ sv:
       deleting_user: "ta bort användare ..."
       edit: Redigera
       edit_access_code: "Redigera Växelprefix"
+      edit_access_code_request: "Redigera Begär Växelprefix"
+      edit_access_code_request_title: "Redigera Begär"
       edit_access_code_title: "Redigera Växelprefix"
       edit_profile: "Redigera profil"
       edit_role_dialog_title: "Redigera roll"
@@ -118,9 +135,11 @@ sv:
       forgot_username: "Glömt användarnamn"
       forgot_your_password: "Har du glömt ditt lösenord?"
       forgot_your_username: "Har du glömt ditt användarnamn?"
+      fullfilled_access_code_requests: "Uppfyllda Växelprefix Begäran"
       invalid_username: "Ogiltigt användarnamn"
       join_application_name: "Bli medlem och få det gjort"
       last_name: Efternamn
+      list_access_codes: "Lista Koder"
       login: "Logga in"
       login_empty: "Ange en inloggning"
       login_fail: "Vi är ledsna, men vi kunde inte känna igen dina inloggningsuppgifter. Försök igen."
@@ -158,6 +177,7 @@ sv:
       remember_me: "Kom ihåg mig"
       remove_my_account: "Ta bort Mitt Konto"
       request_access_code: "Begär Växelprefix"
+      request_access_code_instruction: "Ange följande information så ska vi ge dig en kod så snart som möjligt."
       request_username: "Begär Användarnamn"
       request_username_subject: "Glömt användarnamn"
       reset_password: "Återställ ditt lösenord"
@@ -169,12 +189,19 @@ sv:
       roles: Roller
       save: Spara
       select_new_password: "Välja ett nytt lösenord"
+      send_access_code: "Skicka koden"
+      send_access_code_instructions: "Ge ett budskap och kropp som ska skickas i e-postmeddelandet tillsammans med den kod som låter användaren skapa ett konto."
+      send_access_code_request_title: "Skicka koden"
+      send_access_codes: "Skicka Koder"
+      send_code: "Skicka koden"
       sign_in: "Logga in"
       sign_in_now: "Logga in nu!"
       sign_in_title: "Logga in"
       sign_out_title: "Logga ut"
       sign_up: "Gå med"
       sign_up_now: "Registrera dig nu"
+      signin_wait: "Undertecknande dig i. Vänta."
+      signup_wait: "Undertecknande upp dig. Var god vänta."
       sorry_invalid_reset_code: "Vi är ledsna, men vi kunde inte hitta ditt konto. Om du har problem att försöka kopiera och klistra in webbadressen från din e-post i webbläsaren eller starta om återställa lösenordet processen."
       submit: "Skicka in"
       terms_and_service: "Genom att klicka på &quot;Registrera dig nu&quot; godkänner du att följa %{tos_link_anchor} Villkor%{link_end}."
@@ -184,6 +211,7 @@ sv:
       thanks_sign_up_check: "Ditt konto har skapats. Kontrollera din e-post för dina instruktioner kontoaktivering!"
       thanks_sign_up_login: "Tack för att registrera dig! Du kan logga in nu"
       total_users: "Totalt antal användare: %{total}"
+      unfullfilled_access_code_requests: "Ouppfyllda Växelprefix Begäran"
       unlimited: "Obegränsad Använder"
       unlimited_tip: "Kolla här om tillgång koden kan användas ett obegränsat antal gånger. Detta kommer att åsidosätta den använda gräns."
       update: Uppdatera
@@ -202,7 +230,7 @@ sv:
       user_not_activated_error: "Kunde inte aktivera användare"
       user_not_deactivated_error: "Kunde inte avaktivera användare"
       user_successfully_deleted: "Användare %{login} har tagits bort."
-      user_update: "Du användarinformation har uppdaterats."
+      user_update: "Din användarinformation har uppdaterats."
       user_update_sucess: "Användaren har uppdaterats"
       username: Användarnamn
       username_available: "Användarnamn tillgänglig"

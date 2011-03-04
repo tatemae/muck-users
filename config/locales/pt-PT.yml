@@ -25,11 +25,24 @@ pt-PT:
       access_code_fullfill_invites_limit_tip: "Digite um número para limitar o número de solicitações enviadas fora. Por exemplo, digitar 100 vai limitar o convida para a mais recente de 100 pedidos"
       access_code_fullfill_invites_tip: "Clique aqui para enviar convites para os usuários que tenham solicitado um convite. Isto irá ignorar qualquer e-mail especificado acima."
       access_code_help: "Se você recebeu um código de acesso de nós, por favor insira-o na caixa acima. Você também pode solicitar %{access_request_anchor} um código de acesso .-.-."
+      access_code_message: Mensagem
       access_code_new: "Novo código de acesso"
+      access_code_not_found: "Nós éramos incapazes de encontrar o código de acesso fornecido. Por favor, entre em contato conosco %{contact_us_anchor}%{contact_us_anchor_end} ou solicitar %{access_request_anchor} outro código%{access_request_anchor_end}."
       access_code_related_users: "Os usuários que se inscreveram com este código"
       access_code_request_count: "Existem actualmente %{access_code_requests_count} pedidos de código de acesso"
+      access_code_request_delete_confirm: "Tem certeza que deseja cancelar esse pedido o código de acesso?"
+      access_code_request_edit_problem: "Problema pedido de edição de código de acesso"
+      access_code_request_send_problem: "Houve um problema ao enviar o código"
       access_code_request_thank_you: "Obrigado por seu pedido. Nós entraremos em contato o mais breve possível."
       access_code_request_tip: "Digite o seu e-mail e nós lhe enviaremos um código de acesso assim que estiver disponível. Obrigado!"
+      access_code_requests: "Código de pedidos de acesso"
+      access_code_requests_code_sent_on: "Enviado em Código"
+      access_code_requests_email: E-mail
+      access_code_requests_name: Nome
+      access_code_requests_signed_up_on: "Cadastro em"
+      access_code_sent_to: "Enviado para"
+      access_code_subject: Assunto
+      access_code_thank_you: "Obrigado pelo seu interesse. Nós vamos te dar um código o mais rapidamente possível."
       access_code_tip: "Digite um código de acesso."
       access_code_unlimited: Ilimitada
       access_code_update_problem: "Houve um problema na atualização do código de acesso."
@@ -67,6 +80,7 @@ pt-PT:
       already_logged_in: "Você já está logado e não precisar recuperar sua senha."
       already_registered: "Já é um membro?"
       application_base_url_not_set: "Por favor, defina application_base_url em global_config.yml"
+      beta_code_not_required: "Você já está autenticado e por isso você provavelmente não quer realmente um código beta."
       bulk_access_code_emails: Emails
       bulk_access_code_emails_tip: "e-mails separados por vírgula"
       bulk_access_code_message: Mensagem
@@ -76,6 +90,7 @@ pt-PT:
       bulk_access_codes: "Bulk Códigos de Acesso"
       bulk_access_codes_created: "Bulk códigos de acesso criada e enviada para e-mails %{email_count}."
       bulk_access_codes_description: "Isso irá gerar um único, o código de acesso de uso único para cada um dos e-mails fornecidos."
+      bulk_access_codes_or: OU
       bulk_access_codes_title: "Bulk Códigos de Acesso"
       cannot_deactivate_yourself: "Você não pode desativar-se!"
       cant_delete_admin: "Você não pode excluir um usuário que está na função de administrador. Remove o usuário da função de administrador e tente novamente. Tenha cuidado ao excluir os administradores. Se você excluir todas as contas de administrador você não vai mais ser capaz de login para o sistema de administração."
@@ -100,6 +115,8 @@ pt-PT:
       deleting_user: "exclusão do usuário ..."
       edit: Editar
       edit_access_code: "Editar Código de Acesso"
+      edit_access_code_request: "Editar pedido do código de acesso"
+      edit_access_code_request_title: "Editar Pedido"
       edit_access_code_title: "Editar Código de Acesso"
       edit_profile: "Editar perfil"
       edit_role_dialog_title: "Editar Papel"
@@ -118,9 +135,11 @@ pt-PT:
       forgot_username: "Esqueceu-se Usuário"
       forgot_your_password: "Esqueceu sua senha?"
       forgot_your_username: "Esqueceu sua senha?"
+      fullfilled_access_code_requests: "Pedidos Código Fulfilled Access"
       invalid_username: "Nome de usuário inválido"
       join_application_name: "Junte-se e fazê-lo"
       last_name: Sobrenome
+      list_access_codes: "Lista de Códigos de Acesso"
       login: Login
       login_empty: "Por favor insira um login"
       login_fail: "Lamentamos, mas não conseguimos reconhecer as informações de login. Por favor, tente novamente."
@@ -158,6 +177,7 @@ pt-PT:
       remember_me: "Lembrar de mim"
       remove_my_account: "Remover Minha Conta"
       request_access_code: "Código de Solicitação de Acesso"
+      request_access_code_instruction: "Favor fornecer as seguintes informações e nós fornecê-lo com um código de acesso o mais rapidamente possível."
       request_username: "Pedido de Usuário"
       request_username_subject: "Esqueceu nome de usuário"
       reset_password: "Redefinir sua senha"
@@ -169,12 +189,19 @@ pt-PT:
       roles: Funções
       save: Guardar
       select_new_password: "Selecione uma nova senha"
+      send_access_code: "Enviar Código"
+      send_access_code_instructions: "Fornecer uma mensagem e do corpo que será enviado no e-mail com o código que vai permitir que o usuário crie uma conta."
+      send_access_code_request_title: "Enviar Código"
+      send_access_codes: "Enviar Códigos"
+      send_code: "Enviar Código"
       sign_in: Entrar
       sign_in_now: "Cadastre-se agora!"
       sign_in_title: Entrar
       sign_out_title: Sair
       sign_up: Inscreva-se
       sign_up_now: "Inscreva-se agora"
+      signin_wait: "Assinatura de você entrar por favor aguarde."
+      signup_wait: "Assinatura de você. Por favor, aguarde."
       sorry_invalid_reset_code: "Lamentamos, mas não conseguimos localizar a sua conta. Se você estiver com problemas tente copiar e colar a URL do seu e-mail em seu navegador ou reiniciando o processo de redefinição de senha."
       submit: Enviar
       terms_and_service: "Ao clicar em &quot;Cadastre-se agora&quot; você concorda em cumprir com os Termos e Condições %{tos_link_anchor}%{link_end}."
@@ -184,6 +211,7 @@ pt-PT:
       thanks_sign_up_check: "Sua conta foi criada. Por favor, verifique seu e-mail para o seu instruções de ativação de conta!"
       thanks_sign_up_login: "Obrigado por se inscrever! Você pode entrar agora"
       total_users: "Total de usuários: %{total}"
+      unfullfilled_access_code_requests: "Os pedidos de código de acesso não cumpridas"
       unlimited: "Usa Unlimited"
       unlimited_tip: "Confira aqui se o código de acesso pode ser utilizada um número ilimitado de vezes. Isto irá substituir o limite de uso."
       update: Update
@@ -202,7 +230,7 @@ pt-PT:
       user_not_activated_error: "Não foi possível ativar usuário"
       user_not_deactivated_error: "Não foi possível desativar usuário"
       user_successfully_deleted: "Usuário %{login} foi excluído com sucesso."
-      user_update: "Você é a informação do usuário foi atualizado."
+      user_update: "Suas informações de usuário foi atualizada."
       user_update_sucess: "Usuário atualizado com sucesso"
       username: "Nome de Usuário"
       username_available: "Nome de usuário disponível"

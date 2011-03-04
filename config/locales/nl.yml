@@ -25,11 +25,24 @@ nl:
       access_code_fullfill_invites_limit_tip: "Voer een getal om het aantal verzoeken verstuurd te beperken. Zo zal het invoeren van 100 beperken nodigt uit tot de 100 meest recente verzoeken"
       access_code_fullfill_invites_tip: "Controleer hier uitnodigingen verzenden naar gebruikers die hebben verzocht om een uit te nodigen. Dit zal negeren e-mails hierboven omschreven."
       access_code_help: "Als u toegang kreeg een code van ons, gelieve in het bovenstaande vak. U kunt ook %{access_request_anchor} om een toegangscode%{access_request_anchor_end}."
+      access_code_message: Bericht
       access_code_new: "Nieuwe Access Code"
+      access_code_not_found: "We waren niet in staat om het vinden van de toegangscode verstrekt. Gelieve contact met ons op %{contact_us_anchor}%{contact_us_anchor_end} of %{access_request_anchor} verzoek een andere code%{access_request_anchor_end}."
       access_code_related_users: "Gebruikers die zich hebben ingeschreven met deze code"
       access_code_request_count: "Er zijn momenteel %{access_code_requests_count} toegangscode aanvragen"
+      access_code_request_delete_confirm: "Weet u zeker dat u dit wilt toegangscode aanvragen annuleren?"
+      access_code_request_edit_problem: "Probleem bewerken toegangscode aanvragen"
+      access_code_request_send_problem: "Er was een probleem met het verzenden van de code"
       access_code_request_thank_you: "Dank u voor uw aanvraag. We zullen in contact zo spoedig mogelijk."
       access_code_request_tip: "Vul uw e-mail en we sturen u een toegangscode zodra er een beschikbaar is. Dank je wel!"
+      access_code_requests: "Toegangscode aanvragen"
+      access_code_requests_code_sent_on: "Code Verzonden op"
+      access_code_requests_email: E-mail
+      access_code_requests_name: Naam
+      access_code_requests_signed_up_on: "Ondertekend op"
+      access_code_sent_to: "Toegezonden aan"
+      access_code_subject: Onderwerp
+      access_code_thank_you: "Dank u voor uw interesse. We halen u een code zo spoedig mogelijk."
       access_code_tip: "Voer een toegangscode."
       access_code_unlimited: Onbeperkte
       access_code_update_problem: "Er was een probleem het bijwerken van de toegangscode."
@@ -67,6 +80,7 @@ nl:
       already_logged_in: "U bent reeds ingelogd en niet hoeft te herstellen van uw wachtwoord."
       already_registered: "Al een lid?"
       application_base_url_not_set: "Stel application_base_url in global_config.yml"
+      beta_code_not_required: "U bent al aangemeld en dus zul je waarschijnlijk niet echt een beta code."
       bulk_access_code_emails: E-mails
       bulk_access_code_emails_tip: "Afzonderlijke e-mails met een komma"
       bulk_access_code_message: Bericht
@@ -76,6 +90,7 @@ nl:
       bulk_access_codes: "Bulk Toegangscodes"
       bulk_access_codes_created: "Bulk toegangscodes gemaakt en gemaild naar %{email_count} e-mails."
       bulk_access_codes_description: "Dit zal een uniek, eenmalig gebruik toegangscode voor elk van de e-mails voorzien."
+      bulk_access_codes_or: OF
       bulk_access_codes_title: "Bulk Toegangscodes"
       cannot_deactivate_yourself: "Je kunt niet deactiveren jezelf!"
       cant_delete_admin: "U kunt niet verwijderen van een gebruiker die in de admin rol. Verwijder de gebruiker van de beheerder rol en probeer het opnieuw. Wees voorzichtig bij het verwijderen van de beheerders. Als u alle accounts administrator zal u niet langer in staat in te loggen op het administratie systeem."
@@ -100,6 +115,8 @@ nl:
       deleting_user: "verwijderen van de gebruiker ..."
       edit: Bewerken
       edit_access_code: "Edit Toegangscode"
+      edit_access_code_request: "Edit toegangscode aanvragen"
+      edit_access_code_request_title: "Verzoek bewerken"
       edit_access_code_title: "Edit Toegangscode"
       edit_profile: "Profiel bewerken"
       edit_role_dialog_title: "Rol bewerken"
@@ -118,9 +135,11 @@ nl:
       forgot_username: "Gebruikersnaam vergeten"
       forgot_your_password: "Uw wachtwoord vergeten?"
       forgot_your_username: "Gebruikersnaam vergeten?"
+      fullfilled_access_code_requests: "Voldaan Toegangscode aanvragen"
       invalid_username: "Ongeldige gebruikersnaam"
       join_application_name: "Word lid en ontvang het gedaan"
       last_name: Achternaam
+      list_access_codes: "Lijst Toegangscodes"
       login: Inloggen
       login_empty: "Voer een login"
       login_fail: "Het spijt ons, maar we konden niet herkennen uw login informatie. Probeer het opnieuw."
@@ -158,6 +177,7 @@ nl:
       remember_me: "Onthoud mij"
       remove_my_account: "Mijn account verwijderen"
       request_access_code: "Verzoeken om toegang Code"
+      request_access_code_instruction: "Gelieve de volgende gegevens en wij zullen u voorzien van een toegangscode zo spoedig mogelijk."
       request_username: "Aanvraag gebruikersnaam"
       request_username_subject: "Vergeten gebruikersnaam"
       reset_password: "Uw wachtwoord opnieuw instellen"
@@ -169,12 +189,19 @@ nl:
       roles: Rollen
       save: Opslaan
       select_new_password: "Een nieuw wachtwoord kiezen"
+      send_access_code: "Stuur Code"
+      send_access_code_instructions: "Geef een bericht en orgaan dat in de e-mail worden verzonden samen met de code die laat de gebruiker een account aanmaken."
+      send_access_code_request_title: "Stuur Code"
+      send_access_codes: "Stuur Codes"
+      send_code: "Stuur Code"
       sign_in: Aanmelden
       sign_in_now: "Meld u nu aan!"
       sign_in_title: Aanmelden
       sign_out_title: Afmelden
       sign_up: "Registreer je"
       sign_up_now: "Nu aanmelden"
+      signin_wait: "Ondertekening van je binnen moment geduld alstublieft."
+      signup_wait: "Ondertekening van u op. Even geduld aub."
       sorry_invalid_reset_code: "Het spijt ons, maar we konden niet vinden uw account. Als u problemen ondervindt proberen te kopiëren en plakken van de URL van uw e-mail in uw browser of het herstarten van de reset wachtwoord proces."
       submit: Indienen
       terms_and_service: "Door te klikken op &quot;Sign-up Now &#39;gaat u ermee akkoord te voldoen aan de %{tos_link_anchor} Voorwaarden%{link_end}."
@@ -184,6 +211,7 @@ nl:
       thanks_sign_up_check: "Uw account is aangemaakt. Gelieve uw e-mail voor uw account te activeren instructies!"
       thanks_sign_up_login: "Bedankt voor uw aanmelding! U kunt nu inloggen"
       total_users: "Totaal aantal leden: %{total}"
+      unfullfilled_access_code_requests: "Onvervulde toegangscode aanvragen"
       unlimited: "Ongelimiteerde toepassingen"
       unlimited_tip: "Controleer hier of de toegangscode kan worden gebruikt een onbeperkt aantal keren. Dit zal overschrijven van het gebruik te beperken."
       update: Update
@@ -202,7 +230,7 @@ nl:
       user_not_activated_error: "Kan niet activeren gebruiker"
       user_not_deactivated_error: "Kon niet deactiveren gebruiker"
       user_successfully_deleted: "Gebruiker %{login} werd succesvol verwijderd."
-      user_update: "Je bent informatie voor de gebruiker is bijgewerkt."
+      user_update: "Uw informatie voor de gebruiker is bijgewerkt."
       user_update_sucess: "Gebruiker is succesvol bijgewerkt"
       username: Gebruikersnaam
       username_available: "Gebruikersnaam beschikbaar"

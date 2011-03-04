@@ -25,11 +25,24 @@ fi:
       access_code_fullfill_invites_limit_tip: "Anna numero rajoittaa hakemusten määrä lähetetty. Jos esimerkiksi kirjoitat 100 rajoittaa kutsuu viimeisintä 100 pyynnöistä"
       access_code_fullfill_invites_tip: "Tarkista tästä lähettää kutsuja käyttäjille, jotka ovat pyytäneet kutsua. Tämä ohittaa kaikki sähköpostit edellä."
       access_code_help: "Jos olet saanut tunnuksen meiltä, kirjoita se yllä olevaan ruutuun. Voit myös %{access_request_anchor} pyytää tunnuksen%{access_request_anchor_end}."
+      access_code_message: Viesti
       access_code_new: "Uusi koodi"
+      access_code_not_found: "Emme pystyneet löytämään pääsy koodin. Ota %{contact_us_anchor} yhteyttä%{contact_us_anchor_end} tai %{access_request_anchor} pyytää toisen koodin, .-.-."
       access_code_related_users: "Käyttäjät, jotka allekirjoittivat tämän koodin"
       access_code_request_count: "Tällä hetkellä %{access_code_requests_count} avauskoodi pyynnöt"
+      access_code_request_delete_confirm: "Oletko varma että haluat poistaa tämän tunnuksen pyyntöä?"
+      access_code_request_edit_problem: "Ongelma muokkausoikeus koodikyselyn"
+      access_code_request_send_problem: "Oli ongelma lähettämällä koodin"
       access_code_request_thank_you: "Kiitos pyynnöstä. Otamme yhteyttä mahdollisimman pian."
       access_code_request_tip: "Kirjoita sähköpostiosoitteesi, niin lähetämme sinulle tunnuksen heti, kun sellainen on käytettävissä. Kiitos!"
+      access_code_requests: "Access Code pyynnöt"
+      access_code_requests_code_sent_on: "Koodi lähetetään"
+      access_code_requests_email: Sähköposti
+      access_code_requests_name: Nimi
+      access_code_requests_signed_up_on: "Allekirjoitettu ylös"
+      access_code_sent_to: Lähetetään
+      access_code_subject: Aihe
+      access_code_thank_you: "Kiitos mielenkiinnosta. Me sinut koodi mahdollisimman pian."
       access_code_tip: "Syötä koodi."
       access_code_unlimited: Rajoittamaton
       access_code_update_problem: "Oli ongelma päivittää koodia."
@@ -67,6 +80,7 @@ fi:
       already_logged_in: "Olet jo kirjautunut sisään ja ei tarvitse palauttaa salasanasi."
       already_registered: "Oletko jo jäsen?"
       application_base_url_not_set: "Aseta application_base_url vuonna global_config.yml"
+      beta_code_not_required: "Olet jo kirjautunut sisään, joten et luultavasti todellakaan halua beta koodia."
       bulk_access_code_emails: Sähköpostit
       bulk_access_code_emails_tip: "Erota sähköpostiosoitteet pilkulla"
       bulk_access_code_message: Viesti
@@ -76,6 +90,7 @@ fi:
       bulk_access_codes: "Bulk Tunnusluvut"
       bulk_access_codes_created: "Bulk pankkitunnukset luodaan ja lähetetään %{email_count} sähköposteja."
       bulk_access_codes_description: "Tämä luo ainutlaatuisen, kertakäyttöinen pääsy koodi kullekin sähköpostit tarjotaan."
+      bulk_access_codes_or: TAI
       bulk_access_codes_title: "Bulk Tunnusluvut"
       cannot_deactivate_yourself: "Et voi poistaa itseäsi!"
       cant_delete_admin: "Et voi poistaa käyttäjän, joka on admin rooli. Poista käyttäjä ylläpitäjän rooli ja yritä uudelleen. Ole varovainen poistaessasi ylläpitäjät. Jos poistat kaikki järjestelmänvalvojan tilille et voi enää kirjautua hallintojärjestelmää."
@@ -100,6 +115,8 @@ fi:
       deleting_user: "poistaminen käyttäjä ..."
       edit: Muokkaa
       edit_access_code: "Muokkaa Pääsykoodi"
+      edit_access_code_request: "Muokkaa Access koodipyyntö"
+      edit_access_code_request_title: "Muokkaa Pyyntö"
       edit_access_code_title: "Muokkaa Pääsykoodi"
       edit_profile: "Muokkaa profiilia"
       edit_role_dialog_title: "Edit Role"
@@ -118,9 +135,11 @@ fi:
       forgot_username: "Unohtuiko käyttäjätunnus"
       forgot_your_password: "Unohtuiko salasana?"
       forgot_your_username: Unohtunut?
+      fullfilled_access_code_requests: "Täyttyvät Pääsykoodi pyynnöt"
       invalid_username: "Virheellinen käyttäjätunnus"
       join_application_name: "Liity ja saada se tehdyksi"
       last_name: Sukunimi
+      list_access_codes: "Luettelo Tunnusluvut"
       login: Kirjaudu
       login_empty: "Anna kirjautuminen"
       login_fail: "Pahoittelemme, mutta emme pystyneet tunnistamaan kirjautumistiedot. Ole hyvä ja yritä uudelleen."
@@ -158,6 +177,7 @@ fi:
       remember_me: "Muista minut"
       remove_my_account: "Poista Oma tilini"
       request_access_code: "Pyydä Pääsykoodi"
+      request_access_code_instruction: "Antakaa seuraavat tiedot ja me toimitamme sinulle tunnuksen mahdollisimman pian."
       request_username: "Pyydä käyttäjätunnus"
       request_username_subject: "Unohtuiko käyttäjätunnus"
       reset_password: "Nollaa salasana"
@@ -169,12 +189,19 @@ fi:
       roles: Roolit
       save: Tallenna
       select_new_password: "Valitse uusi salasana"
+      send_access_code: "Lähetä koodi"
+      send_access_code_instructions: "Antaa viestin ja elin, joka lähetetään sähköpostin mukana koodi, jonka avulla käyttäjä luo tilin."
+      send_access_code_request_title: "Lähetä koodi"
+      send_access_codes: "Lähetä koodit"
+      send_code: "Lähetä koodi"
       sign_in: "Kirjaudu sisään"
       sign_in_now: "Kirjaudu sisään nyt!"
       sign_in_title: "Kirjaudu sisään"
       sign_out_title: "Kirjaudu ulos"
       sign_up: "Rekisteröidy Facebookiin"
       sign_up_now: "Kirjaudu nyt"
+      signin_wait: "Allekirjoittamalla sisään Odota."
+      signup_wait: "Kirjautuminen sinut. Odota."
       sorry_invalid_reset_code: "Pahoittelemme, mutta emme voineet paikallistaa tilin. Jos sinulla on ongelmia yrittää kopioimalla URL-osoitteen sähköpostiisi selaimeen tai uudelleenkäynnistystä nollata salasanan prosessi."
       submit: Lähetä
       terms_and_service: "Klikkaamalla &quot;Kirjaudu nyt&quot; sitoudut noudattamaan %{tos_link_anchor} käyttöehtojen%{link_end}."
@@ -184,6 +211,7 @@ fi:
       thanks_sign_up_check: "Tilisi on luotu. Tarkista sähköpostisi tilin aktivointi ohjeet!"
       thanks_sign_up_login: "Kiitos rekisteröitymisestä! Voit kirjautua heti"
       total_users: "Käyttäjiä yhteensä: %{total}"
+      unfullfilled_access_code_requests: "Täyttymätön Pääsykoodi pyynnöt"
       unlimited: "Rajaton käyttö"
       unlimited_tip: "Tarkista tästä, jos tunnusluku voidaan käyttää rajattoman monta kertaa. Tämä korvaa käytön raja."
       update: Päivitä
@@ -202,7 +230,7 @@ fi:
       user_not_activated_error: "Ei voitu aktivoida käyttäjää"
       user_not_deactivated_error: "Ei voitu poistaa käyttäjän"
       user_successfully_deleted: "Käyttäjä %{login} poistettu onnistuneesti."
-      user_update: "Olet käyttäjän tiedot on päivitetty."
+      user_update: "Käyttäjätiedot on päivitetty."
       user_update_sucess: "Käyttäjän on päivitetty onnistuneesti"
       username: Käyttäjätunnus
       username_available: "Käyttäjätunnus saatavilla"

@@ -25,11 +25,24 @@ ja:
       access_code_fullfill_invites_limit_tip: から送信された要求の数を制限する番号を入力します。たとえば、100を入力して、最新の100の要求に招待制限されます
       access_code_fullfill_invites_tip: 送信にはここをチェック招待要求しているユーザーに招待します。これは上記で指定した任意のメールを無視されます。
       access_code_help: "あなたは私たちからのアクセスコードを受け取った場合は、上記のボックスに入力してください。また、%{access_request_anchor}要求できるアクセスコード.-.-."
+      access_code_message: メッセージ
       access_code_new: 新しいアクセスコード
+      access_code_not_found: "我々は、アクセスコードが提供さを見つけることができませんでした。 %{contact_us_anchor} - .-.- or %{contact_us_anchor_end}要求にお問い合わせください別のコード- .-.-."
       access_code_related_users: このコードでサインアップしたユーザー
       access_code_request_count: "現在ありません%{access_code_requests_count}アクセスコードの要求は、"
+      access_code_request_delete_confirm: あなたは、このアクセスコードの要求をキャンセルしてもよろしいですか？
+      access_code_request_edit_problem: 問題の編集アクセスコードの要求
+      access_code_request_send_problem: コードの送信中に問題があった
       access_code_request_thank_you: ご要望をいただき、ありがとうございます。我々は、できるだけ早くご連絡いたします。
       access_code_request_tip: あなたのメールアドレスを入力し、我々はすぐにいずれかを使用可能になるあなたのアクセスコードをお送りします。ありがとうございます！
+      access_code_requests: アクセスコードを要求
+      access_code_requests_code_sent_on: コードは、上の送信
+      access_code_requests_email: Eメール
+      access_code_requests_name: 名
+      access_code_requests_signed_up_on: 上に署名
+      access_code_sent_to: 送信するには
+      access_code_subject: 題目
+      access_code_thank_you: 関心をお寄せいただきありがとうございます。私たちはあなたに、できるだけ早くコードを取得します。
       access_code_tip: アクセスコードを入力してください。
       access_code_unlimited: 無制限の
       access_code_update_problem: アクセスコードを更新する問題があった。
@@ -67,6 +80,7 @@ ja:
       already_logged_in: あなたはすでにログインしているパスワードを回復する必要はありません。
       already_registered: 既にメンバーではありませんか？
       application_base_url_not_set: global_config.ymlでapplication_base_urlを設定してください
+      beta_code_not_required: あなたはすでにログインしているので、おそらく実際にベータ版のコードを望んでいない。
       bulk_access_code_emails: 電子メール
       bulk_access_code_emails_tip: カンマで区切りますメール
       bulk_access_code_message: メッセージ
@@ -76,6 +90,7 @@ ja:
       bulk_access_codes: コードへのアクセスバルク
       bulk_access_codes_created: "作成され、%{email_count}電子メールに電子メールで送信コードにアクセスするバルク。"
       bulk_access_codes_description: 電子メールの各々が提供するこのユニークな、シングルユースのアクセスコードを生成します。
+      bulk_access_codes_or: または
       bulk_access_codes_title: コードへのアクセスバルク
       cannot_deactivate_yourself: あなたは自分を無効にすることはできません！
       cant_delete_admin: あなたが管理者ロールに属しているユーザーを削除することはできません。管理者ロールからユーザーを削除し、もう一度試してください。管理者を削除するときに注意してください。あなたが削除する場合は、すべての管理者は、あなたは、もはや管理システムにログインできるようになります占めている。
@@ -100,6 +115,8 @@ ja:
       deleting_user: ユーザーを削除する...
       edit: "[編集]"
       edit_access_code: アクセスコードを編集する
+      edit_access_code_request: アクセスコードの要求を編集する
+      edit_access_code_request_title: リクエストを編集
       edit_access_code_title: アクセスコードを編集する
       edit_profile: プロフィールを編集
       edit_role_dialog_title: ロールを編集
@@ -118,9 +135,11 @@ ja:
       forgot_username: ユーザー名を忘れた場合
       forgot_your_password: パスワードを忘れましたか？
       forgot_your_username: ユーザ名を忘れましたか？
+      fullfilled_access_code_requests: 満たさアクセスコードを要求
       invalid_username: 無効なユーザー名
       join_application_name: 参加して、それを成し遂げる
       last_name: 最後の名前
+      list_access_codes: リストへのアクセスコード
       login: ログイン
       login_empty: ログイン情報を入力してください。
       login_fail: 申し訳ありませんが、しかし、我々はあなたのログイン情報を認識できませんでした。もう一度やり直してください。
@@ -158,6 +177,7 @@ ja:
       remember_me: 次回から入力を省略
       remove_my_account: マイアカウントを削除します。
       request_access_code: 要求アクセスコード
+      request_access_code_instruction: 次の情報を入力してください、私たちはできるだけ早くアクセスコードを提供します。
       request_username: 要求名
       request_username_subject: 忘れてしまったのユーザー名
       reset_password: パスワードのリセット
@@ -169,12 +189,19 @@ ja:
       roles: ロール
       save: 名前を付けて保存
       select_new_password: 新しいパスワードを選択します。
+      send_access_code: コードを送信
+      send_access_code_instructions: メッセージを体のユーザーアカウントを作成できるようになるコードと一緒に電子メールで送信されます提供します。
+      send_access_code_request_title: コードを送信
+      send_access_codes: コードを送信する
+      send_code: コードを送信
       sign_in: サインイン
       sign_in_now: 今ではしましょう！
       sign_in_title: サインイン
       sign_out_title: サインアウト
       sign_up: 交流しましょう
       sign_up_now: ポップアップ今すぐしましょう
+      signin_wait: あなたはインチお待ちください署名。
+      signup_wait: あなたにサインアップする。しばらくお待ちください。
       sorry_invalid_reset_code: 申し訳ありませんが、しかし、我々はあなたのアカウントを見つけることができませんでした。あなたが問題を抱えている場合はコピーしてみてください、あなたのブラウザに電子メールからURLを貼り付けたりパスワードのリセットプロセスを再起動します。
       submit: 送信
       terms_and_service: "でクリックすると、.-.-. %{tos_link_anchor}利用規約 - に従うことに同意する&#39;ポップアップ今すぐしましょう&#39;"
@@ -184,6 +211,7 @@ ja:
       thanks_sign_up_check: あなたのアカウントが作成されています。アカウントのアクティベーション手順については、電子メールを確認してください！
       thanks_sign_up_login: お申し込みいただきありがとうございます！あなたは今すぐログインすることも
       total_users: "ユーザ合計：%{total}"
+      unfullfilled_access_code_requests: 満たされていないアクセスコードを要求
       unlimited: 無制限の使用
       unlimited_tip: アクセスコードが何回でも無制限に使用することができる場合は、ここをチェックしてください。これは、使用の制限を上書きします。
       update: 更新
@@ -202,7 +230,7 @@ ja:
       user_not_activated_error: できませんでしたは、ユーザーをアクティブにする
       user_not_deactivated_error: できませんでしたは、ユーザーを無効にする
       user_successfully_deleted: "ユーザー%{login}が正常に削除されました。"
-      user_update: あなたはユーザー情報が更新されていますしています。
+      user_update: ユーザー情報は更新されています。
       user_update_sucess: ユーザーが正常に更新されました
       username: ユーザー名
       username_available: ユーザー名可能

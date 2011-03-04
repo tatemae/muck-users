@@ -25,11 +25,24 @@ sq:
       access_code_fullfill_invites_limit_tip: "Hyrë në një numër të kufizuar numrin e kërkesave të dërguar. Për shembull, hyjnë 100 do të kufizojnë fton për më të fundit 100 kërkesa"
       access_code_fullfill_invites_tip: "Check këtu për të dërguar fton për përdoruesit të cilët kanë kërkuar një të ftuar. Kjo do të injorojë ndonjë email të specifikuar më sipër."
       access_code_help: "Në qoftë se keni marrë një kod hyrjeje nga ne, ju lutem shkruani atë në kutinë më sipër. Ju gjithashtu mund të kërkojë një qasje %{access_request_anchor} kod%{access_request_anchor_end}."
+      access_code_message: Mesazh
       access_code_new: "Kodi i ri Access"
+      access_code_not_found: "Ne ishim të paaftë për të gjetur kodin qasje me kusht. Ju lutemi të na kontaktoni %{contact_us_anchor}%{contact_us_anchor_end} ose të kërkojë një tjetër kod %{access_request_anchor}%{access_request_anchor_end}."
       access_code_related_users: "Përdoruesit që nënshkruar me këtë kod"
       access_code_request_count: "Nuk janë aktualisht %{access_code_requests_count} kërkesa kodin akses"
+      access_code_request_delete_confirm: "Jeni i sigurt që dëshironi të anuloni këtë kërkesë kod qasje?"
+      access_code_request_edit_problem: "qasje në kodin Problem kërkesë redaktimi"
+      access_code_request_send_problem: "Nuk ishte një problem i dërguar kodin"
       access_code_request_thank_you: "Ju falënderoj për kërkesën tuaj. Ne do të jemi në kontakt sa më shpejt që të jetë e mundur."
       access_code_request_tip: "Shkruani e-mail tuaj dhe ne do të ju dërgojnë një kod qasje sa më shpejt që është në dispozicion. Thank you!"
+      access_code_requests: "Kodi Kërkesat Access"
+      access_code_requests_code_sent_on: "Kodi Sent mbi"
+      access_code_requests_email: Email
+      access_code_requests_name: Emri
+      access_code_requests_signed_up_on: "Nënshkruar në"
+      access_code_sent_to: "Sent To"
+      access_code_subject: Subjekt
+      access_code_thank_you: "Ju faleminderit për interesin tuaj. Ne do të merrni një kod sa më shpejt të jetë e mundur."
       access_code_tip: "Futni një kod të qasjes."
       access_code_unlimited: Unlimited
       access_code_update_problem: "Nuk ishte një problem përditësimin kodin qasje."
@@ -67,6 +80,7 @@ sq:
       already_logged_in: "Ju jeni tashmë në dhe nuk kanë nevojë të shërohen fjalëkalimin tuaj."
       already_registered: "Already a Member?"
       application_base_url_not_set: "Ju lutemi të vendosur application_base_url në global_config.yml"
+      beta_code_not_required: "Ju jeni tashmë në dhe kështu ju ndoshta nuk dëshironi me të vërtetë një kod beta."
       bulk_access_code_emails: Emails
       bulk_access_code_emails_tip: "email Ndaj me një presje"
       bulk_access_code_message: Mesazh
@@ -76,6 +90,7 @@ sq:
       bulk_access_codes: "Bulk Access Codes"
       bulk_access_codes_created: "Pjesa më e madhe e krijuar qasje kodet dhe email për të email %{email_count}."
       bulk_access_codes_description: "Kjo do të gjenerojë një unike, të vetme akses kodin përdorim për çdo e-mail me kusht."
+      bulk_access_codes_or: APO
       bulk_access_codes_title: "Bulk Access Codes"
       cannot_deactivate_yourself: "Ju nuk mund të çaktivizuar veten!"
       cant_delete_admin: "Ju nuk mund të fshini një përdorues që është në rolin e admin. Hiq përdoruesin nga roli administratori dhe pastaj provoni përsëri. Ju lutem, kini kujdes kur fshirjes administratorëve. Nëse jeni fshirë të gjitha llogari administratori ju nuk do të jetë në gjendje të identifikoheni në sistemin e administratës."
@@ -100,6 +115,8 @@ sq:
       deleting_user: "fshirjes user ..."
       edit: Redaktoj
       edit_access_code: "Edit Kodi Access"
+      edit_access_code_request: "Edit Kodi Kërkesë Access"
+      edit_access_code_request_title: "Edit Kërkesë"
       edit_access_code_title: "Edit Kodi Access"
       edit_profile: "Edit Profile"
       edit_role_dialog_title: "Edit Roli"
@@ -118,9 +135,11 @@ sq:
       forgot_username: "Keni harruar emrin"
       forgot_your_password: "Keni harruar fjalëkalimin?"
       forgot_your_username: "Keni harruar fjalëkalimin?"
+      fullfilled_access_code_requests: "Kërkesat përmbushur Kodi Access"
       invalid_username: "Invalid username"
       join_application_name: "Bashkohen dhe të merrni atë bërë"
       last_name: Mbiemri
+      list_access_codes: "Kodet e hyrjes Lista"
       login: Hyrje
       login_empty: "Ju lutem shkruani një hyrje me emrin përkatës"
       login_fail: "Na vjen keq, por ne nuk mund të njohin të dhënat tuaja identifikuese. Ju lutem provoni përsëri."
@@ -158,6 +177,7 @@ sq:
       remember_me: "Më mbani mënd"
       remove_my_account: "Hiq Llogaria ime"
       request_access_code: "Kodi Kërkesë Access"
+      request_access_code_instruction: "Ju lutemi të japë informacionin e mëposhtëm dhe ne do t&#39;ju ofrojë një kod qasje sa më shpejt të jetë e mundur."
       request_username: "Username Kërkesë"
       request_username_subject: "Keni harruar username"
       reset_password: "Reset Password juaj"
@@ -169,12 +189,19 @@ sq:
       roles: Rolet
       save: Ruaj
       select_new_password: "Zgjidh një fjalëkalim të ri"
+      send_access_code: "Send Kodi"
+      send_access_code_instructions: "Të sigurojë një mesazh dhe trup që do të dërgohet në e-mail, së bashku me kodin që do të lejuar përdoruesit të krijuar një llogari."
+      send_access_code_request_title: "Send Kodi"
+      send_access_codes: "Send Codes"
+      send_code: "Send Kodi"
       sign_in: "Sign In"
       sign_in_now: "Sign in tani!"
       sign_in_title: "Sign In"
       sign_out_title: "Sign Out"
       sign_up: Regjistrohu
       sign_up_now: "Sign-up Now"
+      signin_wait: "Nënshkrimi ju in lutem prisni."
+      signup_wait: "Nënshkrimi ju lart. Ju lutem prisni."
       sorry_invalid_reset_code: "Na vjen keq, por ne nuk mund të gjetur llogarinë tuaj. Nëse keni çështje të përpiqet kopjimi dhe pasting URL e email-it tuaj në shfletuesin tuaj ose rifillimin e procesit të reset password."
       submit: Submit
       terms_and_service: "Duke klikuar tek &#39;Sign-up Now&#39; jeni dakord në përputhje me Termat dhe Kushtet %{tos_link_anchor}%{link_end}."
@@ -184,6 +211,7 @@ sq:
       thanks_sign_up_check: "Llogaria juaj është krijuar. Ju lutem kontrolloni e-mailin tuaj për aktivizimin e llogarisë udhëzimet tuaja!"
       thanks_sign_up_login: "Faleminderit për nënshkrimin! Ju mund të identifikoheni tani"
       total_users: "Total Users: %{total}"
+      unfullfilled_access_code_requests: "Kërkesat e paplotësuara Kodi Access"
       unlimited: "Përdor pakufizuar"
       unlimited_tip: "Shikoni këtu nëse kodin qasje mund të përdoret një numër të pakufizuar të herë. Kjo do të pranoj limit përdorimi."
       update: Update
@@ -202,7 +230,7 @@ sq:
       user_not_activated_error: "Mund të mos aktivizohet përdorues"
       user_not_deactivated_error: "Nuk mund të transferoj në rezervë përdorues"
       user_successfully_deleted: "User %{login} u fshi me sukses."
-      user_update: "Ju jeni të dhëna përdoruesi është përditësuar."
+      user_update: "Informacioni juaj përdorues është përditësuar."
       user_update_sucess: "User u freskua me sukses"
       username: "Emri i përdoruesit"
       username_available: "Username dispozicion"

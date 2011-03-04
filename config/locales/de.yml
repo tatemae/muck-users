@@ -25,11 +25,24 @@ de:
       access_code_fullfill_invites_limit_tip: "Geben Sie eine Zahl auf die Anzahl der Anfragen verschickt begrenzen. Zum Beispiel wird die Eingabe der 100 Personen begrenzen lädt die letzten 100 Zugriffe"
       access_code_fullfill_invites_tip: "Prüfen Sie hier, um zu senden lädt für Benutzer, die beantragte eine einzuladen. Daraufhin erhalten Sie alle E-Mails oben angegeben."
       access_code_help: "Wenn Sie einen Zugangscode von uns erhalten, bitte geben Sie in das Feld oben ein. Sie können auch %{access_request_anchor} anfordern Zugangscode%{access_request_anchor_end}."
+      access_code_message: Nachricht
       access_code_new: "Neue Access Code"
+      access_code_not_found: "Wir konnten bei der Suche nach Zugangscode versehen. Bitte kontaktieren Sie uns %{contact_us_anchor}%{contact_us_anchor_end} oder %{access_request_anchor} Anfrage einen anderen Code%{access_request_anchor_end}."
       access_code_related_users: "Nutzer, die sich mit diesem Code unterzeichnet"
       access_code_request_count: "Derzeit gibt es %{access_code_requests_count} Zugangscode Zugriffe"
+      access_code_request_delete_confirm: "Sind Sie sicher, dass Sie diese Zugangscode zu stornieren?"
+      access_code_request_edit_problem: "Problem bearbeiten Zugangscode beantragen"
+      access_code_request_send_problem: "Es gab ein Problem beim Senden des Codes"
       access_code_request_thank_you: "Vielen Dank für Ihre Anfrage. Wir melden uns so bald wie möglich werden."
       access_code_request_tip: "Geben Sie einfach Ihre E-Mail und wir schicken Ihnen einen Zugang sobald diese verfügbar ist. Vielen Dank!"
+      access_code_requests: "Access Code Anträge"
+      access_code_requests_code_sent_on: "Code gesendet am"
+      access_code_requests_email: E-Mail
+      access_code_requests_name: Name
+      access_code_requests_signed_up_on: "auf Unterzeichnung"
+      access_code_sent_to: "Gesendet an"
+      access_code_subject: Betrifft
+      access_code_thank_you: "Vielen Dank für Ihr Interesse. Wir kriegen Sie einen Code so schnell wie möglich."
       access_code_tip: "Geben Sie einen Zugangscode."
       access_code_unlimited: Unbegrenzte
       access_code_update_problem: "Es gab ein Problem beim Aktualisieren Sie den Zugangscode."
@@ -67,6 +80,7 @@ de:
       already_logged_in: "Sie sind bereits angemeldet und müssen nicht vergessen zu erholen."
       already_registered: "Bereits Mitglied?"
       application_base_url_not_set: "Bitte setzen Sie application_base_url in global_config.yml"
+      beta_code_not_required: "Sie sind bereits angemeldet und so werden Sie wahrscheinlich nicht wirklich wollen, eine Beta-Code."
       bulk_access_code_emails: E
       bulk_access_code_emails_tip: "Separate E-Mails durch ein Komma"
       bulk_access_code_message: Nachricht
@@ -76,6 +90,7 @@ de:
       bulk_access_codes: "Bulk Zugangscodes"
       bulk_access_codes_created: "Bulk Zugangscodes erstellt und per Email an %{email_count} E-Mails."
       bulk_access_codes_description: "Dies erzeugt eine einzigartige, einmalige Benützung Zugangscode für jeden der E-Mails zur Verfügung gestellt."
+      bulk_access_codes_or: OR
       bulk_access_codes_title: "Bulk Zugangscodes"
       cannot_deactivate_yourself: "Sie können nicht deaktivieren Sie sich selbst!"
       cant_delete_admin: "Du kannst nicht einen Benutzer löschen, die in der Admin-Rolle ist. Entfernen Sie den Benutzer aus der Administrator-Rolle und dann erneut versuchen. Bitte seien Sie vorsichtig beim Löschen von Administratoren. Wenn Sie alle Administrator-Konten werden Sie nicht mehr in der Lage sein, die Verwaltung System anmelden."
@@ -100,6 +115,8 @@ de:
       deleting_user: "Löschen von Benutzerkonten ..."
       edit: Bearbeiten
       edit_access_code: "Bearbeiten Access Code"
+      edit_access_code_request: "Bearbeiten Zugangscode anfordern"
+      edit_access_code_request_title: "Bearbeiten anfordern"
       edit_access_code_title: "Bearbeiten Access Code"
       edit_profile: "Profil bearbeiten"
       edit_role_dialog_title: "Rolle ändern"
@@ -118,9 +135,11 @@ de:
       forgot_username: "Benutzername vergessen"
       forgot_your_password: "Passwort vergessen?"
       forgot_your_username: "Benutzernamen vergessen?"
+      fullfilled_access_code_requests: "Erfüllte Wünsche Access Code"
       invalid_username: "Ungültiger Benutzername"
       join_application_name: "Mitmachen und get it done"
       last_name: Nachname
+      list_access_codes: "Liste Zugangscodes"
       login: Login
       login_empty: "Bitte geben Sie einen Login"
       login_fail: "Es tut uns leid, aber wir konnten nicht erkennen, Ihre Login-Daten. Bitte versuchen Sie es erneut."
@@ -158,6 +177,7 @@ de:
       remember_me: "Erinnere dich an mich"
       remove_my_account: "Nehmen Sie Ihr Konto"
       request_access_code: "Request Access Code"
+      request_access_code_instruction: "Bitte geben Sie die folgenden Informationen und wir werden Sie mit einem Zugangscode so bald wie möglich bereitzustellen."
       request_username: "Fordern Sie Benutzername"
       request_username_subject: "Benutzername vergessen"
       reset_password: "Passwort zurücksetzen"
@@ -169,12 +189,19 @@ de:
       roles: Rollen
       save: Speichern
       select_new_password: "Wählen Sie ein neues Passwort"
+      send_access_code: "Senden Code"
+      send_access_code_instructions: "Geben Sie eine Nachricht und Körper, die in der E-Mail zusammen mit dem Code, damit der Benutzer ein Konto anlegen wird gesendet."
+      send_access_code_request_title: "Senden Code"
+      send_access_codes: "Senden Codes"
+      send_code: "Senden Code"
       sign_in: Anmelden
       sign_in_now: "Melden Sie sich jetzt!"
       sign_in_title: Anmelden
       sign_out_title: "Registriere Out"
       sign_up: "Registriere dich"
       sign_up_now: "Registrieren Sie sich jetzt"
+      signin_wait: "Unterschreiben Sie auf Bitte warten."
+      signup_wait: "Unterschreiben Sie auf. Bitte warten Sie."
       sorry_invalid_reset_code: "Es tut uns leid, aber wir konnten nicht gefunden werden Ihrem Konto. Sie sind mit Fragen versuchen Kopieren und Einfügen der URL aus Ihrer E-Mail in Ihrem Browser oder ein Neustart des Passwort zurücksetzen Prozess."
       submit: Senden
       terms_and_service: "Durch Klicken auf &quot;Jetzt anmelden&quot; erklären Sie sich mit dem %{tos_link_anchor} AGB-nachzukommen .-.-."
@@ -184,6 +211,7 @@ de:
       thanks_sign_up_check: "Ihr Konto wurde erstellt. Bitte überprüfen Sie Ihre E-Mail für Ihre Account-Aktivierung beachten!"
       thanks_sign_up_login: "Vielen Dank für Ihre Anmeldung! Sie können sich jetzt anmelden"
       total_users: "Benutzer insgesamt: %{total}"
+      unfullfilled_access_code_requests: "Unerfüllte Wünsche Access Code"
       unlimited: "Verwendet Unlimited"
       unlimited_tip: "Prüfen Sie hier, wenn Sie den Zugangscode eine unbegrenzte Anzahl von Zeiten genutzt werden kann. Dies überschreibt die Verwendung zu beschränken."
       update: Update
@@ -202,7 +230,7 @@ de:
       user_not_activated_error: "Konnte nicht aktiviert werden Benutzer"
       user_not_deactivated_error: "Konnte nicht deaktivieren Benutzer"
       user_successfully_deleted: "User %{login} wurde erfolgreich gelöscht."
-      user_update: "Du bist Benutzerinformationen aktualisiert wurde."
+      user_update: "Ihre Benutzerinformationen wurden aktualisiert."
       user_update_sucess: "User wurde erfolgreich aktualisiert"
       username: Benutzername
       username_available: "Benutzername verfügbar"

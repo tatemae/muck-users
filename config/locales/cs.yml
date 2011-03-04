@@ -25,11 +25,24 @@ cs:
       access_code_fullfill_invites_limit_tip: "Zadejte číslo omezit počet žádostí poslal ven. Například, vstupující 100 limit zve na poslední 100 žádostí"
       access_code_fullfill_invites_tip: "Zkontrolujte, zda sem vyslat zve k uživatelům, kteří požádali pozvat. To bude ignorovat všechny e-maily uvedené výše."
       access_code_help: "Pokud jste obdrželi přístupový kód od nás, prosím, zadejte ho do pole nahoře. Můžete také požádat %{access_request_anchor} přístupový kód%{access_request_anchor_end}."
+      access_code_message: Zprávy
       access_code_new: "Nový přístupový kód"
+      access_code_not_found: "Nepodařilo se nám najít přístupový kód poskytovány. Prosím, kontaktujte nás %{contact_us_anchor}%{contact_us_anchor_end} nebo %{access_request_anchor} požádat jiný kód%{access_request_anchor_end}."
       access_code_related_users: "Uživatelé, kteří podepsali s tímto kódem"
       access_code_request_count: "V současné době existuje %{access_code_requests_count} žádostí přístupový kód"
+      access_code_request_delete_confirm: "Jste si jisti, že chcete zrušit tento přístupový kód požadavek?"
+      access_code_request_edit_problem: "Problém úpravy přístupový kód dotaz"
+      access_code_request_send_problem: "Došlo k chybě při odesílání kód"
       access_code_request_thank_you: "Děkuji vám za váš dotaz. Budeme v kontaktu co nejdříve."
       access_code_request_tip: "Zadejte svůj e-mail a my vám zašleme přístupový kód, jakmile je k dispozici. Děkuji vám!"
+      access_code_requests: "Přístupový kód Žádosti"
+      access_code_requests_code_sent_on: "Kód zaslaný na"
+      access_code_requests_email: E-mail
+      access_code_requests_name: Jméno
+      access_code_requests_signed_up_on: "Přihlásil na"
+      access_code_sent_to: "Chcete-li zaslána"
+      access_code_subject: Předmět
+      access_code_thank_you: "Děkujeme Vám za Váš zájem. Budeme vám kód, co nejdříve."
       access_code_tip: "Zadejte přístupový kód."
       access_code_unlimited: Neomezený
       access_code_update_problem: "Tam byl problém aktualizace přístupový kód."
@@ -67,6 +80,7 @@ cs:
       already_logged_in: "Jste již přihlášeni a nepotřebují k získání hesla."
       already_registered: "Jste již členem?"
       application_base_url_not_set: "Prosím nastavte application_base_url v global_config.yml"
+      beta_code_not_required: "Jste již přihlášeni, a tak si asi opravdu nechceš beta kód."
       bulk_access_code_emails: E-maily
       bulk_access_code_emails_tip: "Samostatné e-maily s čárkou"
       bulk_access_code_message: Zprávy
@@ -76,6 +90,7 @@ cs:
       bulk_access_codes: "Hromadné Přístupové kódy"
       bulk_access_codes_created: "Hromadné přístupové kódy vytvořeny a e-mailem na %{email_count} e-maily."
       bulk_access_codes_description: "Tím se vygeneruje jedinečný, jedno použití přístupový kód pro každou z e-mailů za předpokladu."
+      bulk_access_codes_or: OR
       bulk_access_codes_title: "Hromadné Přístupové kódy"
       cannot_deactivate_yourself: "Nemůžete deaktivovat sami!"
       cant_delete_admin: "Nemůžete odstranit uživatele, který je v roli admin. Odebrat uživatele z role správce a zkuste to znovu. Prosím, buďte opatrní při odstraňování administrátory. Máte-li odstranit všechny správce účtů, které již nebudou moci přihlásit k administraci systému."
@@ -100,6 +115,8 @@ cs:
       deleting_user: "mazání uživatelů ..."
       edit: Upravit
       edit_access_code: "Upravit přístupový kód"
+      edit_access_code_request: "Upravit přístupový kód Poptávka"
+      edit_access_code_request_title: "Upravit Poptávka"
       edit_access_code_title: "Upravit přístupový kód"
       edit_profile: "Upravit profil"
       edit_role_dialog_title: "Upravit Role"
@@ -118,9 +135,11 @@ cs:
       forgot_username: "Zapomněli jste uživatelské jméno"
       forgot_your_password: "Zapomněli jste heslo?"
       forgot_your_username: "Zapomněli jste heslo?"
+      fullfilled_access_code_requests: "Splněný Žádosti přístupový kód"
       invalid_username: "Neplatné uživatelské jméno"
       join_application_name: "Zaregistrujte se a získejte to udělal"
       last_name: "Poslední jméno"
+      list_access_codes: "Seznam kódů Přístup"
       login: "Přihlásit se"
       login_empty: "Zadejte prosím přihlaste"
       login_fail: "Je nám líto, ale my jsme nemohli poznat své přihlašovací údaje. Zkuste to prosím znovu."
@@ -158,6 +177,7 @@ cs:
       remember_me: "Pamatuj si mě"
       remove_my_account: "Odebrat Můj účet"
       request_access_code: "Žádost o přístupový kód"
+      request_access_code_instruction: "Uveďte, prosím, následující údaje a my Vám s přístupovým kódem co nejdříve."
       request_username: "Žádost o jméno"
       request_username_subject: "Zapomněli jste uživatelské jméno"
       reset_password: "Reset hesla"
@@ -169,12 +189,19 @@ cs:
       roles: Role
       save: Uložit
       select_new_password: "Zvolte nové heslo"
+      send_access_code: "Odeslat kód"
+      send_access_code_instructions: "Poskytovat zprávy a tělo, které bude zasláno v e-mailu spolu s kódem, který umožní uživateli vytvořit si účet."
+      send_access_code_request_title: "Odeslat kód"
+      send_access_codes: "Poslat kódy"
+      send_code: "Odeslat kód"
       sign_in: "Přihlásit se"
       sign_in_now: "Přihlaste se nyní!"
       sign_in_title: "Přihlásit se"
       sign_out_title: "Odhlásit se"
       sign_up: "Registrujte se"
       sign_up_now: "Sign-up nyní"
+      signin_wait: "Podpisem vám palce, prosím čekejte."
+      signup_wait: "Podpisem vás. Čekejte prosím."
       sorry_invalid_reset_code: "Je nám líto, ale my jsme nemohli najít účet. Pokud máte problémy zkuste kopírování a vkládání URL z e-mailového do prohlížeče nebo restartovat resetovat heslo procesu."
       submit: Odeslat
       terms_and_service: "Kliknutím na tlačítko &#39;Sign-up nyní&#39; souhlasíte dodržovat Všeobecné podmínky %{tos_link_anchor}%{link_end}."
@@ -184,6 +211,7 @@ cs:
       thanks_sign_up_check: "Váš účet byl vytvořen. Zkontrolujte prosím, zda váš e-mail pro vaše pokyny aktivace účtu!"
       thanks_sign_up_login: "Díky za registraci! Můžete se nyní přihlásit"
       total_users: "Celkem uživatelů: %{total}"
+      unfullfilled_access_code_requests: "Žádosti o nenaplněné přístupový kód"
       unlimited: "Neomezené použití"
       unlimited_tip: "Zkontrolujte, zde, pokud přístupový kód lze použít neomezený počet. Toto přepíše použití limit."
       update: Aktualizace
@@ -202,7 +230,7 @@ cs:
       user_not_activated_error: "Nelze aktivovat uživatele"
       user_not_deactivated_error: "Nemohl deaktivovat uživatele"
       user_successfully_deleted: "Uživatel %{login} byla úspěšně smazána."
-      user_update: "Vy jste uživatelské informace byla aktualizována."
+      user_update: "Vaše uživatelská data byla aktualizována."
       user_update_sucess: "Uživatel byl úspěšně aktualizován"
       username: "Uživatelské jméno"
       username_available: "Uživatelské jméno k dispozici"

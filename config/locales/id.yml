@@ -25,11 +25,24 @@ id:
       access_code_fullfill_invites_limit_tip: "Masukkan nomor untuk membatasi jumlah permintaan dikirim keluar. Sebagai contoh, memasuki 100 akan membatasi mengajak ke 100 permintaan terbaru"
       access_code_fullfill_invites_tip: "Cek di sini untuk mengirim undangan ke pengguna yang meminta sebuah undangan. Ini akan mengabaikan setiap email yang ditentukan di atas."
       access_code_help: "Jika Anda menerima kode akses dari kami, silahkan masukkan ke dalam kotak di atas. Anda mungkin juga %{access_request_anchor} meminta kode akses%{access_request_anchor_end}."
+      access_code_message: Pesan
       access_code_new: "Baru Kode Akses"
+      access_code_not_found: "Kami tidak dapat menemukan kode akses yang diberikan. Silahkan %{contact_us_anchor} hubungi kami%{contact_us_anchor_end} atau %{access_request_anchor} minta kode%{access_request_anchor_end}."
       access_code_related_users: "Pengguna yang mendaftar dengan kode ini"
       access_code_request_count: "Saat ini ada %{access_code_requests_count} akses permintaan kode"
+      access_code_request_delete_confirm: "Apakah Anda yakin ingin membatalkan permintaan ini kode akses?"
+      access_code_request_edit_problem: "Masalah mengedit kode akses permintaan"
+      access_code_request_send_problem: "Ada masalah saat mengirim kode"
       access_code_request_thank_you: "Terima kasih atas permintaan Anda. Kami akan menghubungi Anda sesegera mungkin."
       access_code_request_tip: "Masukkan email Anda dan kami akan mengirimkan kode akses segera sebagai salah satu tersedia. Terima kasih!"
+      access_code_requests: "Permintaan Kode Akses"
+      access_code_requests_code_sent_on: "Kode Terkirim pada"
+      access_code_requests_email: Email
+      access_code_requests_name: Nama
+      access_code_requests_signed_up_on: "Ditandatangani di"
+      access_code_sent_to: "Terkirim Untuk"
+      access_code_subject: Subyek
+      access_code_thank_you: "Terima kasih atas minat Anda. Kami akan mendapatkan kode Anda sesegera mungkin."
       access_code_tip: "Masukkan kode akses."
       access_code_unlimited: "Tak terbatas"
       access_code_update_problem: "Ada masalah memperbarui kode akses."
@@ -67,15 +80,17 @@ id:
       already_logged_in: "Anda sudah login dan tidak perlu untuk memulihkan password anda."
       already_registered: "Sudah menjadi anggota?"
       application_base_url_not_set: "Silakan set application_base_url di global_config.yml"
+      beta_code_not_required: "Anda telah login dan sehingga Anda mungkin tidak benar-benar menginginkan kode beta."
       bulk_access_code_emails: Email
       bulk_access_code_emails_tip: "Pisahkan email dengan tanda koma"
       bulk_access_code_message: Pesan
       bulk_access_code_problem: "Masalah menambahkan kode akses"
       bulk_access_code_subject: Subyek
-      bulk_access_code_tip: "Opsional. Jika kode tersebut ditentukan maka kode akan dikirimkan ke semua pengguna. Membiarkan field ini kosong untuk mengirim kode unik untuk tiap user."
+      bulk_access_code_tip: "Opsional. Jika kode ditetapkan maka kode akan dikirimkan ke semua pengguna. Membiarkan field ini kosong untuk mengirim kode unik untuk tiap user."
       bulk_access_codes: "Kode Akses Massal"
       bulk_access_codes_created: "Bulk kode akses dibuat dan email ke email %{email_count}."
       bulk_access_codes_description: "Ini akan menghasilkan kode, menggunakan akses tunggal yang unik untuk setiap email yang disediakan."
+      bulk_access_codes_or: ATAU
       bulk_access_codes_title: "Kode Akses Massal"
       cannot_deactivate_yourself: "Anda tidak dapat menonaktifkan diri sendiri!"
       cant_delete_admin: "Anda tidak dapat menghapus pengguna yang ada di peran admin. Hapus pengguna dari peran administrator dan kemudian coba lagi. Harap berhati-hati saat menghapus administrator. Jika Anda menghapus administrator semua account Anda tidak akan lagi bisa login ke sistem administrasi."
@@ -100,6 +115,8 @@ id:
       deleting_user: "menghapus pengguna ..."
       edit: Edit
       edit_access_code: "Edit Kode Akses"
+      edit_access_code_request: "Edit Permintaan Kode Akses"
+      edit_access_code_request_title: "Edit Permintaan"
       edit_access_code_title: "Edit Kode Akses"
       edit_profile: "Edit Profil"
       edit_role_dialog_title: "Edit Peran"
@@ -118,9 +135,11 @@ id:
       forgot_username: "Lupa Username"
       forgot_your_password: "Lupa password Anda?"
       forgot_your_username: "Lupa nama pengguna anda?"
+      fullfilled_access_code_requests: "Kode Akses Permintaan Terpenuhi"
       invalid_username: "Username tidak valid"
       join_application_name: "Bergabung dan menyelesaikannya"
       last_name: "Nama Terakhir"
+      list_access_codes: "Daftar Kode Akses"
       login: Login
       login_empty: "Masukkan login"
       login_fail: "Kami minta maaf, tapi kami tidak bisa mengenali informasi login Anda. Silakan coba lagi."
@@ -158,6 +177,7 @@ id:
       remember_me: "Ingat saya"
       remove_my_account: "Hapus Account Saya"
       request_access_code: "Permintaan Kode Akses"
+      request_access_code_instruction: "Harap memberikan informasi berikut ini dan kami akan menyediakan Anda dengan kode akses sesegera mungkin."
       request_username: "Permintaan Username"
       request_username_subject: "Lupa nama pengguna"
       reset_password: "Reset Password Anda"
@@ -169,12 +189,19 @@ id:
       roles: Peran
       save: Simpan
       select_new_password: "Pilih Password Baru"
+      send_access_code: "Kirim Kode"
+      send_access_code_instructions: "Memberikan pesan dan tubuh yang akan dikirim dalam email bersama dengan kode yang akan membiarkan pengguna membuat account."
+      send_access_code_request_title: "Kirim Kode"
+      send_access_codes: "Kirim Kode"
+      send_code: "Kirim Kode"
       sign_in: "Sign In"
       sign_in_now: "Daftar sekarang!"
       sign_in_title: "Sign In"
       sign_out_title: "Sign Out"
       sign_up: "Sign up"
       sign_up_now: "Sign-up Sekarang"
+      signin_wait: "Penandatanganan Anda masuk Silakan tunggu."
+      signup_wait: "Penandatanganan anda. Harap tunggu."
       sorry_invalid_reset_code: "Kami minta maaf, tapi kami tidak dapat menemukan account Anda. Jika Anda mengalami masalah coba salin dan sisipkan URL dari email anda ke browser anda atau restart proses reset password."
       submit: Menyerahkan
       terms_and_service: "Dengan mengklik &#39;Daftar-up Sekarang&#39; Anda setuju untuk mematuhi Syarat dan Ketentuan %{tos_link_anchor}%{link_end}."
@@ -184,6 +211,7 @@ id:
       thanks_sign_up_check: "Akun Anda telah dibuat. Silakan cek e-mail Anda untuk mendapatkan petunjuk aktivasi account anda!"
       thanks_sign_up_login: "Terima kasih telah mendaftar! Anda dapat login sekarang"
       total_users: "Total Pengguna: %{total}"
+      unfullfilled_access_code_requests: "Kode Akses Permintaan terpenuhnya"
       unlimited: "Menggunakan Unlimited"
       unlimited_tip: "Cek di sini jika kode akses dapat digunakan dalam jumlah tidak terbatas kali. Ini akan mengesampingkan membatasi penggunaan."
       update: Update
@@ -202,7 +230,7 @@ id:
       user_not_activated_error: "Tidak dapat mengaktifkan pengguna"
       user_not_deactivated_error: "Tidak dapat menonaktifkan pengguna"
       user_successfully_deleted: "%{login} User berhasil dihapus."
-      user_update: "Kau informasi pengguna telah diperbarui."
+      user_update: "informasi pengguna Anda telah diperbarui."
       user_update_sucess: "User berhasil diperbarui"
       username: Username
       username_available: "Username tersedia"

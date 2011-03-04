@@ -25,11 +25,24 @@ hu:
       access_code_fullfill_invites_limit_tip: "Írjon be egy számot, hogy korlátozza a kérelmek száma küldött. Például, belépő 100 korlátozni fogja az kéri, hogy a legutóbbi 100 kérelmet"
       access_code_fullfill_invites_tip: "Klikkeljen ide, hogy küldjön felkéri a felhasználóknak, akik kérték a meghívót. Ez figyelmen kívül hagyja e-mailt a fent megadott."
       access_code_help: "Ha kapott egy hozzáférési kódot tőlünk, kérjük adja meg a fenti mezőbe. Ön is %{access_request_anchor} kérhet hozzáférési kód .-.-."
+      access_code_message: Üzenet
       access_code_new: "Új hozzáférési kód"
+      access_code_not_found: "Nem tudtuk megtalálni a hozzáférési kódot. Kérjük %{contact_us_anchor} fel velünk a kapcsolatot, vagy .-.- %{contact_us_anchor_end} kérjen egy kódot%{access_request_anchor}."
       access_code_related_users: "A felhasználók, akik aláírták fel ezt a kódot"
       access_code_request_count: "Jelenleg %{access_code_requests_count} hozzáférési kódot kér"
+      access_code_request_delete_confirm: "Biztosan meg akarja szakítani ezt a hozzáférési kód kérése?"
+      access_code_request_edit_problem: "Probléma szerkesztését kód kérése"
+      access_code_request_send_problem: "Ott sikerült elküldeni a kódot"
       access_code_request_thank_you: "Köszönjük kérését. Mi lesz a kapcsolatot a lehető leghamarabb."
       access_code_request_tip: "Adja meg e-mail és küldünk Önnek egy belépési kódot, amint rendelkezésre áll. Köszönöm!"
+      access_code_requests: "Hozzáférési kód kéri"
+      access_code_requests_code_sent_on: "Kód küldött"
+      access_code_requests_email: E-mail
+      access_code_requests_name: Név
+      access_code_requests_signed_up_on: "Aláírták fel"
+      access_code_sent_to: Címzett
+      access_code_subject: Tárgy
+      access_code_thank_you: "Köszönjük az érdeklődést. Majd kapsz egy kódot a lehető leghamarabb."
       access_code_tip: "Írja be a hozzáférési kódot."
       access_code_unlimited: Korlátlan
       access_code_update_problem: "Volt egy probléma frissítése a hozzáférési kódot."
@@ -67,6 +80,7 @@ hu:
       already_logged_in: "Ön már bejelentkezett, és nem kell a jelszó visszaállítására."
       already_registered: "Már tag?"
       application_base_url_not_set: "Kérjük, állítsa be a application_base_url global_config.yml"
+      beta_code_not_required: "Ön már bejelentkezett, és így valószínűleg nem igazán akar a béta kódot."
       bulk_access_code_emails: E-mailek
       bulk_access_code_emails_tip: "Külön e-maileket egy vesszővel"
       bulk_access_code_message: Üzenet
@@ -76,6 +90,7 @@ hu:
       bulk_access_codes: "Tömeges Belépõkódok"
       bulk_access_codes_created: "Tömeges hozzáférési kódokat létre, és e-mailben a %{email_count} e-maileket."
       bulk_access_codes_description: "Ez létrehozzanak egy egyedi, egyszer használatos belépési kódot minden egyes e-mailek biztosított."
+      bulk_access_codes_or: VAGY
       bulk_access_codes_title: "Tömeges Belépõkódok"
       cannot_deactivate_yourself: "Nem lehet kikapcsolni magad!"
       cant_delete_admin: "Nem lehet törölni a felhasználót, hogy van az admin szerepét. Vegye ki a felhasználót a rendszergazda szerepét, majd próbálkozzon újra. Kérjük, legyen óvatos, amikor törlése a rendszergazdák. Ha törli az összes rendszergazdai fiókok akkor már nem tud bejelentkezni az adminisztrációs rendszer."
@@ -100,6 +115,8 @@ hu:
       deleting_user: "törlésével a felhasználó ..."
       edit: Edit
       edit_access_code: "Edit hozzáférési kód"
+      edit_access_code_request: "Edit hozzáférési kód kérése"
+      edit_access_code_request_title: "Edit kérése"
       edit_access_code_title: "Edit hozzáférési kód"
       edit_profile: "Profil szerkesztése"
       edit_role_dialog_title: "Edit szerepe"
@@ -118,9 +135,11 @@ hu:
       forgot_username: "Elfelejtett felhasználónév"
       forgot_your_password: "Elfelejtette a jelszavát?"
       forgot_your_username: "Elfelejtette a felhasználónevét?"
+      fullfilled_access_code_requests: "Teljesült hozzáférési kód kéri"
       invalid_username: "Érvénytelen felhasználónév"
       join_application_name: "Csatlakozz, és intézd el"
       last_name: "Utolsó Név"
+      list_access_codes: "Lista Belépõkódok"
       login: Bejelentkezés
       login_empty: "Kérjük, adja meg a bejelentkezési"
       login_fail: "Sajnáljuk, de nem ismerték meg a bejelentkezési adatokat. Kérjük, próbálja újra."
@@ -158,6 +177,7 @@ hu:
       remember_me: "Emlékezzen rám"
       remove_my_account: "Saját fiók törlése"
       request_access_code: "Kérése hozzáférési kód"
+      request_access_code_instruction: "Kérjük, adja meg az alábbi adatokat, és mi adunk Önnek egy belépési kódot a lehető leghamarabb."
       request_username: "Kérés Felhasználónév"
       request_username_subject: "Elfelejtett felhasználónév"
       reset_password: "Reset Jelszó"
@@ -169,12 +189,19 @@ hu:
       roles: Szerepek
       save: Mentés
       select_new_password: "Válasszon ki egy új jelszó"
+      send_access_code: "Küldje kód"
+      send_access_code_instructions: "Adja meg az üzenetet és a test, hogy lesz elküldve az e-mailben együtt a kódot, amely hagyja, hogy a felhasználói fiók létrehozásához."
+      send_access_code_request_title: "Küldje kód"
+      send_access_codes: "Küldje kódok"
+      send_code: "Küldje kód"
       sign_in: Bejelentkezés
       sign_in_now: "Jelentkezzen be most!"
       sign_in_title: Bejelentkezés
       sign_out_title: Kijelentkezés
       sign_up: Regisztrálj
       sign_up_now: "Iratkozzon fel most"
+      signin_wait: "Aláírásával Ön be Kérem, várjon."
+      signup_wait: "Aláírását téged. Kérem, várjon."
       sorry_invalid_reset_code: "Sajnáljuk, de nem tudtuk megtalálni a fiókját. Ha nem próbálja kérdések másolás és beillesztés az URL-mail címet a böngészőbe, vagy újraindítani a reset jelszó folyamatot."
       submit: Beküldése
       terms_and_service: "Ha rákattintunk &quot;Iratkozzon fel most&quot; Ön vállalja, hogy betartja a %{tos_link_anchor} Általános Szerződési Feltételek%{link_end}."
@@ -184,6 +211,7 @@ hu:
       thanks_sign_up_check: "Fiókja hoztak létre. Kérjük, ellenőrizze az e-mail fiókja aktiválási utasításokat!"
       thanks_sign_up_login: "Köszönjük, hogy regisztrálsz! Lehet be most"
       total_users: "Felhasználók: %{total}"
+      unfullfilled_access_code_requests: "Hozzáférési kód nem teljesített kérelmek"
       unlimited: "Korlátlan felhasználás"
       unlimited_tip: "Klikkeljen ide, ha a hozzáférési kód is használható korlátlan számú alkalommal. Ez felülírja a használat korlátozása."
       update: Frissítés
@@ -202,7 +230,7 @@ hu:
       user_not_activated_error: "Nem lehet aktiválni a felhasználó"
       user_not_deactivated_error: "Nem lehet kikapcsolni a felhasználó"
       user_successfully_deleted: "Felhasználó %{login} sikeresen törölve."
-      user_update: "Maga a felhasználói adatokat nem frissítik."
+      user_update: "Az Ön felhasználói adatait frissítettük."
       user_update_sucess: "A felhasználó sikeresen frissítve"
       username: Felhasználónév
       username_available: "Felhasználónév elérhető"

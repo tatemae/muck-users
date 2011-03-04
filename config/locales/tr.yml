@@ -25,11 +25,24 @@ tr:
       access_code_fullfill_invites_limit_tip: "gönderilen istek sayısını sınırlamak için bir sayı girin. Örneğin, 100 giren en son 100 kişi davet sınırlayacaktır"
       access_code_fullfill_invites_tip: "göndermek için burayı kontrol edin bir davet istemiş kullanıcılara davet ediyor. Bu yukarıda belirtilen tüm e-postaları yok sayacaktır."
       access_code_help: "Eğer bizden bir erişim kodu aldıysanız, yukarıdaki kutuya yazınız. Ayrıca %{access_request_anchor} isteyebilir bir erişim kodu%{access_request_anchor_end}."
+      access_code_message: Mesajı
       access_code_new: "Yeni Erişim Kodu"
+      access_code_not_found: "Biz erişim kodu verilen bulamadık. %{contact_us_anchor}%{contact_us_anchor_end} Veya %{access_request_anchor} talep bize ulaşın başka kod .-.-."
       access_code_related_users: "Bu kod ile kaydoldum Kullanıcılar"
       access_code_request_count: "Şu Anda %{access_code_requests_count} erişim kodu açılış"
+      access_code_request_delete_confirm: "Bu erişim kodu isteği iptal etmek istediğinizden emin misiniz?"
+      access_code_request_edit_problem: "Sorun düzenleme erişim kodu isteği"
+      access_code_request_send_problem: "kodu gönderen bir sorun oldu"
       access_code_request_thank_you: "isteğiniz için teşekkür ederiz. Biz en kısa sürede irtibat halinde olacağım."
       access_code_request_tip: "E-postanızı girin ve biz en kısa sürede tek geçerli olarak bir erişim kodu göndereceğiz. Teşekkürler!"
+      access_code_requests: "Erişim kodu İstekler"
+      access_code_requests_code_sent_on: "Kod Gönderilmiş"
+      access_code_requests_email: E-posta
+      access_code_requests_name: Adı
+      access_code_requests_signed_up_on: "üzerinde olma"
+      access_code_sent_to: "Gönderdiğiniz için"
+      access_code_subject: Konu
+      access_code_thank_you: "İlginiz için teşekkür ederiz. Size en kısa sürede bir kod alırsınız."
       access_code_tip: "bir erişim kodu girin."
       access_code_unlimited: Sınırsız
       access_code_update_problem: "erişim kodu güncelleme bir sorun vardı."
@@ -67,6 +80,7 @@ tr:
       already_logged_in: "Zaten kaydediliyor Şifrenizi kurtarmak gerekmez."
       already_registered: "Zaten üye misiniz?"
       application_base_url_not_set: "global_config.yml içinde application_base_url ayarlayın"
+      beta_code_not_required: "Zaten kaydediliyor bu nedenle muhtemelen gerçekten bir beta kod istemiyorum."
       bulk_access_code_emails: E-postaları
       bulk_access_code_emails_tip: "virgül ile ayrılmış e-postaları"
       bulk_access_code_message: Mesajı
@@ -76,6 +90,7 @@ tr:
       bulk_access_codes: "Kodları Erişim Toplu"
       bulk_access_codes_created: "oluşturulan ve %{email_count} e-postalar e-postayla kodları erişim Toplu."
       bulk_access_codes_description: "e-postaları her kaydıyla bu benzersiz, tek kullanımlık bir şifre üretecektir."
+      bulk_access_codes_or: VEYA
       bulk_access_codes_title: "Kodları Erişim Toplu"
       cannot_deactivate_yourself: "Kendinizi devre dışı bırakmak olamaz!"
       cant_delete_admin: "Eğer yönetici rolü olan bir kullanıcı silemezsiniz. yönetici rolü kullanıcı çıkarın ve yeniden deneyin. yöneticileri silerken dikkatli olun. Eğer silerseniz tüm yönetici artık yönetim sistemine giriş mümkün olacak hesaplar."
@@ -100,6 +115,8 @@ tr:
       deleting_user: "kullanıcı silme ..."
       edit: Düzenlemek
       edit_access_code: "Erişim Kod Düzenle"
+      edit_access_code_request: "Erişim Kodu İsteği Düzenleme"
+      edit_access_code_request_title: "Istek Düzenle"
       edit_access_code_title: "Erişim Kod Düzenle"
       edit_profile: "Profilinizi düzenleyin"
       edit_role_dialog_title: "Rol Düzenle"
@@ -118,9 +135,11 @@ tr:
       forgot_username: "Unuttum Adı"
       forgot_your_password: "Şifrenizi mi unuttunuz?"
       forgot_your_username: "Adınızı mı unuttunuz?"
+      fullfilled_access_code_requests: "Yerine Erişim Kodu İstekler"
       invalid_username: "Geçersiz kullanıcı adı"
       join_application_name: "Katılmak ve halletmek"
       last_name: "Son Adı"
+      list_access_codes: "Liste Giriş Kodları"
       login: Giriş
       login_empty: "bir giriş yapınız"
       login_fail: "Üzgünüz, ama giriş bilgilerinizi tanıyamadı. Lütfen tekrar deneyin."
@@ -158,6 +177,7 @@ tr:
       remember_me: "Beni hatırla"
       remove_my_account: "Hesap Kaldır"
       request_access_code: "Istek Erişim Kodu"
+      request_access_code_instruction: "Aşağıdaki bilgileri veriniz ve biz en kısa sürede bir erişim kodu veririz."
       request_username: "İstek Adı"
       request_username_subject: "Unutulmuş kullanıcı adı"
       reset_password: "Şifrenizi Sıfırlayın"
@@ -169,12 +189,19 @@ tr:
       roles: Rolleri
       save: Kaydetmek
       select_new_password: "Yeni Şifre seçin"
+      send_access_code: "Kodu gönder"
+      send_access_code_instructions: "Mesaj ve vücut kullanıcı bir hesap oluştur sağlayacak kodu ile birlikte e-posta gönderilecektir sağlayın."
+      send_access_code_request_title: "Kodu gönder"
+      send_access_codes: "Kodları gönder"
+      send_code: "Kodu gönder"
       sign_in: Oturum
       sign_in_now: "Şimdi kaydol!"
       sign_in_title: Oturum
       sign_out_title: "Oturumu Kapat"
       sign_up: "Facebook&#39;a kaydol"
       sign_up_now: "-Up Şimdi kaydol"
+      signin_wait: "Bulunduğunuz bekleyin imzalandı."
+      signup_wait: "Eğer Kaydolma. Lütfen bekleyin."
       sorry_invalid_reset_code: "Üzgünüz, ama biz hesap bulamadık. Eğer sorunlar yaşıyorsanız kopyalamayı deneyin ve tarayıcınızın halinde e-posta URL yapıştırma veya sıfırlama parola sürecini yeniden başlatmayı."
       submit: Gönderin
       terms_and_service: "Tıklayarak size .-.-. %{tos_link_anchor} Koşulları-uymayı &#39;-up Şimdi kaydol&#39;"
@@ -184,6 +211,7 @@ tr:
       thanks_sign_up_check: "Hesabınız yaratıldı. Hesap etkinleştirme talimatları için e-posta kontrol edin!"
       thanks_sign_up_login: "kayıt için teşekkürler! Sen şimdi giriş yapabilirsiniz"
       total_users: "Toplam Kullanıcı: %{total}"
+      unfullfilled_access_code_requests: "Yerine getirilmemiş Erişim Kodu İstekler"
       unlimited: "Sınırsız kullanır"
       unlimited_tip: "erişim kodu kere sınırsız sayıda kullanılabilir eğer burada kontrol edin. Bu kullanım sınırı geçersiz kılacaktır."
       update: Güncelleme
@@ -199,10 +227,10 @@ tr:
       user_enabled: "Kullanıcı etkin"
       user_marked_active: "Kullanıcı aktif olarak işaretlenmiş"
       user_marked_inactive: "Kullanıcı aktif olarak işaretlenmiş"
-      user_not_activated_error: "Couldn&#39;t kullanıcı aktif"
+      user_not_activated_error: "Couldn&#39;t kullanıcı etkinleştirmek"
       user_not_deactivated_error: "Couldn&#39;t kullanıcı devre dışı bırakmak"
       user_successfully_deleted: "Kullanıcı %{login} başarıyla silindi."
-      user_update: "Eğer kullanıcı bilgileri güncellendi konum."
+      user_update: "Kullanıcı bilgileriniz güncellendi."
       user_update_sucess: "Kullanıcı başarıyla güncellendi"
       username: "Kullanıcı adı"
       username_available: "Kullanıcı adı kullanılıyor"

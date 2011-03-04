@@ -25,11 +25,24 @@ mt:
       access_code_fullfill_invites_limit_tip: "Daħħal numru li jillimitaw in-numru ta &#39;talbiet mibgħuta. Per eżempju, li jidħlu 100 se jillimita l-tistieden l-aktar reċenti 100 talba"
       access_code_fullfill_invites_tip: "Iċċekkja hawn biex jibgħat tistieden lill-utenti li talbu jistiednu. Dan se jinjora xi emails speċifikati hawn fuq."
       access_code_help: "Jekk inti rċeviet kodiċi ta &#39;aċċess minna, jekk jogħġbok niżżel fil-kaxxa hawn fuq. Tista &#39;wkoll %{access_request_anchor} jitolbu aċċess code%{access_request_anchor_end}."
+      access_code_message: Messaġġ
       access_code_new: "Kodiċi ta &#39;aċċess Ġdid"
+      access_code_not_found: "Aħna ma konniex kapaċi ssib il-kodiċi ta &#39;aċċess ipprovdut. Jekk jogħġbok ikkuntattjana %{contact_us_anchor}%{contact_us_anchor_end} jew talba %{access_request_anchor} kodiċi oħra%{access_request_anchor_end}."
       access_code_related_users: "Utenti li ffirmaw mal dan il-kodiċi"
       access_code_request_count: "Bħalissa hemm %{access_code_requests_count} talbiet kodiċi ta &#39;aċċess"
+      access_code_request_delete_confirm: "Inti żgur li trid tħassar din it-talba kodiċi ta &#39;aċċess?"
+      access_code_request_edit_problem: "editjar Problema aċċess kodiċi talba"
+      access_code_request_send_problem: "Kien hemm problema jibgħat il-kodiċi"
       access_code_request_thank_you: "Grazzi għat-talba tiegħek. Aħna ser tkun f&#39;kuntatt kemm jista &#39;jkun malajr."
       access_code_request_tip: "Ikteb l-email tiegħek u aħna ser nibaghtulek kodiċi ta &#39;aċċess hekk kif wieħed hija disponibbli. Grazzi!"
+      access_code_requests: "Kodiċi Talbiet Aċċess"
+      access_code_requests_code_sent_on: "Kodiċi Mibgħuta fuq"
+      access_code_requests_email: Email
+      access_code_requests_name: Isem
+      access_code_requests_signed_up_on: "Iffirmat up fuq"
+      access_code_sent_to: "Mibgħuta Biex"
+      access_code_subject: Suġġett
+      access_code_thank_you: "Grazzi għall-interess tiegħek. Aħna ser inti tikseb ċertu kodiċi mill-iktar fis possibbli."
       access_code_tip: "Daħħal kodiċi ta &#39;aċċess."
       access_code_unlimited: Unlimited
       access_code_update_problem: "Kien hemm problema taġġorna l-kodiċi ta &#39;aċċess."
@@ -67,6 +80,7 @@ mt:
       already_logged_in: "Inti diġà illoggjat u ma għandekx bżonn li tirkupra l-password tiegħek."
       already_registered: "Diġà membru?"
       application_base_url_not_set: "Jekk jogħġbok stabbiliti application_base_url fl global_config.yml"
+      beta_code_not_required: "Inti diġà illoggjat u għalhekk inti probabilment ma verament irridu kodiċi beta."
       bulk_access_code_emails: Emails
       bulk_access_code_emails_tip: "Separati emails b&#39;virgola"
       bulk_access_code_message: Messaġġ
@@ -76,6 +90,7 @@ mt:
       bulk_access_codes: "Bulk Aċċess Kodiċijiet"
       bulk_access_codes_created: "Bulk aċċess kodiċijiet maħluqa u emailed emails %{email_count}."
       bulk_access_codes_description: "Dan se jiġġenera, kodiċi ta &#39;aċċess uniku użu għal kull wieħed mill-emails pprovduti."
+      bulk_access_codes_or: JEW
       bulk_access_codes_title: "Bulk Aċċess Kodiċijiet"
       cannot_deactivate_yourself: "Inti ma tistax diżattivazzjoni ruħek!"
       cant_delete_admin: "Inti ma tistax tħassar utent li huwa fir-rwol admin. Neħħi l-utent mill-irwol amministratur u mbagħad erġa &#39;pprova. Jekk jogħġbok oqgħod attent meta tħassir amministraturi. Jekk inti titħassar kull amministratur kontijiet inti ma tkunx tista login l-sistema ta &#39;amministrazzjoni."
@@ -100,6 +115,8 @@ mt:
       deleting_user: "tħassir utent ..."
       edit: Edit
       edit_access_code: "Edit Kodiċi Aċċess"
+      edit_access_code_request: "Edit Talba Kodiċi Aċċess"
+      edit_access_code_request_title: "Edit Talba"
       edit_access_code_title: "Edit Kodiċi Aċċess"
       edit_profile: "Edit Profile"
       edit_role_dialog_title: "Edit Rwol"
@@ -118,9 +135,11 @@ mt:
       forgot_username: "Insejt il-Username"
       forgot_your_password: "Insejt il-password tiegħek?"
       forgot_your_username: "Insejt il-username tiegħek?"
+      fullfilled_access_code_requests: "Talbiet Sodisfatti Kodiċi Aċċess"
       invalid_username: "username Invalid"
       join_application_name: "Jissieħbu u tikseb dan isir"
       last_name: "Last Isem"
+      list_access_codes: "Aċċess Kodiċijiet Lista"
       login: Login
       login_empty: "Jekk jogħġbok daħħal login"
       login_fail: "We&#39;re sorry, imma aħna ma jistgħu jagħrfu informazzjoni login tiegħek. Jekk jogħġbok erġa &#39;pprova."
@@ -158,6 +177,7 @@ mt:
       remember_me: "Remember me"
       remove_my_account: "Neħħi Kont Tiegħi"
       request_access_code: "Kodiċi Talba Aċċess"
+      request_access_code_instruction: "Jekk jogħġbok ipprovdi l-informazzjoni li ġejja u aħna ser jagħtuk kodiċi ta &#39;aċċess aktar fis possibbli."
       request_username: "Username Talba"
       request_username_subject: "username Minsija"
       reset_password: "Irrisettja Password tiegħek"
@@ -169,12 +189,19 @@ mt:
       roles: Rwoli
       save: Save
       select_new_password: "Agħżel Password Ġdid"
+      send_access_code: "Ibgħat Kodiċi"
+      send_access_code_instructions: "Ipprovdi messaġġ u l-korp li se jintbagħtu fil-email flimkien mal-kodiċi li se let l-utent toħloq kont."
+      send_access_code_request_title: "Ibgħat Kodiċi"
+      send_access_codes: "Ibgħat Kodiċijiet"
+      send_code: "Ibgħat Kodiċi"
       sign_in: "Sign In"
       sign_in_now: "Sinjal issa!"
       sign_in_title: "Sign In"
       sign_out_title: "Sign Out"
       sign_up: "Sign up"
       sign_up_now: "Sign up Issa"
+      signin_wait: "Iffirmar inti pulzieri Jekk jogħġbok stenna."
+      signup_wait: "Iffirmar inti up. Jekk jogħġbok stenna."
       sorry_invalid_reset_code: "We&#39;re sorry, imma aħna ma setgħetx issib il-kont tiegħek. Jekk qed ikollok kwistjonijiet tipprova tikkopja u pasta il-URL mill email tiegħek fil-browser tiegħek jew jerġa-proċess password reset."
       submit: Issottometti
       terms_and_service: "Billi tikklikkja &quot;Sign-up Now&quot; Taqbel li jikkonformaw mal-Termini u Kundizzjonijiet %{tos_link_anchor}%{link_end}."
@@ -184,6 +211,7 @@ mt:
       thanks_sign_up_check: "kont tiegħek ġie maħluq. Jekk jogħġbok iċċekkja l-email tiegħek għal struzzjonijiet tiegħek attivazzjoni kont!"
       thanks_sign_up_login: "Grazzi għall-iffirmar sa! Inti tista &#39;login issa"
       total_users: "Utenti Total: %{total}"
+      unfullfilled_access_code_requests: "Talbiet mhux mitmuma Kodiċi Aċċess"
       unlimited: "Użi Unlimited"
       unlimited_tip: "Iċċekkja hawn jekk il-kodiċi ta &#39;aċċess jista&#39; jintuża numru illimitat ta &#39;drabi. Dan se jwarrab l-limitu l-użu."
       update: Aġġornament
@@ -202,7 +230,7 @@ mt:
       user_not_activated_error: "Ma kellekx jattiva utent"
       user_not_deactivated_error: "Ma kellekx diżattivazzjoni utent"
       user_successfully_deleted: "Utenti %{login} kien b&#39;suċċess mħassar."
-      user_update: "Inti informazzjoni lill-utent ġiet aġġornata."
+      user_update: "informazzjoni lill-utent tiegħek ġie aġġornat."
       user_update_sucess: "Utenti kien b&#39;suċċess aġġornata"
       username: Username
       username_available: "Username disponibbli"

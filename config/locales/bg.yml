@@ -25,11 +25,24 @@ bg:
       access_code_fullfill_invites_limit_tip: "Въведете номер за ограничаване на броя на молбите изпратени. Така например, въвеждане на сто ще ограничи кани на последните 100 искания"
       access_code_fullfill_invites_tip: "Проверете тук, за да изпращате покани за потребители, които са поискали да покани. Това ще игнорира всички имейли, посочени по-горе."
       access_code_help: "Ако сте получили код за достъп от нас, моля да го въведете в полето по-горе. Може би ще %{access_request_anchor} поиска код за достъп, .-.-."
+      access_code_message: Съобщение
       access_code_new: "Нов код за достъп"
+      access_code_not_found: "Не успяхме да намерите кода за достъп, предвидени. Моля свържете се с нас %{contact_us_anchor}%{contact_us_anchor_end} или %{access_request_anchor} да поиска от друга код .-.-."
       access_code_related_users: "Потребителите, които се регистрирали с този код"
       access_code_request_count: "В момента са %{access_code_requests_count} искания код за достъп"
+      access_code_request_delete_confirm: "Наистина ли искате да отмените тази заявка код за достъп?"
+      access_code_request_edit_problem: "Проблем редактиране искане код за достъп"
+      access_code_request_send_problem: "Имаше проблем при изпращане на код"
       access_code_request_thank_you: "Благодарим ви за вашата заявка. Ние ще се свържем с вас възможно най-скоро."
       access_code_request_tip: "Въведете и-мейл и ние ще Ви изпратим код за достъп, веднага след като има такъв. Благодаря ви!"
+      access_code_requests: "Код за достъп Исканията"
+      access_code_requests_code_sent_on: "Код изпратен на"
+      access_code_requests_email: Email
+      access_code_requests_name: Име
+      access_code_requests_signed_up_on: "Подписано се на"
+      access_code_sent_to: "Изпратено до"
+      access_code_subject: Предмет
+      access_code_thank_you: "Благодарим ви за проявения интерес. Ще получите код, колкото е възможно по-скоро."
       access_code_tip: "Въведете код за достъп."
       access_code_unlimited: Неограничен
       access_code_update_problem: "Имаше проблем при актуализиране на код за достъп."
@@ -67,6 +80,7 @@ bg:
       already_logged_in: "Вие вече сте влезли в системата и не е необходимо да възстановите паролата си."
       already_registered: "Вече си член?"
       application_base_url_not_set: "Моля, задайте application_base_url в global_config.yml"
+      beta_code_not_required: "Вие вече сте влезли в системата и така че може би наистина не искам бета код."
       bulk_access_code_emails: Имейли
       bulk_access_code_emails_tip: "Отделни писма със запетая"
       bulk_access_code_message: Съобщение
@@ -76,6 +90,7 @@ bg:
       bulk_access_codes: "Насипни кодове за достъп"
       bulk_access_codes_created: "Насипни кодове за достъп е създаден и изпратен по имейл, съобщения %{email_count}."
       bulk_access_codes_description: "Това ще генерира уникален, единствен код за достъп, използване за всяка една от имейли условие."
+      bulk_access_codes_or: ИЛИ
       bulk_access_codes_title: "Насипни кодове за достъп"
       cannot_deactivate_yourself: "Вие не можете да изключите себе си!"
       cant_delete_admin: "Не можете да изтриете даден потребител, който е в ролята администратор. Премахване на потребител от администратор роля и опитайте отново. Моля, бъдете внимателни, когато изтривате администратори. Ако изтриете всички администратор сметки вече няма да бъде в състояние да влезете в администриране на системата."
@@ -100,6 +115,8 @@ bg:
       deleting_user: "изтриване на потребителя ..."
       edit: Редактиране
       edit_access_code: "Редактиране на код за достъп"
+      edit_access_code_request: "Редактиране на искането на код за достъп"
+      edit_access_code_request_title: "Редактиране на Заявка"
       edit_access_code_title: "Редактиране на код за достъп"
       edit_profile: "Редактиране на профила"
       edit_role_dialog_title: "Редактиране Роля"
@@ -118,9 +135,11 @@ bg:
       forgot_username: "Забравено потребителско име"
       forgot_your_password: "Забравена парола?"
       forgot_your_username: "Забравено потребителско име?"
+      fullfilled_access_code_requests: "Изпълнен Исканията Код за достъп"
       invalid_username: "Невалидно потребителско име"
       join_application_name: "Присъединете се и да го направи"
       last_name: Фамилия
+      list_access_codes: "Списък код за достъп"
       login: Вход
       login_empty: "Моля, въведете потребителско име"
       login_fail: "Съжаляваме, но ние не може да разпознае данните си за вход. Моля, опитайте отново."
@@ -158,6 +177,7 @@ bg:
       remember_me: "Запомни ме"
       remove_my_account: "Премахване Вход"
       request_access_code: "Искане Код за достъп"
+      request_access_code_instruction: "Моля, представете следната информация и ние ще ви предостави код за достъп, колкото е възможно по-скоро."
       request_username: "Искане име"
       request_username_subject: "Забравена потребителско име"
       reset_password: "Променете паролата си"
@@ -169,12 +189,19 @@ bg:
       roles: Роли
       save: Запази
       select_new_password: "Изберете нова парола"
+      send_access_code: "Изпрати кодекс"
+      send_access_code_instructions: "Осигуряване на съобщение и орган, който ще бъде изпратен в имейла, заедно с код, който ще позволи на потребителите да си създадете профил."
+      send_access_code_request_title: "Изпрати кодекс"
+      send_access_codes: "Изпращане на код"
+      send_code: "Изпрати кодекс"
       sign_in: Вход
       sign_in_now: "Влезте сега!"
       sign_in_title: Вход
       sign_out_title: Изход
       sign_up: "Регистрирай се"
       sign_up_now: "Регистрирай се сега"
+      signin_wait: "Подписване сте инча Моля, изчакайте."
+      signup_wait: "Подписване ви се. Моля, изчакайте."
       sorry_invalid_reset_code: "Съжаляваме, но ние не може да намери своя профил. Ако имате въпроси опитате да копирате и поставите URL адреса от електронната си поща в браузъра си или рестартиране на процеса възстановите паролата."
       submit: Изпращане
       terms_and_service: "Като натиснете &#39;Абонирайте се сега &quot;, Вие се съгласявате да се съобразят с условията %{tos_link_anchor} условия%{link_end}."
@@ -184,6 +211,7 @@ bg:
       thanks_sign_up_check: "Вашият профил бе създаден. Моля, проверете вашата електронна поща за инструкции за активиране!"
       thanks_sign_up_login: "Благодаря за записване! Можете да влезете сега"
       total_users: "Общо потребители: %{total}"
+      unfullfilled_access_code_requests: "Неизпълнени Исканията Код за достъп"
       unlimited: "Неограничен Използва"
       unlimited_tip: "Проверете тук, ако кодът за достъп може да се използва неограничен брой пъти. Това ще замени ограничаване на употребата."
       update: Update
@@ -202,7 +230,7 @@ bg:
       user_not_activated_error: "Не може да се активира потребителя"
       user_not_deactivated_error: "не може да бъде изключена потребител"
       user_successfully_deleted: "Потребителят %{login} беше изтрит успешно."
-      user_update: "Вие сте потребител информацията е била актуализирана."
+      user_update: "Вашата информация за потребителя е обновена."
       user_update_sucess: "Потребителят е успешно обновен"
       username: "Потребителско име"
       username_available: "Потребителите на разположение"

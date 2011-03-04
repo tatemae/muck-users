@@ -25,11 +25,24 @@ ca:
       access_code_fullfill_invites_limit_tip: "Introduïu un nombre per limitar el nombre de peticions enviades. Per exemple, entrant 100 limitarà la convida a la més recent 100 sol.licituds"
       access_code_fullfill_invites_tip: "Marqui aquí per enviar invitacions als usuaris que han demanat una invitació. Això ignorar qualsevol correu electrònic especificada anteriorment."
       access_code_help: "Si vostè va rebre un codi d&#39;accés de nosaltres, si us plau, escriviu en el quadre de dalt. També pot demanar una %{access_request_anchor} accés al codi%{access_request_anchor_end}."
+      access_code_message: Missatge
       access_code_new: "Nou Codi d&#39;Accés"
+      access_code_not_found: "No hem pogut trobar el codi d&#39;accés. Si us plau, %{contact_us_anchor} en contacte amb nosaltres%{contact_us_anchor_end} %{access_request_anchor} o demanar un altre codi%{access_request_anchor_end}."
       access_code_related_users: "Els usuaris que va signar amb el codi"
       access_code_request_count: "En aquest moment hi ha %{access_code_requests_count} sol.licituds d&#39;accés a codi"
+      access_code_request_delete_confirm: "Esteu segur que voleu cancel lar aquesta sol.licitud de codi d&#39;accés?"
+      access_code_request_edit_problem: "edició de problema d&#39;accés codi de sol licitud"
+      access_code_request_send_problem: "Hi va haver un problema en enviar el codi"
       access_code_request_thank_you: "Gràcies per la seva sol.licitud. Ens posarem en contacte tan aviat com sigui possible."
       access_code_request_tip: "Introduïu el vostre e-mail i t&#39;enviarem un codi d&#39;accés tan aviat com hagi un de disponible. Gràcies!"
+      access_code_requests: "Les sol.licituds d&#39;accés Codi"
+      access_code_requests_code_sent_on: "Enviat el Codi"
+      access_code_requests_email: "Correu electrònic"
+      access_code_requests_name: Nom
+      access_code_requests_signed_up_on: "Registrat en"
+      access_code_sent_to: "Enviat a"
+      access_code_subject: Assumpte
+      access_code_thank_you: "Gràcies pel seu interès. Anem a obtenir un codi tan aviat com sigui possible."
       access_code_tip: "Introduïu un codi d&#39;accés."
       access_code_unlimited: Unlimited
       access_code_update_problem: "Hi va haver un problema en actualitzar el codi d&#39;accés."
@@ -67,6 +80,7 @@ ca:
       already_logged_in: "Vostè ja ha entrat i no és necessari per recuperar la seva contrasenya."
       already_registered: "Ja ets membre?"
       application_base_url_not_set: "Si us plau, estableix application_base_url en global_config.yml"
+      beta_code_not_required: "Vostè ja està registrat i pel que probablement no volen realment un codi beta."
       bulk_access_code_emails: "Missatges de correu electrònic"
       bulk_access_code_emails_tip: "Separar missatges de correu electrònic amb una coma"
       bulk_access_code_message: Missatge
@@ -76,6 +90,7 @@ ca:
       bulk_access_codes: "Codis d&#39;Accés a granel"
       bulk_access_codes_created: "A granel codis d&#39;accés creat i enviat per correu electrònic als correus electrònics %{email_count}."
       bulk_access_codes_description: "Això generarà un codi únic, d&#39;un sol ús per a accedir a cada un dels missatges de correu electrònic proporcionada."
+      bulk_access_codes_or: O
       bulk_access_codes_title: "Codis d&#39;Accés a granel"
       cannot_deactivate_yourself: "No podeu desactivar!"
       cant_delete_admin: "No es pot eliminar un usuari que està en el rol d&#39;administrador. Tregui l&#39;usuari de la funció d&#39;administrador i torneu a intentar-ho. Si us plau, vagi amb compte en eliminar els administradors. Si elimina tots els comptes d&#39;administradors que ja no serà capaç d&#39;accedir a l&#39;administració del sistema."
@@ -100,6 +115,8 @@ ca:
       deleting_user: "eliminar usuari ..."
       edit: Edita
       edit_access_code: "Edició d&#39;accés a codi"
+      edit_access_code_request: "Edita Sol.licitud de codi"
+      edit_access_code_request_title: "Edita Sol.licitud"
       edit_access_code_title: "Edició d&#39;accés a codi"
       edit_profile: "Edita Perfil"
       edit_role_dialog_title: "MÉS INFORMACIÓ"
@@ -118,9 +135,11 @@ ca:
       forgot_username: "Has oblidat el teu nom d&#39;usuari"
       forgot_your_password: "Has oblidat la teva contrasenya?"
       forgot_your_username: "Heu oblidat el nom d&#39;usuari?"
+      fullfilled_access_code_requests: "Complert Demana codi d&#39;accés"
       invalid_username: "Nom d&#39;usuari no vàlid"
       join_application_name: "Uneix-te i aconseguir que es faci"
       last_name: Cognom
+      list_access_codes: "Codis de llista d&#39;accés"
       login: "Inicia sessió"
       login_empty: "Si us plau, introduïu un inici de sessió"
       login_fail: "Ho sentim, però no podia reconèixer la seva informació d&#39;accés. Torneu-ho de nou."
@@ -158,6 +177,7 @@ ca:
       remember_me: Recordar
       remove_my_account: "Treure El meu compte"
       request_access_code: "Sol.licitud de codi d&#39;accés"
+      request_access_code_instruction: "Si us plau, completi el següent formulari i li proporcionarà un codi d&#39;accés tan aviat com sigui possible."
       request_username: "Sol.licitud d&#39;usuari"
       request_username_subject: "Heu oblidat nom d&#39;usuari"
       reset_password: "Restablir la contrasenya"
@@ -169,12 +189,19 @@ ca:
       roles: Funcions
       save: Guardar
       select_new_password: "Seleccioneu una nova contrasenya"
+      send_access_code: "Enviar Codi"
+      send_access_code_instructions: "Proporcionar un missatge i el cos, que serà enviat al correu electrònic juntament amb el codi que li permetrà a l&#39;usuari crear un compte."
+      send_access_code_request_title: "Enviar Codi"
+      send_access_codes: "Enviar Codis"
+      send_code: "Enviar Codi"
       sign_in: "Inicia sessió"
       sign_in_now: "Entra ara!"
       sign_in_title: "Inicia sessió"
       sign_out_title: Sortir
       sign_up: "Registra&#39;t"
       sign_up_now: "Subscriu-te ara"
+      signin_wait: "La firma que in us plau, espereu."
+      signup_wait: "La signatura per dalt. Si us plau, espereu."
       sorry_invalid_reset_code: "Ho sentim, però no vam poder localitzar al seu compte. Si teniu problemes proveu de copiar i enganxar l&#39;adreça del seu correu electrònic en el navegador o reiniciant el procés de restabliment de contrasenya."
       submit: Enviar
       terms_and_service: "En fer clic a &quot;Registrar ara&quot; es compromet a complir amb els Termes i Condicions %{tos_link_anchor}%{link_end}."
@@ -184,6 +211,7 @@ ca:
       thanks_sign_up_check: "El seu compte ha estat creada. Si us plau, revisi el seu correu electrònic les instruccions per a la seva activació del compte!"
       thanks_sign_up_login: "Gràcies per registrar-te! Vostè pot iniciar sessió ara"
       total_users: "Total d&#39;usuaris: %{total}"
+      unfullfilled_access_code_requests: "Demana incomplertes Codi d&#39;Accés"
       unlimited: "Usos il limitats"
       unlimited_tip: "Marqui aquí si el codi d&#39;accés es pot utilitzar un nombre il limitat de vegades. Això larà el límit d&#39;ús."
       update: Actualitzar
@@ -202,7 +230,7 @@ ca:
       user_not_activated_error: "No s&#39;ha pogut activar l&#39;usuari"
       user_not_deactivated_error: "No s&#39;ha pogut desactivar l&#39;usuari"
       user_successfully_deleted: "%{login} Usuari s&#39;ha eliminat amb èxit."
-      user_update: "Vostè és la informació de l&#39;usuari s&#39;ha actualitzat."
+      user_update: "La seva informació d&#39;usuari s&#39;ha actualitzat."
       user_update_sucess: "L&#39;usuari s&#39;ha actualitzat correctament"
       username: "Nom d&#39;usuari"
       username_available: "Nom d&#39;usuari disponible"

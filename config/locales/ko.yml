@@ -25,11 +25,24 @@ ko:
       access_code_fullfill_invites_limit_tip: "보내는 요청의 수를 제한하는 번호를 입력하십시오. 예를 들어, 100을 입력은 가장 최근 100 요청에 초대 제한합니다"
       access_code_fullfill_invites_tip: "보내려면 여기를 체크 초대를 요청한 사용자에게 초대합니다. 이것이 위의 지정된 모든 이메일을 무시합니다."
       access_code_help: "당신은 우리의 접근 코드를받은 경우, 위의 상자에 입력하십시오. 당신은 또한 %{access_request_anchor} 요청할 수 있습니다 액세스 코드 .-.-."
+      access_code_message: 메시지
       access_code_new: "새로운 접근 코드"
+      access_code_not_found: "우리는 액세스 코드를 제공 찾을 수 없었습니다. %{contact_us_anchor} - .-.- 또는 %{contact_us_anchor_end} 요청에게 문의하시기 바랍니다 다른 코드 .-.-."
       access_code_related_users: "이 코드로 가입한 사용자"
       access_code_request_count: "현재이 없습니다 %{access_code_requests_count} 액세스 코드 요청"
+      access_code_request_delete_confirm: "당신이이 접근 코드 요청을 취소 하시겠습니까?"
+      access_code_request_edit_problem: "문제 편집 액세스 코드 요청"
+      access_code_request_send_problem: "코드를 보내는 문제가 발생했습니다"
       access_code_request_thank_you: "귀하의 요청을 주셔서 감사합니다. 우리는 최대한 빨리 연락 드리죠."
       access_code_request_tip: "귀하의 이메일을 입력하고 우리는 곧 하나가 사용할으로 당신에게 접근 코드를 보내드립니다. 감사합니다!"
+      access_code_requests: "접근 코드 요청"
+      access_code_requests_code_sent_on: "코드에 보낸"
+      access_code_requests_email: "이메일 보내기"
+      access_code_requests_name: 이름
+      access_code_requests_signed_up_on: "에 서명"
+      access_code_sent_to: 전송
+      access_code_subject: 제목
+      access_code_thank_you: "당신의 관심을 가져 주셔서 감사합니다. 우리는 당신에게 최대한 빠른 시일 내에 코드를 얻을거야."
       access_code_tip: "접근 코드를 입력하십시오."
       access_code_unlimited: 무제한
       access_code_update_problem: "액세스 코드를 업데이 트하는 문제가 발생했습니다."
@@ -67,6 +80,7 @@ ko:
       already_logged_in: "당신은 이미 로그인되어 비밀 번호를 복구하지 않아도됩니다."
       already_registered: "이미 회원이십니까?"
       application_base_url_not_set: "global_config.yml에 application_base_url을 설정하십시오"
+      beta_code_not_required: "당신은 이미 로그인되어 있습니다 그래서 당신은 아마 진짜 베타 코드를 싶지 않아."
       bulk_access_code_emails: 이메일
       bulk_access_code_emails_tip: "쉼표로 구분 이메일"
       bulk_access_code_message: 메시지
@@ -76,6 +90,7 @@ ko:
       bulk_access_codes: "코드에 접근할 대량"
       bulk_access_codes_created: "창조 %{email_count} 이메일 이메일로 코드에 접근할 대량."
       bulk_access_codes_description: "이메일을 각각 제공을위한이 독특한, 단일 사용 액세스 코드를 생성합니다."
+      bulk_access_codes_or: 또는
       bulk_access_codes_title: "코드에 접근할 대량"
       cannot_deactivate_yourself: "너 자신을 비활성화 수 없어!"
       cant_delete_admin: "당신이 관리자 역할에있는 사용자를 삭제할 수 없습니다. 관리자 역할에서 사용자를 제거하고 다시 시도하십시오. 관리자를 삭제할 때는주의하시기 바랍니다. 당신이 삭제하면 모든 관리자가 더 이상 관리 시스템에 로그인할 수있게됩니다 차지하고 있습니다."
@@ -100,6 +115,8 @@ ko:
       deleting_user: "사용자를 삭제 중 ..."
       edit: 수정
       edit_access_code: "접근 코드를 수정"
+      edit_access_code_request: "액세스 코드 요청 수정"
+      edit_access_code_request_title: "요청 수정"
       edit_access_code_title: "접근 코드를 수정"
       edit_profile: "프로필 수정"
       edit_role_dialog_title: "역할 편집"
@@ -118,9 +135,11 @@ ko:
       forgot_username: "사용자 이름 찾기"
       forgot_your_password: "암호를 잊으셨습니까?"
       forgot_your_username: "사용자 이름을 잊어버렸습?"
+      fullfilled_access_code_requests: "완수 접근 코드 요청"
       invalid_username: "잘못된 사용자 이름"
       join_application_name: "가입 그리고 마무리"
       last_name: 성
+      list_access_codes: "목록 접근 코드"
       login: 로그인
       login_empty: "로그인을 입력하세요"
       login_fail: "죄송하지만, 귀하의 로그인 정보를 인식할 수 없습니다. 다시 시도해주십시오."
@@ -158,6 +177,7 @@ ko:
       remember_me: "내 계정 정보 기억"
       remove_my_account: "내 계정 삭제"
       request_access_code: "요청 접근 코드"
+      request_access_code_instruction: "다음 정보를 제공해주십시오 그리고 우리는 최대한 빨리 접근 코드를 제공합니다."
       request_username: "사용자 이름 요청"
       request_username_subject: "잊고 사용자 이름"
       reset_password: "비밀 번호 재설정"
@@ -169,12 +189,19 @@ ko:
       roles: 역할
       save: 저장
       select_new_password: "새 암호를 선택하십시오"
+      send_access_code: "코드를 보내"
+      send_access_code_instructions: "메시지를 몸과 사용자가 계정을 만들 것입니다 코드와 함께 이메일로 발송됩니다 제공합니다."
+      send_access_code_request_title: "코드를 보내"
+      send_access_codes: "코드를 보내기"
+      send_code: "코드를 보내"
       sign_in: 로그인
       sign_in_now: "지금 가입하십시오!"
       sign_in_title: 로그인
       sign_out_title: 로그아웃
       sign_up: "회원 가입"
       sign_up_now: "- 지금까지 가입"
+      signin_wait: "당신이 안으로 서명 기다려주십시오."
+      signup_wait: "당신이 가입. 잠시 기다려주세요."
       sorry_invalid_reset_code: "죄송합니다,하지만 우리는 귀하의 계정을 찾을 수 없습니다. 당신이 문제가 발생하면 복사하여 브라우저에 귀하의 이메일에서 URL을 붙여넣거나 비밀 번호 재설정 프로세스를 다시 시작."
       submit: 제출
       terms_and_service: "클릭하여 당신이 .-.-. %{tos_link_anchor} 이용 약관 - 준수하는 데 동의 &#39;업 지금 가입&#39;"
@@ -184,6 +211,7 @@ ko:
       thanks_sign_up_check: "귀하의 계정이 만들어졌습니다. 귀하의 계정 활성화 지침은 사용자의 전자 메일을 확인하세요!"
       thanks_sign_up_login: "가입해 주셔서 감사합니다! 이제 로그인 있습니다"
       total_users: "총 사용자 : %{total}"
+      unfullfilled_access_code_requests: "이루어지지 않은 접근 코드 요청"
       unlimited: "무제한 사용"
       unlimited_tip: "액세스 코드는 시간을 무제한 사용할 수있을 경우 여기를 확인하십시오. 이것은 사용 제한을 무시합니다."
       update: 업데이트
@@ -202,7 +230,7 @@ ko:
       user_not_activated_error: "없습니다 사용자를 활성화"
       user_not_deactivated_error: "없습니다 사용자를 비활성화"
       user_successfully_deleted: "사용자 %{login}이 성공적으로 삭제되었습니다."
-      user_update: "당신은 사용자 정보가 업데이 트되었습니다거야."
+      user_update: "사용자 정보가 업데이 트되었습니다."
       user_update_sucess: "사용자가 성공적으로 업데이 트되었습니다"
       username: "사용자 이름"
       username_available: "사용자 이름을 사용할 수"

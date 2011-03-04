@@ -25,11 +25,24 @@ ru:
       access_code_fullfill_invites_limit_tip: "Введите число, чтобы ограничить количество запросов, отправляемых из. Например, если ввести 100 будет предела приглашает на последние 100 запросов"
       access_code_fullfill_invites_tip: "Проверьте здесь, чтобы отправлять приглашения для пользователей, которые обратились с просьбой пригласить. Это будет игнорировать любые сообщения, указанным выше."
       access_code_help: "Если вы получили код доступа от нас, пожалуйста, введите его в поле выше. Вы также можете %{access_request_anchor} запрос кода доступа%{access_request_anchor_end}."
+      access_code_message: Сообщение
       access_code_new: "Новый код доступа"
+      access_code_not_found: "Нам не удалось найти код доступа при условии. Пожалуйста, свяжитесь с нами %{contact_us_anchor}%{contact_us_anchor_end} или %{access_request_anchor} запросу другой код%{access_request_anchor_end}."
       access_code_related_users: "Пользователи, которые подписали с этим кодом"
       access_code_request_count: "Есть в настоящее время %{access_code_requests_count} просит код доступа"
+      access_code_request_delete_confirm: "Вы уверены, что хотите отменить запрос кода доступа?"
+      access_code_request_edit_problem: "Проблема редактирования кода доступа запросу"
+      access_code_request_send_problem: "Существовал проблема с отправкой кода"
       access_code_request_thank_you: "Благодарим Вас за Ваш запрос. Мы свяжемся с вами как можно скорее."
       access_code_request_tip: "Введите адрес электронной почты и мы вышлем вам код доступа, как только можно. Спасибо!"
+      access_code_requests: "Просит код доступа"
+      access_code_requests_code_sent_on: "Код, присланный на"
+      access_code_requests_email: "Электронная почта"
+      access_code_requests_name: Название
+      access_code_requests_signed_up_on: "Регистрация на"
+      access_code_sent_to: "Переданные Для"
+      access_code_subject: Тема
+      access_code_thank_you: "Благодарим Вас за проявленный интерес. Да мы тебя код как можно скорее."
       access_code_tip: "Введите код доступа."
       access_code_unlimited: Неограниченный
       access_code_update_problem: "Существовал проблема обновления кода доступа."
@@ -67,6 +80,7 @@ ru:
       already_logged_in: "Вы уже вошли в систему и не нужно, чтобы восстановить ваш пароль."
       already_registered: "Вы уже зарегистрированы?"
       application_base_url_not_set: "Пожалуйста, установите application_base_url в global_config.yml"
+      beta_code_not_required: "Вы уже вошли в систему и поэтому вы, вероятно, действительно не хотят бета-код."
       bulk_access_code_emails: Письма
       bulk_access_code_emails_tip: "Отдельные письма с запятой"
       bulk_access_code_message: Сообщение
@@ -76,6 +90,7 @@ ru:
       bulk_access_codes: "Массовая Коды доступа"
       bulk_access_codes_created: "Массовая коды доступа создаются и по электронной почте %{email_count} писем."
       bulk_access_codes_description: "Это создаст уникальный, единый код доступа использовать для каждого из сообщений условии."
+      bulk_access_codes_or: ИЛИ
       bulk_access_codes_title: "Массовая Коды доступа"
       cannot_deactivate_yourself: "Вы не можете отключить сами!"
       cant_delete_admin: "Вы не можете удалять пользователя, в роли администратора. Удалить пользователя из роли администратора, а затем повторите попытку. Пожалуйста, будьте осторожны при удалении администраторов. Если удалить все учетные записи администратора вы больше не будете иметь возможность Войти на администрирование системы."
@@ -100,6 +115,8 @@ ru:
       deleting_user: "удаление пользователей ..."
       edit: Изменить
       edit_access_code: "Редактировать код доступа"
+      edit_access_code_request: "Изменить запрос кода доступа"
+      edit_access_code_request_title: "Изменить запрос"
       edit_access_code_title: "Редактировать код доступа"
       edit_profile: "Изменить профиль"
       edit_role_dialog_title: "Изменить роль"
@@ -118,9 +135,11 @@ ru:
       forgot_username: "Забыли Имя пользователя"
       forgot_your_password: "Забыли пароль?"
       forgot_your_username: "Забыли имя пользователя?"
+      fullfilled_access_code_requests: "Выполненные просит Управление доступом для кода"
       invalid_username: "Неверное имя пользователя"
       join_application_name: "Присоединяйтесь и сделать это"
       last_name: Фамилия
+      list_access_codes: "Коды Список доступа"
       login: Войти
       login_empty: "Пожалуйста, введите Логин"
       login_fail: "Мы сожалеем, но мы не могли узнать ваш Логин информации. Пожалуйста, попробуйте еще раз."
@@ -158,6 +177,7 @@ ru:
       remember_me: "Запомнить меня"
       remove_my_account: "Удалить Мои данные"
       request_access_code: "Запрос кода доступа"
+      request_access_code_instruction: "Просьба представить следующую информацию, и мы предоставим Вам код доступа как можно скорее."
       request_username: "Запрос Имя пользователя"
       request_username_subject: "Забыли имя пользователя"
       reset_password: "Сброс пароля"
@@ -169,12 +189,19 @@ ru:
       roles: Роли
       save: Сохранить
       select_new_password: "Выберите новый пароль"
+      send_access_code: "Отправить код"
+      send_access_code_instructions: "Обеспечение и текст сообщения, которое будет отправлено в электронной почте вместе с кодом, который позволит пользователю создать учетную запись."
+      send_access_code_request_title: "Отправить код"
+      send_access_codes: "Отправить коды"
+      send_code: "Отправить код"
       sign_in: "Войдите в систему,"
       sign_in_now: "Зарегистрируйтесь сейчас!"
       sign_in_title: "Войдите в систему,"
       sign_out_title: Выйти
       sign_up: Зарегистрируйтесь
       sign_up_now: "Зарегистрироваться сейчас"
+      signin_wait: "Подписание вы дюйма Пожалуйста, подождите."
+      signup_wait: "Подписание вас. Пожалуйста, подождите."
       sorry_invalid_reset_code: "Мы сожалеем, но мы не могли найти Вашу учетную запись. Если у вас возникли вопросы, попробуйте скопировать и вставить URL из электронной почты в адресной строке браузера или перезапуска процесса сброса пароля."
       submit: Отправить
       terms_and_service: "Нажимая на кнопку &quot;Зарегистрироваться сейчас&quot; Вы соглашаетесь соблюдать условия и условия %{tos_link_anchor}%{link_end}."
@@ -184,6 +211,7 @@ ru:
       thanks_sign_up_check: "Ваша учетная запись была создана. Пожалуйста, проверьте свой адрес электронной почты для вашей инструкции активации учетной записи!"
       thanks_sign_up_login: "Спасибо за регистрацию! Вы можете Войти сейчас"
       total_users: "Всего пользователей: %{total}"
+      unfullfilled_access_code_requests: "Несбывшиеся просит Управление доступом для кода"
       unlimited: "Неограниченное использование"
       unlimited_tip: "Отметьте здесь, если код доступа может быть использован неограниченное количество раз. Это отменит использования предела."
       update: Обновление
@@ -202,7 +230,7 @@ ru:
       user_not_activated_error: "Не удалось активировать пользователь"
       user_not_deactivated_error: "Не удалось отключить пользователя"
       user_successfully_deleted: "Пользователь %{login} был успешно удален."
-      user_update: "Ты пользователя информация была обновлена."
+      user_update: "Ваша учетная информация была обновлена."
       user_update_sucess: "Пользователь был успешно обновлен"
       username: "Имя пользователя"
       username_available: "Имя пользователя доступно"

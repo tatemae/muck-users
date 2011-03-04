@@ -1,5 +1,9 @@
-<% if @access_code_request.errors.any? -%>
-	jQuery('.beta_code_request_form').prepend("<%= @access_code_request.errors.full_messages.to_sentence %>");
+<% if @indicate_logged_in -%>
+	jQuery('.beta_code_request_form').prepend("<%= t('muck.users.beta_code_not_required') %>");
 <% else -%>
-	jQuery('.beta_code_request_form').html("<%= t('muck.users.access_code_thank_you') %>");
-<% end -%>
+	<% if @access_code_request.errors.any? -%>
+		jQuery('.beta_code_request_form').prepend("<%= @access_code_request.errors.full_messages.to_sentence %>");
+	<% else -%>
+		jQuery('.beta_code_request_form').html("<%= t('muck.users.access_code_thank_you') %>");
+	<% end -%>
+<% end %>

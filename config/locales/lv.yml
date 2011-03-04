@@ -25,11 +25,24 @@ lv:
       access_code_fullfill_invites_limit_tip: "Ievadiet skaitli, lai ierobežotu pieprasījumu skaitu izsūtīti. Piemēram, ierakstot 100 ierobežos aicina uz jaunāko 100 pieprasījumiem"
       access_code_fullfill_invites_tip: "Pārbaudiet šeit, lai nosūtītu aicina uz lietotājiem, kas lūguši uzaicināt. Tas ignorē jebkuru e-pasta precizētas iepriekš."
       access_code_help: "Ja esat saņēmis pieejas kodu no mums, lūdzu ievadiet to lodziņā. Jūs varat arī %{access_request_anchor} pieprasīt piekļuves kodu, .-.-."
+      access_code_message: Ziņu
       access_code_new: "Jaunu piekļuves kodu"
+      access_code_not_found: "Mēs nevarējām atrast piekļuves kodu. Lūdzu %{contact_us_anchor} sazinieties ar mums, .-.- vai %{contact_us_anchor_end} lūgt citu kodu .-.-."
       access_code_related_users: "Lietotājiem, kas pierakstījies ar šo kodu"
       access_code_request_count: "Pašlaik ir %{access_code_requests_count} piekļuves kodu pieprasījumi"
+      access_code_request_delete_confirm: "Vai tiešām vēlaties atcelt šo piekļuves kodu pieprasījumu?"
+      access_code_request_edit_problem: "Problēma rediģēšanas piekļuves koda"
+      access_code_request_send_problem: "Radās problēma, nosūtot kodu"
       access_code_request_thank_you: "Paldies par jūsu pieprasījumu. Mēs sazināties pēc iespējas ātrāk."
       access_code_request_tip: "Ievadiet savu e-pastu un mēs jums nosūtīsim piekļuves kodu, tiklīdz tāds ir pieejams. Paldies!"
+      access_code_requests: "Piekļuves kods Pieprasījumi"
+      access_code_requests_code_sent_on: "Kods nosūtīts"
+      access_code_requests_email: E-pasts
+      access_code_requests_name: Vārds
+      access_code_requests_signed_up_on: "Pierakstījies uz"
+      access_code_sent_to: "Nosūtīti uz"
+      access_code_subject: Tēma
+      access_code_thank_you: "Paldies par Jūsu interesi. Mēs Jūsu kodu, cik ātri vien iespējams."
       access_code_tip: "Ievadiet piekļuves kodu."
       access_code_unlimited: Neierobežots
       access_code_update_problem: "Radās problēma, atjauninot piekļuves kodu."
@@ -67,6 +80,7 @@ lv:
       already_logged_in: "Jūs jau pieteicies un nav nepieciešams, lai atgūtu savu paroli."
       already_registered: "Jau reģistrējāties?"
       application_base_url_not_set: "Lūdzu uzstādi application_base_url ar global_config.yml"
+      beta_code_not_required: "Jūs jau pieteicies, un lai jūs, iespējams, nav patiešām vēlamies beta kodu."
       bulk_access_code_emails: E-pastu
       bulk_access_code_emails_tip: "Atdaliet e-pastus ar komatu"
       bulk_access_code_message: Ziņu
@@ -76,6 +90,7 @@ lv:
       bulk_access_codes: "Bulk Piekļuves kodi"
       bulk_access_codes_created: "Bulk piekļuves kodus izveidota un nosūtīta %{email_count} e-pastiem."
       bulk_access_codes_description: "Tas rada unikālu, vienreizējas lietošanas piekļuves kodu uz katru e-pasta sniegta."
+      bulk_access_codes_or: VAI
       bulk_access_codes_title: "Bulk Piekļuves kodi"
       cannot_deactivate_yourself: "Jūs nevarat deaktivizēt sevi!"
       cant_delete_admin: "Nevar izdzēst lietotāju, kas ir admin lomu. Noņemt lietotāju administratora funkcijas, un pēc tam mēģiniet vēlreiz. Lūdzu, esiet uzmanīgi, dzēšot administratoriem. Ja izdzēšat visu administratora kontu jūs vairs nevarēsiet ielogoties pārvaldes sistēmā."
@@ -100,6 +115,8 @@ lv:
       deleting_user: "svītrot lietotāju ..."
       edit: Rediģēt
       edit_access_code: "Edit Piekļuves kods"
+      edit_access_code_request: "Edit Piekļuves kods pieprasījums"
+      edit_access_code_request_title: "Edit pieprasījums"
       edit_access_code_title: "Edit Piekļuves kods"
       edit_profile: "Rediģēt profila"
       edit_role_dialog_title: "Rediģēt lomu"
@@ -118,9 +135,11 @@ lv:
       forgot_username: "Aizmirsi lietotājvārdu"
       forgot_your_password: "Aizmirsi savu paroli?"
       forgot_your_username: "Aizmirsāt savu lietotājvārdu?"
+      fullfilled_access_code_requests: "Izpildīts Piekļuves kods Pieprasījumi"
       invalid_username: "Nederīgs lietotāja vārds"
       join_application_name: "Join un saņemt to izdarīt"
       last_name: Uzvārds
+      list_access_codes: "Sarakstu Piekļuves kodi"
       login: Login
       login_empty: "Lūdzu, ievadiet pieteikumvārdu"
       login_fail: "Atvainojiet, taču mēs nevar atzīt savu pieteikšanās informāciju. Lūdzu, mēģiniet vēlreiz."
@@ -158,6 +177,7 @@ lv:
       remember_me: "Atcerēties mani"
       remove_my_account: "Noņemt Mans konts"
       request_access_code: "Pieprasīt Piekļuves kods"
+      request_access_code_instruction: "Lūdzu, sniedziet šādu informāciju un mēs sniegsim Jums pieejas kodu, cik ātri vien iespējams."
       request_username: "Pieprasīt Lietotājvārds"
       request_username_subject: "Aizmirst lietotājvārdu"
       reset_password: "Atiestatītu savu paroli"
@@ -169,12 +189,19 @@ lv:
       roles: Lomas
       save: Saglabāt
       select_new_password: "Izvēlēties jaunu paroli"
+      send_access_code: "Nosūtīt Kods"
+      send_access_code_instructions: "Sniedz ziņojumu un iestādei, kas tiks nosūtīta e-pasta kopā ar kodu, kas ļaus lietotājam izveidot kontu."
+      send_access_code_request_title: "Nosūtīt Kods"
+      send_access_codes: "Nosūtīt kodi"
+      send_code: "Nosūtīt Kods"
       sign_in: Ienākt
       sign_in_now: "Pieteikties tagad!"
       sign_in_title: Ienākt
       sign_out_title: Izrakstīties
       sign_up: Pierakstieties
       sign_up_now: Piereģistrējies
+      signin_wait: "Parakstot you in Lūdzu, uzgaidiet."
+      signup_wait: "Parakstot jums augšu. Lūdzu uzgaidiet."
       sorry_invalid_reset_code: "Atvainojiet, taču mēs nevarējām atrast jūsu kontu. Ja Jums ir jautājumi, mēģiniet kopēt un ielīmēt URL no e-pasta savā pārlūkprogrammā vai atkārtoti atjaunotu paroli procesu."
       submit: Iesniegt
       terms_and_service: "Noklikšķinot uz &quot;Sign-up Now&quot; jūs piekrītat ievērot %{tos_link_anchor} Noteikumiem%{link_end}."
@@ -184,6 +211,7 @@ lv:
       thanks_sign_up_check: "Jūsu konts ir izveidots. Lūdzu, pārbaudiet savu e-pasta jūsu konta aktivizēšanas instrukcijas!"
       thanks_sign_up_login: "Paldies par pierakstīšanos! Jūs varat uzreiz pieslēgties"
       total_users: "Absolutie Lietotāji: %{total}"
+      unfullfilled_access_code_requests: "Nepiepildīts Piekļuves kods Pieprasījumi"
       unlimited: "Neierobežots Izmanto"
       unlimited_tip: "Atzīmējiet šeit, ja piekļuves kodu var izmantot neierobežotu skaitu reižu. Tas ignorēt lietošanas ierobežojumu."
       update: Update
@@ -202,7 +230,7 @@ lv:
       user_not_activated_error: "Neizdevās aktivizēt lietotājs"
       user_not_deactivated_error: "Neizdevās atslēgt lietotāju"
       user_successfully_deleted: "Lietotāja %{login} tika veiksmīgi izdzēsta."
-      user_update: "Jūs esat lietotāju informācija ir atjaunināta."
+      user_update: "Jūsu lietotāja informācija ir atjaunināta."
       user_update_sucess: "Lietotāja tika veiksmīgi atjaunināts"
       username: Lietotājvārds
       username_available: "Lietotājvārds pieejams"

@@ -25,11 +25,24 @@ ro:
       access_code_fullfill_invites_limit_tip: "Introduceţi un număr pentru a limita numărul de cereri trimise. De exemplu, introducerea 100 va limita invită la cele mai recente 100 de cereri"
       access_code_fullfill_invites_tip: "Verificaţi aici pentru a trimite invită la utilizatorii care au solicitat o invitatie. Acest lucru va ignora orice e-mailuri menţionate mai sus."
       access_code_help: "Dacă aţi primit un cod de acces de la noi, vă rugăm să introduceţi-l în caseta de mai sus. Puteţi, de asemenea, %{access_request_anchor} solicita un cod de acces%{access_request_anchor_end}."
+      access_code_message: Mesaj
       access_code_new: "Nou Cod de acces"
+      access_code_not_found: "Am fost în imposibilitatea de a găsi codul de acces furnizat. Va rugam sa ne contactati %{contact_us_anchor}%{contact_us_anchor_end} sau %{access_request_anchor} solicita un alt cod%{access_request_anchor_end}."
       access_code_related_users: "Utilizatorii care au semnat cu acest cod"
       access_code_request_count: "În prezent, există cereri de %{access_code_requests_count} cod de acces"
+      access_code_request_delete_confirm: "Sunteţi sigur că doriţi să anulaţi această cerere cod de acces?"
+      access_code_request_edit_problem: "Probleme de acces de editare cod cerere"
+      access_code_request_send_problem: "Nu a fost o problema la transmiterea codul"
       access_code_request_thank_you: "Vă mulţumim pentru cererea dumneavoastră. Vom fi în contact cât mai curând posibil."
       access_code_request_tip: "Introduceţi adresa dvs. de email şi vă vom trimite un cod de acces cât mai curând ca unul este disponibil. Vă mulţumim!"
+      access_code_requests: "Codul de acces Cereri"
+      access_code_requests_code_sent_on: "Codul trimis pe"
+      access_code_requests_email: E-mail
+      access_code_requests_name: Numele
+      access_code_requests_signed_up_on: "Semnat pe"
+      access_code_sent_to: "Pentru a trimis"
+      access_code_subject: Subiect
+      access_code_thank_you: "Vă mulţumim pentru interesul dumneavoastră. Vom primi un cod cât mai curând posibil."
       access_code_tip: "Introduceţi un cod de acces."
       access_code_unlimited: Nelimitat
       access_code_update_problem: "Nu a fost o problemă actualizarea codul de acces."
@@ -67,6 +80,7 @@ ro:
       already_logged_in: "Sunteti deja logat şi nu au nevoie pentru a recupera parola."
       already_registered: "Deja membru?"
       application_base_url_not_set: "Vă rugăm să setaţi application_base_url în global_config.yml"
+      beta_code_not_required: "Sunteti deja logat şi aşa probabil că nu doresc cu adevărat un cod beta."
       bulk_access_code_emails: E-mailuri
       bulk_access_code_emails_tip: "Separati email-uri cu o virgulă"
       bulk_access_code_message: Mesaj
@@ -76,6 +90,7 @@ ro:
       bulk_access_codes: "Vrac Coduri de acces"
       bulk_access_codes_created: "Vrac codurile de acces creat şi prin e-mail la e-mailuri %{email_count}."
       bulk_access_codes_description: "Acest lucru va genera un unic, singur cod de acces pentru fiecare utilizare a e-mailuri furnizate."
+      bulk_access_codes_or: SAU
       bulk_access_codes_title: "Vrac Coduri de acces"
       cannot_deactivate_yourself: "Nu te poţi dezactiva!"
       cant_delete_admin: "Nu puteţi şterge un utilizator care este în rolul admin. Scoateţi utilizator din rolul de administrator, apoi încercaţi din nou. Vă rugăm să fiţi atenţi atunci când ştergerea administratori. Dacă ştergeţi toate conturile de administrator nu veţi mai fi în măsură să vă conectaţi la sistemul de administrare."
@@ -100,6 +115,8 @@ ro:
       deleting_user: "ştergerea utilizator ..."
       edit: Editare
       edit_access_code: "Editare Codul de acces"
+      edit_access_code_request: "Editare Solicitare cod de acces"
+      edit_access_code_request_title: "Editare Cerere"
       edit_access_code_title: "Editare Codul de acces"
       edit_profile: "Editare profil"
       edit_role_dialog_title: "Editare Rolul"
@@ -118,9 +135,11 @@ ro:
       forgot_username: "Nume de utilizator uitat"
       forgot_your_password: "Ai uitat parola?"
       forgot_your_username: "Ai uitat numele de utilizator?"
+      fullfilled_access_code_requests: "Cererile Realizate Codul de acces"
       invalid_username: "Nume de utilizator invalid"
       join_application_name: "Alăturaţi-vă şi-l face"
       last_name: "Ultima Nume"
+      list_access_codes: "Lista de Coduri de acces"
       login: Login
       login_empty: "Vă rugăm să introduceţi un login"
       login_fail: "Ne pare rău, dar nu am putut recunoaşte informaţiile de conectare. Vă rugăm să încercaţi din nou."
@@ -158,6 +177,7 @@ ro:
       remember_me: "Tine-ma minte"
       remove_my_account: "Eliminare Contul meu"
       request_access_code: "Cerere de Codul de acces"
+      request_access_code_instruction: "Vă rugăm să furnizaţi următoarele informaţii şi vă vom oferi cu un cod de acces cât mai curând posibil."
       request_username: "Nume cerere"
       request_username_subject: "Uitat numele de utilizator"
       reset_password: "Reseta parola dvs."
@@ -169,12 +189,19 @@ ro:
       roles: Roluri
       save: Salva
       select_new_password: "Selectaţi o nouă parolă"
+      send_access_code: "Trimite Codul"
+      send_access_code_instructions: "Furnizează un mesaj şi corpul, care va fi trimis in e-mail, împreună cu codul de care va permite utilizatorului sa isi creeze un cont."
+      send_access_code_request_title: "Trimite Codul"
+      send_access_codes: "Trimite Coduri"
+      send_code: "Trimite Codul"
       sign_in: "În semn"
       sign_in_now: "Înscrie-te acum!"
       sign_in_title: "În semn"
       sign_out_title: Înscrie-Out
       sign_up: Înscrie-te
       sign_up_now: "Înregistraţi-vă acum"
+      signin_wait: "Semnarea vă inch Vă rugăm să aşteptaţi."
+      signup_wait: "Semnarea te sus. Vă rugăm să aşteptaţi."
       sorry_invalid_reset_code: "Ne pare rău, dar nu am putut localiza contul dumneavoastră. Dacă aveţi probleme încercaţi să copiaţi şi să inseraţi URL-ul de la adresa dvs. de email în browser-ul dvs. sau reluarea procesului de resetare a parolei."
       submit: Trimite
       terms_and_service: "Făcând clic pe &quot;Înregistraţi-vă acum&quot;, sunteţi de acord să respecte Termenii şi condiţiile %{tos_link_anchor}%{link_end}."
@@ -184,6 +211,7 @@ ro:
       thanks_sign_up_check: "Contul dvs. a fost creat. Vă rugăm să verificaţi de e-mail pentru instrucţiuni de activare cont!"
       thanks_sign_up_login: "Vă mulţumim pentru semnarea-te! Acum va puteti autentifica"
       total_users: "Total utilizatori: %{total}"
+      unfullfilled_access_code_requests: "Cererile neîmplinită Codul de acces"
       unlimited: "Utilizeaza nelimitat"
       unlimited_tip: "Verificaţi aici dacă codul de acces poate fi utilizat un număr nelimitat de ori. Acest lucru va înlocui limita de utilizare."
       update: Update
@@ -202,7 +230,7 @@ ro:
       user_not_activated_error: "Nu ar putea activa utilizator"
       user_not_deactivated_error: "Nu ar putea dezactiva utilizator"
       user_successfully_deleted: "%{login} Utilizator a fost şters cu succes."
-      user_update: "Eşti informaţiile de utilizator a fost actualizat."
+      user_update: "Informaţiile dvs. de utilizator a fost actualizat."
       user_update_sucess: "Utilizatorul a fost actualizat cu succes"
       username: "Nume de utilizator"
       username_available: "Nume de utilizator disponibile"

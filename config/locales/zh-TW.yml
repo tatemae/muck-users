@@ -25,11 +25,24 @@ zh-TW:
       access_code_fullfill_invites_limit_tip: "輸入一個數字，以限制人數的要求寄了出去。例如，輸入 100將限制邀請到最近的100個請求"
       access_code_fullfill_invites_tip: 選擇此處，可向用戶發送邀請誰要求邀請。這將忽略任何上面指定的電子郵件。
       access_code_help: "如果您收到一個訪問代碼從我們，請填寫在上面的框中。您可能還 %{access_request_anchor}請求訪問代碼 .-.-."
+      access_code_message: 消息
       access_code_new: 新的接入代碼
+      access_code_not_found: "我們無法找到提供的接入碼。請與我們聯繫 %{contact_us_anchor} - .-.-或%{contact_us_anchor_end}請求另一個代碼 .-.-."
       access_code_related_users: 用戶誰簽署與此代碼
       access_code_request_count: "目前有%{access_code_requests_count}訪問代碼請求"
+      access_code_request_delete_confirm: 你確定要取消此訪問代碼的要求？
+      access_code_request_edit_problem: 編輯訪問碼問題
+      access_code_request_send_problem: 有一個問題發送代碼
       access_code_request_thank_you: 謝謝您的要求。我們會在盡快聯繫。
       access_code_request_tip: 輸入您的電子郵件，我們會向您發送訪問代碼只要一可用。謝謝！
+      access_code_requests: 訪問代碼請求
+      access_code_requests_code_sent_on: 發送代碼
+      access_code_requests_email: 電郵
+      access_code_requests_name: 名稱
+      access_code_requests_signed_up_on: 簽署了
+      access_code_sent_to: 發送到
+      access_code_subject: 科目
+      access_code_thank_you: 謝謝您的關注。我們會送你一個代碼盡快。
       access_code_tip: 輸入訪問代碼。
       access_code_unlimited: 無限
       access_code_update_problem: 有一個問題更新的接入碼。
@@ -67,6 +80,7 @@ zh-TW:
       already_logged_in: 您已經登錄，不需要恢復密碼。
       already_registered: 已經是會員？
       application_base_url_not_set: "請設置 application_base_url在global_config.yml"
+      beta_code_not_required: 您已經登錄，所以你可能真的不想要一個測試代碼。
       bulk_access_code_emails: 電子郵件
       bulk_access_code_emails_tip: 用逗號分隔電子郵件
       bulk_access_code_message: 消息
@@ -76,6 +90,7 @@ zh-TW:
       bulk_access_codes: 大量接碼
       bulk_access_codes_created: "散裝訪問代碼創建並通過電子郵件發送給 %{email_count}電子郵件。"
       bulk_access_codes_description: 這將產生一個獨特的，一次性訪問代碼的每個電子郵件提供。
+      bulk_access_codes_or: 或
       bulk_access_codes_title: 大量接碼
       cannot_deactivate_yourself: 您不能停用，你自己！
       cant_delete_admin: 您不能刪除用戶是在管理的作用。刪除用戶從管理員的角色，然後再試一次。請小心刪除管理員。如果您刪除所有的管理員帳戶，您將不再能夠登錄到管理系統。
@@ -100,6 +115,8 @@ zh-TW:
       deleting_user: "刪除用戶 ..."
       edit: 編輯
       edit_access_code: 編輯接入碼
+      edit_access_code_request: 編輯接入碼
+      edit_access_code_request_title: 編輯請求
       edit_access_code_title: 編輯接入碼
       edit_profile: 編輯個人資料
       edit_role_dialog_title: 編輯角色
@@ -118,9 +135,11 @@ zh-TW:
       forgot_username: 忘記用戶名
       forgot_your_password: 忘記密碼？
       forgot_your_username: 忘記用戶名？
+      fullfilled_access_code_requests: 完成訪問代碼請求
       invalid_username: 用戶名無效
       join_application_name: 加入並完成它
       last_name: 姓
+      list_access_codes: 訪問代碼清單
       login: 登錄
       login_empty: 請輸入登錄
       login_fail: 很抱歉，但我們無法識別您的登錄信息。請再試一次。
@@ -158,6 +177,7 @@ zh-TW:
       remember_me: 記住我
       remove_my_account: 刪除我的帳戶
       request_access_code: 要求接入碼
+      request_access_code_instruction: 請提供以下信息，我們會為您提供一個訪問代碼盡快。
       request_username: 要求用戶名
       request_username_subject: 忘記用戶名
       reset_password: 重置您的密碼
@@ -169,12 +189,19 @@ zh-TW:
       roles: 角色
       save: 保存
       select_new_password: 選擇一個新密碼
+      send_access_code: 發送代碼
+      send_access_code_instructions: 提供消息和身體將發送的電子郵件中，隨著代碼，將讓用戶創建一個帳戶。
+      send_access_code_request_title: 發送代碼
+      send_access_codes: 發送代碼
+      send_code: 發送代碼
       sign_in: 登錄
       sign_in_now: 馬上註冊！
       sign_in_title: 登錄
       sign_out_title: 登出
       sign_up: 趕快註冊
       sign_up_now: 登錄了現在
+      signin_wait: 簽名你進來，請稍等。
+      signup_wait: 簽約你。請稍候。
       sorry_invalid_reset_code: 很抱歉，但我們無法找到您的帳戶。如果您有問題，可以再複製和粘貼的URL從您的電子郵件到您的瀏覽器或重新啟動重置密碼的過程。
       submit: 提交
       terms_and_service: "通過點擊&#39;登錄了現在&#39;你同意遵守%{tos_link_anchor}條款和條件，.-.-."
@@ -184,6 +211,7 @@ zh-TW:
       thanks_sign_up_check: 您的帳戶已創建。請檢查您的電子郵件帳戶的激活說明！
       thanks_sign_up_login: 感謝您了！現在，您可以登陸
       total_users: "共有用戶：%{total}"
+      unfullfilled_access_code_requests: 秕訪問代碼請求
       unlimited: 無限制使用
       unlimited_tip: 在這裡檢查，如果訪問代碼可用於無限次數。這將覆蓋使用的限制。
       update: 更新
@@ -202,7 +230,7 @@ zh-TW:
       user_not_activated_error: 不能激活用戶
       user_not_deactivated_error: 用戶無法關閉
       user_successfully_deleted: "用戶 %{login}已成功刪除。"
-      user_update: 你的用戶信息已更新。
+      user_update: 您的用戶信息已更新。
       user_update_sucess: 用戶已成功更新
       username: 用戶名
       username_available: 使用者名稱

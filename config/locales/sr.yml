@@ -25,11 +25,24 @@ sr:
       access_code_fullfill_invites_limit_tip: "Унесите број за ограничење броја захтева шаљу. На пример, уношење 100 ће ограничити позива на најновију 100 захтева"
       access_code_fullfill_invites_tip: "Проверите овде за слање позива на корисницима који су захтевали позвати. Ово ће игнорисати све е-поруке наведене изнад."
       access_code_help: "Ако сте примили приступни код од нас, унесите га у поље изнад. Такође можете %{access_request_anchor} захтева приступни код%{access_request_anchor_end}."
+      access_code_message: Порука
       access_code_new: "Нови приступ код"
+      access_code_not_found: "Ми смо били у могућности да пронађе приступ код. Молимо Вас да нас контактирате %{contact_us_anchor}%{contact_us_anchor_end} или %{access_request_anchor} захтев другог кода .-.-."
       access_code_related_users: "Корисници који су потписали са овим кодом"
       access_code_request_count: "Тренутно постоји %{access_code_requests_count} позивни број захтева"
+      access_code_request_delete_confirm: "Да ли сте сигурни да желите да откажете овај захтев позивни број?"
+      access_code_request_edit_problem: "Проблем уређивање приступ код захтева"
+      access_code_request_send_problem: "Дошло је до проблема приликом слања кода"
       access_code_request_thank_you: "Хвала вам на ваш захтев. Ми ћемо бити у контакту што је пре могуће."
       access_code_request_tip: "Унесите вашу е-маил и ми ћемо вам послати код за приступ чим је на располагању. Хвала вам!"
+      access_code_requests: "Приступ Код Захтеви"
+      access_code_requests_code_sent_on: "Код Послато"
+      access_code_requests_email: Е-маил
+      access_code_requests_name: Име
+      access_code_requests_signed_up_on: "Се пријавили на"
+      access_code_sent_to: Послата
+      access_code_subject: Предмет
+      access_code_thank_you: "Хвала Вам на интересовању. Ми ћемо вам код у најкраћем могућем року."
       access_code_tip: "Унесите шифру за приступ."
       access_code_unlimited: Неограничен
       access_code_update_problem: "Дошло је до проблема ажурирања приступни код."
@@ -67,6 +80,7 @@ sr:
       already_logged_in: "Већ сте пријављени и не треба да се опорави лозинку."
       already_registered: "Већ члан?"
       application_base_url_not_set: "Молимо Вас да поставите апплицатион_басе_урл у глобал_цонфиг.имл"
+      beta_code_not_required: "Већ сте пријављени и тако да вероватно не заиста желе бета кода."
       bulk_access_code_emails: Е-поруке
       bulk_access_code_emails_tip: "Одвојите е-поруке са зарезом"
       bulk_access_code_message: Порука
@@ -76,6 +90,7 @@ sr:
       bulk_access_codes: "Групно Приступни кодови"
       bulk_access_codes_created: "Групно приступних кодова креирана и послата на е-маил %{email_count}."
       bulk_access_codes_description: "То ће генерисати јединствен, један код користите Аццесс за сваки е-поште дали."
+      bulk_access_codes_or: ИЛИ
       bulk_access_codes_title: "Групно Приступни кодови"
       cannot_deactivate_yourself: "Не можете да деактивирате себе!"
       cant_delete_admin: "Не можете да избришете корисника који се налази у админ улогу. Уклањање корисника из администратора улоге, а затим покушајте поново. Молимо вас будите опрезни приликом брисања администратора. Ако обришете све налоге администратора нећете више бити у стању да се улогујете администрације система."
@@ -100,6 +115,8 @@ sr:
       deleting_user: "брисање корисника ..."
       edit: Уреди
       edit_access_code: "Уређивање шифру за приступ"
+      edit_access_code_request: "Измена захтева приступ код"
+      edit_access_code_request_title: "Уређивање Захтев"
       edit_access_code_title: "Уређивање шифру за приступ"
       edit_profile: "Измени профил"
       edit_role_dialog_title: "Уређивање Улога"
@@ -118,9 +135,11 @@ sr:
       forgot_username: "Заборавили сте корисничко име"
       forgot_your_password: "Заборавили сте лозинку?"
       forgot_your_username: "Заборавили сте корисничко име?"
+      fullfilled_access_code_requests: "Испуњена Приступ Код Захтеви"
       invalid_username: "Погрешно корисничко име"
       join_application_name: "Придружите се то уради и"
       last_name: Презиме
+      list_access_codes: "Листа Приступни кодови"
       login: Пријава
       login_empty: "Молимо Вас да унесете податке за пријављивање"
       login_fail: "Жао нам је, али нисмо могли да препознамо своје информације за пријављивање. Молимо покушајте поново."
@@ -158,6 +177,7 @@ sr:
       remember_me: "Запамти ме"
       remove_my_account: "Уклони Мој налог"
       request_access_code: "Захтев за приступ код"
+      request_access_code_instruction: "Молимо вас да обезбедите следеће информације и ми ћемо вам обезбедити приступни код у најкраћем могућем року."
       request_username: "Захтев име"
       request_username_subject: "Заборавили сте корисничко име"
       reset_password: "Ресетуј лозинку"
@@ -169,12 +189,19 @@ sr:
       roles: Улоге
       save: Сачувај
       select_new_password: "Изаберете нову лозинку"
+      send_access_code: "Пошаљи код"
+      send_access_code_instructions: "Обезбедите поруку и тело које ће бити послате на е-маил са кодом који ће омогућити кориснику да отворите налог."
+      send_access_code_request_title: "Пошаљи код"
+      send_access_codes: "Пошаљи Кодови"
+      send_code: "Пошаљи код"
       sign_in: "Пријавите се"
       sign_in_now: "Пријавите се одмах!"
       sign_in_title: "Пријавите се"
       sign_out_title: "Одјавите се"
       sign_up: "Пријавите се"
       sign_up_now: "Пријавите се сада"
+      signin_wait: "Пријављивање ин Молимо сачекајте."
+      signup_wait: "Пријављивање се. Молимо сачекајте."
       sorry_invalid_reset_code: "Жао нам је, али нисмо могли пронаћи свој налог. Ако имате проблема пробајте копирање и лепљење УРЛ адресу из вашег е-маил у свом прегледачу или поновним Ресетуј лозинку процес."
       submit: Субмит
       terms_and_service: "Кликом на дугме &quot;Пријавите се сада&quot; слажете се да у складу са условима и одредбама %{tos_link_anchor}%{link_end}."
@@ -184,6 +211,7 @@ sr:
       thanks_sign_up_check: "Ваш налог је направљен. Молимо Вас да проверите вашу е-маил за активирање ваше инструкције налог!"
       thanks_sign_up_login: "Хвала што сте се пријавили! Сада можете Логин"
       total_users: "Укупно корисника / ца: %{total}"
+      unfullfilled_access_code_requests: "Приступ неиспуњених захтева код"
       unlimited: "Неограничено Користи"
       unlimited_tip: "Проверите овде ако приступни код се може користити неограничен број пута. Ово ће заменити ограничење употребе."
       update: Ажурирање
@@ -202,7 +230,7 @@ sr:
       user_not_activated_error: "Није могуће да активирате корисника"
       user_not_deactivated_error: "Није могуће деактивирати корисника"
       user_successfully_deleted: "Корисник %{login} је успешно обрисана."
-      user_update: "Ти си корисник је информација ажуриран."
+      user_update: "Ваше упутство за информације су ажуриране."
       user_update_sucess: "Корисник је успешно ажуриран"
       username: "Корисничко име"
       username_available: "Корисничко име доступно"

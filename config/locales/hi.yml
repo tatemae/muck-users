@@ -25,11 +25,24 @@ hi:
       access_code_fullfill_invites_limit_tip: "एक के लिए बाहर भेजा अनुरोधों की संख्या को सीमित संख्या दर्ज करें. उदाहरण के लिए, 100 में प्रवेश करने तक सीमित कर देगा सबसे हाल ही में 100 का अनुरोध करने के लिए आमंत्रित"
       access_code_fullfill_invites_tip: "यहाँ की जाँच के लिए भेज उपयोगकर्ताओं को, जो एक आमंत्रण का अनुरोध किया है करने के लिए आमंत्रित किया है. यह किसी भी ऊपर निर्दिष्ट ईमेल की अनदेखी करेंगे."
       access_code_help: "अगर आप हम से एक एक्सेस कोड प्राप्त है, यह ऊपर बॉक्स में दर्ज करें. आप भी %{access_request_anchor} अनुरोध कर सकते हैं एक का उपयोग कोड .-.-."
+      access_code_message: संदेश
       access_code_new: "नया एक्सेस कोड"
+      access_code_not_found: "हम खोजने के लिए एक्सेस कोड प्रदान करने में असमर्थ रहे. कृपया %{contact_us_anchor} हमें%{contact_us_anchor_end} या %{access_request_anchor} अनुरोध संपर्क एक और कोड .-.-."
       access_code_related_users: "उपयोगकर्ताओं को, जो इस कोड के साथ साइन अप"
       access_code_request_count: "वर्तमान में %{access_code_requests_count} एक्सेस कोड का अनुरोध"
+      access_code_request_delete_confirm: "आप सुनिश्चित हैं कि आप इस कोड का उपयोग अनुरोध को रद्द करना चाहते हैं?"
+      access_code_request_edit_problem: "समस्या संपादन एक्सेस कोड अनुरोध"
+      access_code_request_send_problem: "वहाँ एक कोड भेजने में समस्या थी"
       access_code_request_thank_you: "आप अपने अनुरोध के लिए धन्यवाद. हम संपर्क में जल्द से जल्द हो जाएगा."
       access_code_request_tip: "अपने ईमेल दर्ज करें और हम आपको एक एक्सेस कोड जैसे ही एक ही उपलब्ध है भेज देंगे. धन्यवाद!"
+      access_code_requests: "एक्सेस कोड अनुरोध"
+      access_code_requests_code_sent_on: "कोड पर भेजे गए"
+      access_code_requests_email: ईमेल
+      access_code_requests_name: नाम
+      access_code_requests_signed_up_on: "पर हस्ताक्षर किए"
+      access_code_sent_to: "करने के लिए भेजे गए"
+      access_code_subject: विषय
+      access_code_thank_you: "आप अपनी रुचि के लिए धन्यवाद. हम आप जल्द से जल्द एक कोड मिलेगा."
       access_code_tip: "एक एक्सेस कोड दर्ज करें."
       access_code_unlimited: असीमित
       access_code_update_problem: "वहाँ एक एक्सेस कोड को अद्यतन करने में समस्या थी."
@@ -67,6 +80,7 @@ hi:
       already_logged_in: "आप पहले से ही में लॉग इन किया है और जरूरत के लिए अपना पासवर्ड की वसूली नहीं."
       already_registered: "पहले से ही एक सदस्य हैं?"
       application_base_url_not_set: "global_config.yml में application_base_url सेट करें"
+      beta_code_not_required: "आप पहले से ही में लॉग इन किया है और इसलिए तुम शायद वास्तव में एक बीटा कोड नहीं चाहता."
       bulk_access_code_emails: ईमेल
       bulk_access_code_emails_tip: "एक अल्पविराम से अलग ईमेल"
       bulk_access_code_message: संदेश
@@ -76,6 +90,7 @@ hi:
       bulk_access_codes: "कोड पहुँच थोक"
       bulk_access_codes_created: "बनाया और %{email_count} ईमेल करने के लिए ईमेल कोड का उपयोग थोक."
       bulk_access_codes_description: "यह एक अद्वितीय, एकल उपयोग एक्सेस कोड उत्पन्न करने के लिए ईमेल के प्रत्येक प्रदान की जाएगी."
+      bulk_access_codes_or: या
       bulk_access_codes_title: "कोड पहुँच थोक"
       cannot_deactivate_yourself: "तुम अपने आप को निष्क्रिय नहीं कर सकते हैं!"
       cant_delete_admin: "आप एक उपयोगकर्ता है कि व्यवस्थापक की भूमिका में है नहीं हटा सकते. प्रशासक भूमिका से उपयोगकर्ता को हटाएँ और फिर कोशिश करें. सावधान जब प्रशासकों को हटाने करें. यदि आप हटाना सब व्यवस्थापक खातों तुम अब प्रशासन प्रणाली में प्रवेश कर सकेंगे."
@@ -100,6 +115,8 @@ hi:
       deleting_user: "उपयोगकर्ता को हटाने ..."
       edit: "संपादित करें"
       edit_access_code: "एक्सेस कोड को संपादित करें"
+      edit_access_code_request: "एक्सेस कोड का अनुरोध करें"
+      edit_access_code_request_title: "अनुरोध करें"
       edit_access_code_title: "एक्सेस कोड को संपादित करें"
       edit_profile: "प्रोफ़ाइल संपादित करें"
       edit_role_dialog_title: "भूमिका संपादित करें"
@@ -118,9 +135,11 @@ hi:
       forgot_username: "उपयोगकर्ता नाम भूल गए"
       forgot_your_password: "अपना पासवर्ड भूल गए?"
       forgot_your_username: "अपना उपयोगकर्ता नाम भूल गए?"
+      fullfilled_access_code_requests: "पूरी एक्सेस कोड अनुरोध"
       invalid_username: "अवैध प्रयोगकर्ता का नाम"
       join_application_name: "जुड़ें और यह किया हो"
       last_name: "अंतिम नाम"
+      list_access_codes: "सूची एक्सेस कोड"
       login: "लॉग इन"
       login_empty: "एक लॉगिन दर्ज करें"
       login_fail: "हमें खेद है, लेकिन हम अपनी प्रवेश जानकारी पहचान नहीं पाया. फिर कोशिश करें."
@@ -158,6 +177,7 @@ hi:
       remember_me: "मुझे याद रखें"
       remove_my_account: "मेरा खाता हटाएँ"
       request_access_code: "अनुरोध एक्सेस कोड"
+      request_access_code_instruction: "निम्नलिखित जानकारी प्रदान करें और हम आप जल्द से जल्द एक का उपयोग कोड के साथ प्रदान करेंगे."
       request_username: "अनुरोध उपयोगकर्ता नाम"
       request_username_subject: "भूल उपयोक्तानाम"
       reset_password: "अपना पासवर्ड रीसेट"
@@ -169,12 +189,19 @@ hi:
       roles: भूमिकाओं
       save: सहेजें
       select_new_password: "एक नया पासवर्ड का चयन करें"
+      send_access_code: "कोड को भेजें"
+      send_access_code_instructions: "एक संदेश और शरीर है कि कोड दूँगी कि उपयोगकर्ता एक खाता बनाने के साथ ईमेल में भेजा जाएगा प्रदान करें."
+      send_access_code_request_title: "कोड को भेजें"
+      send_access_codes: "कोड को भेजें"
+      send_code: "कोड को भेजें"
       sign_in: "में प्रवेश करें"
       sign_in_now: "अब में साइन अप करें!"
       sign_in_title: "में प्रवेश करें"
       sign_out_title: "साइन आउट"
       sign_up: "साइन अप करें"
       sign_up_now: "साइन अप अब"
+      signin_wait: "तुम्हें अंदर कृपया प्रतीक्षा करें हस्ताक्षर."
+      signup_wait: "आप साइन अप. कृपया प्रतीक्षा करें."
       sorry_invalid_reset_code: "हमें खेद है, लेकिन हम आपके खाते को ढूँढ नहीं सकता था. आप मुद्दों कर रहे हैं यदि नकल और प्रयास अपने ब्राउज़र में अपने ईमेल से यूआरएल चिपकाने या रीसेट पासवर्ड प्रक्रिया शुरु."
       submit: सबमिट
       terms_and_service: "पर क्लिक करके आप %{tos_link_anchor} नियम और शर्तें-अनुपालन .-.-. सहमत &#39;साइन अप अब&#39;"
@@ -184,6 +211,7 @@ hi:
       thanks_sign_up_check: "आपका खाता बना दिया गया है. अपना खाता सक्रियण निर्देश के लिए अपना ई मेल की जाँच करें!"
       thanks_sign_up_login: "साइन अप करने के लिए धन्यवाद! अब आप लॉग इन कर सकते हैं"
       total_users: "कुल उपयोगकर्ता: %{total}"
+      unfullfilled_access_code_requests: "अधूरी एक्सेस कोड अनुरोध"
       unlimited: "असीमित उपयोग करता है"
       unlimited_tip: "यहाँ की जाँच करें अगर एक्सेस कोड समय की एक असीमित संख्या में इस्तेमाल किया जा सकता है. इस उपयोग की सीमा पार कर जाएगी."
       update: अद्यतन
@@ -202,7 +230,7 @@ hi:
       user_not_activated_error: "नहीं किया जा सका उपयोगकर्ता सक्रिय"
       user_not_deactivated_error: "नहीं किया जा सका उपयोगकर्ता निष्क्रिय"
       user_successfully_deleted: "उपयोगकर्ता %{login} सफलतापूर्वक नष्ट किया गया."
-      user_update: "आप कर रहे हैं उपयोगकर्ता जानकारी अद्यतन किया गया है."
+      user_update: "आपके उपयोगकर्ता जानकारी अद्यतन किया गया है."
       user_update_sucess: "उपयोगकर्ता सफलतापूर्वक अद्यतन किया गया"
       username: "उपयोगकर्ता नाम"
       username_available: "उपयोगकर्ता नाम उपलब्ध"

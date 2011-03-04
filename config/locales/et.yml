@@ -25,11 +25,24 @@ et:
       access_code_fullfill_invites_limit_tip: "Sisestage number piirata taotluste arvu välja saadetud. Näiteks kui sisestate 100 piirab kutsub viimasele 100 taotlust"
       access_code_fullfill_invites_tip: "Vaata siia, et saata kutseid kasutajatele, kes soovisid kutsuda. See eiravad kõiki kirju täpsustatud."
       access_code_help: "Kui olete saanud ligipääsu koodi, palun sisestage see ülal olevasse kasti. Võite %{access_request_anchor} taotleda juurdepääsu koodi .-.-."
+      access_code_message: Sõnum
       access_code_new: "New Access Code"
+      access_code_not_found: "Me ei suutnud leida väljahelistamise koodi ette. Palun %{contact_us_anchor} meiega%{contact_us_anchor_end} või %{access_request_anchor} taotleda, et teine koodi .-.-."
       access_code_related_users: "Kasutajad, kes liitusid selle koodi"
       access_code_request_count: "Praegu on %{access_code_requests_count} väljahelistamise koodi taotlused"
+      access_code_request_delete_confirm: "Oled sa kindel, et soovid loobuda käesoleva juurdepääs koodi küsimine?"
+      access_code_request_edit_problem: "Probleem toimetamine juurdepääs koodi küsimine"
+      access_code_request_send_problem: "Seal oli probleem saates kood"
       access_code_request_thank_you: "Täname teie palve. Võtame ühendust niipea kui võimalik."
       access_code_request_tip: "Sisesta oma e-posti ja saadame Teile juurdepääsu koodi niipea, kui see on saadaval. Aitäh!"
+      access_code_requests: "Access Code taotlused"
+      access_code_requests_code_sent_on: "Kood saadetakse"
+      access_code_requests_email: Email
+      access_code_requests_name: Nimi
+      access_code_requests_signed_up_on: "Allkirjastatud üles"
+      access_code_sent_to: Saadetud
+      access_code_subject: Teema
+      access_code_thank_you: "Täname huvi. Saadame sulle koodi niipea kui võimalik."
       access_code_tip: "Enter väljahelistamise koodi."
       access_code_unlimited: Piiramatu
       access_code_update_problem: "Seal oli probleem ajakohastamine väljahelistamise koodi."
@@ -67,6 +80,7 @@ et:
       already_logged_in: "Te olete juba sisse loginud ja ei vaja taastada oma parool."
       already_registered: "Oled juba liige?"
       application_base_url_not_set: "Palun määrake application_base_url aastal global_config.yml"
+      beta_code_not_required: "Te olete juba sisse loginud ja nii te ilmselt ei taha beta koodi."
       bulk_access_code_emails: Kirjad
       bulk_access_code_emails_tip: "Eraldi kirju komaga"
       bulk_access_code_message: Sõnum
@@ -76,6 +90,7 @@ et:
       bulk_access_codes: "Bulk Pääsukoodid"
       bulk_access_codes_created: "Bulk pääsukoode loodud ja meilitsi %{email_count} kirju."
       bulk_access_codes_description: "See loob kordumatu, ühekordseks kasutamiseks väljahelistamise koodi iga kirju ette."
+      bulk_access_codes_or: VÕI
       bulk_access_codes_title: "Bulk Pääsukoodid"
       cannot_deactivate_yourself: "Sa ei saa deaktiveerida ise!"
       cant_delete_admin: "Sa ei saa kustutada kasutaja, et on admin osa. Eemalda kasutaja administraatori rolli ja proovige uuesti. Palun olge kustutamine administraatorid. Kui teil kustutada kõik administraatori kontosid te ei saa enam sisse logida haldussüsteemi."
@@ -100,6 +115,8 @@ et:
       deleting_user: "kustutamine kasutaja ..."
       edit: Edit
       edit_access_code: "Edit Access Code"
+      edit_access_code_request: "Edit Access Code Request"
+      edit_access_code_request_title: "Edit Request"
       edit_access_code_title: "Edit Access Code"
       edit_profile: "Muuda profiili"
       edit_role_dialog_title: "Edit roll"
@@ -118,9 +135,11 @@ et:
       forgot_username: "Unustasid kasutajanime"
       forgot_your_password: "Unustasid oma parooli?"
       forgot_your_username: "Unustasid oma kasutajanime?"
+      fullfilled_access_code_requests: "Täidetud Access Code taotlused"
       invalid_username: "Vale kasutajanimi"
       join_application_name: "Liitu ja saan seda teha"
       last_name: "Viimane nimi"
+      list_access_codes: "Nimekiri Pääsukoodid"
       login: "Logi sisse"
       login_empty: "Palun sisesta login"
       login_fail: "Vabandame, kuid me ei tunne oma sisselogimise andmeid. Palun proovige uuesti."
@@ -158,6 +177,7 @@ et:
       remember_me: "Mäleta mind"
       remove_my_account: "Eemalda Minu konto"
       request_access_code: "Taotleda juurdepääsu Code"
+      request_access_code_instruction: "Esitage järgmised andmed ja anname Teile juurdepääsu koodi nii kiiresti kui võimalik."
       request_username: "Soov Kasutajanimi"
       request_username_subject: "Unustasid kasutajanime"
       reset_password: "Lähtestada oma parool"
@@ -169,12 +189,19 @@ et:
       roles: Rollid
       save: Salvesta
       select_new_password: "Valige uus parool"
+      send_access_code: "Saada kood"
+      send_access_code_instructions: "Pakkuda sõnum ja keha, mis tuleb saata e-posti koos koodi, mis laseb kasutajal luua konto."
+      send_access_code_request_title: "Saada kood"
+      send_access_codes: "Saada Codes"
+      send_code: "Saada kood"
       sign_in: "Logi sisse"
       sign_in_now: "Logi sisse kohe!"
       sign_in_title: "Logi sisse"
       sign_out_title: "End välja kirjutama"
       sign_up: Liitu
       sign_up_now: "Sign-up Nüüd"
+      signin_wait: "Allkirjastamine logida Palun oota."
+      signup_wait: "Allkirjastamine sind. Palun oota."
       sorry_invalid_reset_code: "Vabandame, kuid me ei suutnud leida oma konto. Kui teil on küsimusi proovida kopeerida ja kleepida URL oma e-posti brauseri või taaskäivitamine reset parooli protsessi."
       submit: Esitama
       terms_and_service: "Klikkides &quot;Sign-up Now&quot;, nõustud sa järgima %{tos_link_anchor} Tingimused%{link_end}."
@@ -184,6 +211,7 @@ et:
       thanks_sign_up_check: "Sinu konto on loodud. Palun kontrollige oma e-posti konto aktiveerimise juhised!"
       thanks_sign_up_login: "Täname! Sa võid sisse logida nüüd"
       total_users: "Kasutajaid kokku: %{total}"
+      unfullfilled_access_code_requests: "Täitumata Access Code taotlused"
       unlimited: "Unlimited Kasutab"
       unlimited_tip: "Vaata siia, kui koodi saab kasutada piiramatu arv kordi. See alistada kasutamise piiramiseks."
       update: Ajakohastama
@@ -202,7 +230,7 @@ et:
       user_not_activated_error: "Ei saa aktiveerida kasutaja"
       user_not_deactivated_error: "Ei saa välja lülitada kasutaja"
       user_successfully_deleted: "Kasutaja %{login} edukalt kustutatud."
-      user_update: "Sa oled kasutaja info on uuendatud."
+      user_update: "Sinu kasutajaandmed on uuendatud."
       user_update_sucess: "Kasutaja edukalt uuendatud"
       username: Kasutajanimi
       username_available: "Kasutajanimi saadaval"

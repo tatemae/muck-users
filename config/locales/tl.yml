@@ -25,11 +25,24 @@ tl:
       access_code_fullfill_invites_limit_tip: "Magpasok ng isang numero upang limitahan ang bilang ng mga kahilingan na ipinadala out. Halimbawa, ang pagpasok 100 ay ang limitasyon ng mga paanyaya sa mga kamakailan, 100 mga kahilingan"
       access_code_fullfill_invites_tip: "Suriin dito upang magpadala ng paanyaya sa mga gumagamit na humiling ng isang mag-imbita. Ito ay huwag pansinin ang anumang mga email na tinukoy sa itaas."
       access_code_help: "Kung natanggap mo ang isang access code mula sa amin, mangyaring ipasok ito sa kahon sa itaas. Maaari mo ring %{access_request_anchor} humiling ng access code%{access_request_anchor_end}."
+      access_code_message: Mensahe
       access_code_new: "Bagong Access Code"
+      access_code_not_found: "Hindi namin nagawang mahanap ang access code na ibinigay. Mangyaring %{contact_us_anchor} ugnayan sa amin%{contact_us_anchor_end} o %{access_request_anchor} humiling ng isa pang code%{access_request_anchor_end}."
       access_code_related_users: "Ang mga gumagamit na naka-sign up sa ang code na ito"
       access_code_request_count: "Sa kasalukuyan ay may %{access_code_requests_count} access code kahilingan"
+      access_code_request_delete_confirm: "Sigurado ka bang gusto mong kanselahin ang access code request?"
+      access_code_request_edit_problem: "Problema sa pag-edit ng access code request"
+      access_code_request_send_problem: "May problema sa pagpapadala ng mga code"
       access_code_request_thank_you: "Salamat sa iyo para sa iyong kahilingan. Kami ay sa usap sa lalong madaling panahon."
       access_code_request_tip: "Ipasok ang iyong email at padadalhan ka namin ng isang access code sa lalong madaling isa ay magagamit. Salamat sa iyo!"
+      access_code_requests: "Access Code Hiling"
+      access_code_requests_code_sent_on: "Code Ipinadala sa"
+      access_code_requests_email: Email
+      access_code_requests_name: Pangalan
+      access_code_requests_signed_up_on: "Sign up sa"
+      access_code_sent_to: "Naipadala Upang"
+      access_code_subject: Paksa
+      access_code_thank_you: "Salamat sa iyong interes. Kami ay makakuha ka ng isang code sa lalong madaling panahon."
       access_code_tip: "Ipasok ang isang access code."
       access_code_unlimited: "Walang hangganan"
       access_code_update_problem: "May problema sa pag-update ng mga access code."
@@ -67,6 +80,7 @@ tl:
       already_logged_in: "Ikaw ay naka-log in at hindi na kailangan upang makuha ang iyong password."
       already_registered: "Ay miyembro?"
       application_base_url_not_set: "Mangyaring set application_base_url sa global_config.yml"
+      beta_code_not_required: "Ikaw ay naka-log in at kaya mo maaring hindi na talagang gusto ng isang beta code."
       bulk_access_code_emails: "Mga email"
       bulk_access_code_emails_tip: "Ihiwalay ang mga email gamit ang isang comma"
       bulk_access_code_message: Mensahe
@@ -76,6 +90,7 @@ tl:
       bulk_access_codes: "Bulk Access Codes"
       bulk_access_codes_created: "Bulk access code na nilikha at na-email sa %{email_count} mga email."
       bulk_access_codes_description: "Ito ay bubuo ng isang natatanging, solong gamitin access code para sa bawat isa ng ang mga email na ibinigay."
+      bulk_access_codes_or: O
       bulk_access_codes_title: "Bulk Access Codes"
       cannot_deactivate_yourself: "Ikaw ay hindi maaaring deactivate ang iyong sarili!"
       cant_delete_admin: "Ikaw ay hindi maaaring tanggalin ang isang gumagamit na sa admin papel. Alisin ang mga gumagamit mula sa papel na ginagampanan ng administrator at pagkatapos ay subukan ulit. Mangyaring maging maingat kapag ang pagtanggal ng mga administrator. Kung tatanggalin mo ang administrator lahat ng mga account ay hindi mo na ma-login sa sistema ng administrasyon."
@@ -100,6 +115,8 @@ tl:
       deleting_user: "pagtanggal ng user ..."
       edit: I-edit
       edit_access_code: "I-edit ang Access Code"
+      edit_access_code_request: "I-edit ang Access Code Request"
+      edit_access_code_request_title: "I-edit ang Kahilingan"
       edit_access_code_title: "I-edit ang Access Code"
       edit_profile: "I-edit ang Profile"
       edit_role_dialog_title: "I-edit ang Role"
@@ -118,9 +135,11 @@ tl:
       forgot_username: "Nakalimutan ang Username"
       forgot_your_password: "Nakalimutan ang iyong password?"
       forgot_your_username: "Nakalimutan mo ang iyong username?"
+      fullfilled_access_code_requests: "Natupad Access Code Hiling"
       invalid_username: "Hindi tanggap na pangalan"
       join_application_name: "Sumali at kumuha ito tapos na"
       last_name: Apelyido
+      list_access_codes: "Listahan ng Access Codes"
       login: Login
       login_empty: "Mangyaring magpasok ng isang login"
       login_fail: "Ikinalulungkot namin, ngunit hindi namin maaaring kilalanin ang iyong login impormasyon. Mangyaring subukan muli."
@@ -158,6 +177,7 @@ tl:
       remember_me: "Tandaan ako"
       remove_my_account: "Alisin ang Aking Account"
       request_access_code: "Request Access Code"
+      request_access_code_instruction: "Mangyaring ibigay ang sumusunod na impormasyon at kami ay magbigay sa iyo ng isang access code sa lalong madaling panahon."
       request_username: "Humiling ng Username"
       request_username_subject: "Nakalimutang username"
       reset_password: "I-reset ang iyong Password"
@@ -169,12 +189,19 @@ tl:
       roles: Tungkulin
       save: Iligtas
       select_new_password: "Pumili ng isang Bagong Password"
+      send_access_code: "Send Code"
+      send_access_code_instructions: "Magbigay ng isang mensahe at katawan na ay ipapadala sa email kasama ang mga code na hahayaan ang gumagamit ng isang account."
+      send_access_code_request_title: "Send Code"
+      send_access_codes: "Send Codes"
+      send_code: "Send Code"
       sign_in: "Mag-sign In"
       sign_in_now: "Mag-sign in ngayon!"
       sign_in_title: "Mag-sign In"
       sign_out_title: "Sign Out"
       sign_up: "Mag-sign up"
       sign_up_now: "Mag-sign-up na Ngayon"
+      signin_wait: "Pag-sign in Mangyaring maghintay."
+      signup_wait: "Pag-sign up mo. Mangyaring maghintay."
       sorry_invalid_reset_code: "Ikinalulungkot namin, ngunit hindi namin mahanap ang iyong account. Kung ikaw ay nakakaranas ng mga isyu subukang kopyahin at idikit ang mga URL mula sa inyong email sa iyong browser o i-restart ang proseso-reset ang password."
       submit: Ibigay
       terms_and_service: "Sa pag-click &#39;Sign-up Ngayon&#39; ayon ka na sumunod sa mga Tuntunin %{tos_link_anchor} at Kundisyon%{link_end}."
@@ -184,6 +211,7 @@ tl:
       thanks_sign_up_check: "Ang iyong account ay nalikha na. Mangyaring suriin ang iyong e-mail para sa iyong mga tagubilin account activation!"
       thanks_sign_up_login: "Salamat sa pag-sign up! Maaari kang mag-login ngayon"
       total_users: "Total Users: %{total}"
+      unfullfilled_access_code_requests: "Unfulfilled Access Code Hiling"
       unlimited: "Unlimited Gumagamit"
       unlimited_tip: "Check dito kung ang access code ay maaaring gamitin ng isang walang limitasyong bilang ng beses. Ito ay sasapaw sa paggamit limitasyon."
       update: Update
@@ -202,7 +230,7 @@ tl:
       user_not_activated_error: "Hindi buhayin ang user"
       user_not_deactivated_error: "Hindi deactivate user"
       user_successfully_deleted: "User %{login} ay matagumpay na natanggal."
-      user_update: "Kayo ay gumagamit ng impormasyon ay na-update."
+      user_update: "Ang iyong impormasyon sa gumagamit ay na-update."
       user_update_sucess: "User ay matagumpay na nai-update"
       username: Username
       username_available: "Username magagamit"

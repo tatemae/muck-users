@@ -25,11 +25,24 @@ iw:
       access_code_fullfill_invites_limit_tip: "הזן מספר כדי להגביל את מספר בקשות שנשלחו. לדוגמה, הזנת 100 יגביל את מזמינה את 100 בקשות האחרונה"
       access_code_fullfill_invites_tip: "בדוק כאן כדי לשלוח הזמנות למשתמשים שביקשו להזמין. זה יהיה להתעלם מכל מיילים שצוין לעיל."
       access_code_help: "אם קיבלת קוד גישה מאיתנו, אנא הזן אותו בתיבה לעיל. ייתכן גם %{access_request_anchor} לבקש גישה לקוד%{access_request_anchor_end}."
+      access_code_message: הודעה
       access_code_new: "ניו קוד גישה"
+      access_code_not_found: "לא הצלחנו למצוא את קוד הגישה סיפק. אנא צרו איתנו קשר %{contact_us_anchor}%{contact_us_anchor_end} או בקשה %{access_request_anchor} אחר קוד%{access_request_anchor_end}."
       access_code_related_users: "משתמשים שנרשמו עם הקוד הזה"
       access_code_request_count: "כרגע יש %{access_code_requests_count} קוד בקשות גישה"
+      access_code_request_delete_confirm: "האם אתה בטוח שאתה רוצה לבטל את בקשת קוד גישה?"
+      access_code_request_edit_problem: "גישה בעיה עריכת קוד בקשה"
+      access_code_request_send_problem: "הייתה בעיה לשלוח את הקוד"
       access_code_request_thank_you: "אנו מודים לך על בקשתך. אנחנו נהיה בקשר בהקדם האפשרי."
       access_code_request_tip: "הזן את כתובת הדוא&quot;ל שלך ואנו נשלח לך קוד גישה ברגע אחד זמין. תודה!"
+      access_code_requests: "הגישה בקשות קוד"
+      access_code_requests_code_sent_on: "קוד שנשלח ב"
+      access_code_requests_email: דוא&quot;ל
+      access_code_requests_name: שם
+      access_code_requests_signed_up_on: "חתמה על"
+      access_code_sent_to: נשלח
+      access_code_subject: נושא
+      access_code_thank_you: "תודה על ההתעניינות שלך. אנחנו נוציא אותך קוד בהקדם האפשרי."
       access_code_tip: "הזן קוד גישה."
       access_code_unlimited: "בלתי מוגבל"
       access_code_update_problem: "היתה בעיה לעדכן את קוד הגישה."
@@ -67,6 +80,7 @@ iw:
       already_logged_in: "אתה כבר מחובר ולא צריך לשחזר את הסיסמה שלך."
       already_registered: "כבר חבר?"
       application_base_url_not_set: "נא להגדיר application_base_url ב global_config.yml"
+      beta_code_not_required: "אתה כבר מחובר אז אתה כנראה לא באמת רוצה קוד בטא."
       bulk_access_code_emails: דוא&quot;ל
       bulk_access_code_emails_tip: "הפרד מיילים עם פסיק"
       bulk_access_code_message: הודעה
@@ -76,6 +90,7 @@ iw:
       bulk_access_codes: "גורפת קודי גישה"
       bulk_access_codes_created: "גורפת קודי הגישה נוצר בדוא&quot;ל מיילים %{email_count}."
       bulk_access_codes_description: "זה יפיק ייחודי, קוד גישה אחת לשימוש עבור כל הודעות הדוא&quot;ל המצורפת."
+      bulk_access_codes_or: או
       bulk_access_codes_title: "גורפת קודי גישה"
       cannot_deactivate_yourself: "אתה לא יכול לבטל את עצמך!"
       cant_delete_admin: "אתה לא יכול למחוק את המשתמש כי הוא בתפקיד מנהל. הסר את המשתמש מתפקיד מנהל ולאחר מכן נסה שוב. אנא היזהר שלא למחוק מנהלי. אם תמחק את כל מנהל חשבונות שאתה כבר לא יהיה מסוגל להתחבר למערכת הממשל."
@@ -100,6 +115,8 @@ iw:
       deleting_user: "מחיקת המשתמש ..."
       edit: לערוך
       edit_access_code: "עריכת קוד גישה"
+      edit_access_code_request: "עריכת קוד בקשת גישה"
+      edit_access_code_request_title: "עריכת בקשה"
       edit_access_code_title: "עריכת קוד גישה"
       edit_profile: "ערוך פרופיל"
       edit_role_dialog_title: "ערוך תפקידים"
@@ -118,9 +135,11 @@ iw:
       forgot_username: "שכחת את שם המשתמש"
       forgot_your_password: "שכחת את הסיסמה?"
       forgot_your_username: "שכחת את שם המשתמש שלך?"
+      fullfilled_access_code_requests: "מילא קוד גישה בקשות"
       invalid_username: "שם משתמש לא חוקי"
       join_application_name: "הצטרף נגמור עם זה"
       last_name: "שם אחרונה"
+      list_access_codes: "גישה רשימת קודים"
       login: התחברות
       login_empty: "נא להזין פרטי כניסה"
       login_fail: "אנו מצטערים, אך לא יכולנו לזהות את פרטי הכניסה שלך. אנא נסה שנית."
@@ -158,6 +177,7 @@ iw:
       remember_me: "זכור אותי"
       remove_my_account: "הסר החשבון שלי"
       request_access_code: "הגישה בקשה קוד"
+      request_access_code_instruction: "נא לציין את הפרטים הבאים ואנו נספק לך קוד גישה בהקדם האפשרי."
       request_username: "בקש שם משתמש"
       request_username_subject: "שכחת את שם המשתמש"
       reset_password: "לאפס את הסיסמה שלך"
@@ -169,12 +189,19 @@ iw:
       roles: תפקידים
       save: שמור
       select_new_password: "לבחור סיסמה חדשה"
+      send_access_code: "שלח קוד"
+      send_access_code_instructions: "לספק הודעה והגוף כי יישלח בדואר האלקטרוני ביחד עם קוד שיאפשר למשתמש ליצור חשבון."
+      send_access_code_request_title: "שלח קוד"
+      send_access_codes: "שלח קודי"
+      send_code: "שלח קוד"
       sign_in: היכנס
       sign_in_now: "הירשם עכשיו!"
       sign_in_title: היכנס
       sign_out_title: התנתק
       sign_up: הירשם
       sign_up_now: "הרשמה עכשיו"
+      signin_wait: "חתימת אותך פנימה אנא המתן."
+      signup_wait: "חתימת אותך. אנא המתן."
       sorry_invalid_reset_code: "אנו מצטערים, אך לא הצלחנו לאתר את חשבונך. אם אתה נתקל בבעיות נסה להעתיק ולהדביק את כתובת האתר הדוא&quot;ל שלך אל תוך הדפדפן שלך או להפעיל מחדש את תהליך איפוס הסיסמה."
       submit: להגיש
       terms_and_service: "על ידי לחיצה על &quot;הרשמה עכשיו&quot; אתה מסכים לציית לתנאים %{tos_link_anchor} ותנאי%{link_end}."
@@ -184,6 +211,7 @@ iw:
       thanks_sign_up_check: "החשבון שלך נוצר. אנא בדוק את הדואר האלקטרוני שלך עבור הפעלת החשבון ההוראות!"
       thanks_sign_up_login: "תודה על שנרשמת! אתה יכול להתחבר כעת"
       total_users: "סה&quot;כ משתמשים: %{total}"
+      unfullfilled_access_code_requests: "התגשמו קוד גישה בקשות"
       unlimited: "Unlimited שימושים"
       unlimited_tip: "בדוק כאן אם קוד גישה ניתן להשתמש במספר בלתי מוגבל של פעמים. זו תבטל את מגבלת השימוש."
       update: עדכון
@@ -202,7 +230,7 @@ iw:
       user_not_activated_error: "אין אפשרות להפעיל את המשתמש"
       user_not_deactivated_error: "אין אפשרות לבטל את המשתמש"
       user_successfully_deleted: "משתמש %{login} נמחק בהצלחה."
-      user_update: "אתה פרטי המשתמש עודכנה."
+      user_update: "מידע המשתמש שלך עודכנה."
       user_update_sucess: "משתמש עודכנה בהצלחה"
       username: "שם משתמש"
       username_available: "שם משתמש זמינים"

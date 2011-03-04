@@ -26,11 +26,24 @@
       access_code_fullfill_invites_limit_tip: "Skriv inn et nummer for å begrense antall forespørsler som sendes ut. For eksempel vil inn 100 begrense inviterer til den nyeste 100 forespørsler"
       access_code_fullfill_invites_tip: "Sjekk her for å sende invitasjoner til brukere som har bedt om en invitasjon. Dette vil ignorere noen e-poster er angitt ovenfor."
       access_code_help: "Hvis du mottok en tilgangskode fra oss, vennligst skriv det i boksen over. Du kan også %{access_request_anchor} be om en adgangskode%{access_request_anchor_end}."
+      access_code_message: Melding
       access_code_new: "Ny Access Code"
+      access_code_not_found: "Vi fant ikke adgangskoden gitt. Vennligst %{contact_us_anchor} kontakt oss%{contact_us_anchor_end} eller %{access_request_anchor} ber om en ny code%{access_request_anchor_end}."
       access_code_related_users: "Brukere som registrerte seg med denne koden"
       access_code_request_count: "Det er for tiden %{access_code_requests_count} tilgang forespørsler"
+      access_code_request_delete_confirm: "Er du sikker på at du vil avbryte denne tilgangen kode?"
+      access_code_request_edit_problem: "Problem redigering tilgang kode"
+      access_code_request_send_problem: "Det oppstod et problem å sende koden"
       access_code_request_thank_you: "Takk for din henvendelse. Vi tar kontakt så snart som mulig."
       access_code_request_tip: "Skriv inn din e-post og vi sender deg en tilgangskode så snart det er tilgjengelig. Takk!"
+      access_code_requests: "Access Code Forespørsler"
+      access_code_requests_code_sent_on: "Code Sendt på"
+      access_code_requests_email: E-post
+      access_code_requests_name: Navn
+      access_code_requests_signed_up_on: "Signert opp"
+      access_code_sent_to: "Sendt til"
+      access_code_subject: Subject
+      access_code_thank_you: "Takk for din interesse. Vi får du en kode så snart som mulig."
       access_code_tip: "Angi en adgangskode."
       access_code_unlimited: Ubegrenset
       access_code_update_problem: "Det oppstod et problem oppdatere tilgangskode."
@@ -68,6 +81,7 @@
       already_logged_in: "Du er allerede logget inn og trenger ikke å gjenopprette passordet ditt."
       already_registered: "Allerede medlem?"
       application_base_url_not_set: "Vennligst sett application_base_url i global_config.yml"
+      beta_code_not_required: "Du er allerede logget på og så har du sannsynligvis ikke egentlig ønsker en beta-kode."
       bulk_access_code_emails: E-post
       bulk_access_code_emails_tip: "Skill e-postadresser med komma"
       bulk_access_code_message: Melding
@@ -77,6 +91,7 @@
       bulk_access_codes: "Bulk Adgangskoder"
       bulk_access_codes_created: "Bulk tilgangskoder opprettet og sendt til %{email_count} e-post."
       bulk_access_codes_description: "Dette vil generere en unik, engangsbruk tilgang kode for hver av e-post gitt."
+      bulk_access_codes_or: ELLER
       bulk_access_codes_title: "Bulk Adgangskoder"
       cannot_deactivate_yourself: "Du kan ikke deaktivere deg selv!"
       cant_delete_admin: "Du kan ikke slette en bruker som er i admin rollen. Fjern brukeren fra administrator rolle og prøv på nytt. Vær forsiktig når du sletter administratorer. Hvis du sletter alle administrator kontoene du vil ikke lenger kunne logge inn til administrasjonen systemet."
@@ -101,6 +116,8 @@
       deleting_user: "sletter brukeren ..."
       edit: Rediger
       edit_access_code: "Rediger Access Code"
+      edit_access_code_request: "Rediger Access-kode kontroll"
+      edit_access_code_request_title: "Rediger Request"
       edit_access_code_title: "Rediger Access Code"
       edit_profile: "Edit Profile"
       edit_role_dialog_title: "Rediger Rolle"
@@ -119,9 +136,11 @@
       forgot_username: "Glemt brukernavn"
       forgot_your_password: "Glemt passordet?"
       forgot_your_username: "Glemt brukernavn?"
+      fullfilled_access_code_requests: "Oppfylt Access Code Forespørsler"
       invalid_username: "Ugyldig brukernavn"
       join_application_name: "Bli med og få det gjort"
       last_name: "Siste Navn"
+      list_access_codes: "Liste Adgangskoder"
       login: "Logg inn"
       login_empty: "Vennligst skriv inn en pålogging"
       login_fail: "Vi beklager, men vi kunne ikke anerkjenne din påloggingsinformasjon. Vennligst prøv igjen."
@@ -159,6 +178,7 @@
       remember_me: "Husk meg"
       remove_my_account: "Fjern Min konto"
       request_access_code: "Be om Access Code"
+      request_access_code_instruction: "Vennligst oppgi følgende informasjon og vi vil gi deg en tilgangskode så snart som mulig."
       request_username: "Be om Brukernavn"
       request_username_subject: "Glemt brukernavn"
       reset_password: "Tilbakestill ditt passord"
@@ -170,12 +190,19 @@
       roles: Roller
       save: Lagre
       select_new_password: "Velg et nytt passord"
+      send_access_code: "Send kode"
+      send_access_code_instructions: "Gi en melding og kropp som vil bli sendt i e-posten sammen med kode som lar brukeren opprette en konto."
+      send_access_code_request_title: "Send kode"
+      send_access_codes: "Send Codes"
+      send_code: "Send kode"
       sign_in: "Logg inn"
       sign_in_now: "Logg deg på nå!"
       sign_in_title: "Logg inn"
       sign_out_title: "Logg ut"
       sign_up: "Registrer deg"
       sign_up_now: "Registrer deg nå"
+      signin_wait: "Logge deg inn Vennligst vent."
+      signup_wait: "Logge deg. Vennligst vent."
       sorry_invalid_reset_code: "Vi beklager, men vi kunne ikke finne kontoen din. Hvis du har problemer prøve å kopiere og lime inn nettadressen fra e-posten i nettleseren eller omstarte tilbakestille passordet prosessen."
       submit: Send
       terms_and_service: "Ved å klikke &quot;Registrer deg nå&quot;, godtar du overholde %{tos_link_anchor} vilkårene%{link_end}."
@@ -185,6 +212,7 @@
       thanks_sign_up_check: "Din konto har blitt opprettet. Vennligst sjekk din e-post for din konto aktiveringsinstruksjoner!"
       thanks_sign_up_login: "Takk for at du registrerte deg Du kan logge inn nå"
       total_users: "Brukere totalt: %{total}"
+      unfullfilled_access_code_requests: "Uoppfylt Access Code Forespørsler"
       unlimited: "Ubegrenset Bruker"
       unlimited_tip: "Sjekk her hvis adgangskoden kan benyttes et ubegrenset antall ganger. Dette vil overstyre bruken grensen."
       update: Update
@@ -203,7 +231,7 @@
       user_not_activated_error: "Kunne ikke aktivere brukeren"
       user_not_deactivated_error: "Kunne ikke deaktivere brukeren"
       user_successfully_deleted: "Bruker %{login} er slettet."
-      user_update: "Du bruker informasjonen har blitt oppdatert."
+      user_update: "Din bruker informasjonen har blitt oppdatert."
       user_update_sucess: "Brukeren ble velykket oppdatert"
       username: Brukernavn
       username_available: "Brukernavn tilgjengelig"

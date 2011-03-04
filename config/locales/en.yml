@@ -77,8 +77,8 @@ en:
       problem_editing_account: There was a problem updating your information.
       edit: Edit
       access_code_subject: Subject
-      bulk_access_codes_or: OR
       thanks_sign_up: Thanks for signing up!
+      bulk_access_codes_or: OR
       access_code_request_send_problem: There was a problem sending the code
       sign_in: Sign In
       user_enabled: User enabled
@@ -94,7 +94,9 @@ en:
       select_new_password: Select a New Password
       login: Login
       access_code_requests_code_sent_on: Code Sent on
+      send_access_codes: Send Codes
       access_code_help: If you received a access code from us, please enter it in the box above. You may also %{access_request_anchor}request a access code%{access_request_anchor_end}.
+      access_code_not_found: We were unable to find the access code provided. Please %{contact_us_anchor}contact us%{contact_us_anchor_end} or %{access_request_anchor}request another code%{access_request_anchor_end}.
       email_address: Email Address
       delete: Delete
       bulk_access_codes_created: Bulk access codes created and emailed to %{email_count} emails.
@@ -183,7 +185,6 @@ en:
       join_application_name: Join and get it done
       bulk_access_code_tip: Optional. If a code is specified then that code will be sent to all users.  Leave this field empty to send a unique code to each user.
       bulk_access_code_emails_tip: Separate emails with a comma
-      send_access_codes: Send Codes
       password_updated: Password successfully updated.
       register_for_account: Register for an account
       recover_password_prompt: (If you forgot your password recover it here)
@@ -222,6 +223,7 @@ en:
       expiration_date: Expiration Date
       add: Add
       terms_of_service_required: You must accept the terms of service.
+      beta_code_not_required: You are already logged in and so you probably don't really want a beta code.
       password: Password
       access_request_email: Email
       current_password: Current Password

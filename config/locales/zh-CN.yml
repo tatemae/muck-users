@@ -25,11 +25,24 @@ zh-CN:
       access_code_fullfill_invites_limit_tip: 输入一个数字，以限制发出请求的数量。例如，输入100将限制邀请到最近的100个请求
       access_code_fullfill_invites_tip: 选择此处，发送邀请给谁要求的是邀请用户。这将忽略上面指定的任何电子邮件。
       access_code_help: "如果您收到我们的访问代码，请在上面的框中输入它。您可能还%{access_request_anchor}请求访问代码.-.-."
+      access_code_message: 消息
       access_code_new: 新的接入代码
+      access_code_not_found: "我们无法找到提供的接入码。请与我们联系%{contact_us_anchor} - .-.-或%{contact_us_anchor_end}请求另一个代码.-.-."
       access_code_related_users: 用户谁签署了这些代码注册
       access_code_request_count: "目前有%{access_code_requests_count}访问代码请求"
+      access_code_request_delete_confirm: 你确定要取消此访问代码的要求？
+      access_code_request_edit_problem: 编辑访问码问题
+      access_code_request_send_problem: 有一个问题发送代码
       access_code_request_thank_you: 感谢您的要求。我们会在尽快联系。
       access_code_request_tip: 输入您的电子邮件，我们会向您发送访问代码只要一可用。谢谢！
+      access_code_requests: 访问代码请求
+      access_code_requests_code_sent_on: 发送代码
+      access_code_requests_email: 电邮
+      access_code_requests_name: 名称
+      access_code_requests_signed_up_on: 签署了
+      access_code_sent_to: 发送到
+      access_code_subject: 科目
+      access_code_thank_you: 感谢您的关注。我们会帮你尽快代码。
       access_code_tip: 输入访问代码。
       access_code_unlimited: 无限
       access_code_update_problem: 有一个问题更新的接入码。
@@ -67,6 +80,7 @@ zh-CN:
       already_logged_in: 您已经登录，不需要恢复密码。
       already_registered: 已经是会员？
       application_base_url_not_set: "请设置在global_config.yml application_base_url"
+      beta_code_not_required: 您已经登录，所以你可能真的不想要一个测试代码。
       bulk_access_code_emails: 电子邮件
       bulk_access_code_emails_tip: 用逗号分隔的电子邮件
       bulk_access_code_message: 消息
@@ -76,6 +90,7 @@ zh-CN:
       bulk_access_codes: 大量接码
       bulk_access_codes_created: "批量访问创建和通过电子邮件发送给%{email_count}邮件代码。"
       bulk_access_codes_description: 这将产生一个独特的，一次性使用接入码为各自提供的电子邮件。
+      bulk_access_codes_or: 或
       bulk_access_codes_title: 大量接码
       cannot_deactivate_yourself: 您不能停用，你自己！
       cant_delete_admin: 您不能删除一个用户，在管理员的角色。删除从管理员角色的用户，然后再试一次。请小心删除管理员。如果您删除所有的管理员帐户，您将不再能够登录到管理系统。
@@ -100,6 +115,8 @@ zh-CN:
       deleting_user: 删除用户...
       edit: 编辑
       edit_access_code: 编辑接入码
+      edit_access_code_request: 编辑接入码
+      edit_access_code_request_title: 编辑请求
       edit_access_code_title: 编辑接入码
       edit_profile: 编辑个人资料
       edit_role_dialog_title: 编辑角色
@@ -118,9 +135,11 @@ zh-CN:
       forgot_username: 忘记用户名
       forgot_your_password: 忘记密码？
       forgot_your_username: 忘记用户名？
+      fullfilled_access_code_requests: 完成访问代码请求
       invalid_username: 用户名无效
       join_application_name: 加入并完成它
       last_name: 姓
+      list_access_codes: 访问代码清单
       login: 登录
       login_empty: 请输入登录
       login_fail: 很抱歉，但我们无法识别您的登录信息。请再试一次。
@@ -158,6 +177,7 @@ zh-CN:
       remember_me: 记住我
       remove_my_account: 删除我的帐户
       request_access_code: 要求接入码
+      request_access_code_instruction: 请提供以下信息，我们会提供一个尽快访问代码。
       request_username: 要求用户名
       request_username_subject: 忘记用户名
       reset_password: 重置您的密码
@@ -169,12 +189,19 @@ zh-CN:
       roles: 角色
       save: 保存
       select_new_password: 选择一个新密码
+      send_access_code: 发送代码
+      send_access_code_instructions: 提供信息和机构，将在随电子邮件发送的代码，将让用户创建一个帐户。
+      send_access_code_request_title: 发送代码
+      send_access_codes: 发送代码
+      send_code: 发送代码
       sign_in: 登录
       sign_in_now: 马上注册！
       sign_in_title: 登录
       sign_out_title: 登出
       sign_up: 赶快注册
       sign_up_now: 登录了现在
+      signin_wait: 签名你进来，请稍等。
+      signup_wait: 签约你。请稍候。
       sorry_invalid_reset_code: 很抱歉，但我们无法找到您的帐户。如果您有问题，可以再复制并粘贴到浏览器从您的电子邮件网址或重新启动重置密码的过程。
       submit: 提交
       terms_and_service: "通过点击&#39;登录了现在&#39;你同意与%{tos_link_anchor}条款和条件，遵守.-.-."
@@ -184,6 +211,7 @@ zh-CN:
       thanks_sign_up_check: 您的帐户已创建。请为您的帐户启动说明你的电子邮件！
       thanks_sign_up_login: 感谢您了！现在，您可以登陆
       total_users: "共有用户：%{total}"
+      unfullfilled_access_code_requests: 秕访问代码请求
       unlimited: 无限制使用
       unlimited_tip: 在这里检查，如果访问代码可以使用的次数不限。这将覆盖使用的限制。
       update: 更新
@@ -202,7 +230,7 @@ zh-CN:
       user_not_activated_error: 不能激活用户
       user_not_deactivated_error: 用户无法关闭
       user_successfully_deleted: "用户%{login}已成功删除。"
-      user_update: 你的用户信息已更新。
+      user_update: 您的用户信息已更新。
       user_update_sucess: 用户已成功更新
       username: 用户名
       username_available: 使用者名称
