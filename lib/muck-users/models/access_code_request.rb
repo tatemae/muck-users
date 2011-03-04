@@ -36,7 +36,8 @@ module MuckUsers
                                          :use_limit => 1,
                                          :uses => 0,
                                          :code => AccessCode.random_code,
-                                         :expires_at => expires_at)
+                                         :expires_at => expires_at,
+                                         :sent_to => self.email)
         UserMailer.access_code(self.email, subject, message, access_code.code).deliver
         success = AccessCodeRequest.mark_fullfilled([self])
       end
