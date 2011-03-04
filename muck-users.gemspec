@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "3.1.17"
+  s.version = "3.1.18"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
@@ -96,6 +96,7 @@ Gem::Specification.new do |s|
     "app/views/user_mailer/access_code.gl.html.erb",
     "app/views/user_mailer/access_code.hi.html.erb",
     "app/views/user_mailer/access_code.hr.html.erb",
+    "app/views/user_mailer/access_code.ht.html.erb",
     "app/views/user_mailer/access_code.html.erb",
     "app/views/user_mailer/access_code.hu.html.erb",
     "app/views/user_mailer/access_code.id.html.erb",
@@ -141,6 +142,7 @@ Gem::Specification.new do |s|
     "app/views/user_mailer/activation_confirmation.gl.html.erb",
     "app/views/user_mailer/activation_confirmation.hi.html.erb",
     "app/views/user_mailer/activation_confirmation.hr.html.erb",
+    "app/views/user_mailer/activation_confirmation.ht.html.erb",
     "app/views/user_mailer/activation_confirmation.html.erb",
     "app/views/user_mailer/activation_confirmation.hu.html.erb",
     "app/views/user_mailer/activation_confirmation.id.html.erb",
@@ -186,6 +188,7 @@ Gem::Specification.new do |s|
     "app/views/user_mailer/activation_instructions.gl.html.erb",
     "app/views/user_mailer/activation_instructions.hi.html.erb",
     "app/views/user_mailer/activation_instructions.hr.html.erb",
+    "app/views/user_mailer/activation_instructions.ht.html.erb",
     "app/views/user_mailer/activation_instructions.html.erb",
     "app/views/user_mailer/activation_instructions.hu.html.erb",
     "app/views/user_mailer/activation_instructions.id.html.erb",
@@ -231,6 +234,7 @@ Gem::Specification.new do |s|
     "app/views/user_mailer/password_not_active_instructions.gl.html.erb",
     "app/views/user_mailer/password_not_active_instructions.hi.html.erb",
     "app/views/user_mailer/password_not_active_instructions.hr.html.erb",
+    "app/views/user_mailer/password_not_active_instructions.ht.html.erb",
     "app/views/user_mailer/password_not_active_instructions.html.erb",
     "app/views/user_mailer/password_not_active_instructions.hu.html.erb",
     "app/views/user_mailer/password_not_active_instructions.id.html.erb",
@@ -276,6 +280,7 @@ Gem::Specification.new do |s|
     "app/views/user_mailer/password_reset_instructions.gl.html.erb",
     "app/views/user_mailer/password_reset_instructions.hi.html.erb",
     "app/views/user_mailer/password_reset_instructions.hr.html.erb",
+    "app/views/user_mailer/password_reset_instructions.ht.html.erb",
     "app/views/user_mailer/password_reset_instructions.html.erb",
     "app/views/user_mailer/password_reset_instructions.hu.html.erb",
     "app/views/user_mailer/password_reset_instructions.id.html.erb",
@@ -321,6 +326,7 @@ Gem::Specification.new do |s|
     "app/views/user_mailer/username_request.gl.html.erb",
     "app/views/user_mailer/username_request.hi.html.erb",
     "app/views/user_mailer/username_request.hr.html.erb",
+    "app/views/user_mailer/username_request.ht.html.erb",
     "app/views/user_mailer/username_request.html.erb",
     "app/views/user_mailer/username_request.hu.html.erb",
     "app/views/user_mailer/username_request.id.html.erb",
@@ -366,6 +372,7 @@ Gem::Specification.new do |s|
     "app/views/user_mailer/welcome_notification.gl.html.erb",
     "app/views/user_mailer/welcome_notification.hi.html.erb",
     "app/views/user_mailer/welcome_notification.hr.html.erb",
+    "app/views/user_mailer/welcome_notification.ht.html.erb",
     "app/views/user_mailer/welcome_notification.html.erb",
     "app/views/user_mailer/welcome_notification.hu.html.erb",
     "app/views/user_mailer/welcome_notification.id.html.erb",
@@ -427,6 +434,7 @@ Gem::Specification.new do |s|
     "config/locales/gl.yml",
     "config/locales/hi.yml",
     "config/locales/hr.yml",
+    "config/locales/ht.yml",
     "config/locales/hu.yml",
     "config/locales/id.yml",
     "config/locales/it.yml",
