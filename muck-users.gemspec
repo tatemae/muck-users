@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "3.1.20"
+  s.version = "3.1.21"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
@@ -53,6 +53,7 @@ Gem::Specification.new do |s|
     "app/views/admin/access_codes/destroy.js.erb",
     "app/views/admin/access_codes/edit.erb",
     "app/views/admin/access_codes/index.html.erb",
+    "app/views/admin/access_codes/new.erb",
     "app/views/admin/access_codes/show.html.erb",
     "app/views/admin/permissions/_permission.html.erb",
     "app/views/admin/roles/_role.html.erb",
