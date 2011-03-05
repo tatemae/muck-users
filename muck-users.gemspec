@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "3.1.18"
+  s.version = "3.1.20"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
@@ -36,24 +36,23 @@ Gem::Specification.new do |s|
     "app/views/access_code_requests/create.js.erb",
     "app/views/access_code_requests/new.html.erb",
     "app/views/access_code_requests/show.html.erb",
-    "app/views/admin/access_code_requests/_access_code_request.html.erb",
-    "app/views/admin/access_code_requests/_form.html.erb",
+    "app/views/admin/access_code_requests/_access_code_request.erb",
+    "app/views/admin/access_code_requests/_form.erb",
     "app/views/admin/access_code_requests/ajax_update_access_code_request.js.erb",
     "app/views/admin/access_code_requests/destroy.js.erb",
-    "app/views/admin/access_code_requests/edit.html.erb",
+    "app/views/admin/access_code_requests/edit.erb",
     "app/views/admin/access_code_requests/index.html.erb",
     "app/views/admin/access_code_requests/send_code.erb",
     "app/views/admin/access_codes/_access_code.html.erb",
     "app/views/admin/access_codes/_access_code_nav.html.erb",
-    "app/views/admin/access_codes/_form.html.erb",
-    "app/views/admin/access_codes/_user.html.erb",
+    "app/views/admin/access_codes/_form.erb",
+    "app/views/admin/access_codes/_user.erb",
     "app/views/admin/access_codes/ajax_create_access_code.js.erb",
     "app/views/admin/access_codes/ajax_update_access_code.js.erb",
     "app/views/admin/access_codes/bulk.html.erb",
     "app/views/admin/access_codes/destroy.js.erb",
-    "app/views/admin/access_codes/edit.html.erb",
+    "app/views/admin/access_codes/edit.erb",
     "app/views/admin/access_codes/index.html.erb",
-    "app/views/admin/access_codes/new.html.erb",
     "app/views/admin/access_codes/show.html.erb",
     "app/views/admin/permissions/_permission.html.erb",
     "app/views/admin/roles/_role.html.erb",
