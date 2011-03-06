@@ -2,4 +2,5 @@
 
 Access Code: <%= @code %>
 
-<%= link_to translate('muck.users.click_to_sign_up_now'), signup_url(:access_code => @code) %>
+<%= translate('muck.users.go_here_to_sign_up_now') %>
+<%= signup_url(:access_code => @code) %>
