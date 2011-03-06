@@ -239,7 +239,7 @@ en:
       access_code_edit_problem: Problem editing access code
       access_codes: Access Codes
       click_to_sign_up_now: Click here to sign up now.
-      go_here_to_sign_up_now: Go here to sign up now:
+      go_here_to_sign_up_now: "Go here to sign up now:"
       access_request_name: Name
       cant_disable_admin: Can't disable an administrator.  Please remove the user from the administrator role and try again.
     roles: 
