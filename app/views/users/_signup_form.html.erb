@@ -56,11 +56,7 @@
   	<% end -%>
 
   	<div class="button form-row">
-  	  <%if params[:wait]%>
-    	  <%= f.submit t('muck.users.sign_up_now'), :class => 'wait-button' %>
-    	<% else %>
-    	  <%= f.submit t('muck.users.sign_up_now') %>
-    	<% end %>
+    	<%= f.submit t('muck.users.sign_up_now'), :class => 'wait-button' %>
       <div class="waiting" style="display:none;"><%=translate('muck.users.signup_wait') %></div>
     </div>
 
