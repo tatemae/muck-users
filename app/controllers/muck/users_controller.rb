@@ -35,8 +35,10 @@ class Muck::UsersController < ApplicationController
   def new
     @page_title = t('muck.users.register_account', :application_name => MuckEngine.configuration.application_name)
     @user = User.new(:access_code_code => params[:access_code])
-    if(params[:access_code])
-      @access_code = AccessCode.find_by_code(params[:access_code])
+    if(params[:access_code] || session[:access_code])
+      access_code = params[:access_code] || session[:access_code]
+      session[:access_code] = access_code
+      @access_code = AccessCode.find_by_code(access_code)
       if @access_code
         @user.email = @access_code.sent_to
       else
