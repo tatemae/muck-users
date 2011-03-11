@@ -167,7 +167,7 @@ module MuckUsers
         options[:except] << :password_salt << :perishable_token << :persistence_token << :single_access_token
         options
       end
-                
+
       def to_xml(options = {})
         options = add_exclude_fields(options)
         super(options)

@@ -5,6 +5,17 @@ module MuckUsersHelper
     options[:html] = {} if options[:html].nil?
     options[:title] = nil if options[:title].blank?
     options[:subtitle] = nil if options[:subtitle].blank?
+    if(params[:access_code] || session[:access_code])
+      access_code = params[:access_code] || session[:access_code]
+      session[:access_code] = access_code
+      @access_code = AccessCode.find_by_code(access_code)
+      if @access_code
+        user.email = @access_code.sent_to if user
+      else
+        @access_code_not_found = true
+      end
+    end
+    
     raw_block_to_partial('users/signup_form', options.merge(:user => user, :redirect_to => redirect_to), &block)
   end
   

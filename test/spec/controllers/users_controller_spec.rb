@@ -258,31 +258,6 @@ describe Muck::UsersController do
         it { should respond_with :success }
         it { should render_template :new }
       end
-      describe "signup with access codes enabled" do
-        describe "with valid access code" do
-          before(:each) do
-            @access_code = Factory(:access_code)
-            get :new, :access_code => @access_code.code
-          end
-          it { should respond_with :success }
-          it { should render_template :new }
-          it "should find the access code" do
-            assigns(:access_code).should_not be_blank
-          end
-        end
-        describe "without valid access code" do
-          before(:each) do
-            get :new, :access_code => 'junk'
-          end
-          it { should respond_with :success }
-          it { should render_template :new }
-          it "should not find the access code" do
-            assigns(:access_code).should be_blank
-            assigns(:access_code_not_found).should be_true
-          end
-        end
-      end
-      
     end
     describe "on GET to show" do
       before(:each) do
