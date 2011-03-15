@@ -54,7 +54,7 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   end
 
   def edit
-    render :template => 'admin/users/edit'
+    render :template => 'admin/users/edit', :layout => false 
   end
   
   def update

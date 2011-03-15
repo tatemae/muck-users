@@ -1,5 +1,8 @@
- jQuery(function(){
-	// BUTTONS
+jQuery(function(){
+	apply_admin_drop_menus();
+});
+
+function apply_admin_drop_menus(){
 	jQuery('.fg-button').hover(
 		function(){ jQuery(this).removeClass('ui-state-default').addClass('ui-state-focus'); },
 		function(){ jQuery(this).removeClass('ui-state-focus').addClass('ui-state-default'); }
@@ -10,4 +13,4 @@
 			showSpeed: 200 
 		});
 	});
-});
+}

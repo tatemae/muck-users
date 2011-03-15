@@ -1,4 +1,4 @@
-<tr id="<%=user.dom_id('row')%>" class="<%= cycle('odd','even') %>">
+<tr id="<%=user.dom_id('row')%>" class="<%= cycle('odd','even') %> <%=active_class(user)%>">
   <td><%= link_to h(user.full_name), user %></td>
   <td><%= mail_to h(user.email), user.email %></td>
   <td>
@@ -7,16 +7,12 @@
 	</ul>
   </td>
   <td>&nbsp;</td>
-  <td id="<%=user.dom_id('link')%>"><%= render :partial => 'admin/users/activate', :locals => { :user => user } %></td>
-	<td valign="bottom">
-	  <a tabindex="<%= user.id %>" href="#menu_<%= user.id %>" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all flat">
-	    <span class="ui-icon ui-icon-triangle-1-s"></span>Edit
-	  </a> 
-    <div id="menu_<%= user.id %>" class="hidden"> 
-      <ul> 
+  <td valign="bottom">
+    <div id="menu_<%= user.id %>"> 
+      <ul class="drop-menu"> 
       	<li><%= link_to(translate('muck.users.change_permissions'), permissions_admin_user_path(user), { :title => translate('muck.users.change_permissions_for', :user => user.full_name), :class => 'dialog-pop', :alt => 'pop' }) %></li> 
       	<li><%= render :partial => 'admin/users/activate', :locals => { :user => user }, :alt => 'pop' %></li> 
-      	<li><%= link_to(t("muck.users.edit"), edit_admin_user_path(user.id)) -%></li> 
+      	<li><%= link_to(t("muck.users.edit"), edit_admin_user_path(user.id), { :title =>t('muck.users.edit_this_user'), :class => 'dialog-pop', :alt => 'pop'}) -%></li> 
       	<li><%= link_to(t("muck.general.delete"), admin_user_path(user.id), { :title => t('muck.users.delete_this_user'), :class => 'delete-user ajax-delete' }) -%></li> 
       </ul> 
     </div>

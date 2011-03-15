@@ -34,4 +34,12 @@ module MuckUsersHelper
     render :partial => 'users/signup_form_javascript'
   end
   
+  def active_class(user)
+    if user.active?
+      'user-active'
+    else
+      'user-inactive'
+    end
+  end
+  
 end
