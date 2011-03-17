@@ -75,12 +75,22 @@ describe Muck::UserSessionsController do
     describe "logout" do
       before(:each) do
         login_as(@user)
-        delete :destroy
       end
-      it "should logout by destroying the user session" do
-        UserSession.find.should be_nil
+      describe "without params" do
+        before(:each) do
+          delete :destroy
+        end
+        it "should logout by destroying the user session" do
+          UserSession.find.should be_nil
+        end
+        it {should redirect_to(logout_complete_path)}
       end
-      it {should redirect_to(logout_complete_path)}
+      describe "with reset api key param" do
+        it "should reset the user's single_access_token" do
+          @user.should_receive(:reset_single_access_token!)
+          delete :destroy, :reset_api_key => true
+        end
+      end
     end
   end
   

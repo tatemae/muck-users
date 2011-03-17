@@ -31,6 +31,7 @@ class Muck::UserSessionsController < ApplicationController
   
   def destroy
     @title = t('muck.users.sign_out_title')
+    current_user.reset_single_access_token! if params[:reset_api_key]
     current_user_session.destroy
     flash[:notice] = t('muck.users.login_out_success')
     respond_to do |format|

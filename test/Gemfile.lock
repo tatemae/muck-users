@@ -9,7 +9,7 @@ GIT
 PATH
   remote: ../
   specs:
-    muck-users (3.1.23)
+    muck-users (3.1.25)
       authlogic
       bcrypt-ruby
       friendly_id
@@ -76,7 +76,7 @@ GEM
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
     culerity (0.2.15)
-    database_cleaner (0.6.4)
+    database_cleaner (0.6.5)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -85,7 +85,7 @@ GEM
       rake (>= 0.8.7)
     friendly_id (3.2.1)
       babosa (~> 0.2.1)
-    gherkin (2.3.3)
+    gherkin (2.3.4)
       json (~> 1.4.6)
     httparty (0.7.4)
       crack (= 0.1.8)
@@ -102,7 +102,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
-    muck-engine (3.2.6)
+    muck-engine (3.2.10)
       overlord
       validation_reflection
       will_paginate (~> 3.0.pre2)
@@ -112,7 +112,7 @@ GEM
       httparty
       json
     polyglot (0.3.1)
-    rack (1.2.1)
+    rack (1.2.2)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
     rack-test (0.5.7)
@@ -162,7 +162,7 @@ GEM
     thor (0.14.6)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.24)
+    tzinfo (0.3.25)
     validation_reflection (1.0.0)
     will_paginate (3.0.pre2)
     xpath (0.1.3)
