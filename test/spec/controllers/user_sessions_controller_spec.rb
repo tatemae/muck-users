@@ -87,6 +87,7 @@ describe Muck::UserSessionsController do
       end
       describe "with reset api key param" do
         it "should reset the user's single_access_token" do
+          controller.stub!(:current_user).and_return(@user)
           @user.should_receive(:reset_single_access_token!)
           delete :destroy, :reset_api_key => true
         end

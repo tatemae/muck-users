@@ -1,14 +1,16 @@
 source "http://rubygems.org"
 
-gem "rails", "3.0.4"
+gem "rails", "3.0.5"
 gem 'mysql'
 
 # gem 'authlogic'
 # TODO this is temporary until the official authlogic gem is updated for rails 3
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem "bcrypt-ruby", :require => "bcrypt"
+gem "jammit"
 
 gem 'muck-engine' #, :path => "~/projects/muck-engine"
+gem 'muck-resources'
 gem 'muck-users', :path => "../"
 
 if RUBY_VERSION < '1.9'

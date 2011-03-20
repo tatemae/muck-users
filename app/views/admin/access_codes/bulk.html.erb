@@ -42,6 +42,7 @@
     <%= f.submit translate('muck.users.send_access_codes') %>
   </div>
 <% end -%>
+<% content_for :javascript do -%>
 <script type="text/javascript" language="JavaScript">
   jQuery(document).ready(function(){
     jQuery('.date_pick').datepicker();
@@ -51,3 +52,4 @@
 		jQuery('#email-list-not-included-message').toggle();
 	});
 </script>
+<% end -%>

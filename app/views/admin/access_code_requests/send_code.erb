@@ -21,9 +21,10 @@
     <%= hidden_field :send_access_code, true %>
   <% end -%>
 </div>
-
+<% content_for :javascript do -%>
 <script type="text/javascript" language="JavaScript">
   jQuery(document).ready(function(){
     jQuery('.date_pick').datepicker();
   });
 </script>
+<% end -%>

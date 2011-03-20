@@ -7,9 +7,10 @@
 <%= f.text_field :expires_at, { :label => translate('muck.users.expiration_date'),
                                 :tip => translate('muck.users.expiration_date_tip'),
                                 :class => 'date_pick' } -%>
-
+<% content_for :javascript do -%>
 <script type="text/javascript" language="JavaScript">
   jQuery(document).ready(function(){
     jQuery('.date_pick').datepicker();
   });
 </script>
+<% end -%>
