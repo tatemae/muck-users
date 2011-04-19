@@ -63,6 +63,13 @@ module MuckUsers
         end
       end
     
+      def access_code_request_confirm(email)
+        mail(:to => email, :subject => I18n.t('muck.users.access_code_request_confirm_subject', :application_name => MuckEngine.configuration.application_name)) do |format|
+          format.html
+          format.text
+        end
+      end
+      
     end
   end
 end

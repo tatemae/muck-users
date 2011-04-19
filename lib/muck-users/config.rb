@@ -27,6 +27,8 @@ module MuckUsers
     attr_accessor :require_access_code        # Require that the user have an access code to be able to sign up.
     attr_accessor :validate_terms_of_service  # Require that the accept terms of service before signing up.
     
+    attr_accessor :send_access_code_request_confirm # Determines whether or not to send a confirmation email after a user requests an access code.
+    
     def initialize
       self.automatically_activate = true
       self.automatically_login_after_account_create = true
@@ -35,6 +37,7 @@ module MuckUsers
       self.let_users_delete_their_account = false
       self.require_access_code = false
       self.validate_terms_of_service = false
+      self.send_access_code_request_confirm = false
     end
     
   end

@@ -11,6 +11,8 @@ module MuckUsers
         scope :fullfilled, where('access_code_requests.code_sent_at IS NOT NULL')
         scope :by_newest, order("created_at DESC")
         scope :by_oldest, order("created_at ASC")
+        
+        after_create :send_access_code_request_confirm
       end
 
       module ClassMethods
@@ -31,6 +33,12 @@ module MuckUsers
         
       end
 
+      def send_access_code_request_confirm
+        if MuckUsers.configuration.send_access_code_request_confirm
+          UserMailer.access_code_request_confirm(self.email).deliver
+        end
+      end
+      
       def send_access_code(subject, message, expires_at)
         access_code = AccessCode.create!(:unlimited => false,
                                          :use_limit => 1,

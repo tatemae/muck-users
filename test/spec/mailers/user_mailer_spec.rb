@@ -78,4 +78,13 @@ describe UserMailer do
     #email.body.should include(code)
   end
 
+  it "should send access code request confirmation email" do
+    email_address = 'testguy@example.com'
+    email = UserMailer.access_code_request_confirm(email_address).deliver
+    ActionMailer::Base.deliveries.should_not be_empty
+    email.to.should == [email_address]
+    email.from.should == [MuckEngine.configuration.from_email]
+    email.subject.should == I18n.t('muck.users.access_code_request_confirm_subject', :application_name => MuckEngine.configuration.application_name)
+  end
+  
 end

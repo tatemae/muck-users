@@ -92,6 +92,7 @@ Create an initializer and add the following adjusting the settings to meet your 
     config.require_access_code = false              # Only let a user sign up if they have an access code
     config.let_users_delete_their_account = false   # Turn on/off ability for users to delete their own account. It is not recommended that you let 
                                                     # users delete their own accounts since the delete can cascade through the system with unknown results.
+    config.send_access_code_request_confirm # Determines whether or not to send a confirmation email after a user requests an access code.
   end
 
   

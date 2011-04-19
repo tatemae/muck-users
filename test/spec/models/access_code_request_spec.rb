@@ -66,6 +66,18 @@ describe AccessCodeRequest do
     end
   end
   
+  describe "send_access_code_request_confirm" do
+    before do
+      MuckUsers.configuration.send_access_code_request_confirm = true
+    end
+    it "should send the user an email confirming their access code request" do
+      mailer = mock(:user_mailer)
+      mailer.should_receive(:deliver)
+      UserMailer.should_receive(:access_code_request_confirm).and_return(mailer)
+      Factory(:access_code_request)
+    end
+  end
+  
   describe "send_access_code" do
     before do
       @access_code_request = Factory(:access_code_request)

@@ -122,6 +122,7 @@ en:
       update: Update
       already_activated: Your account has already been activated. You can log in below.
       welcome_email_subject: Welcome to %{application_name}
+      access_code_request_confirm_subject: Thank you for your beta code request for %{application_name}
       deleting_user: deleting user...
       add_user_to_role: Add User to Role
       logout_required: ""
