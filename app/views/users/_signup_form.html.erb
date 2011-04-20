@@ -20,12 +20,9 @@
               :access_request_anchor => %Q{<a class="fancy-access-request iframe" href="#{new_access_code_request_path}">},
               :access_request_anchor_end => "</a>").html_safe %>
         </p>
-  	  <% end -%>
+  	  <% end -%>            
       <%= f.text_field :access_code_code, { :label => translate('muck.users.access_code'), 
-                                            :extra_html => '<p id="access_code_help" class="attention">' + 
-                                              translate('muck.users.access_code_help', 
-                                                :access_request_anchor => %Q{<a class="fancy-access-request iframe" href="#{new_access_code_request_path}">},
-                                                :access_request_anchor_end => "</a>") + '<p>'.html_safe } -%>
+                                            :extra_html => @access_code_help } -%>
     <% end -%>
 
   	<%= f.text_field :login, { :label => t('muck.users.choose_member_name'), 

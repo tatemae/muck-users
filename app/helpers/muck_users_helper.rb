@@ -16,6 +16,13 @@ module MuckUsersHelper
       end
     end
     
+    if params[:access_code].blank?
+      @access_code_help = '<p id="access_code_help" class="attention">' + 
+        translate('muck.users.access_code_help', 
+          :access_request_anchor => %Q{<a class="fancy-access-request iframe" href="#{new_access_code_request_path}">},
+          :access_request_anchor_end => "</a>") + '<p>'.html_safe
+	  end
+	  
     raw_block_to_partial('users/signup_form', options.merge(:user => user, :redirect_to => redirect_to), &block)
   end
   

@@ -30,6 +30,12 @@ describe MuckUsersHelper do
           controller.session[:access_code] = @access_code.code
           helper.signup_form(@user).should include('testguy@example.com')
         end
+        it "should leave @access_code_help blank" do
+          params = {}
+          params[:access_code] = @access_code.code
+          helper.stub!(:params).and_return(params)
+          helper.signup_form(@user).should_not include('id="access_code_help"')
+        end
       end
       describe "without valid access code" do
         before(:each) do

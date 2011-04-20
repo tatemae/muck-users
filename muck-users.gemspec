@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "3.1.27"
+  s.version = "3.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2011-03-19}
+  s.date = %q{2011-04-19}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -127,6 +127,8 @@ Gem::Specification.new do |s|
     "app/views/user_mailer/access_code.zh-CN.html.erb",
     "app/views/user_mailer/access_code.zh-TW.html.erb",
     "app/views/user_mailer/access_code.zh.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.text.erb",
     "app/views/user_mailer/activation_confirmation.ar.html.erb",
     "app/views/user_mailer/activation_confirmation.bg.html.erb",
     "app/views/user_mailer/activation_confirmation.ca.html.erb",

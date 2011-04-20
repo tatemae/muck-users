@@ -9,7 +9,7 @@ GIT
 PATH
   remote: ../
   specs:
-    muck-users (3.1.27)
+    muck-users (3.2.0)
       authlogic
       bcrypt-ruby
       friendly_id
@@ -49,7 +49,7 @@ GEM
     arel (2.0.9)
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
-    babosa (0.3.2)
+    babosa (0.3.3)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     capybara (0.4.1.2)
