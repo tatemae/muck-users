@@ -1,5 +1,5 @@
 <div id="search_box" class="search-box">
-  <%= form_tag search_admin_users_path, :class => 'ajax' do -%>
+  <%= form_tag search_admin_users_path do -%>
     <%= text_field_tag :query, '', :class => 'span-5' %>
     <%= submit_tag t("muck.users.admin.search_users") %>
   <% end -%>

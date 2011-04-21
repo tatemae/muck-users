@@ -49,4 +49,17 @@ module MuckUsersHelper
     end
   end
   
+  # Generates a new random access code. If provided_by is provided then the provided_by user
+  # will be attached to the access code as the providing user.
+  def random_access_code(provided_by)
+    access_code = AccessCode.new(:expires_at => 1.year.since)
+    access_code.provided_by = provided_by
+    access_code.unlimited = false
+    access_code.use_limit = 1
+    access_code.uses = 0
+    access_code.code = AccessCode.random_code
+    access_code.save!
+    access_code
+  end
+  
 end

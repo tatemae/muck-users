@@ -10,7 +10,8 @@ module MuckUsers
         validates_uniqueness_of :code
 
         has_many :users
-
+        belongs_to :provided_by, :class_name => "User"
+        
         scope :by_newest, order('access_codes.created_at DESC')
         scope :by_alpha, order('access_codes.code ASC')
         scope :active, where('access_codes.expires_at > Now() AND access_codes.uses <= use_limit')

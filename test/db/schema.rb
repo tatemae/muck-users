@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110303183433) do
+ActiveRecord::Schema.define(:version => 20110420153714) do
 
   create_table "access_code_requests", :force => true do |t|
     t.string   "email"
@@ -24,13 +24,14 @@ ActiveRecord::Schema.define(:version => 20110303183433) do
 
   create_table "access_codes", :force => true do |t|
     t.string   "code"
-    t.integer  "uses",       :default => 0,     :null => false
-    t.boolean  "unlimited",  :default => false, :null => false
+    t.integer  "uses",           :default => 0,     :null => false
+    t.boolean  "unlimited",      :default => false, :null => false
     t.datetime "expires_at"
-    t.integer  "use_limit",  :default => 1,     :null => false
+    t.integer  "use_limit",      :default => 1,     :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "sent_to"
+    t.integer  "provided_by_id"
   end
 
   add_index "access_codes", ["code"], :name => "index_access_codes_on_code"

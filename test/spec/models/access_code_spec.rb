@@ -24,6 +24,7 @@ describe AccessCode do
   it { should validate_uniqueness_of :code }
   
   it { should have_many :users }
+  it { should belong_to :provided_by }
 
   describe "scopes" do
     

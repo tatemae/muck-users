@@ -1,0 +1,17 @@
+<h2><%= link_to @user.full_name, @user %></h2>
+<%= mail_to @user.email, @user.email %>
+<%= link_to t('muck.users.public_profile'), @user %>
+<div>
+	<ul id="<%=@user.dom_id('permissions')%>" class="permissions inline">
+	  <%= render :partial => 'admin/permissions/permission', :collection => @user.permissions, :locals => { :user => @user } %>
+	</ul>
+</div>
+
+<div>
+  <ul class="drop-menu"> 
+  	<li><%= link_to(translate('muck.users.change_permissions'), permissions_admin_user_path(@user), { :title => translate('muck.users.change_permissions_for', :user => @user.full_name), :class => 'dialog-pop', :alt => 'pop' }) %></li> 
+  	<li><%= render :partial => 'admin/users/activate', :locals => { :user => @user }, :alt => 'pop' %></li> 
+  	<li><%= link_to(t("muck.users.edit"), edit_admin_user_path(@user.id), { :title =>t('muck.users.edit_this_user'), :class => 'dialog-pop', :alt => 'pop'}) -%></li> 
+  	<li><%= link_to(t("muck.general.delete"), admin_user_path(@user.id), { :title => t('muck.users.delete_this_user'), :class => 'delete-user ajax-delete' }) -%></li> 
+  </ul> 
+</div>

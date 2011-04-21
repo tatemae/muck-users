@@ -21,6 +21,7 @@ module MuckUsers
         scope :by_login_alpha, order("users.login ASC")
         scope :by_login, lambda { |*args| { :conditions => ["users.login LIKE ?", args.first + '%'] } }
         
+        has_many :provided_access_codes, :class_name => "AccessCode", :foreign_key => "provided_by_id"
         belongs_to :access_code
         accepts_nested_attributes_for :access_code
         attr_accessor :access_code_code
@@ -33,7 +34,7 @@ module MuckUsers
         before_save :lower_login
         
         validates_format_of :login, :with => /^[a-z0-9-]+$/i, :message => 'may only contain letters, numbers or a hyphen.'
-        validates_format_of :email, :with => email_regex, :message => 'does not look like a valid email address.'
+        #validates_format_of :email, :with => email_regex, :message => 'does not look like a valid email address.'
         
         # prevents a user from submitting a crafted form that bypasses activation
         attr_protected :crypted_password, :password_salt, :persistence_token, :single_access_token, :perishable_token, :login_count,

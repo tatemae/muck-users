@@ -317,21 +317,21 @@ describe Muck::UsersController do
         post :is_login_available
       end
       it { should respond_with :success }
-      it { @response.body.should == '<span class="unavailable"></span>' }
+      it { @response.body.should include('<span class="unavailable"></span>') }
     end
     describe "empty login" do
       before(:each) do
         post :is_login_available, :user_login => ''
       end
       it { should respond_with :success }
-      it { @response.body.should == '<span class="unavailable">' + I18n.t('muck.users.login_empty') + '</span>' }
+      it { @response.body.should include('<span class="unavailable">' + I18n.t('muck.users.login_empty') + '</span>') }
     end
     describe "valid login" do
       before(:each) do
         post :is_login_available, :user_login => 'testdude1945'
       end
       it { should respond_with :success }
-      it { @response.body.should == '<span class="available">' + I18n.t('muck.users.username_available') + '</span>' }
+      it { @response.body.should include('<span class="available">' + I18n.t('muck.users.username_available') + '</span>') }
     end
     describe "invalid login" do
       before(:each) do
@@ -346,7 +346,7 @@ describe Muck::UsersController do
         post :is_login_available, :user_login => @user.login
       end
       it { should respond_with :success }
-      it { response.body.should include(I18n.t('muck.users.username_not_available')) }
+      it { response.body.should include(I18n.t('muck.users.username_not_available', :reset_password_help => '')) }
     end
   end
   
@@ -356,28 +356,28 @@ describe Muck::UsersController do
         post :is_email_available
       end
       it { should respond_with :success }
-      it { response.body.should == '<span class="available"></span>' }
+      it { response.body.should include('<span class="available"></span>') }
     end
     describe "empty email" do
       before(:each) do
         post :is_email_available, :user_email => ''
       end
       it { should respond_with :success }
-      it { response.body.should == '<span class="available">' + I18n.t('muck.users.email_empty') + '</span>' }
+      it { response.body.should include('<span class="available">' + I18n.t('muck.users.email_empty') + '</span>') }
     end
     describe "valid email" do
       before(:each) do
         post :is_email_available, :user_email => 'testdude1945@example.com'
       end
       it { should respond_with :success }
-      it { response.body.should == '<span class="available">' + I18n.t('muck.users.email_available') + '</span>' }
+      it { response.body.should include('<span class="available">' + I18n.t('muck.users.email_available') + '</span>') }
     end
     describe "invalid email" do
       before(:each) do
         post :is_email_available, :user_email => 'testdude1945@com'
       end
       it { should respond_with :success }
-      it { response.body.should == '<span class="unavailable">' + I18n.t('muck.users.email_invalid') + '</span>' }
+      it { response.body.should include('<span class="unavailable">' + I18n.t('muck.users.email_invalid') + '</span>') }
     end
     describe "email not available" do
       before(:each) do

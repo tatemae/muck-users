@@ -56,6 +56,17 @@ describe Admin::Muck::UsersController do
       end
     end
 
+    describe "GET show" do
+      describe "html" do
+        before(:each) do
+          @user = Factory(:user)
+          get :show, :id => @user.to_param
+        end
+        it { should respond_with :success }
+        it { should render_template :show }
+      end
+    end
+    
     describe "GET inactive" do
       before(:each) do
         get :inactive

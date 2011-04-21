@@ -36,6 +36,7 @@ describe User do
 
   it { should have_many :permissions}
   it { should have_many :roles}
+  it { should have_many :provided_access_codes}
   
   it { should scope_by_latest }
   it { should scope_by_newest }

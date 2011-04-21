@@ -1,5 +1,5 @@
 <tr id="<%=user.dom_id('row')%>" class="<%= cycle('odd','even') %> <%=active_class(user)%>">
-  <td><%= link_to h(user.full_name), user %></td>
+  <td><%= link_to h(user.full_name), admin_user_path(user) %></td>
   <td><%= mail_to h(user.email), user.email %></td>
   <td>
 	<ul id="<%=user.dom_id('permissions')%>" class="permissions inline">

@@ -1,5 +1,8 @@
 <div>
   <h2><%= t('muck.users.admin_users_title') %></h2>
-  <%= link_to 'Download Users', admin_users_path(:format => 'csv')%>
+  <% if !@is_search -%>
+    <%= link_to 'Download Users', admin_users_path(:format => 'csv')%>
+    <%=translate('muck.users.total_users', :total => User.count) %>
+  <% end -%>
   <%= render :partial => 'admin/users/table' -%>
 </div>

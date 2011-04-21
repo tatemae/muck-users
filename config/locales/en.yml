@@ -2,6 +2,7 @@
 en: 
   muck: 
     users: 
+      public_profile: Public Profile
       add_access_code: Add Access Code
       cant_delete_admin: You can't delete a user that is in the admin role.  Remove the user from the administrator role and then try again.  Please be careful when deleting administrators.  If you delete all administrator accounts you will no longer be able to login to the administration system.
       sign_in_now: Sign in now!
@@ -24,7 +25,8 @@ en:
       bulk_access_code_message: Message
       view_your_account: View Your Account
       password_mismatch: Password mismatch.
-      username_not_available: Username not available
+      username_not_available: Username already in use. %{reset_password_help}
+      email_not_available: Email already in use. %{reset_password_help}
       admin: 
         activate_all_inactive_users_confirm: Are you sure you want to activate all inactive users in the system?  This cannot be undone!
         activate_all_inactive_users: Activate All Inactive Users
@@ -37,7 +39,6 @@ en:
       confirm_select_new_password: Confirm Password Change
       email_invalid: Invalid email
       user_disable_problem: There was a problem disabling this user.
-      email_not_available: Email already in use. %{reset_password_help}
       total_users: "Total Users: %{total}"
       add_role_dialog_title: Add Role
       submit: Submit
@@ -91,6 +92,8 @@ en:
         search_users: Search Users
       access_code_uses: Uses
       access_code_sent_to: Sent To
+      access_code_provided_by: Provided By
+      access_code_used_by: Used By
       select_new_password: Select a New Password
       login: Login
       access_code_requests_code_sent_on: Code Sent on

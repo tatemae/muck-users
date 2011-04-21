@@ -55,4 +55,16 @@ describe MuckUsersHelper do
     end
   end
   
+  describe "random_access_code" do
+    before do
+      @user = Factory(:user)
+    end
+    it "should generate a random access code" do
+      helper.random_access_code(@user).code.should_not be_blank
+    end
+    it "should assign the provided_by user" do
+      helper.random_access_code(@user).provided_by.should == @user
+    end
+  end
+  
 end

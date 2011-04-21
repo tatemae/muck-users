@@ -1,7 +1,7 @@
 class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   
   def index
-    @codes = AccessCode.by_alpha.paginate(:page => @page, :per_page => @per_page)
+    @codes = AccessCode.by_newest.includes(:provided_by, :users).paginate(:page => @page, :per_page => @per_page)
     render :template => 'admin/access_codes/index'
   end
 

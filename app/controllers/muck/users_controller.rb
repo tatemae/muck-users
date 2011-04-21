@@ -90,7 +90,10 @@ class Muck::UsersController < ApplicationController
   end
   
   def is_login_available
-    result = t('muck.users.username_not_available')
+    @available = 'unavailable'
+    @output_element = 'username'    
+    recover_password_prompt = render_to_string :partial => 'users/recover_password_via_email_link', :locals => { :email => params[:user_email] }
+    result = t('muck.users.username_not_available', :reset_password_help => recover_password_prompt.html_safe).html_safe
     if params[:user_login].nil?
       result = ''
     elsif params[:user_login].empty?
@@ -104,21 +107,18 @@ class Muck::UsersController < ApplicationController
         result = t('muck.users.username_available')
       end
     end
+    if !@user.blank? && @user.errors[:login].blank? && !result.blank?
+      @available = 'available'
+    end
     respond_to do |format|
-      if !@user.blank? && @user.errors[:login].blank? && !result.blank?
-        format.html { render :partial => 'users/available', :locals => { :message => result } }
-        format.js { render :partial => 'users/available', :locals => { :message => result } }
-      else
-        format.html { render :partial => 'users/unavailable', :locals => { :message => result } }
-        format.js { render :partial => 'users/unavailable', :locals => { :message => result } }
-      end
-      
-      #format.html { render :text => result }
-      #format.js { render :text => result }
+      format.html { render :partial => 'users/availability', :locals => { :message => result } }
+      format.js { render :partial => 'users/availability', :locals => { :message => result } }
     end
   end
 
   def is_email_available
+    @available = 'unavailable'
+    @output_element = 'email'
     if params[:user_email].nil?
       result = ''
     elsif params[:user_email].empty?
@@ -134,19 +134,17 @@ class Muck::UsersController < ApplicationController
       recover_password_prompt = render_to_string :partial => 'users/recover_password_via_email_link', :locals => { :email => params[:user_email] }
       result = t('muck.users.email_not_available', :reset_password_help => recover_password_prompt.html_safe).html_safe
       respond_to do |format|
-        format.html { render :partial => 'users/unavailable', :locals => { :message => result.html_safe } }
-        format.js { render :partial => 'users/unavailable', :locals => { :message => result } }
+        format.html { render :partial => 'users/availability', :locals => { :message => result } }
+        format.js { render :partial => 'users/availability', :locals => { :message => result } }
       end
       return
+    end  
+    if errors.blank? && ! result.nil?
+      @available = 'available'
     end
     respond_to do |format|
-      if errors.blank? && ! result.nil?
-        format.html { render :partial => 'users/available', :locals => { :message => result } }
-        format.js { render :partial => 'users/available', :locals => { :message => result } }
-      else
-        format.html { render :partial => 'users/unavailable', :locals => { :message => result } }
-        format.js { render :partial => 'users/unavailable', :locals => { :message => result } }
-      end
+      format.html { render :partial => 'users/availability', :locals => { :message => result } }
+      format.js { render :partial => 'users/availability', :locals => { :message => result } }
     end
   end
 

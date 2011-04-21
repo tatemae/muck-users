@@ -20,6 +20,13 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+    respond_to do |format|
+      format.html { render :template => 'admin/users/show' }
+    end
+  end
+  
   def inactive
     @user_inactive_count = User.inactive_count
     @users = User.inactive.paginate(:page => @page, :per_page => @per_page)
@@ -46,7 +53,8 @@ class Admin::Muck::UsersController < Admin::Muck::BaseController
   end
 
   def search
-    @users = User.where("first_name LIKE ? OR last_name LIKE ? OR email LIKE ?", params[:query], params[:query], params[:query] ).paginate(:page => @page, :per_page => @per_page )
+    @is_search = true
+    @users = User.where("first_name LIKE ? OR last_name LIKE ? OR email LIKE ?", params[:query], params[:query], params[:query] ).paginate(:page => @page, :per_page => @per_page )    
     respond_to do |format|
       format.html { render :template => 'admin/users/index' }
       format.js { render :partial => 'admin/users/table', :layout => false }
