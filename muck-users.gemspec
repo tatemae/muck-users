@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "3.2.0"
+  s.version = "3.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = %q{2011-04-19}
+  s.date = %q{2011-04-20}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -79,6 +79,7 @@ Gem::Specification.new do |s|
     "app/views/admin/users/row.js.erb",
     "app/views/admin/users/search.html.erb",
     "app/views/admin/users/search.js.erb",
+    "app/views/admin/users/show.html.erb",
     "app/views/password_resets/edit.html.erb",
     "app/views/password_resets/new.html.erb",
     "app/views/user_mailer/access_code.ar.html.erb",
@@ -408,11 +409,10 @@ Gem::Specification.new do |s|
     "app/views/user_sessions/_form.erb",
     "app/views/user_sessions/new.html.erb",
     "app/views/username_request/new.html.erb",
-    "app/views/users/_available.html.erb",
+    "app/views/users/_availability.html.erb",
     "app/views/users/_recover_password_via_email_link.html.erb",
     "app/views/users/_signup_form.html.erb",
     "app/views/users/_signup_form_javascript.html.erb",
-    "app/views/users/_unavailable.html.erb",
     "app/views/users/_user.html.erb",
     "app/views/users/activation_confirmation.html.erb",
     "app/views/users/activation_instructions.html.erb",
@@ -472,6 +472,7 @@ Gem::Specification.new do |s|
     "db/migrate/20100123233654_create_access_code_requests.rb",
     "db/migrate/20101117172951_add_name_to_access_code_requests.rb",
     "db/migrate/20110303183433_add_sent_to_to_access_codes.rb",
+    "db/migrate/20110420153714_add_provided_by_to_access_codes.rb",
     "lib/muck-users.rb",
     "lib/muck-users/config.rb",
     "lib/muck-users/controllers/authentic_application.rb",

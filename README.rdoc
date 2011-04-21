@@ -105,7 +105,8 @@ Route to the site home page:
   root :to => "default#index"
 
 Route to a public user page (this could also go to home etc. if needed)
-  match '/profiles/:id' => 'profiles#show', :as => :public_user
+
+  match '/public_user/:id', :to => 'profiles#show', :as => :public_user
   
 This is the path that a user will be redirected to if they attempt to access another user's dashboard page.
 
