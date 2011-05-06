@@ -39,6 +39,7 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
       emails = @access_code.emails.split(',')
     end
     use_random_code = @access_code.code.blank?
+    @access_code.save! unless use_random_code
     emails.each do |email|
       if use_random_code
         # need to build a new access code for each email

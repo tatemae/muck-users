@@ -9,7 +9,7 @@ GIT
 PATH
   remote: ../
   specs:
-    muck-users (3.2.0)
+    muck-users (3.2.2)
       authlogic
       bcrypt-ruby
       friendly_id

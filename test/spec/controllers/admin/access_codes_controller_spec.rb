@@ -74,6 +74,9 @@ describe Admin::Muck::AccessCodesController do
           end
           it {should set_the_flash.to(I18n.translate('muck.users.bulk_access_codes_created', :email_count => 1))}
           it {should redirect_to(bulk_admin_access_codes_path)}
+          it "should save the access code" do
+            AccessCode.find_by_code(@params[:code]).should_not be_blank
+          end
         end
 
         describe "valid - sent invites" do
