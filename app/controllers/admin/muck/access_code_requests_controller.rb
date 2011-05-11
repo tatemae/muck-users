@@ -30,6 +30,8 @@ class Admin::Muck::AccessCodeRequestsController < Admin::Muck::BaseController
   end
   
   def send_code
+    @subject ||= params[:subject]
+    @message ||= params[:message]
     @expires_at = 1.year.from_now
     @access_code_request = AccessCodeRequest.find(params[:id])
     render :template => "admin/access_code_requests/send_code", :layout => false

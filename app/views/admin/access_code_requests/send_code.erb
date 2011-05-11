@@ -5,12 +5,12 @@
     <p><%=translate('muck.users.send_access_code_instructions') %></p>
     <div class="form-row">
       <label><%= translate('muck.users.access_code_subject') %></label>
-      <%= text_field_tag :subject, params[:subject] -%>
+      <%= text_field_tag :subject, @subject -%>
     </div>
     <div class="form-row">
       <label><%= translate('muck.users.access_code_message') %></label>
       <p><%=translate('muck.users.access_code_message_help') %></p>
-      <%= text_area_tag :message, params[:message] -%>  
+      <%= text_area_tag :message, @message -%>  
     </div>
     <div class="form-row">
       <label><%= translate('muck.users.expiration_date') %></label>
