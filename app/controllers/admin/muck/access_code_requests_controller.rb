@@ -11,6 +11,19 @@ class Admin::Muck::AccessCodeRequestsController < Admin::Muck::BaseController
     render :template => 'admin/access_code_requests/index'
   end
   
+  def search
+    @is_search = true
+    query = "%#{params[:query]}%"
+    if params[:fullfilled]
+      @access_code_requests = AccessCodeRequest.where("name LIKE ? OR email LIKE ?", query, query).fullfilled.by_newest.paginate(:page => @page, :per_page => @per_page)
+    else
+      @access_code_requests = AccessCodeRequest.where("name LIKE ? OR email LIKE ?", query, query).unfullfilled.by_newest.paginate(:page => @page, :per_page => @per_page)
+    end
+    respond_to do |format|
+      format.html { render :template => 'admin/access_code_requests/index' }
+    end
+  end
+  
   def edit
     @access_code_request = AccessCodeRequest.find(params[:id])
     render :template => "admin/access_code_requests/edit", :layout => false

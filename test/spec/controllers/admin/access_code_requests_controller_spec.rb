@@ -53,6 +53,35 @@ describe Admin::Muck::AccessCodeRequestsController do
         it { should render_template :edit }
       end
   
+      describe "POST search" do
+        before(:all) do
+          @user = Factory(:access_code_request, :name => 'john smith', :email => 'john.smith@example.com')
+        end
+        describe "empty search" do
+          before(:each) do
+            post :search, :query => ''
+          end
+          it { should respond_with :success }
+          it { should render_template :index }
+        end
+        describe "search name" do
+          before(:each) do
+            post :search, :query => 'john'
+          end
+          it { should respond_with :success }
+          it { should render_template :index }
+          it { response.body.should include('john') }
+        end
+        describe "search email" do
+          before(:each) do
+            post :search, :query => 'john.smith@example.com'
+          end
+          it { should respond_with :success }
+          it { should render_template :index } 
+          it { response.body.should include('john') }         
+        end
+      end
+          
       describe "PUT to update" do
         before(:each) do
           put :update, :id => @access_code_request.to_param, :access_code_request => { :email => 'test@example.com' }, :format => 'js'

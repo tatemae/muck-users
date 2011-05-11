@@ -60,6 +60,9 @@ Rails.application.routes.draw do
     end
     resources :roles, :controller => 'muck/roles'
     resources :access_code_requests, :controller => 'muck/access_code_requests' do
+      collection do
+        post :search
+      end
       member do
         get :send_code
       end

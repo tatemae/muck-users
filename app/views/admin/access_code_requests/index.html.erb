@@ -1,6 +1,15 @@
 <h2><%=translate('muck.users.access_code_requests') %></h2>
 <%= render :partial => 'admin/access_codes/access_code_nav' %>
 <h3><%= @title %></h3>
+
+<div id="search_box" class="search-box">
+  <%= form_tag search_admin_access_code_requests_path do -%>
+    <%= hidden_field_tag :fullfilled, true if params[:fullfilled]%>
+    <%= text_field_tag :query, '', :class => 'span-5' %>
+    <%= submit_tag t("muck.users.admin.search_access_code_requests") %>
+  <% end -%>
+</div>
+
 <table class="adminTable" cellspacing="0" cellpadding="0">
   <thead>
     <tr>

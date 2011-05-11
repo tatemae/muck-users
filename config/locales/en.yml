@@ -31,6 +31,7 @@ en:
         show_emails: Show Emails
         search_users: Search Users
         unactivated_users: There are %{count} unactivated users
+        search_access_code_requests: Search Requests
       access_code_used_by: Used By
       invalid_username: Invalid username
       last_name: Last Name
