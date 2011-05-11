@@ -2,7 +2,6 @@
 en: 
   muck: 
     users: 
-      public_profile: Public Profile
       add_access_code: Add Access Code
       cant_delete_admin: You can't delete a user that is in the admin role.  Remove the user from the administrator role and then try again.  Please be careful when deleting administrators.  If you delete all administrator accounts you will no longer be able to login to the administration system.
       sign_in_now: Sign in now!
@@ -26,19 +25,20 @@ en:
       view_your_account: View Your Account
       password_mismatch: Password mismatch.
       username_not_available: Username already in use. %{reset_password_help}
-      email_not_available: Email already in use. %{reset_password_help}
       admin: 
         activate_all_inactive_users_confirm: Are you sure you want to activate all inactive users in the system?  This cannot be undone!
         activate_all_inactive_users: Activate All Inactive Users
         show_emails: Show Emails
         search_users: Search Users
         unactivated_users: There are %{count} unactivated users
+      access_code_used_by: Used By
       invalid_username: Invalid username
       last_name: Last Name
       user_update: Your user information has been updated.
       confirm_select_new_password: Confirm Password Change
       email_invalid: Invalid email
       user_disable_problem: There was a problem disabling this user.
+      email_not_available: Email already in use. %{reset_password_help}
       total_users: "Total Users: %{total}"
       add_role_dialog_title: Add Role
       submit: Submit
@@ -55,10 +55,13 @@ en:
       edit_role_dialog_title: Edit Role
       already_logged_in: You are already logged in and don't need to recover your password.
       forgot_your_username: Forgot your username?
+      public_profile: Public Profile
+      go_here_to_sign_up_now: "Go here to sign up now:"
       access_code_created: Created
       bulk_access_code_problem: Problem adding access code
       signup_wait: Signing you up. Please wait.
       password_not_reset: Password not reset.
+      access_code_not_found: We were unable to find the access code provided. Please %{contact_us_anchor}contact us%{contact_us_anchor_end} or %{access_request_anchor}request another code%{access_request_anchor_end}.
       my_dashboard: My Dashboard
       bulk_access_codes_description: This will generate a unique, single use access code for each of the emails provided.
       cannot_deactivate_yourself: You cannot deactivate yourself!
@@ -71,6 +74,7 @@ en:
       already_registered: Already a member?
       all_users: All Users
       login_out_success: You have been logged out.
+      access_code_provided_by: Provided By
       validation_are_required: are required.
       request_username: Request Username
       send_access_code: Send Code
@@ -92,14 +96,12 @@ en:
         search_users: Search Users
       access_code_uses: Uses
       access_code_sent_to: Sent To
-      access_code_provided_by: Provided By
-      access_code_used_by: Used By
       select_new_password: Select a New Password
       login: Login
       access_code_requests_code_sent_on: Code Sent on
       send_access_codes: Send Codes
+      access_code_message_help: (If you want to embed the code and sign up link inline use {code} and {signup_link} in your message.)
       access_code_help: If you received a access code from us, please enter it in the box above. You may also %{access_request_anchor}request a access code%{access_request_anchor_end}.
-      access_code_not_found: We were unable to find the access code provided. Please %{contact_us_anchor}contact us%{contact_us_anchor_end} or %{access_request_anchor}request another code%{access_request_anchor_end}.
       email_address: Email Address
       delete: Delete
       bulk_access_codes_created: Bulk access codes created and emailed to %{email_count} emails.
@@ -122,10 +124,10 @@ en:
       user_not_deactivated_error: Could not deactivate user
       account_activated: Your account has been activated! You can now login.
       welcome: Welcome
+      edit_this_user: Edit User
       update: Update
       already_activated: Your account has already been activated. You can log in below.
       welcome_email_subject: Welcome to %{application_name}
-      access_code_request_confirm_subject: Thank you for your beta code request for %{application_name}
       deleting_user: deleting user...
       add_user_to_role: Add User to Role
       logout_required: ""
@@ -161,7 +163,6 @@ en:
       user_account_deleted: You have successfully deleted your account.
       password_reset: Password reset
       delete_this_user: Delete User
-      edit_this_user: Edit User
       use_limit: Number of Uses
       user_successfully_deleted: User %{login} was successfully deleted.
       access_code_requests: Access Code Requests
@@ -179,6 +180,7 @@ en:
       expiration_date_tip: Enter the date upon which the access code will become invalid
       signin_wait: Signing you in. Please wait.
       remember_me: Remember me
+      access_code_request_confirm_subject: Thank you for your beta code request for %{application_name}
       add_user_to_role_title: Add user to a new role.
       access_code_edit_link: Edit Access Code
       access_code_update_problem: There was a problem updating the access code.
@@ -228,10 +230,10 @@ en:
       expiration_date: Expiration Date
       add: Add
       terms_of_service_required: You must accept the terms of service.
+      current_password: Current Password
+      access_request_email: Email
       beta_code_not_required: You are already logged in and so you probably don't really want a beta code.
       password: Password
-      access_request_email: Email
-      current_password: Current Password
       sign_out_title: Sign Out
       email_available: Email available
       thanks_sign_up_check: Your account has been created. Please check your e-mail for your account activation instructions!
@@ -244,7 +246,6 @@ en:
       access_code_edit_problem: Problem editing access code
       access_codes: Access Codes
       click_to_sign_up_now: Click here to sign up now.
-      go_here_to_sign_up_now: "Go here to sign up now:"
       access_request_name: Name
       cant_disable_admin: Can't disable an administrator.  Please remove the user from the administrator role and try again.
     roles: 

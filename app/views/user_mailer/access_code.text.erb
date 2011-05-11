@@ -1,6 +1,8 @@
-<%= @message %>
-
-Access Code: <%= @code %>
-
-<%= translate('muck.users.go_here_to_sign_up_now') %>
-<%= signup_url(:access_code => @code) %>
+<% signup = "#{translate('muck.users.go_here_to_sign_up_now')}: #{signup_url(:access_code => @code)}".html_safe -%>
+<%= @message.gsub('{signup_link}', signup).html_safe %>
+<% if !@code_included -%>
+  Access Code: <%= @code %>
+<% end -%>
+<% if !@signup_link_included -%>
+  <%= signup.html_safe %>
+<% end -%>

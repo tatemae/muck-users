@@ -57,6 +57,9 @@ module MuckUsers
       def access_code(email, subject, message, code)
         @message = message
         @code = code
+        @code_included = @message.include?('{code}')
+        @signup_link_included = @message.include?('{signup_link}')
+        @message.gsub!('{code}', @code)
         mail(:to => email, :subject => subject) do |format|
           format.html
           format.text
