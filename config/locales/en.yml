@@ -223,7 +223,7 @@ en:
       login_success: Login successful!
       change_permissions_for: Change Permissions for %{user}
       password_help: Your password should be at least six characters long. A Mix of upper and lower-case letters and numbers works well
-      access_code_fullfill_invites_limit_tip: Enter a number to limit the number of requests sent out.  For example, entering 100 will limit the invites to the most recent 100 requests
+      access_code_fullfill_invites_limit_tip: Enter a number to limit the number of requests sent out.  For example, entering 100 will limit the invites to the oldest 100 requests
       edit_access_code_request: Edit Access Code Request
       user_marked_inactive: User has been marked as inactive
       terms_and_service_tip: In order to register you must agree to the terms and conditions. You may review these policies before proceeding by clicking on the link.
