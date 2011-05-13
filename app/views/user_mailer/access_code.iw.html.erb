@@ -1,3 +1,8 @@
-<p style=";text-align:right;direction:rtl"> <%= @message %> </p>
+<% signup = link_to(translate('muck.users.click_to_sign_up_now'), signup_url(:access_code => @code)) -%> 
+<p style=";text-align:right;direction:rtl"> <%= @message.gsub('{signup_link}', signup).html_safe  %> </p>
+ <% if !@code_included -%> 
 <p style=";text-align:right;direction:rtl"> קוד גישה: <%= @code %> </p>
-<p style=";text-align:right;direction:rtl"> <%= link_to translate('muck.users.click_to_sign_up_now'), signup_url(:access_code => @code) %> </p>
+ <% end -%> 
+ <% if !@signup_link_included -%> 
+<p style=";text-align:right;direction:rtl"> <%= signup.html_safe %> </p>
+ <% end -%>

@@ -1,3 +1,8 @@
-<p> <%= @message %> </p>
+<% signup = link_to(translate('muck.users.click_to_sign_up_now'), signup_url(:access_code => @code)) -%> 
+<p> <%= @message.gsub('{signup_link}', signup).html_safe  %> </p>
+ <% if !@code_included -%> 
 <p> Hozzáférési kód: <%= @code %> </p>
-<p> <%= link_to translate('muck.users.click_to_sign_up_now'), signup_url(:access_code => @code) %> </p>
+ <% end -%> 
+ <% if !@signup_link_included -%> 
+<p> <%= signup.html_safe %> </p>
+ <% end -%>
