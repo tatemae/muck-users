@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{muck-users}
-  s.version = "3.2.5"
+  s.version = "3.2.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Justin Ball}, %q{Joel Duffin}]
-  s.date = %q{2011-05-11}
+  s.date = %q{2011-05-18}
   s.description = %q{Easily add user signup, login and other features to your application}
   s.email = %q{justin@tatemae.com}
   s.extra_rdoc_files = [
@@ -128,8 +128,52 @@ Gem::Specification.new do |s|
     "app/views/user_mailer/access_code.zh-CN.html.erb",
     "app/views/user_mailer/access_code.zh-TW.html.erb",
     "app/views/user_mailer/access_code.zh.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.ar.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.bg.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.ca.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.cs.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.da.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.de.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.el.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.es.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.et.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.fa.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.fi.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.fr.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.gl.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.hi.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.hr.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.ht.html.erb",
     "app/views/user_mailer/access_code_request_confirm.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.hu.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.id.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.it.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.iw.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.ja.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.ko.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.lt.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.lv.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.mt.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.nl.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.no.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.pl.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.pt-PT.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.ro.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.ru.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.sk.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.sl.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.sq.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.sr.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.sv.html.erb",
     "app/views/user_mailer/access_code_request_confirm.text.erb",
+    "app/views/user_mailer/access_code_request_confirm.th.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.tl.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.tr.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.uk.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.vi.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.zh-CN.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.zh-TW.html.erb",
+    "app/views/user_mailer/access_code_request_confirm.zh.html.erb",
     "app/views/user_mailer/activation_confirmation.ar.html.erb",
     "app/views/user_mailer/activation_confirmation.bg.html.erb",
     "app/views/user_mailer/activation_confirmation.ca.html.erb",
