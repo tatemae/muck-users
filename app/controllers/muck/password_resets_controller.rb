@@ -47,7 +47,7 @@ class Muck::PasswordResetsController < ApplicationController
     if @user.reset_password!(params[:user])
       flash[:success] = t('muck.users.password_updated')
       respond_to do |format|
-        format.html { redirect_to account_url }
+        format.html { redirect_to login_url }
       end
     else
       respond_to do |format|
@@ -72,7 +72,7 @@ class Muck::PasswordResetsController < ApplicationController
     respond_to do |format|
       format.html do
         flash[:notice] = t('muck.users.already_logged_in')
-        redirect_to account_url
+        redirect_to user_path(current_user)
       end
     end
   end

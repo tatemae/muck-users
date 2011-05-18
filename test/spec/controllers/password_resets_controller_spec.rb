@@ -48,7 +48,7 @@ describe Muck::PasswordResetsController do
       before(:each) do
         put :update, :id => @user.perishable_token, :user => {:password => "foobar", :password_confirmation => "foobar" }
       end
-      it {should redirect_to(account_path)}
+      it {should redirect_to(login_url)}
     end
     describe "PUT update - password mismatch" do
       before(:each) do

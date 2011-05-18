@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   match '/users/signup_complete/:id'     => 'muck/users#welcome',                 :as => :signup_complete
   match '/users/activation_complete/:id' => 'muck/users#welcome',                 :as => :activation_complete
   match '/signup_complete_activate/:id'  => 'muck/users#activation_instructions', :as => :signup_complete_activation_required
-  match 'account'                        => 'muck/users#show',                    :as => :account
   match 'current_user'                   => 'muck/users#show'
   
   # activations
