@@ -1,4 +1,7 @@
 <h2><%= translate('muck.users.users_admin') %></h2>
 <ul>
   <li><%=translate('muck.users.total_users', :total => User.count) %></li>
+  <li><%=translate('muck.users.total_access_code_requests', :total => AccessCodeRequest.count) %></li>
+  <li><%=translate('muck.users.total_fullfilled_access_code_requests', :total => AccessCodeRequest.fullfilled.count) %></li>
+  <li><%=translate('muck.users.total_unfullfilled_access_code_requests', :total => AccessCodeRequest.unfullfilled.count) %></li>
 </ul>

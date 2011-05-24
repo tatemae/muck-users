@@ -40,7 +40,10 @@ en:
       email_invalid: Invalid email
       user_disable_problem: There was a problem disabling this user.
       email_not_available: Email already in use. %{reset_password_help}
-      total_users: "Total Users: %{total}"
+      total_users: "Total Users: %{total}"      
+      total_access_code_requests: "Total Access Code Requests: %{total}"
+      total_fullfilled_access_code_requests: "Total Fullfilled Access Code Requests: %{total}"
+      total_unfullfilled_access_code_requests: "Total Unfullfilled Access Code Requests: %{total}"
       add_role_dialog_title: Add Role
       submit: Submit
       application_base_url_not_set: Please set application_base_url in global_config.yml
