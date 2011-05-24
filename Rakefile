@@ -1,6 +1,5 @@
-require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
+require 'rubygems'
+require 'bundler'
 require 'rspec/core/rake_task'
 
 desc 'Default: run specs.'
@@ -32,14 +31,10 @@ begin
     gem.add_dependency "muck-engine"
     gem.add_dependency "friendly_id"
     gem.files.exclude 'test/**'
-    gem.test_files.exclude 'test/**' # exclude test directory
   end
-  Jeweler::RubyforgeTasks.new do |rubyforge|
-    rubyforge.doc_task = "rdoc"
-  end
-  Jeweler::GemcutterTasks.new
+  Jeweler::RubygemsDotOrgTasks.new
 rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
+  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
 
 begin
@@ -57,6 +52,7 @@ rescue LoadError
 end
 
 require 'rake/rdoctask'
+desc 'Generate documentation for the muck-users gem.'
 Rake::RDocTask.new do |rdoc|
   if File.exist?('VERSION.yml')
     config = YAML.load(File.read('VERSION.yml'))
