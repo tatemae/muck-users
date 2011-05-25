@@ -221,7 +221,7 @@ en:
       request_access_code_instruction: Please provide the following information and we'll provide you with an access code as soon as possible.
       fullfilled_access_code_requests: Fulfilled Access Code Requests
       update_profile: Update your profile
-      username_help: You can use between 6 and 20 characters. If the name you want isn't available try adding numbers or punctuation.
+      username_help: You can use between 6 and 20 characters. If the name you want isn't available try adding numbers or hyphen.
       user_update_sucess: User was successfully updated
       login_success: Login successful!
       change_permissions_for: Change Permissions for %{user}
