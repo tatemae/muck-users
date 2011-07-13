@@ -23,6 +23,9 @@ module MuckUsersHelper
           :access_request_anchor_end => "</a>") + '<p>'.html_safe
 	  end
 	  
+	  # Make sure there is a user available to the signup_form
+	  @user ||= User.new
+	  
     raw_block_to_partial('users/signup_form', options.merge(:user => user, :redirect_to => redirect_to), &block)
   end
   
