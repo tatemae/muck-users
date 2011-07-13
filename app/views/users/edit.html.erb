@@ -31,7 +31,7 @@
 
 <% if MuckUsers.configuration.let_users_delete_their_account -%>
   <div id="delete-account" class="common-form">
-    <%= muck_form_for :user, :url => users_path, :html => {:id => "delete-user-form", :name => 'delete-user-form', :method => :delete, :confirm => t("users.confirm_delete_account")} do |f| -%>
+    <%= muck_form_for @user, :url => users_path, :html => {:id => "delete-user-form", :name => 'delete-user-form', :method => :delete, :confirm => t("users.confirm_delete_account")} do |f| -%>
   		<h2><%= t('muck.users.remove_my_account') %></h2>
   		<div class="button form-row">
   	  	<%= f.submit t('muck.general.delete_my_account') %>

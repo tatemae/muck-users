@@ -130,7 +130,7 @@ It is recommended that you include muck-users.css or copy it's content's and mod
 === Access Codes
 muck-users includes the ability to require a code to sign up. Add a sign up form to collect emails:
 
-  <%= muck_form_for :access_code_request, :url => access_code_requests_path, :html => { :class => 'ajax beta_code_request_form' } do |f| -%>
+  <%= muck_form_for @access_code_request, :url => access_code_requests_path, :html => { :class => 'ajax beta_code_request_form' } do |f| -%>
     <%= f.text_field :email, { :label => translate('muck.users.access_request_email')  } -%>
     <%= f.text_field :name, { :label => translate('muck.users.access_request_name')  } -%>
     <%= f.submit translate('muck.users.submit') %>

@@ -11,6 +11,7 @@ class Admin::Muck::AccessCodesController < Admin::Muck::BaseController
   end
   
   def new
+    @access_code = AccessCode.new
     render :template => 'admin/access_codes/new', :layout => false
   end
   

@@ -10,6 +10,7 @@ class Muck::AccessCodeRequestsController < ApplicationController
   end
   
   def new
+    @access_code_request = AccessCodeRequest.new
     @page_title = t('muck.users.request_access_code')
     render :template => 'access_code_requests/new'
   end
