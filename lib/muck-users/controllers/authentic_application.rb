@@ -40,7 +40,7 @@ module MuckUsers
               flash[:notice] = I18n.t('muck.users.login_requred')
               redirect_to login_path
             end
-            format.json { render :json => { :success => false, :logged_in => false, :message => I18n.t('muck.users.login_requred') } }
+            format.json { render :json => { :success => false, :logged_in => false, :message => I18n.t('muck.users.login_requred') }, :callback => params[:callback] }
           end
         end
       end
