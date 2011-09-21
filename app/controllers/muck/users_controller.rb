@@ -51,16 +51,22 @@ class Muck::UsersController < ApplicationController
     setup_tos
     check_access_code
     check_recaptcha
+    before_create_user
     success, path = setup_user
+    after_create_user(success)
     after_create_response(success, path)
   rescue MuckUsers::Exceptions::InvalidAccessCode, ActiveRecord::RecordInvalid => ex
     after_create_response(false)
   end
-
+  
   def update
     @title = t("users.update_profile")
     @user = admin? ? User.find(params[:id]) : User.find(current_user)
-    if @user.update_attributes(params[:user])
+    @user.attributes = params[:user]
+    before_update_user
+    success = @user.save
+    after_update_user(success)
+    if success
       flash[:notice] = t("muck.users.user_update")
       after_update_response(true)
     else
@@ -149,7 +155,25 @@ class Muck::UsersController < ApplicationController
   end
 
   protected 
+  
+    # Override to act on @user before it is created
+    def before_create_user
+    end
 
+    # Override to act on @user after it is created
+    # success indicates whether or not the user was successfully created
+    def after_create_user(success)
+    end
+
+    # Override to act on @user before it is updated
+    def before_update_user
+    end
+    
+    # Override to act on @user after it is updated
+    # success indicates whether or not the user was successfully updated
+    def after_update_user(success)
+    end
+    
     def valid_email?(email)
       user = User.new(:email => email)
       user.valid?
@@ -165,13 +189,25 @@ class Muck::UsersController < ApplicationController
         respond_to do |format|
           format.html { render :template => "users/#{template}" }
           format.xml { render :xml => @user }
-          format.json { render :json => { :success => true, :user => @user.as_json } }
+          format.json do
+            if MuckUsers.configuration.use_http_status_failures
+              render :json => @user
+            else
+              render :json => { :success => true, :user => @user.as_json }
+            end
+          end
         end
       else 
         respond_to do |format|
           format.html { redirect_to failure_path }
           format.xml { render :xml => @user }
-          format.json { render :json => { :success => false } }
+          format.json do
+            if MuckUsers.configuration.use_http_status_failures
+              render :json => @user, :status => :unprocessable_entity
+            else
+              render :json => { :success => false, :user => @user.as_json }
+            end
+          end
         end
       end  
     end
@@ -181,13 +217,25 @@ class Muck::UsersController < ApplicationController
         respond_to do |format|
           format.html { redirect_to local_uri }
           format.xml { render :xml => @user, :status => :created, :location => user_url(@user) }
-          format.json { render :json => { :success => true, :user => @user.as_json } }
+          format.json do
+            if MuckUsers.configuration.use_http_status_failures
+              render :json => @user
+            else
+              render :json => { :success => true, :user => @user.as_json }
+            end
+          end
         end
       else
         respond_to do |format|
           format.html { render :template => "users/new" }
           format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
-          format.json { render :json => { :success => false, :user => @user.as_json } }
+          format.json do
+            if MuckUsers.configuration.use_http_status_failures
+              render :json => @user.errors, :status => :unprocessable_entity
+            else
+              render :json => { :success => true, :user => @user.as_json }
+            end
+          end
         end
       end
     end
@@ -299,13 +347,26 @@ class Muck::UsersController < ApplicationController
               redirect_to public_user_path(@user)
             end  
           end
-          format.xml{ head :ok }
+          format.xml{ head :ok }          
+          format.json do
+            if MuckUsers.configuration.use_http_status_failures
+              render :json => @user
+            else
+              render :json => { :success => true, :user => @user.as_json }
+            end
+          end          
         end
       else
         respond_to do |format|
           format.html { render :template => 'users/edit' }
-          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
-          format.json { render :json => { :success => success, :user => @user.as_json, :errors => @user.errors.as_json } }
+          format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }          
+          format.json do
+            if MuckUsers.configuration.use_http_status_failures
+              render :json => @user.errors, :status => :unprocessable_entity
+            else
+              render :json => { :success => success, :user => @user.as_json, :errors => @user.errors.as_json }
+            end
+          end
         end
       end
     end
@@ -317,7 +378,13 @@ class Muck::UsersController < ApplicationController
           redirect_to success_redirect || login_url
         end
         format.xml { head :ok }
-        format.json { render :json => { :success => true } }
+        format.json do
+          if MuckUsers.configuration.use_http_status_failures
+            render :json => @user
+          else
+            render :json => { :success => true }
+          end
+        end
       end
     end
   
@@ -326,7 +393,13 @@ class Muck::UsersController < ApplicationController
       respond_to do |format|
         format.html { redirect_to user_path(current_user) }
         format.xml { render :xml => t('muck.users.permission_denied'), :status => :unprocessable_entity }
-        format.json { render :json => { :message => t('muck.users.permission_denied') } }
+        format.json do
+          if MuckUsers.configuration.use_http_status_failures
+            render :json => t('muck.users.permission_denied'), :status => :unprocessable_entity
+          else
+            render :json => { :message => t('muck.users.permission_denied') }
+          end
+        end
       end
     end
 

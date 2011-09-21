@@ -28,8 +28,10 @@ module MuckUsers
     attr_accessor :validate_terms_of_service  # Require that the accept terms of service before signing up.
     
     attr_accessor :send_access_code_request_confirm # Determines whether or not to send a confirmation email after a user requests an access code.
+    attr_accessor :use_http_status_failures         # This only applies to json requests
     
     def initialize
+      self.use_http_status_failures = false
       self.automatically_activate = true
       self.automatically_login_after_account_create = true
       self.send_welcome = true
