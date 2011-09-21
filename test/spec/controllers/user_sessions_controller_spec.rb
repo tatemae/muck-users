@@ -31,6 +31,17 @@ describe Muck::UserSessionsController do
     it {should redirect_to(user_path(@user))}
   end
   
+  describe "login callbacks" do
+    it "should call before_create_user_session" do
+      controller.should_receive(:before_create_user_session)
+      post :create, :user_session => { :login => @login, :password => @good_password }
+    end
+    it "should call after_create_user_session" do
+      controller.should_receive(:after_create_user_session).with(true)
+      post :create, :user_session => { :login => @login, :password => @good_password }
+    end  
+  end
+  
   describe "login success and render json" do
     before(:each) do
       post :create, :user_session => { :login => @login, :password => @good_password }, :format => 'json'
@@ -84,7 +95,17 @@ describe Muck::UserSessionsController do
           UserSession.find.should be_nil
         end
         it {should redirect_to(logout_complete_path)}
-      end
+      end      
+      describe "login" do
+        it "should call before_create_user_session" do
+          controller.should_receive(:before_destroy_user_session)
+          delete :destroy
+        end
+        it "should call after_destroy_user_session" do
+          controller.should_receive(:after_destroy_user_session)
+          delete :destroy
+        end
+      end      
       describe "with reset api key param" do
         it "should reset the user's single_access_token" do
           controller.stub!(:current_user).and_return(@user)

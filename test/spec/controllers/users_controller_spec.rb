@@ -19,6 +19,16 @@ describe Muck::UsersController do
         MuckUsers.configuration.automatically_login_after_account_create = true
       end
       describe "on POST to :create" do
+        describe "callbacks" do
+          it "should call 'before_create_user'" do
+            controller.should_receive(:before_create_user)
+            post_create_user
+          end
+          it "should call 'after_create_user'" do
+            controller.should_receive(:after_create_user).with(true)
+            post_create_user
+          end
+        end
         describe "html" do
           before(:each) do
             post_create_user
@@ -223,10 +233,22 @@ describe Muck::UsersController do
     end
     
     describe "on PUT to :update" do
-      before(:each) do
-        put_update_user(@user)
+      describe "callbacks" do
+        it "should call 'before_create_user'" do
+          controller.should_receive(:before_update_user)
+          put_update_user(@user)
+        end
+        it "should call 'after_create_user'" do
+          controller.should_receive(:after_update_user).with(true)
+          put_update_user(@user)
+        end
+      end      
+      describe "html" do
+        before(:each) do
+          put_update_user(@user)
+        end
+        it {should redirect_to(user_path(@user))}
       end
-      it {should redirect_to(user_path(@user))}
     end
     
   end

@@ -22,18 +22,22 @@ class Muck::UserSessionsController < ApplicationController
   end
   
   def create
-    @title = t('muck.users.sign_in_title')
+    @title = t('muck.users.sign_in_title')    
     @user_session = UserSession.new(params[:user_session])
+    before_create_user_session
     @user_session.save do |result|
+      after_create_user_session(result)
       after_create_response(result)
     end
   end
   
   def destroy
     @title = t('muck.users.sign_out_title')
+    before_destroy_user_session
     current_user.reset_single_access_token! if params[:reset_api_key]
     current_user_session.destroy
     flash[:notice] = t('muck.users.login_out_success')
+    after_destroy_user_session
     respond_to do |format|
       format.html { redirect_to logout_complete_path }
       format.json { render :json => { :logged_in => false, :message => t('muck.users.login_out_success') } }
@@ -46,6 +50,23 @@ class Muck::UserSessionsController < ApplicationController
   
   protected
   
+    # Override to act on @user_session before it is created
+    def before_create_user_session
+    end
+    
+    # Override to act on @user_session after it is created
+    # success indicates whether or not the user was successfully created
+    def after_create_user_session(success)
+    end
+    
+    # Override to act on @user_session before it is destroyed
+    def before_destroy_user_session
+    end
+    
+    # Override to act on @user_session after it is destroyed
+    def after_destroy_user_session
+    end
+    
     def after_create_response(success)
       if success
         respond_to do |format|
