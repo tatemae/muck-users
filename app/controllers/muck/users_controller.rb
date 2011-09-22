@@ -184,34 +184,31 @@ class Muck::UsersController < ApplicationController
       end
     end
   
-    def standard_response(template, success = true, failure_path = '')
-      if success
-        respond_to do |format|
-          format.html { render :template => "users/#{template}" }
-          format.xml { render :xml => @user }
-          format.json do
-            if MuckUsers.configuration.use_http_status_failures
-              render :json => @user
-            else
-              render :json => { :success => true, :user => @user.as_json }
-            end
-          end
-        end
-      else 
-        respond_to do |format|
-          format.html { redirect_to failure_path }
-          format.xml { render :xml => @user }
-          format.json do
-            if MuckUsers.configuration.use_http_status_failures
-              render :json => @user, :status => :unprocessable_entity
-            else
-              render :json => { :success => false, :user => @user.as_json }
-            end
-          end
-        end
-      end  
+    # override to customize the json generated for the user
+    def standard_user_json
+      @user.as_json
     end
-  
+
+    def standard_response(template, success = true, failure_path = '')      
+      respond_to do |format|        
+        format.html do
+          if success
+            render :template => "users/#{template}"
+          else
+            redirect_to failure_path
+          end
+        end
+        format.xml { render :xml => @user }
+        format.json do
+          if MuckUsers.configuration.use_http_status_failures
+            render :json => standard_user_json, :status => success ? :ok : :unprocessable_entity
+          else        
+            render :json => { :success => success, :user => standard_user_json }
+          end
+        end                 
+      end
+    end
+    
     def after_create_response(success, local_uri = '')
       if success
         respond_to do |format|
