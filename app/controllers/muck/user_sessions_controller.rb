@@ -60,7 +60,7 @@ class Muck::UserSessionsController < ApplicationController
     # Override to act on @user_session after it is created
     # success indicates whether or not the user was successfully created
     def after_create_user_session(success)
-      true
+      success
     end
     
     # Override to act on @user_session before it is destroyed
@@ -76,6 +76,7 @@ class Muck::UserSessionsController < ApplicationController
         respond_to do |format|
           format.html do
             flash[:notice] = t('muck.users.login_success')
+            debugger if @user_session.user.blank?
             redirect_back_or_default(user_path(@user_session.user))
           end
           format.json { render :json => { :logged_in => true, :message => t('muck.users.login_success'), :user => @user.to_json } }
