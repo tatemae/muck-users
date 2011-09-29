@@ -39,7 +39,16 @@ describe Muck::UserSessionsController do
     it "should call after_create_user_session" do
       controller.should_receive(:after_create_user_session).with(true)
       post :create, :user_session => { :login => @login, :password => @good_password }
-    end  
+    end
+    it "should call after_create_user_session with false" do
+      controller.should_receive(:after_create_user_session).with(false)
+      post :create, :user_session => { :login => @login, :password => 'bad password' }
+    end
+    it "should call after_create_user_session with false because before_create_user_session fails" do
+      controller.stub!(:before_create_user_session).and_return(false)
+      controller.should_receive(:after_create_user_session).with(false)
+      post :create, :user_session => { :login => @login, :password => 'bad password' }
+    end
   end
   
   describe "login success and render json" do
@@ -63,7 +72,7 @@ describe Muck::UserSessionsController do
       UserSession.find.should be_nil
     end
     it { should respond_with :success }
-    it { should render_template :new }
+    it { should render_template :new }    
   end
 
   describe "fail login json" do

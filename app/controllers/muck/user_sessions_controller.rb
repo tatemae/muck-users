@@ -24,11 +24,13 @@ class Muck::UserSessionsController < ApplicationController
   def create
     @title = t('muck.users.sign_in_title')    
     @user_session = UserSession.new(params[:user_session])
-    before_create_user_session
-    @user_session.save do |result|
-      after_create_user_session(result)
-      after_create_response(result)
+    if success = before_create_user_session
+      @user_session.save do |result|
+        success = result
+      end
     end
+    after_create_user_session(success)
+    after_create_response(success)
   end
   
   def destroy
@@ -52,6 +54,7 @@ class Muck::UserSessionsController < ApplicationController
   
     # Override to act on @user_session before it is created
     def before_create_user_session
+      true
     end
     
     # Override to act on @user_session after it is created

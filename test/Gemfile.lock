@@ -1,7 +1,7 @@
 PATH
   remote: ../
   specs:
-    muck-users (3.2.14)
+    muck-users (3.2.15)
       authlogic
       bcrypt-ruby
       friendly_id

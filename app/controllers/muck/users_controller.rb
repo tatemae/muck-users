@@ -51,10 +51,13 @@ class Muck::UsersController < ApplicationController
     setup_tos
     check_access_code
     check_recaptcha
-    before_create_user
-    success, path = setup_user
-    after_create_user(success)
-    after_create_response(success, path)
+    if before_create_user
+      success, path = setup_user
+      after_create_user(success)
+      after_create_response(success, path)
+    else
+      after_create_response(false)
+    end
   rescue MuckUsers::Exceptions::InvalidAccessCode, ActiveRecord::RecordInvalid => ex
     after_create_response(false)
   end
@@ -63,12 +66,15 @@ class Muck::UsersController < ApplicationController
     @title = t("users.update_profile")
     @user = admin? ? User.find(params[:id]) : User.find(current_user)
     @user.attributes = params[:user]
-    before_update_user
-    success = @user.save
-    after_update_user(success)
-    if success
-      flash[:notice] = t("muck.users.user_update")
-      after_update_response(true)
+    if before_update_user
+      success = @user.save
+      after_update_user(success)
+      if success
+        flash[:notice] = t("muck.users.user_update")
+        after_update_response(true)
+      else
+        after_update_response(false)
+      end
     else
       after_update_response(false)
     end
@@ -158,6 +164,7 @@ class Muck::UsersController < ApplicationController
   
     # Override to act on @user before it is created
     def before_create_user
+      true
     end
 
     # Override to act on @user after it is created
@@ -167,6 +174,7 @@ class Muck::UsersController < ApplicationController
 
     # Override to act on @user before it is updated
     def before_update_user
+      true
     end
     
     # Override to act on @user after it is updated
