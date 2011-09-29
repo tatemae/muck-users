@@ -29,7 +29,7 @@ class Muck::UserSessionsController < ApplicationController
         success = result
       end
     end
-    after_create_user_session(success)
+    success = after_create_user_session(success)
     after_create_response(success)
   end
   
@@ -60,6 +60,7 @@ class Muck::UserSessionsController < ApplicationController
     # Override to act on @user_session after it is created
     # success indicates whether or not the user was successfully created
     def after_create_user_session(success)
+      true
     end
     
     # Override to act on @user_session before it is destroyed
