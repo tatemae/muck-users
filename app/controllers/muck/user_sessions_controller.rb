@@ -75,8 +75,7 @@ class Muck::UserSessionsController < ApplicationController
       if success
         respond_to do |format|
           format.html do
-            flash[:notice] = t('muck.users.login_success')
-            debugger if @user_session.user.blank?
+            flash[:notice] = t('muck.users.login_success')            
             redirect_back_or_default(user_path(@user_session.user))
           end
           format.json { render :json => { :logged_in => true, :message => t('muck.users.login_success'), :user => @user.to_json } }
