@@ -170,6 +170,7 @@ class Muck::UsersController < ApplicationController
     # Override to act on @user after it is created
     # success indicates whether or not the user was successfully created
     def after_create_user(success)
+      success
     end
 
     # Override to act on @user before it is updated

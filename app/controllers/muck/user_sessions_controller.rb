@@ -89,6 +89,7 @@ class Muck::UserSessionsController < ApplicationController
           format.json { render :json => { :logged_in => false, :message => t('muck.users.login_fail') } }
         end
       end
+      success
     end
   
     # override redirect by adding a route like this:
