@@ -138,13 +138,14 @@ module MuckUsers
       def any_role?(*test_rolenames)
         test_rolenames = [test_rolenames] unless test_rolenames.is_a?(Array)
         test_rolenames.flatten!
-        @role_names ||= self.roles.map(&:rolename)
+        @role_names = self.roles.map(&:rolename) if @role_names.blank?
         return false if @role_names.blank?
         (@role_names & test_rolenames).length > 0
       end
       
       # Add the user to a new role
       def add_to_role(rolename)
+        @role_names = nil
         role = Role.find_or_create_by_rolename(rolename)
         self.roles << role if !self.roles.include?(role) # Make sure that the user can only be put into a role once
       end
