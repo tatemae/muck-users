@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "muck-users"
-  s.version = "3.2.19"
+  s.version = "3.2.20"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = "2011-09-29"
+  s.date = "2011-10-07"
   s.description = "Easily add user signup, login and other features to your application"
   s.email = "justin@tatemae.com"
   s.extra_rdoc_files = [
