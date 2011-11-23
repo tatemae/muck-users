@@ -30,6 +30,8 @@ module MuckUsers
     attr_accessor :send_access_code_request_confirm # Determines whether or not to send a confirmation email after a user requests an access code.
     attr_accessor :use_http_status_failures         # This only applies to json requests
     
+    attr_accessor :include_signup_scripts # If true then javscript will be added to the sign up form that indicates if login/email are available. Default is true.
+    
     def initialize
       self.use_http_status_failures = false
       self.automatically_activate = true
@@ -40,6 +42,7 @@ module MuckUsers
       self.require_access_code = false
       self.validate_terms_of_service = false
       self.send_access_code_request_confirm = false
+      self.include_signup_scripts = true
     end
     
   end
