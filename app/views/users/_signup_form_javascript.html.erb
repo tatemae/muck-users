@@ -1,3 +1,4 @@
+<% return unless MuckUsers.configuration.include_signup_scripts %>
 <% content_for :javascript do -%>
   <%= javascript_include_tag 'jquery/jquery.autocomplete.min.js' %>
   <%= javascript_include_tag 'muck-users' %>
