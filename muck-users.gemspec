@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "muck-users"
-  s.version = "3.2.23"
+  s.version = "3.2.24"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball", "Joel Duffin"]
-  s.date = "2011-11-23"
+  s.date = "2012-01-10"
   s.description = "Easily add user signup, login and other features to your application"
   s.email = "justin@tatemae.com"
   s.extra_rdoc_files = [
@@ -551,7 +551,7 @@ Gem::Specification.new do |s|
   ]
   s.homepage = "http://github.com/jbasdf/muck_users"
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.10"
+  s.rubygems_version = "1.8.12"
   s.summary = "Easy to use user engine for Rails"
 
   if s.respond_to? :specification_version then
